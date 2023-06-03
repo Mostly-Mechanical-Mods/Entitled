@@ -1,0 +1,15 @@
+﻿entitled_realm_size = {
+	every_in_global_list = {
+		variable = realm
+		limit = { tier = tier_county }
+		add = 1
+	}
+}
+
+entitled_domain_size = {
+	every_in_global_list = {
+		variable = holdings
+		limit = { tier = tier_county }
+		add = 1
+	}
+}

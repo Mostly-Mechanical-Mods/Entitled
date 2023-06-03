@@ -1,0 +1,35 @@
+﻿d_entitled_blank = {
+	color = { 192 192 192 }
+	capital = c_roma
+	can_create = { always = no }
+}
+
+d_entitled_holding_de_jure = {
+	color = { 0 100 0 }
+	capital = c_roma
+	can_create = { always = no }
+}
+
+d_entitled_holding_not_de_jure = {
+	color = { 0 100 100 }
+	capital = c_roma
+	can_create = { always = no }
+}
+
+d_entitled_realm_de_jure = {
+	color = { 0 250 0 }
+	capital = c_roma
+	can_create = { always = no }
+}
+
+d_entitled_realm_not_de_jure = {
+	color = { 0 250 250 }
+	capital = c_roma
+	can_create = { always = no }
+}
+
+d_entitled_de_jure_not_realm = {
+	color = { 250 250 0 }
+	capital = c_roma
+	can_create = { always = no }
+}

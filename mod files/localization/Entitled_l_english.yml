@@ -1,0 +1,34 @@
+﻿l_english:
+
+ENTITLED_CUSTOM_TITLE: "#TOOLTIP:ENTITLED_CUSTOM_NAME #L Custom Name#!#!"
+ENTITLED_CUSTOM_NAME: "You can customize the title name in the Ruler Designer"
+
+entitled_copy_title_tooltip: "#T Copy title #!\n\nUse [Scope.Title.GetNameNoTierNoTooltip] name and coat of arms for your Primary Title."
+entitled_set_de_jure_tooltip: "#T Make De Jure#!\n\nMake all De Jure titles in the [Scope.Title.GetNameNoTooltip], De Jure of your Primary Title, if they are of lower tier."
+entitled_remove_de_jure_tooltip: "#T Forfeit De Jure#!\n\nRelinquish De Jure rights on all titles in the [Scope.Title.GetNameNoTooltip]."
+entitled_add_to_realm_tooltip: "#T Bring in the Realm#!\n\nGrab all De Jure titles in the [Scope.Title.GetNameNoTooltip] in your Realm, if they are of lower tier, by vassalizing their holders."
+entitled_remove_from_realm_tooltip: "#T Remove from Realm#!\n\nRemove all De Jure titles in the [Scope.Title.GetNameNoTooltip] from your Realm."
+entitled_add_to_holdings_tooltip: "#T Take Holdings#!\n\nMake all De Jure counties in the [Scope.Title.GetNameNoTooltip] your own."
+entitled_remove_from_holdings_tooltip: "#T Remove Holdings#!\n\nRelinquish direct ownership of all De Jure counties in the [Scope.Title.GetNameNoTooltip] your own. They will remain in your Realm."
+entitled_set_capital_county_tooltip: "#T Make Capital County#!\n\nMake the [Scope.Title.GetNameNoTooltip] your Capital County."
+
+entitled_pick_rank_tooltip: "Chose a Rank"
+entitled_pick_capital_county_tooltip: "Chose a Capital County"
+
+entitled_liege_tooltip: "You will start as a Vassal of [liege.GetNameNoTooltip].\n\n#help You can start as the vassal of the lower-tiered ruler which holds a title of higher tier than your own, and De Jure above your Capital County.#!"
+entitled_no_liege_tooltip: "There is no ruler you could be liege to.\n\n#help You can start as the vassal of the lower-tiered ruler which holds a title of higher tier than your own, and De Jure above your Capital County.#!"
+
+entitled_create_title_holding: "You get the [THIS.Title.GetName]"
+entitled_create_title_vassal: "[THIS.Char.GetName] becomes your vassal"
+entitled_create_title_vassal_created: "[THIS.Title.GetHolder.GetName] loses the [THIS.Title.GetName].\nThe title will be granted to a randomly generated vassal."
+
+ENTITLED_OPEN: "Create your own Primary Title"
+ENTITLED_RANK: "Rank:"
+ENTITLED_VASSAL: "#L Start as a Vassal#!"
+ENTITLED_PRIMARY_TITLE: "Primary Title:"
+ENTITLED_CHOSE_RANK: "Pick a Rank"
+ENTITLED_CHOSE_CAPITAL_COUNTY: "Pick a Capital County"
+ENTITLED_REALM_SIZE: "Realm Size: [GuiScope.ScriptValue('entitled_realm_size')|0]"
+ENTITLED_CAPITAL_COUNTY: "Capital County:"
+ENTITLED_DOMAIN_SIZE: "Domain Size: [GuiScope.ScriptValue('entitled_domain_size')|0]"
+ENTITLED_CREATE_TITLE: "Create Title"

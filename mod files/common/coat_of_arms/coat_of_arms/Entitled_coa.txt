@@ -1,0 +1,59 @@
+d_entitled_blank = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_entitled_holding_de_jure = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_entitled_holding_not_de_jure = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_entitled_realm_de_jure = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_entitled_realm_not_de_jure = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_entitled_de_jure_not_realm = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}

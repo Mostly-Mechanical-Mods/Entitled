@@ -1,0 +1,16 @@
+﻿namespace = entitled_error_suppression
+
+entitled_error_suppression.0001 = {
+	hidden = yes
+	orphan = yes
+
+	trigger = {
+		
+	}
+
+	immediate = {	
+		fix_variable_error = { X = entitled_is_loaded }
+		fix_variable_error = { X = entitled_v1_0 }
+		
+	}
+}

@@ -1,0 +1,168 @@
+﻿on_game_start = {
+	on_actions = {
+		Entitled_changelog
+		Entitled_on_game_start
+	}
+}
+
+Entitled_changelog = {
+	effect = {
+		set_global_variable = {
+			name = entitled_is_loaded
+			value = yes
+		}
+		set_global_variable = entitled_v1_0
+	}
+}
+
+Entitled_on_game_start = {
+	effect = {
+		random_ruler = {
+			primary_title = { save_scope_as = custom_coa }
+		}
+		every_ruler = {
+			limit = { highest_held_title_tier = tier_county }
+			every_held_title = {
+				limit = { tier = tier_county }
+				ordered_this_title_or_de_jure_above = {
+					order_by = tier
+					add_to_list = top_de_jure
+					every_in_de_jure_hierarchy = {
+						limit = { NOT = { this = prev }}
+						continue = { tier >= tier_duchy }
+						if = {
+							limit = {
+								tier < tier_duchy
+								exists = duchy
+							}
+							duchy = {
+								add_to_variable_list = {
+									name = de_jure
+									target = prev
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								tier < tier_kingdom
+								exists = kingdom
+							}
+							kingdom = {
+								add_to_variable_list = {
+									name = de_jure
+									target = prev
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								tier < tier_empire
+								exists = empire
+							}
+							empire = {
+								add_to_variable_list = {
+									name = de_jure
+									target = prev
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ordered_in_list = {
+			list = top_de_jure
+			order_by = {
+				title_capital_county = { save_temporary_scope_as = temp }
+				ordered_in_list = {
+					list = top_de_jure
+					limit = { NOT = { this = prev }}
+					title_capital_county = {
+						add = "squared_distance(scope:temp)"
+					}
+				}
+			}
+			add_to_global_variable_list = {
+				name = Entitled_top_de_jure
+				target = this
+			}
+			title_capital_county = { save_scope_as = first_in_list }
+			remove_from_list = top_de_jure
+		}
+		while = {
+			limit = {
+				any_in_list = {
+					list = top_de_jure
+					count > 0
+				}
+			}
+			ordered_in_list = {
+				list = top_de_jure
+				order_by = {
+					title_capital_county = { save_temporary_scope_as = temp }
+					ordered_in_global_list = {
+						variable = Entitled_top_de_jure
+						limit = { NOT = { this = prev }}
+						title_capital_county = {
+							subtract = "squared_distance(scope:temp)"
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = Entitled_top_de_jure
+					target = this
+				}
+				remove_from_list = top_de_jure
+			}
+		}
+		every_province = {
+			barony = {
+				set_color_from_title = title:d_entitled_blank
+			}
+		}
+		debug_log = "ENTITLED"
+		create_dynamic_title = {
+			tier = empire
+			name = ENTITLED_CUSTOM_TITLE
+		}
+		scope:new_title = {
+			set_delete_on_destroy = yes
+			save_scope_as = custom_empire
+			debug_log_scopes = no
+			set_coa = scope:custom_coa
+		}
+		set_global_variable = {
+			name = custom_empire
+			value = scope:custom_empire
+		}
+		create_dynamic_title = {
+			tier = kingdom
+			name = ENTITLED_CUSTOM_TITLE
+		}
+		scope:new_title = {
+			set_delete_on_destroy = yes
+			save_scope_as = custom_kingdom
+			debug_log_scopes = no
+			set_coa = scope:custom_coa
+		}
+		set_global_variable = {
+			name = custom_kingdom
+			value = scope:custom_kingdom
+		}
+		create_dynamic_title = {
+			tier = duchy
+			name = ENTITLED_CUSTOM_TITLE
+		}
+		scope:new_title = {
+			set_delete_on_destroy = yes
+			save_scope_as = custom_duchy
+			debug_log_scopes = no
+			set_coa = scope:custom_coa
+		}
+		set_global_variable = {
+			name = custom_duchy
+			value = scope:custom_duchy
+		}
+		set_global_variable = custom_name
+	}
+}

@@ -1,0 +1,602 @@
+﻿Entitled_set_capital_county = {
+	scope = title
+	is_shown = {
+		global_var:capital_county ?= this
+	}
+	is_valid = {
+		tier = tier_county
+		is_target_in_global_variable_list = {
+			name = holdings
+			target = this
+		}
+	}
+	effect = {
+		set_global_variable = {
+			name = capital_county
+			value = this
+		}
+	}
+}
+
+Entitled_set_de_jure = {
+	scope = title
+	saved_scopes = { title_rank }
+	is_shown = {
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = de_jure
+				target = this
+			}
+		}
+	}
+	is_valid = {
+		# switch = {
+		# 	trigger = scope:title_rank
+		# 	flag:empire = { tier = tier_kingdom }
+		# 	flag:kingdom = { tier = tier_duchy }
+		# 	flag:duchy = { tier = tier_county }
+		# }
+	}
+	effect = {
+		every_in_de_jure_hierarchy = {
+			add_to_global_variable_list = {
+				name = de_jure
+				target = this
+			}
+			if = {
+				limit = { tier = tier_barony }
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = realm
+								target = this
+							}
+						}
+					}
+					set_color_from_title = title:d_entitled_de_jure_not_realm
+				}
+				else_if = {
+					limit = {
+						is_target_in_global_variable_list = {
+							name = holdings
+							target = this
+						}
+					}
+					set_color_from_title = title:d_entitled_holding_de_jure
+				}
+				else = {
+					set_color_from_title = title:d_entitled_realm_de_jure
+				}
+			}
+		}
+	}
+}
+
+Entitled_remove_de_jure = {
+	scope = title
+	saved_scopes = { title_rank }
+	is_shown = {
+		is_target_in_global_variable_list = {
+			name = de_jure
+			target = this
+		}
+	}
+	is_valid = {
+		# switch = {
+		# 	trigger = scope:title_rank
+		# 	flag:empire = { tier = tier_kingdom }
+		# 	flag:kingdom = { tier = tier_duchy }
+		# 	flag:duchy = { tier = tier_county }
+		# }
+	}
+	effect = {
+		every_in_de_jure_hierarchy = {
+			remove_list_global_variable = {
+				name = de_jure
+				target = this
+			}
+			if = {
+				limit = { tier = tier_barony }
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = realm
+								target = this
+							}
+						}
+					}
+					set_color_from_title = title:d_entitled_blank
+				}
+				else_if = {
+					limit = {
+						is_target_in_global_variable_list = {
+							name = holdings
+							target = this
+						}
+					}
+					set_color_from_title = title:d_entitled_holding_not_de_jure
+				}
+				else = {
+					set_color_from_title = title:d_entitled_realm_not_de_jure
+				}
+			}
+		}
+	}
+}
+
+Entitled_add_to_realm = {
+	scope = title
+	saved_scopes = { title_rank }
+	is_shown = {
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = realm
+				target = this
+			}
+		}
+	}
+	is_valid = {
+
+	}
+	effect = {
+		every_in_de_jure_hierarchy = {
+			add_to_global_variable_list = {
+				name = realm
+				target = this
+			}
+			if = {
+				limit = { tier = tier_barony }
+				if = {
+					limit = {
+						is_target_in_global_variable_list = {
+							name = de_jure
+							target = this
+						}
+					}
+					set_color_from_title = title:d_entitled_realm_de_jure
+				}
+				else = {
+					set_color_from_title = title:d_entitled_realm_not_de_jure
+				}
+			}
+		}
+	}
+}
+
+Entitled_remove_from_realm = {
+	scope = title
+	saved_scopes = { title_rank }
+	is_shown = {
+		is_target_in_global_variable_list = {
+			name = realm
+			target = this
+		}
+	}
+	is_valid = {
+
+	}
+	effect = {
+		every_in_de_jure_hierarchy = {
+			remove_list_global_variable = {
+				name = realm
+				target = this
+			}
+			remove_list_global_variable = {
+				name = holdings
+				target = this
+			}
+			if = {
+				limit = { tier = tier_barony }
+				if = {
+					limit = {
+						is_target_in_global_variable_list = {
+							name = de_jure
+							target = this
+						}
+					}
+					set_color_from_title = title:d_entitled_de_jure_not_realm
+				}
+				else = {
+					set_color_from_title = title:d_entitled_blank
+				}
+			}
+			if = {
+				limit = {
+					global_var:capital_county ?= this
+				}
+				remove_global_variable = capital_county
+			}
+		}
+	}
+}
+
+Entitled_add_holdings = {
+	scope = title
+	saved_scopes = { title_rank }
+	is_shown = {
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = holdings
+				target = this
+			}
+		}
+	}
+	is_valid = {
+
+	}
+	effect = {
+		every_in_de_jure_hierarchy = {
+			add_to_global_variable_list = {
+				name = holdings
+				target = this
+			}
+			add_to_global_variable_list = {
+				name = realm
+				target = this
+			}
+			if = {
+				limit = { tier = tier_barony }
+				if = {
+					limit = {
+						is_target_in_global_variable_list = {
+							name = de_jure
+							target = this
+						}
+					}
+					set_color_from_title = title:d_entitled_holding_de_jure
+				}
+				else = {
+					set_color_from_title = title:d_entitled_holding_not_de_jure
+				}
+			}
+		}
+	}
+}
+
+Entitled_remove_holdings = {
+	scope = title
+	saved_scopes = { title_rank }
+	is_shown = {
+		is_target_in_global_variable_list = {
+			name = holdings
+			target = this
+		}
+	}
+	is_valid = {
+
+	}
+	effect = {
+		every_in_de_jure_hierarchy = {
+			remove_list_global_variable = {
+				name = holdings
+				target = this
+			}
+			if = {
+				limit = { tier = tier_barony }
+				if = {
+					limit = {
+						is_target_in_global_variable_list = {
+							name = de_jure
+							target = this
+						}
+					}
+					set_color_from_title = title:d_entitled_realm_de_jure
+				}
+				else = {
+					set_color_from_title = title:d_entitled_realm_not_de_jure
+				}
+			}
+			if = {
+				limit = {
+					global_var:capital_county ?= this
+				}
+				remove_global_variable = capital_county
+			}
+		}
+	}
+}
+
+Entitled_copy_title = {
+	scope = title
+	effect = {
+		save_scope_as = old_title
+		debug_log = "Entitled_copy_title"
+		debug_log_scopes = yes
+		random_living_character = {
+			destroy_title = global_var:custom_empire
+			destroy_title = global_var:custom_kingdom
+			destroy_title = global_var:custom_duchy
+		}
+
+		create_dynamic_title = {
+			tier = empire
+			name = NEW_CREATED_TITLE_NAME
+		}
+		scope:new_title = {
+			set_delete_on_destroy = yes
+			save_scope_as = custom_empire
+			debug_log_scopes = no
+			set_coa = scope:old_title
+		}
+		set_global_variable = {
+			name = custom_empire
+			value = scope:custom_empire
+		}
+		create_dynamic_title = {
+			tier = kingdom
+			name = NEW_CREATED_TITLE_NAME
+		}
+		scope:new_title = {
+			set_delete_on_destroy = yes
+			save_scope_as = custom_kingdom
+			debug_log_scopes = no
+			set_coa = scope:old_title
+		}
+		set_global_variable = {
+			name = custom_kingdom
+			value = scope:custom_kingdom
+		}
+		create_dynamic_title = {
+			tier = duchy
+			name = NEW_CREATED_TITLE_NAME
+		}
+		scope:new_title = {
+			set_delete_on_destroy = yes
+			save_scope_as = custom_duchy
+			debug_log_scopes = no
+			set_coa = scope:old_title
+		}
+		set_global_variable = {
+			name = custom_duchy
+			value = scope:custom_duchy
+		}
+
+		set_global_variable = custom_name
+	}
+}
+
+Entitled_create_title = {
+	scope = title
+	is_valid = {
+		exists = this
+		exists = global_var:capital_county
+	}
+	effect = {
+		debug_log = "TEST ENTITLED"
+
+		random_living_character = {
+			if = {
+				limit = { NOT = { global_var:custom_empire ?= root }}
+				remove_global_variable = custom_empire
+				destroy_title = global_var:custom_empire
+			}
+			if = {
+				limit = { NOT = { global_var:custom_kingdom ?= root }}
+				remove_global_variable = custom_kingdom
+				destroy_title = global_var:custom_kingdom
+			}
+			if = {
+				limit = { NOT = { global_var:custom_duchy ?= root }}
+				remove_global_variable = custom_duchy
+				destroy_title = global_var:custom_duchy
+			}
+		}
+
+		create_character = {
+			save_scope_as = player
+			gender_female_chance = 50
+			location = global_var:capital_county.title_province
+			faith = global_var:capital_county.faith
+			culture = global_var:capital_county.culture
+		}
+		set_global_variable = {
+			name = player
+			value = scope:player
+		}
+		save_scope_as = primary_title
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+		}
+
+		scope:primary_title = {
+			change_title_holder = {
+				holder = scope:player
+				change = scope:change
+			}
+		}
+
+		every_in_global_list = {
+			variable = holdings
+			limit = {
+				tier <= scope:primary_title.tier
+				tier >= tier_county
+			}
+			custom_tooltip = entitled_create_title_holding
+			change_title_holder = {
+				holder = scope:player
+				change = scope:change
+			}
+			remove_list_global_variable = {
+				name = holdings
+				target = this
+			}
+			remove_list_global_variable = {
+				name = realm
+				target = this
+			}
+			add_to_list = removed_holdings
+			add_to_list = removed_realm
+		}
+
+		every_in_global_list = {
+			variable = realm
+			limit = {
+				tier >= tier_county
+				holder ?= {
+					highest_held_title_tier < scope:primary_title.tier
+					any_held_title = {
+						is_target_in_global_variable_list = {
+							name = realm
+							target = this
+						}
+						count = all
+					}
+				}
+			}
+			holder = { add_to_list = vassal }
+			remove_list_global_variable = {
+				name = realm
+				target = this
+			}
+			add_to_list = removed_realm
+		}
+
+		every_in_list = {
+			list = vassal
+			limit = { NOT = { is_in_list = removed_realm }}
+			custom_tooltip = entitled_create_title_vassal
+			change_liege = {
+				liege = scope:player
+				change = scope:change
+			}
+		}
+
+		every_in_global_list = {
+			variable = realm
+			limit = {
+				tier = tier_county
+				NOT = { is_in_list = removed_realm }
+			}
+			create_character = {
+				save_scope_as = vassal
+				gender_female_chance = 50
+				location = this.title_province
+				faith = this.faith
+				culture = this.culture
+			}
+			custom_tooltip = entitled_create_title_vassal_created
+			change_title_holder = {
+				holder = scope:vassal
+				change = scope:change
+			}
+			scope:vassal = {
+				change_liege = {
+					liege = scope:player
+					change = scope:change
+				}
+			}
+		}
+
+		every_in_global_list = {
+			variable = de_jure
+			limit = {
+				tier < scope:primary_title.tier
+				tier >= tier_county
+				any_this_title_or_de_jure_above = {
+					is_target_in_global_variable_list = {
+						name = de_jure
+						target = this
+					}
+					count = 0
+				}
+			}
+			add_to_list = de_jure
+		}
+
+		every_in_list = {
+			list = de_jure
+			set_de_jure_liege_title = scope:primary_title
+		}
+		
+		resolve_title_and_vassal_change = scope:change
+
+		scope:primary_title = {
+			set_color_from_title = global_var:capital_county
+			set_delete_on_destroy = no
+		}
+		if = {
+			limit = { NOT = { exists = global_var:custom_name }}
+			set_coa = global_var:capital_county
+		}
+
+		remove_global_variable = custom_empire
+		remove_global_variable = custom_kingdom
+		remove_global_variable = custom_duchy
+
+		set_global_variable = entitled_used
+	}
+}
+
+Entitled_clean = {
+	effect = {
+		remove_global_variable = capital_county
+		remove_global_variable = custom_name
+		clear_global_variable_list = de_jure
+		clear_global_variable_list = realm
+		clear_global_variable_list = holdings
+		every_province = {
+			barony = {
+				set_color_from_title = title:d_entitled_blank
+			}
+		}
+	}
+}
+
+Entitled_vassal = {
+	scope = title
+	is_valid = {
+		global_var:capital_county ?= {
+			any_this_title_or_de_jure_above = {
+				exists = holder
+				tier > root.tier
+			}
+		}
+	}
+	effect = {
+		global_var:capital_county = {
+			ordered_this_title_or_de_jure_above = {
+				limit = {
+					exists = holder
+					tier > root.tier
+				}
+				order_by = {
+					subtract = tier
+				}
+				save_scope_as = liege
+			}
+		}
+		if = {
+			limit = { exists = scope:liege }
+			custom_tooltip = entitled_liege_tooltip
+		}
+		else = {
+			custom_tooltip = entitled_no_liege_tooltip
+		}
+	}
+}
+
+Entitled_title_selected = {
+	scope = title
+	is_valid = {
+		any_in_de_jure_hierarchy = {
+			OR = {
+				is_target_in_global_variable_list = {
+					name = de_jure
+					target = this
+				}
+				is_target_in_global_variable_list = {
+					name = realm
+					target = this
+				}
+				is_target_in_global_variable_list = {
+					name = holdings
+					target = this
+				}
+			}
+		}
+	}
+}
