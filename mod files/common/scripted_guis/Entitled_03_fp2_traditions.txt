@@ -1,0 +1,96 @@
+﻿###########################
+# FP2 CULTURAL TRADITIONS 
+###########################
+
+#######################
+# Aragonese Specific
+#######################
+
+tradition_fp2_state_ransoming = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		# DLC check.
+		has_fp2_dlc_trigger = yes
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp2_state_ransoming }
+	}
+}
+
+#######################
+# Castilian Specific
+#######################
+
+tradition_fp2_strategy_gamers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		# DLC check.
+		has_fp2_dlc_trigger = yes
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp2_strategy_gamers }
+	}
+}
+
+#######################
+# Andalusian Specific
+#######################
+
+tradition_fp2_malleable_subjects = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		# DLC check.
+		has_fp2_dlc_trigger = yes
+		has_cultural_pillar = heritage_iberian
+	}
+
+	is_valid = {
+		# Must be of a suitable heritage.
+		custom_tooltip = {
+			text = iberian_heritage_trigger
+			has_cultural_pillar = heritage_iberian
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp2_malleable_subjects }
+	}
+}
+
+#######################
+# Generic
+#######################
+
+tradition_fp2_ritualised_friendship = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		# DLC check.
+		#has_fp2_dlc_trigger = yes
+	}
+
+	is_valid = {
+		# Must have at least one friend. No friendless losers. Especially you, Nick.
+		custom_tooltip = {
+			text = need_at_least_one_friend
+			culture_head ?= {
+				any_relation = {
+					type = friend
+					count >= 1
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp2_ritualised_friendship }
+	}
+}

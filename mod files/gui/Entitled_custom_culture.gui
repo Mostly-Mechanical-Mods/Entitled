@@ -1,0 +1,516 @@
+######################################################
+################## CULTURE ADD TRADITION #############
+######################################################
+
+window = {
+	name = "Entitled_custom_culture_pick"
+	widgetid = "Entitled_custom_culture_pick"
+	parentanchor = top|hcenter
+	size = { 300 200 }
+	layer = windows_layer
+	visible = "[GetVariableSystem.HasValue('Entitled','culture')]"
+	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+
+	background = {
+		using = Background_Area_Dark
+		margin = { 10 10 }
+	}
+
+	background = {
+		using = Background_Area_Dark
+		margin = { 10 10 }
+
+		modify_texture = {
+			texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+			blend_mode = alphamultiply
+			alpha = 0.6
+			mirror = horizontal
+		}
+	}
+
+	background = {
+		using = Background_Area_Dark
+		margin = { 10 10 }
+		alpha = 0.6
+
+		modify_texture = {
+			texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+			blend_mode = alphamultiply
+			mirror = horizontal
+		}
+	}
+
+	background = {
+		using = Background_Area_Dark
+		margin = { 10 10 }
+
+		modify_texture = {
+			texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+			blend_mode = alphamultiply
+			mirror = vertical
+		}
+	}
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+	}
+
+	vbox = {
+		using = Window_Margins
+		# minimumsize = { 600 0 }
+
+		text_single = {
+			raw_text = "CUSTOMIZE_CULTURE"
+		}
+
+		dropdown_menu_standard = {
+			blockoverride "dropdown_properties"
+			{
+				datamodel = "[GetGlobalList('entitled_cultures')]"
+			}
+
+			blockoverride "dropdown_size"
+			{
+				size = { 300 32 }
+			}
+
+			blockoverride "dropdown_list_maxsize"
+			{
+				maximumsize = { 291 250 }
+			}
+
+			block "dropdown_active_item_properties"
+			{
+				raw_text = "CUSTOMIZE_CULTURE"
+			}
+
+			blockoverride "dropdown_item_properties"
+			{
+				text = "[Scope.Culture.GetNameNoTooltip]"
+				# tooltip = "[EnumSettingEntry.GetTooltip]"
+			}
+		}
+	}
+}
+
+window = {
+	name = "Entitled_custom_culture_list"
+	widgetid = "Entitled_custom_culture_list"
+	parentanchor = top|hcenter
+	size = { 1000 800 }
+	layer = windows_layer
+	# visible = "[GetVariableSystem.HasValue('Entitled','culture')]"
+	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+
+	background = {
+		using = Background_Area_Dark
+		margin = { 10 10 }
+	}
+
+	background = {
+		using = Background_Area_Dark
+		margin = { 10 10 }
+
+		modify_texture = {
+			texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+			blend_mode = alphamultiply
+			alpha = 0.6
+			mirror = horizontal
+		}
+	}
+
+	background = {
+		using = Background_Area_Dark
+		margin = { 10 10 }
+		alpha = 0.6
+
+		modify_texture = {
+			texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+			blend_mode = alphamultiply
+			mirror = horizontal
+		}
+	}
+
+	background = {
+		using = Background_Area_Dark
+		margin = { 10 10 }
+
+		modify_texture = {
+			texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+			blend_mode = alphamultiply
+			mirror = vertical
+		}
+	}
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+	}
+
+	vbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		scrollbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+	
+			blockoverride "scrollbox_content" {
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					fixedgridbox = {
+						datamodel = "[GetGlobalList('entitled_cultures')]"
+						addrow = 70
+						addcolumn = 200
+				
+						flipdirection = yes
+						datamodel_wrap = 5
+						item = {
+							widget = {
+				
+								button_standard = {
+									text = "[Scope.Culture.GetName]"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+window = {
+	name = "Entitled_traditions"
+	widgetid = "Entitled_traditions"
+	parentanchor = center
+	size = { 400 950 }
+	layer = windows_layer
+	visible = "[GetVariableSystem.HasValue('Entitled_culture','traditions')]"
+	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+
+	using = Window_Background
+	using = Window_Decoration
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		on_start = "[GetVariableSystem.Set('tradition_grouping','realm')]"
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		on_finish = "[GetVariableSystem.Clear('tradition_grouping')]"
+	}
+
+	vbox = {
+		using = Window_Margins
+		minimumsize = { 400 0 }
+
+		header_pattern = {
+			layoutpolicy_horizontal = expanding
+
+			blockoverride "header_text"
+			{
+				# text = "[SelectLocalization(AddTraditionWindow.IsReplacing, 'REPLACE_TRADITION_WINDOW_TITLE', 'ADD_TRADITION_WINDOW_TITLE')]"
+				raw_text = "Customize Traditions"
+			}
+
+			blockoverride "button_close"
+			{
+				onclick = "[GetVariableSystem.Clear('Entitled_culture')]"
+			}
+		}
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			margin = { 4 0 }
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				margin_bottom = -4
+
+				# The parameter for GetTraditionGrouping should match the categories in the traditions script
+				entitled_add_tradition_category = {
+					datacontext = "[GetGlobalVariable('entitled_tradition_grouping_realm')]"
+				}
+				entitled_add_tradition_category = {
+					datacontext = "[GetGlobalVariable('entitled_tradition_grouping_combat')]"
+				}
+				entitled_add_tradition_category = {
+					datacontext = "[GetGlobalVariable('entitled_tradition_grouping_societal')]"
+				}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				margin_bottom = 5
+
+				entitled_add_tradition_category = {
+					datacontext = "[GetGlobalVariable('entitled_tradition_grouping_ritual')]"
+				}
+				entitled_add_tradition_category = {
+					datacontext = "[GetGlobalVariable('entitled_tradition_grouping_regional')]"
+				}
+			}
+		}
+
+		vbox = {
+			name = "tradition_selection"
+			margin = { 0 8 }
+			spacing = 6
+
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			entitled_vbox_traditions_list = {
+				datacontext = "[GetGlobalVariable('entitled_tradition_grouping_realm')]"
+			}
+
+			entitled_vbox_traditions_list = {
+				datacontext = "[GetGlobalVariable('entitled_tradition_grouping_combat')]"
+			}
+
+			entitled_vbox_traditions_list = {
+				datacontext = "[GetGlobalVariable('entitled_tradition_grouping_societal')]"
+			}
+
+			entitled_vbox_traditions_list = {
+				datacontext = "[GetGlobalVariable('entitled_tradition_grouping_ritual')]"
+			}
+
+			entitled_vbox_traditions_list = {
+				datacontext = "[GetGlobalVariable('entitled_tradition_grouping_regional')]"
+			}
+
+			vbox = {
+				name = "cost"
+				datacontext = "[AddTraditionWindow.GetSelectedTradition]"
+				visible = "[GetPlayer.IsValid]"
+				minimumsize = { 0 28 }
+				spacing = 10
+				tooltip = "[SelectLocalization(AddTraditionWindow.IsReplacing, 'REPLACE_TRADITION_COST_TOOLTIP', 'ADD_TRADITION_COST_TOOLTIP')]"
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center|nobaseline
+					text = "[SelectLocalization(AddTraditionWindow.IsReplacing, 'REPLACE_TRADITION_TOTAL_COST', 'ADD_TRADITION_TOTAL_COST')]"
+					default_format = "#high"
+					using = Font_Size_Medium
+
+					background = {
+						visible = "[Not( AddTraditionWindow.CanPayCost )]"
+						margin = { 5 0 }
+						using = Status_Bad
+					}
+				}
+			}
+
+			hbox = {
+				visible = "[GetPlayer.IsValid]"
+				layoutpolicy_horizontal = expanding
+				margin = { 44 8 }
+				spacing = 20
+
+				button_standard= {
+					name = "decline_button"
+					text = "CANCEL_BUTTON"
+					onclick = [AddTraditionWindow.Close]
+					shortcut = "close_window"
+				}
+
+				button_primary = {
+					name = "done"
+					layoutpolicy_horizontal = expanding
+					onclick = "[AddTraditionWindow.AddTradition]"
+					onclick = "[AddTraditionWindow.Close]"
+					enabled = "[AddTraditionWindow.CanAddTradition]"
+					text = "[SelectLocalization(AddTraditionWindow.IsReplacing, 'REPLACE_TRADITION_EXECUTE_LABEL', 'ADD_TRADITION_EXECUTE_LABEL')]"
+					default_format = "#high"
+
+					tooltip = "[SelectLocalization(AddTraditionWindow.IsReplacing, 'REPLACE_TRADITION_EXECUTE_TOOLTIP', 'ADD_TRADITION_EXECUTE_TOOLTIP')]"
+
+					warning_icon = {
+						visible = "[Culture.IsReforming]"
+						parentanchor = vcenter|right
+						size = { 25 25 }
+						position = { -3 0 }
+						alwaystransparent = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+types CultureAddTraditionTypes
+{
+	type entitled_widget_tradition_item = widget {
+		size = {  240 180  }
+		datacontext = "[GetCultureTradition(Scope.GetFlagName)]"
+		tooltipwidget = {
+			using = culture_tradition_tooltip_clickable
+
+			blockoverride "above_description_text" {
+				visible = "[Not(GetScriptedGui(Scope.GetFlagName).IsValid(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).End))]"
+				text = "[GetScriptedGui(Scope.GetFlagName).IsValidTooltip(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).End)]"
+			}
+		}
+
+		vbox = {
+			button_standard = {
+				visible = "[LessThan_int32(GetDataModelSize(Culture.GetTraditions),Culture.GetMaxNumberOfTraditions)]"
+				size = {  220 120  }
+				onclick = "[GetScriptedGui(Scope.GetFlagName).Execute(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).AddScope('add',MakeScopeFlag('yes')).End)]"
+				enabled = "[GetScriptedGui(Scope.GetFlagName).IsValid(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).End)]"
+
+				widget_tradition_icon = {
+					block "icon_size" {
+						size = { 220 120 }
+					}
+				}
+				
+			}
+
+			button_standard = {
+				visible = "[GreaterThanOrEqualTo_int32(GetDataModelSize(Culture.GetTraditions),Culture.GetMaxNumberOfTraditions)]"
+				size = {  220 120  }
+				onclick = "[GetScriptedGui(Scope.GetFlagName).Execute(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).AddScope('add',MakeScopeFlag('no')).End)]"
+				enabled = "[GetScriptedGui(Scope.GetFlagName).IsValid(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).End)]"
+
+				widget_tradition_icon = {
+					block "icon_size" {
+						size = { 220 120 }
+					}
+				}
+			}
+
+			hbox = {
+				margin_top = 4
+
+				text_label_center = {
+					name = "name"
+					text = "[CultureTradition.GetNameNoTooltip]"
+					maximumsize = { 180 44 }
+					multiline = yes
+					align = center|nobaseline
+
+					using = Font_Size_Medium
+				}
+
+				widget = {
+					size = { 0 30 }
+					allow_outside = yes
+
+					warning_icon = {
+						visible = "[Not(GetScriptedGui(Scope.GetFlagName).IsValid(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).End))]"
+						position = { 6 -2 }
+						widgetanchor = left
+						size = { 30 30 }
+						tooltip = "[GetScriptedGui(Scope.GetFlagName).IsValidTooltip(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).End)]"
+					}
+				}
+			}
+
+			# hbox = {
+			# 	expand = {}
+			# 	spacing = 20
+			# 	text_label_center = {
+			# 		name = "cost"
+			# 		# text = "[AddTraditionWindow.GetTraditionCost( CultureTradition.Self )]"
+			# 		maximumsize = { 130 44 }
+			# 		margin_left = 20
+			# 		multiline = yes
+			# 		align = center
+
+			# 		using = Font_Size_Small
+			# 		# tooltip = "[AddTraditionWindow.GetTraditionCostBreakdown( CultureTradition.Self )]"
+			# 		using = tooltip_se
+
+			# 		background = {
+			# 			# visible = "[Not( AddTraditionWindow.CanBuyTradition(CultureTradition.Self) )]"
+			# 			margin_right = 15
+			# 			margin_left = -13
+			# 			margin_bottom = -1
+			# 			using = Status_Bad
+			# 		}
+			# 	}
+
+			# 	text_label_left = {
+			# 		name = "time"
+			# 		# text = "[SelectLocalization(AddTraditionWindow.IsReplacing, Culture.GetTotalReformTimeForReplacingTradition, Culture.GetTotalReformTimeForNewTradition)]"
+			# 		maximumsize = { 130 44 }
+			# 		multiline = yes
+			# 		align = center
+
+			# 		using = Font_Size_Small
+			# 		# tooltip = "[SelectLocalization(AddTraditionWindow.IsReplacing, 'ESTABLISHMENT_TIME_TOOLTIP_REPLACING_TRADITION', 'ESTABLISHMENT_TIME_TOOLTIP_NEW_TRADITION')]"
+			# 		using = tooltip_se
+			# 	}
+			# }
+		}
+	}
+
+	type entitled_add_tradition_category = button_tab {
+		layoutpolicy_horizontal = expanding
+		onclick = "[GetVariableSystem.Set('tradition_grouping',Scope.GetFlagName)]"
+		down = "[GetVariableSystem.HasValue('tradition_grouping',Scope.GetFlagName)]"
+
+		hbox = {
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				align = center
+				text = "[Localize(Concatenate('tradition_group_',Scope.GetFlagName))]"
+				default_format = "#low"
+			}
+
+			text_single = {
+				visible = "[GetPlayer.IsValid]"
+				align = center
+				text = "TRADITION_CATEGORY_COUNT"
+				default_format = "#low"
+				margin_right = 15
+				min_width = 30
+			}
+		}
+	}
+
+	# Needs a wrapping vbox as otherwise the blockoverride for the scrollbox_content doesn't work
+	type entitled_vbox_traditions_list = vbox {
+		visible = "[GetVariableSystem.HasValue('tradition_grouping',Scope.GetFlagName)]"
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+
+		using = Animation_Tab_Switch
+
+		scrollbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			blockoverride "scrollbox_content"
+			{
+				flowcontainer = {
+					datamodel = "[GetGlobalList(Concatenate('entitled_traditions_',Scope.GetFlagName))]"
+					ignoreinvisible = yes
+					direction = vertical
+					item = {
+						entitled_widget_tradition_item = {
+							visible = "[GetScriptedGui(Scope.GetFlagName).IsShown(GuiScope.SetRoot(Culture.MakeScope).AddScope('character',Culture.GetCultureHead.MakeScope).End)]"
+						}
+					}
+				}
+			}
+		}
+	}
+}

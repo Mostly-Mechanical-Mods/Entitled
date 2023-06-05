@@ -1,0 +1,88 @@
+﻿entitled_tradition_setup = {
+	save_scope_value_as = {
+		name = tradition
+		value = flag:$TRADITION$
+	}
+	add_to_global_variable_list = {
+		name = entitled_traditions_$GROUPING$
+		target = scope:tradition
+	}
+}
+
+entitled_toggle_tradition = {
+	if = {
+		limit = { has_cultural_tradition = $TRADITION$ }
+		remove_culture_tradition = $TRADITION$
+		remove_list_variable = {
+			name = current_traditions
+			target = flag:$TRADITION$
+		}
+	}
+	else_if = {
+		limit = { scope:add = flag:yes }
+		add_culture_tradition = $TRADITION$
+		add_to_variable_list = {
+			name = current_traditions
+			target = flag:$TRADITION$
+		}
+	}
+}
+
+entitled_record_tradition = {
+	if = {
+		limit = { has_cultural_tradition = $TRADITION$ }
+		add_to_variable_list = {
+			name = traditions target = flag:$TRADITION$
+		}
+
+	}	
+}
+
+entitled_reset_ethos = {
+	if = {
+		limit = {
+			var:ethos ?= flag:$ETHOS$
+			NOT = { has_cultural_pillar = $ETHOS$ }
+		}
+		set_culture_pillar = $ETHOS$
+	}
+}
+
+entitled_reset_martial = {
+	if = {
+		limit = {
+			var:martial ?= flag:$MARTIAL$
+			NOT = { has_cultural_pillar = $MARTIAL$ }
+		}
+		set_culture_pillar = $MARTIAL$
+	}
+}
+
+entitled_reset_tradition = {
+	save_scope_value_as = {
+		name = tradition
+		value = flag:$TRADITION$
+	}
+	if = {
+		limit = {
+			has_cultural_tradition = $TRADITION$
+			NOT = {
+				is_target_in_variable_list = {
+					name = traditions
+					target = scope:tradition
+				}
+			}
+		}
+		remove_culture_tradition = $TRADITION$
+	}
+	else_if = {
+		limit = {
+			NOT = { has_cultural_tradition = $TRADITION$ }
+			is_target_in_variable_list = {
+				name = traditions
+				target = scope:tradition
+			}
+		}
+		add_culture_tradition = $TRADITION$
+	}
+}

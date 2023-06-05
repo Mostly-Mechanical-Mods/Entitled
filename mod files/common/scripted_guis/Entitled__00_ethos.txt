@@ -1,0 +1,53 @@
+﻿ethos_bellicose = {
+	is_valid = {
+		NOR = {
+			has_cultural_tradition = tradition_pacifism
+			has_cultural_tradition = tradition_philosopher_culture
+		}
+	}
+	effect = {
+		set_culture_pillar = ethos_bellicose
+	}
+}
+
+ethos_stoic = {
+	effect = {
+		set_culture_pillar = ethos_stoic
+	}
+}
+
+ethos_bureaucratic = {
+	effect = {
+		set_culture_pillar = ethos_bureaucratic
+	}
+}
+
+ethos_spiritual = {
+	effect = {
+		set_culture_pillar = ethos_spiritual
+	}
+}
+
+ethos_courtly = {
+	effect = {
+		set_culture_pillar = ethos_courtly
+	}
+}
+
+ethos_egalitarian = {
+	is_valid = {
+		NOR = {
+			has_cultural_tradition = tradition_only_the_strong
+			has_cultural_tradition = tradition_khadga_puja
+		}
+	}
+	effect = {
+		set_culture_pillar = ethos_egalitarian
+	}
+}
+
+ethos_communal = {
+	effect = {
+		set_culture_pillar = ethos_communal
+	}
+}

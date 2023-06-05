@@ -1,0 +1,4 @@
+﻿l_english:
+
+knight_culture_player_plural:0 "[SelectLocalization(GetPlayer.IsValid,'knight_culture_player_plural_vanilla','knight_culture_player_plural_entitled')]"
+COA_TOOLTIP_HOLDER:1 "[SelectLocalization(GetPlayer.IsValid,'COA_TOOLTIP_HOLDER_vanilla','')][TITLE.GetLeaseInfo][holder|E]: [TITLE.GetHolder.GetFullNameNicknamed]\n[SelectLocalization(DataModelHasItems(TITLE.GetLineOfSuccession), 'COA_LINE_OF_SUCCESSION', '')][TITLE.GetLineOfSuccessionDesc]\n"

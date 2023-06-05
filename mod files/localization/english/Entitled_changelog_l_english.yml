@@ -1,0 +1,23 @@
+﻿l_english:
+
+Entitled_changelog_alert: "[mmm_entitled|E] update"
+Entitled_changelog_alert_desc: "[mmm_entitled|E] has updated since you started this playthrough"
+Entitled_changelog_alert_click: "#P #italic Left-click to read Changelog and remove the alert#!#!"
+
+Entitled_changelog_alert_interaction: "[mmm_entitled|E] Changelog"
+Entitled_changelog_alert_interaction_desc: "Changelog for [mmm_entitled|E]"
+Entitled_changelog_alert_interaction_send: "Apply Patch"
+Entitled_changelog_alert_introduction: "[mmm_entitled|E] has updated since you started this playthrough"
+Entitled_v1_0_1_changelog: "#bold Entitled v1.0.1#!"
+Entitled_v1_0_1_changelog_patch: "No patch is necessary on your current savegame."
+Entitled_v1_0_1_changelog_1: "#bold New Feature: Culture Customization#!\n     #help(requires Royal Court DLC)#!\n     You can now change Ethos, Martial custom and Traditions of all cultures"
+Entitled_v1_0_1_changelog_2: "You can now create several custom titles"
+Entitled_v1_0_1_changelog_3: "Fixed not being able to start as a custom Count"
+Entitled_v1_0_1_changelog_4: "Fixed not being able to start as a Vassal. Now you opt-out to make the custom title Independent instead."
+Entitled_v1_0_1_changelog_5: "Various GUI improvements and aditional tooltips"
+
+Entitled_v1_0_2_changelog: "#bold Entitled v1.0.2#!"
+Entitled_v1_0_2_changelog_patch: "No patch is necessary on your current savegame."
+Entitled_v1_0_2_changelog_1: "Fixed custom title having no CoA"
+Entitled_v1_0_2_changelog_2: "Fixed custom title having no De Jure liege"
+Entitled_v1_0_3_changelog_3: "Fixed not being able to start as a Vassal (again)"

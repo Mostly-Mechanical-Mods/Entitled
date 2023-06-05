@@ -1,1 +1,8 @@
-gui/Entitled_widgets.gui = Entitled_de_jure
+﻿gui/Entitled_custom_title.gui = Entitled_custom_title
+# gui/Entitled_custom_title.gui = Entitled_custom_title_detail
+gui/Entitled_custom_culture.gui = Entitled_traditions
+gui/Entitled_window_culture.gui = entitled_culture_window
+# gui/Entitled_custom_culture.gui = Entitled_custom_culture_pick
+# gui/Entitled_custom_culture.gui = Entitled_custom_culture_list
+gui/Entitled_menu.gui = Entitled_menu
+gui/Entitled_window_replace_pillar.gui = Entitled_replace_pillar_window

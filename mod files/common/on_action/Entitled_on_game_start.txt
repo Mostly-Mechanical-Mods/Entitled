@@ -1,6 +1,7 @@
 ﻿on_game_start = {
 	on_actions = {
 		Entitled_changelog
+		Entitled_culture
 		Entitled_on_game_start
 	}
 }
@@ -8,18 +9,439 @@
 Entitled_changelog = {
 	effect = {
 		set_global_variable = {
-			name = entitled_is_loaded
+			name = Entitled_is_loaded
 			value = yes
 		}
-		set_global_variable = entitled_v1_0
+		set_global_variable = Entitled_v1_0
+		set_global_variable = Entitled_v1_0_1
+		set_global_variable = Entitled_v1_0_2
+	}
+}
+
+
+Entitled_culture = {
+	effect = {
+		every_culture_global = {
+			add_to_global_variable_list = {
+				name = entitled_cultures
+				target = this
+			}
+			switch = {
+				trigger = has_cultural_pillar
+				martial_custom_male_only = { set_variable = { name = martial value = flag:martial_custom_male_only }}
+				martial_custom_equal = { set_variable = { name = martial value = flag:martial_custom_equal }}
+				martial_custom_female_only = { set_variable = { name = martial value = flag:martial_custom_female_only }}
+			}
+			switch = {
+				trigger = has_cultural_pillar
+				ethos_bellicose = { set_variable = { name = ethos value = flag:ethos_bellicose }}
+				ethos_stoic = { set_variable = { name = ethos value = flag:ethos_stoic }}
+				ethos_bureaucratic = { set_variable = { name = ethos value = flag:ethos_bureaucratic }}
+				ethos_spiritual = { set_variable = { name = ethos value = flag:ethos_spiritual }}
+				ethos_courtly = { set_variable = { name = ethos value = flag:ethos_courtly }}
+				ethos_egalitarian = { set_variable = { name = ethos value = flag:ethos_egalitarian }}
+				ethos_communal = { set_variable = { name = ethos value = flag:ethos_communal }}
+			}
+			entitled_record_tradition = { TRADITION = tradition_winter_warriors }
+			entitled_record_tradition = { TRADITION = tradition_forest_fighters }
+			entitled_record_tradition = { TRADITION = tradition_mountaineers }
+			entitled_record_tradition = { TRADITION = tradition_warriors_of_the_dry }
+			entitled_record_tradition = { TRADITION = tradition_highland_warriors }
+			entitled_record_tradition = { TRADITION = tradition_jungle_warriors }
+			entitled_record_tradition = { TRADITION = tradition_only_the_strong }
+			entitled_record_tradition = { TRADITION = tradition_warriors_by_merit }
+			entitled_record_tradition = { TRADITION = tradition_warrior_monks }
+			entitled_record_tradition = { TRADITION = tradition_talent_acquisition }
+			entitled_record_tradition = { TRADITION = tradition_strength_in_numbers }
+			entitled_record_tradition = { TRADITION = tradition_frugal_armorsmiths }
+			entitled_record_tradition = { TRADITION = tradition_malleable_invaders }
+			entitled_record_tradition = { TRADITION = tradition_quarrelsome }
+			entitled_record_tradition = { TRADITION = tradition_swords_for_hire }
+			entitled_record_tradition = { TRADITION = tradition_reverence_for_veterans }
+			entitled_record_tradition = { TRADITION = tradition_stalwart_defenders }
+			entitled_record_tradition = { TRADITION = tradition_battlefield_looters }
+			entitled_record_tradition = { TRADITION = tradition_hit_and_run }
+			entitled_record_tradition = { TRADITION = tradition_stand_and_fight }
+			entitled_record_tradition = { TRADITION = tradition_adaptive_skirmishing }
+			entitled_record_tradition = { TRADITION = tradition_formation_fighting }
+			entitled_record_tradition = { TRADITION = tradition_horse_breeder }
+			entitled_record_tradition = { TRADITION = tradition_longbow_competitions }
+			#common\culture\traditions\00_maa_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_futuwaa }
+			entitled_record_tradition = { TRADITION = tradition_mubarizuns }
+			entitled_record_tradition = { TRADITION = tradition_desert_ribat }
+			entitled_record_tradition = { TRADITION = tradition_land_of_the_bow }
+			entitled_record_tradition = { TRADITION = tradition_druzhina }
+			entitled_record_tradition = { TRADITION = tradition_hussar }
+			entitled_record_tradition = { TRADITION = tradition_horn_mountain_skirmishing }
+			entitled_record_tradition = { TRADITION = tradition_bush_hunting }
+			entitled_record_tradition = { TRADITION = tradition_mobile_guards }
+			entitled_record_tradition = { TRADITION = tradition_khadga_puja }
+			entitled_record_tradition = { TRADITION = tradition_garuda_warriors }
+			entitled_record_tradition = { TRADITION = tradition_burman_royal_army }
+			entitled_record_tradition = { TRADITION = tradition_mountain_herding }
+			entitled_record_tradition = { TRADITION = tradition_forest_wardens }
+			entitled_record_tradition = { TRADITION = tradition_upland_skirmishing }
+			entitled_record_tradition = { TRADITION = tradition_strong_kinship }
+			entitled_record_tradition = { TRADITION = tradition_amharic_highlanders }
+			entitled_record_tradition = { TRADITION = tradition_polders }
+			entitled_record_tradition = { TRADITION = tradition_caucasian_wolves }
+			entitled_record_tradition = { TRADITION = tradition_hird }
+			entitled_record_tradition = { TRADITION = tradition_chanson_de_geste }
+			#common\culture\traditions\00_realm_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_court_eunuchs }
+			entitled_record_tradition = { TRADITION = tradition_legalistic }
+			entitled_record_tradition = { TRADITION = tradition_republican_legacy }
+			entitled_record_tradition = { TRADITION = tradition_hereditary_hierarchy }
+			entitled_record_tradition = { TRADITION = tradition_esteemed_hospitality }
+			entitled_record_tradition = { TRADITION = tradition_gardening }
+			entitled_record_tradition = { TRADITION = tradition_tribe_unity }
+			entitled_record_tradition = { TRADITION = tradition_astute_diplomats }
+			entitled_record_tradition = { TRADITION = tradition_collective_lands }
+			entitled_record_tradition = { TRADITION = tradition_female_only_inheritance }
+			entitled_record_tradition = { TRADITION = tradition_equal_inheritance }
+			entitled_record_tradition = { TRADITION = tradition_roman_legacy }
+			entitled_record_tradition = { TRADITION = tradition_metal_craftsmanship }
+			entitled_record_tradition = { TRADITION = tradition_family_entrepreneurship }
+			entitled_record_tradition = { TRADITION = tradition_wedding_ceremonies }
+			entitled_record_tradition = { TRADITION = tradition_culture_blending }
+			entitled_record_tradition = { TRADITION = tradition_isolationist }
+			entitled_record_tradition = { TRADITION = tradition_fervent_temple_builders }
+			entitled_record_tradition = { TRADITION = tradition_agrarian }
+			entitled_record_tradition = { TRADITION = tradition_pastoralists }
+			entitled_record_tradition = { TRADITION = tradition_parochialism }
+			entitled_record_tradition = { TRADITION = tradition_ruling_caste }
+			entitled_record_tradition = { TRADITION = tradition_staunch_traditionalists }
+			entitled_record_tradition = { TRADITION = tradition_hill_dwellers }
+			entitled_record_tradition = { TRADITION = tradition_forest_folk }
+			entitled_record_tradition = { TRADITION = tradition_mountain_homes }
+			entitled_record_tradition = { TRADITION = tradition_dryland_dwellers }
+			entitled_record_tradition = { TRADITION = tradition_jungle_dwellers }
+			entitled_record_tradition = { TRADITION = tradition_wetlanders }
+			entitled_record_tradition = { TRADITION = tradition_hidden_cities }
+			entitled_record_tradition = { TRADITION = tradition_ancient_miners }
+			entitled_record_tradition = { TRADITION = tradition_castle_keepers }
+			entitled_record_tradition = { TRADITION = tradition_city_keepers }
+			entitled_record_tradition = { TRADITION = tradition_maritime_mercantilism }
+			entitled_record_tradition = { TRADITION = tradition_monastic_communities }
+			#common\culture\traditions\00_regional_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_byzantine_succession }
+			entitled_record_tradition = { TRADITION = tradition_lords_of_the_elephant }
+			entitled_record_tradition = { TRADITION = tradition_african_tolerance }
+			entitled_record_tradition = { TRADITION = tradition_the_witenagemot }
+			entitled_record_tradition = { TRADITION = tradition_things }
+			entitled_record_tradition = { TRADITION = tradition_caravaneers }
+			entitled_record_tradition = { TRADITION = tradition_horse_lords }
+			entitled_record_tradition = { TRADITION = tradition_saharan_nomads }
+			entitled_record_tradition = { TRADITION = tradition_visigothic_codes }
+			entitled_record_tradition = { TRADITION = tradition_himalayan_settlers }
+			entitled_record_tradition = { TRADITION = tradition_desert_nomads }
+			entitled_record_tradition = { TRADITION = tradition_mountaineer_ruralism }
+			entitled_record_tradition = { TRADITION = tradition_steppe_tolerance }
+			entitled_record_tradition = { TRADITION = tradition_longbow_competitions }
+			entitled_record_tradition = { TRADITION = tradition_nubian_warrior_queens }
+			entitled_record_tradition = { TRADITION = tradition_nubian_warrior_kings }
+			#common\culture\traditions\00_ritual_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_monogamous }
+			entitled_record_tradition = { TRADITION = tradition_polygamous }
+			entitled_record_tradition = { TRADITION = tradition_concubines }
+			entitled_record_tradition = { TRADITION = tradition_sacred_mountains }
+			entitled_record_tradition = { TRADITION = tradition_sacred_groves }
+			entitled_record_tradition = { TRADITION = tradition_culinary_art }
+			entitled_record_tradition = { TRADITION = tradition_festivities }
+			entitled_record_tradition = { TRADITION = tradition_sorcerous_metallurgy }
+			entitled_record_tradition = { TRADITION = tradition_mystical_ancestors }
+			entitled_record_tradition = { TRADITION = tradition_religion_blending }
+			entitled_record_tradition = { TRADITION = tradition_religious_patronage }
+			entitled_record_tradition = { TRADITION = tradition_medicinal_plants }
+			entitled_record_tradition = { TRADITION = tradition_sacred_hunts }
+			entitled_record_tradition = { TRADITION = tradition_faith_bound }
+			entitled_record_tradition = { TRADITION = tradition_by_the_sword }
+			entitled_record_tradition = { TRADITION = tradition_language_scholars }
+			entitled_record_tradition = { TRADITION = tradition_runestones }
+			entitled_record_tradition = { TRADITION = tradition_merciful_blindings }
+			#common\culture\traditions\00_societal_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_xenophilic }
+			entitled_record_tradition = { TRADITION = tradition_chivalry }
+			entitled_record_tradition = { TRADITION = tradition_hard_working }
+			entitled_record_tradition = { TRADITION = tradition_loyal_soldiers }
+			entitled_record_tradition = { TRADITION = tradition_pacifism }
+			entitled_record_tradition = { TRADITION = tradition_spartan }
+			entitled_record_tradition = { TRADITION = tradition_diasporic }
+			entitled_record_tradition = { TRADITION = tradition_hunters }
+			entitled_record_tradition = { TRADITION = tradition_vegetarianism }
+			entitled_record_tradition = { TRADITION = tradition_seafaring }
+			entitled_record_tradition = { TRADITION = tradition_storytellers }
+			entitled_record_tradition = { TRADITION = tradition_music_theory }
+			entitled_record_tradition = { TRADITION = tradition_poetry }
+			entitled_record_tradition = { TRADITION = tradition_fishermen }
+			entitled_record_tradition = { TRADITION = tradition_mendicant_mystics }
+			entitled_record_tradition = { TRADITION = tradition_warrior_culture }
+			entitled_record_tradition = { TRADITION = tradition_martial_admiration }
+			entitled_record_tradition = { TRADITION = tradition_philosopher_culture }
+			entitled_record_tradition = { TRADITION = tradition_welcoming }
+			entitled_record_tradition = { TRADITION = tradition_eye_for_an_eye }
+			entitled_record_tradition = { TRADITION = tradition_zealous_people }
+			entitled_record_tradition = { TRADITION = tradition_forbearing }
+			entitled_record_tradition = { TRADITION = tradition_equitable }
+			entitled_record_tradition = { TRADITION = tradition_charitable }
+			entitled_record_tradition = { TRADITION = tradition_modest }
+			entitled_record_tradition = { TRADITION = tradition_practiced_pirates }
+			entitled_record_tradition = { TRADITION = tradition_life_is_just_a_joke }
+			entitled_record_tradition = { TRADITION = tradition_artisans }
+			#common\culture\traditions\01_fp1_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_fp1_coastal_warriors }
+			entitled_record_tradition = { TRADITION = tradition_fp1_performative_honour }
+			entitled_record_tradition = { TRADITION = tradition_fp1_northern_stories }
+			entitled_record_tradition = { TRADITION = tradition_fp1_trials_by_combat }
+			entitled_record_tradition = { TRADITION = tradition_fp1_the_right_to_prove }
+			#common\culture\traditions\03_fp2_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_fp2_state_ransoming }
+			entitled_record_tradition = { TRADITION = tradition_fp2_strategy_gamers }
+			entitled_record_tradition = { TRADITION = tradition_fp2_malleable_subjects }
+			entitled_record_tradition = { TRADITION = tradition_fp2_ritualised_friendship }
+			#common\culture\traditions\04_ep2_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_ep2_avid_falconers }
+			every_in_list = {
+				variable = traditions
+				prev = {
+					add_to_variable_list = {
+						name = current_traditions
+						target = prev
+					}
+				}
+			}
+
+		}
+
+		add_to_global_variable_list = {
+			name = entitled_martial
+			target = flag:martial_custom_male_only
+		}
+		add_to_global_variable_list = {
+			name = entitled_martial
+			target = flag:martial_custom_equal
+		}
+		add_to_global_variable_list = {
+			name = entitled_martial
+			target = flag:martial_custom_female_only
+		}
+
+		add_to_global_variable_list = {
+			name = entitled_ethos
+			target = flag:ethos_bellicose
+		}
+		add_to_global_variable_list = {
+			name = entitled_ethos
+			target = flag:ethos_stoic
+		}
+		add_to_global_variable_list = {
+			name = entitled_ethos
+			target = flag:ethos_bureaucratic
+		}
+		add_to_global_variable_list = {
+			name = entitled_ethos
+			target = flag:ethos_spiritual
+		}
+		add_to_global_variable_list = {
+			name = entitled_ethos
+			target = flag:ethos_courtly
+		}
+		add_to_global_variable_list = {
+			name = entitled_ethos
+			target = flag:ethos_egalitarian
+		}
+		add_to_global_variable_list = {
+			name = entitled_ethos
+			target = flag:ethos_communal
+		}
+
+		set_global_variable = {
+			name = entitled_tradition_grouping_combat
+			value = flag:combat
+		}
+		set_global_variable = {
+			name = entitled_tradition_grouping_regional
+			value = flag:regional
+		}
+		set_global_variable = {
+			name = entitled_tradition_grouping_realm
+			value = flag:realm
+		}
+		set_global_variable = {
+			name = entitled_tradition_grouping_ritual
+			value = flag:ritual
+		}
+		set_global_variable = {
+			name = entitled_tradition_grouping_societal
+			value = flag:societal
+		}
+		#common\culture\traditions\00_combat_traditions.txt
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_winter_warriors }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_forest_fighters }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_mountaineers }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_warriors_of_the_dry }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_highland_warriors }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_jungle_warriors }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_only_the_strong }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_warriors_by_merit }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_warrior_monks }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_talent_acquisition }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_strength_in_numbers }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_frugal_armorsmiths }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_malleable_invaders }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_quarrelsome }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_swords_for_hire }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_reverence_for_veterans }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_stalwart_defenders }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_battlefield_looters }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_hit_and_run }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_stand_and_fight }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_adaptive_skirmishing }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_formation_fighting }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_horse_breeder }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_longbow_competitions }
+		#common\culture\traditions\00_maa_traditions.txt
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_futuwaa }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_mubarizuns }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_desert_ribat }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_land_of_the_bow }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_druzhina }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_hussar }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_horn_mountain_skirmishing }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_bush_hunting }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_mobile_guards }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_khadga_puja }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_garuda_warriors }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_burman_royal_army }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_mountain_herding }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_forest_wardens }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_upland_skirmishing }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_strong_kinship }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_amharic_highlanders }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_polders }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_caucasian_wolves }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_hird }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_chanson_de_geste }
+		#common\culture\traditions\00_realm_traditions.txt
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_court_eunuchs }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_legalistic }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_republican_legacy }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_hereditary_hierarchy }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_esteemed_hospitality }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_gardening }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_tribe_unity }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_astute_diplomats }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_collective_lands }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_female_only_inheritance }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_equal_inheritance }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_roman_legacy }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_metal_craftsmanship }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_family_entrepreneurship }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_wedding_ceremonies }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_culture_blending }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_isolationist }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_fervent_temple_builders }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_agrarian }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_pastoralists }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_parochialism }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_ruling_caste }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_staunch_traditionalists }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_hill_dwellers }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_forest_folk }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_mountain_homes }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_dryland_dwellers }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_jungle_dwellers }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_wetlanders }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_hidden_cities }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_ancient_miners }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_castle_keepers }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_city_keepers }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_maritime_mercantilism }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_monastic_communities }
+		#common\culture\traditions\00_regional_traditions.txt
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_byzantine_succession }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_lords_of_the_elephant }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_african_tolerance }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_the_witenagemot }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_things }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_caravaneers }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_horse_lords }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_saharan_nomads }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_visigothic_codes }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_himalayan_settlers }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_desert_nomads }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_mountaineer_ruralism }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_steppe_tolerance }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_longbow_competitions }
+		entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_nubian_warrior_queens }
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_nubian_warrior_kings }
+		#common\culture\traditions\00_ritual_traditions.txt
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_monogamous }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_polygamous }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_concubines }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_sacred_mountains }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_sacred_groves }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_culinary_art }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_festivities }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_sorcerous_metallurgy }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_mystical_ancestors }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_religion_blending }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_religious_patronage }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_medicinal_plants }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_sacred_hunts }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_faith_bound }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_by_the_sword }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_language_scholars }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_runestones }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_merciful_blindings }
+		#common\culture\traditions\00_societal_traditions.txt
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_xenophilic }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_chivalry }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_hard_working }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_loyal_soldiers }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_pacifism }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_spartan }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_diasporic }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_hunters }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_vegetarianism }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_seafaring }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_storytellers }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_music_theory }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_poetry }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_fishermen }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_mendicant_mystics }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_warrior_culture }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_martial_admiration }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_philosopher_culture }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_welcoming }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_eye_for_an_eye }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_zealous_people }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_forbearing }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_equitable }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_charitable }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_modest }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_practiced_pirates }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_life_is_just_a_joke }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_artisans }
+		#common\culture\traditions\01_fp1_traditions.txt
+		entitled_tradition_setup = { GROUPING = combat TRADITION = tradition_fp1_coastal_warriors }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_fp1_performative_honour }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_fp1_northern_stories }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_fp1_trials_by_combat }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_fp1_the_right_to_prove }
+		#common\culture\traditions\03_fp2_traditions.txt
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_fp2_state_ransoming }
+		entitled_tradition_setup = { GROUPING = ritual TRADITION = tradition_fp2_strategy_gamers }
+		entitled_tradition_setup = { GROUPING = realm TRADITION = tradition_fp2_malleable_subjects }
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_fp2_ritualised_friendship }
+		#common\culture\traditions\04_ep2_traditions.txt
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_ep2_avid_falconers }
 	}
 }
 
 Entitled_on_game_start = {
 	effect = {
-		random_ruler = {
-			primary_title = { save_scope_as = custom_coa }
-		}
 		every_ruler = {
 			limit = { highest_held_title_tier = tier_county }
 			every_held_title = {
@@ -120,49 +542,5 @@ Entitled_on_game_start = {
 				set_color_from_title = title:d_entitled_blank
 			}
 		}
-		debug_log = "ENTITLED"
-		create_dynamic_title = {
-			tier = empire
-			name = ENTITLED_CUSTOM_TITLE
-		}
-		scope:new_title = {
-			set_delete_on_destroy = yes
-			save_scope_as = custom_empire
-			debug_log_scopes = no
-			set_coa = scope:custom_coa
-		}
-		set_global_variable = {
-			name = custom_empire
-			value = scope:custom_empire
-		}
-		create_dynamic_title = {
-			tier = kingdom
-			name = ENTITLED_CUSTOM_TITLE
-		}
-		scope:new_title = {
-			set_delete_on_destroy = yes
-			save_scope_as = custom_kingdom
-			debug_log_scopes = no
-			set_coa = scope:custom_coa
-		}
-		set_global_variable = {
-			name = custom_kingdom
-			value = scope:custom_kingdom
-		}
-		create_dynamic_title = {
-			tier = duchy
-			name = ENTITLED_CUSTOM_TITLE
-		}
-		scope:new_title = {
-			set_delete_on_destroy = yes
-			save_scope_as = custom_duchy
-			debug_log_scopes = no
-			set_coa = scope:custom_coa
-		}
-		set_global_variable = {
-			name = custom_duchy
-			value = scope:custom_duchy
-		}
-		set_global_variable = custom_name
 	}
 }

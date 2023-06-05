@@ -1,0 +1,9 @@
+﻿texticon = {
+	icon = edit_text_icon
+	iconsize = {
+		texture = "gfx/interface/icons/flat_icons/edit_text.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}

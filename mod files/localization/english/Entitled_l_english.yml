@@ -15,8 +15,9 @@ entitled_set_capital_county_tooltip: "#T Make Capital County#!\n\nMake the [Scop
 entitled_pick_rank_tooltip: "Chose a Rank"
 entitled_pick_capital_county_tooltip: "Chose a Capital County"
 
-entitled_liege_tooltip: "You will start as a Vassal of [liege.GetNameNoTooltip].\n\n#help You can start as the vassal of the lower-tiered ruler which holds a title of higher tier than your own, and De Jure above your Capital County.#!"
-entitled_no_liege_tooltip: "There is no ruler you could be liege to.\n\n#help You can start as the vassal of the lower-tiered ruler which holds a title of higher tier than your own, and De Jure above your Capital County.#!"
+entitled_independent_liege: "You will start as a Vassal of [liege.GetNameNoTooltip].\n\n#help You can start as the vassal of the lower-tiered ruler which holds a title of higher tier than your own, and De Jure above your Capital County.#!"
+entitled_independent_no_liege: "There is no ruler you could be liege to.\n\n#help You can start as the vassal of the lower-tiered ruler which holds a title of higher tier than your own, and De Jure above your Capital County.#!"
+entitled_independent_checked: "You will start independent"
 
 entitled_create_title_holding: "You get the [THIS.Title.GetName]"
 entitled_create_title_vassal: "[THIS.Char.GetName] becomes your vassal"
@@ -24,11 +25,28 @@ entitled_create_title_vassal_created: "[THIS.Title.GetHolder.GetName] loses the 
 
 ENTITLED_OPEN: "Create your own Primary Title"
 ENTITLED_RANK: "Rank:"
-ENTITLED_VASSAL: "#L Start as a Vassal#!"
+ENTITLED_INDEPENDENT: "#L Start Independent#!"
 ENTITLED_PRIMARY_TITLE: "Primary Title:"
 ENTITLED_CHOSE_RANK: "Pick a Rank"
-ENTITLED_CHOSE_CAPITAL_COUNTY: "Pick a Capital County"
+ENTITLED_CHOSE_CAPITAL_COUNTY: "#TOOLTIP:ENTITLED_CHOSE_CAPITAL_COUNTY_TOOLTIP #L Pick a Capital County#!#!"
+ENTITLED_CHOSE_CAPITAL_COUNTY_TOOLTIP: "#T Pick a Capital County#!\n\nUnfold the De Jure title menu below until you reach the County layer."
 ENTITLED_REALM_SIZE: "Realm Size: [GuiScope.ScriptValue('entitled_realm_size')|0]"
 ENTITLED_CAPITAL_COUNTY: "Capital County:"
 ENTITLED_DOMAIN_SIZE: "Domain Size: [GuiScope.ScriptValue('entitled_domain_size')|0]"
 ENTITLED_CREATE_TITLE: "Create Title"
+
+
+knight_culture_player_plural_vanilla: "GetPlayer.Custom( 'KnightCulturePlural' )"
+knight_culture_player_plural_entitled: "[knights|E]"
+COA_TOOLTIP_HOLDER_vanilla: "[GetPlayer.Custom2_Title( 'TitleRelationToMe', TITLE.Self )]"
+
+entitled_create_title_county_removed: "#TOOLTIP:entitled_create_title_county_removed_tooltip #L Counties removed#!#! from [county_removed.GetShortUIName]:"
+entitled_create_title_county_removed_tooltip: "#T Counties Removed#!\n\nThis ruler holds territory outside of your projected realm.\nAll Counties they holds within your projected realm will be given to a new Count in your realm."
+entitled_create_title_county_lost: "     [TARGET_TITLE.GetName]"
+
+ENTITLED_MAPMODE_TOOLTIP: "Switch back to the Title Creation map mode"
+ENTITLED_CLEAR_TOOLTIP: "Clear all changes and start over"
+ENTITLED_MENU_CULTURE_ICON: "Chose a ruler, and click the @edit_text_icon! icon next to their Culture's name."
+ENTITLED_MENU_CULTURE_ICON_NO_DLC: "The Royal Court DLC is required to enable Culture Customization"
+
+ENTITLED_WINDOW_TITLE: "Create Title"

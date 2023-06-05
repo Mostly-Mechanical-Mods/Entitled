@@ -1,19 +1,85 @@
-﻿Entitled_set_capital_county = {
+﻿Entitled_setup = {
+	is_valid = {
+		NOT = { has_global_variable = entitled_setup }
+	}
+	effect = {
+		set_global_variable = entitled_setup
+		random_independent_ruler = {
+			capital_county = { save_scope_as = random_county }
+		}
+		create_dynamic_title = {
+			tier = empire
+			name = ENTITLED_CUSTOM_TITLE
+		}
+		scope:new_title = {
+			set_capital_county = scope:random_county
+			set_delete_on_destroy = yes
+			save_scope_as = custom_empire
+			debug_log_scopes = no
+			set_coa = scope:random_county
+		}
+		set_global_variable = {
+			name = custom_empire
+			value = scope:custom_empire
+		}
+		create_dynamic_title = {
+			tier = kingdom
+			name = ENTITLED_CUSTOM_TITLE
+		}
+		scope:new_title = {
+			set_capital_county = scope:random_county
+			set_delete_on_destroy = yes
+			save_scope_as = custom_kingdom
+			debug_log_scopes = no
+			set_coa = scope:random_county
+		}
+		set_global_variable = {
+			name = custom_kingdom
+			value = scope:custom_kingdom
+		}
+		create_dynamic_title = {
+			tier = duchy
+			name = ENTITLED_CUSTOM_TITLE
+		}
+		scope:new_title = {
+			set_capital_county = scope:random_county
+			set_delete_on_destroy = yes
+			save_scope_as = custom_duchy
+			debug_log_scopes = no
+			set_coa = scope:random_county
+		}
+		set_global_variable = {
+			name = custom_duchy
+			value = scope:custom_duchy
+		}
+		set_global_variable = custom_name
+	}
+}
+
+Entitled_set_capital_county = {
 	scope = title
 	is_shown = {
 		global_var:capital_county ?= this
 	}
 	is_valid = {
 		tier = tier_county
-		is_target_in_global_variable_list = {
-			name = holdings
-			target = this
-		}
 	}
 	effect = {
 		set_global_variable = {
 			name = capital_county
 			value = this
+		}
+		set_global_variable = {
+			name = custom_county
+			value = this
+		}
+		add_to_global_variable_list = {
+			name = holdings
+			target = this
+		}
+		add_to_global_variable_list = {
+			name = realm
+			target = this
 		}
 	}
 }
@@ -367,23 +433,9 @@ Entitled_create_title = {
 		debug_log = "TEST ENTITLED"
 
 		random_living_character = {
-			if = {
-				limit = { NOT = { global_var:custom_empire ?= root }}
-				remove_global_variable = custom_empire
-				destroy_title = global_var:custom_empire
-			}
-			if = {
-				limit = { NOT = { global_var:custom_kingdom ?= root }}
-				remove_global_variable = custom_kingdom
-				destroy_title = global_var:custom_kingdom
-			}
-			if = {
-				limit = { NOT = { global_var:custom_duchy ?= root }}
-				remove_global_variable = custom_duchy
-				destroy_title = global_var:custom_duchy
-			}
+			save_scope_as = player
 		}
-
+		
 		create_character = {
 			save_scope_as = player
 			gender_female_chance = 50
@@ -391,11 +443,45 @@ Entitled_create_title = {
 			faith = global_var:capital_county.faith
 			culture = global_var:capital_county.culture
 		}
+
+		scope:player ?= {
+			if = {
+				limit = { NOT = { global_var:custom_empire ?= root }}
+				destroy_title = global_var:custom_empire
+				remove_global_variable = custom_empire
+			}
+			if = {
+				limit = { NOT = { global_var:custom_kingdom ?= root }}
+				destroy_title = global_var:custom_kingdom
+				remove_global_variable = custom_kingdom
+			}
+			if = {
+				limit = { NOT = { global_var:custom_duchy ?= root }}
+				destroy_title = global_var:custom_duchy
+				remove_global_variable = custom_duchy
+			}
+		}
+
+		set_delete_on_destroy = no
+
 		set_global_variable = {
 			name = player
 			value = scope:player
 		}
 		save_scope_as = primary_title
+
+		global_var:capital_county = {
+			ordered_this_title_or_de_jure_above = {
+				limit = { tier > scope:primary_title.tier }
+				order_by = {
+					subtract = tier
+				}
+				save_scope_as = de_jure_liege
+				scope:primary_title = {
+					set_de_jure_liege_title = prev
+				}
+			}
+		}
 
 		create_title_and_vassal_change = {
 			type = created
@@ -435,6 +521,7 @@ Entitled_create_title = {
 		every_in_global_list = {
 			variable = realm
 			limit = {
+				NOT = { is_in_list = removed_realm }
 				tier >= tier_county
 				holder ?= {
 					highest_held_title_tier < scope:primary_title.tier
@@ -478,7 +565,7 @@ Entitled_create_title = {
 				faith = this.faith
 				culture = this.culture
 			}
-			custom_tooltip = entitled_create_title_vassal_created
+			# custom_tooltip = entitled_create_title_vassal_created
 			change_title_holder = {
 				holder = scope:vassal
 				change = scope:change
@@ -489,6 +576,22 @@ Entitled_create_title = {
 					change = scope:change
 				}
 			}
+			holder = { add_to_list = county_removed }
+			add_to_list = county_lost
+		}
+
+		every_in_list = {
+			list = county_removed
+			save_scope_as = county_removed
+			custom_tooltip = entitled_create_title_county_removed
+			every_in_list = {
+				list = county_lost
+				limit = { holder = prev }
+				custom_description_no_bullet = {
+					text = entitled_create_title_county_lost
+					object = this
+				}
+			}
 		}
 
 		every_in_global_list = {
@@ -497,6 +600,8 @@ Entitled_create_title = {
 				tier < scope:primary_title.tier
 				tier >= tier_county
 				any_this_title_or_de_jure_above = {
+					NOT = { this = prev }
+					tier < scope:primary_title.tier
 					is_target_in_global_variable_list = {
 						name = de_jure
 						target = this
@@ -504,19 +609,49 @@ Entitled_create_title = {
 					count = 0
 				}
 			}
-			add_to_list = de_jure
+			# custom_tooltip = entitled_create_title_de_jure
+			set_de_jure_liege_title = scope:primary_title
 		}
 
-		every_in_list = {
-			list = de_jure
-			set_de_jure_liege_title = scope:primary_title
+		if = {
+			limit = {
+				exists = scope:liege
+				trigger_if = {
+					limit = { exists = scope:independent }
+					NOT = { scope:independent = flag:yes }
+				}
+			}
 		}
 		
 		resolve_title_and_vassal_change = scope:change
 
-		scope:primary_title = {
-			set_color_from_title = global_var:capital_county
-			set_delete_on_destroy = no
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = vassalize
+		}
+		scope:player = {
+			if = {
+				limit = {
+					exists = scope:de_jure_liege.holder
+					trigger_if = {
+						limit = { exists = scope:independent }
+						NOT = { scope:independent = flag:yes }
+					}
+				}
+				# custom_tooltip = test
+				change_liege = {
+					liege = scope:de_jure_liege.holder
+					change = scope:vassalize
+				}
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:vassalize
+
+		hidden_effect = {
+			scope:primary_title = {
+				set_color_from_title = global_var:capital_county
+			}
 		}
 		if = {
 			limit = { NOT = { exists = global_var:custom_name }}
@@ -526,8 +661,7 @@ Entitled_create_title = {
 		remove_global_variable = custom_empire
 		remove_global_variable = custom_kingdom
 		remove_global_variable = custom_duchy
-
-		set_global_variable = entitled_used
+		remove_global_variable = entitled_setup
 	}
 }
 
@@ -546,18 +680,40 @@ Entitled_clean = {
 	}
 }
 
-Entitled_vassal = {
+Entitled_independent = {
 	scope = title
-	is_valid = {
+	is_shown = {
 		global_var:capital_county ?= {
 			any_this_title_or_de_jure_above = {
 				exists = holder
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = holdings
+						target = this
+					}
+				}
 				tier > root.tier
+				# count = 0
 			}
 		}
 	}
+	is_valid = {
+		# global_var:capital_county ?= {
+		# 	any_this_title_or_de_jure_above = {
+		# 		exists = holder
+		# 		NOT = {
+		# 			is_target_in_global_variable_list = {
+		# 				name = holdings
+		# 				target = this
+		# 			}
+		# 		}
+		# 		tier > root.tier
+		# 		# count = 0
+		# 	}
+		# }
+	}
 	effect = {
-		global_var:capital_county = {
+		global_var:capital_county ?= {
 			ordered_this_title_or_de_jure_above = {
 				limit = {
 					exists = holder
@@ -570,11 +726,15 @@ Entitled_vassal = {
 			}
 		}
 		if = {
-			limit = { exists = scope:liege }
-			custom_tooltip = entitled_liege_tooltip
+			limit = { scope:independent ?= flag:yes }
+			custom_tooltip = entitled_independent_checked
+		}
+		else_if = {
+			limit = { NOT = { exists = scope:liege }}
+			custom_tooltip = entitled_independent_no_liege
 		}
 		else = {
-			custom_tooltip = entitled_no_liege_tooltip
+			custom_tooltip = entitled_independent_liege
 		}
 	}
 }
@@ -598,5 +758,206 @@ Entitled_title_selected = {
 				}
 			}
 		}
+	}
+}
+
+Entitled_culture = {
+	scope = culture
+	effect = { set_global_variable = { name = entitled_culture value = this }}
+}
+
+Entitled_culture_close = {
+	# scope = culture
+	effect = { remove_global_variable = entitled_culture }
+}
+
+test = {
+	scope = culture
+	effect = { set_variable = test }
+}
+
+Entitled_max_traditions = {
+	scope = culture
+	is_valid = {
+		
+	}
+}
+
+Entitled_culture_reset = {
+	scope = culture
+	effect = {
+		entitled_reset_ethos = { ETHOS = ethos_bellicose }
+		entitled_reset_ethos = { ETHOS = ethos_stoic }
+		entitled_reset_ethos = { ETHOS = ethos_bureaucratic }
+		entitled_reset_ethos = { ETHOS = ethos_spiritual }
+		entitled_reset_ethos = { ETHOS = ethos_courtly }
+		entitled_reset_ethos = { ETHOS = ethos_egalitarian }
+		entitled_reset_ethos = { ETHOS = ethos_communal }
+
+		entitled_reset_martial = { MARTIAL = martial_custom_male_only }
+		entitled_reset_martial = { MARTIAL = martial_custom_equal }
+		entitled_reset_martial = { MARTIAL = martial_custom_female_only }
+
+		entitled_reset_tradition = { TRADITION = tradition_winter_warriors }
+		entitled_reset_tradition = { TRADITION = tradition_forest_fighters }
+		entitled_reset_tradition = { TRADITION = tradition_mountaineers }
+		entitled_reset_tradition = { TRADITION = tradition_warriors_of_the_dry }
+		entitled_reset_tradition = { TRADITION = tradition_highland_warriors }
+		entitled_reset_tradition = { TRADITION = tradition_jungle_warriors }
+		entitled_reset_tradition = { TRADITION = tradition_only_the_strong }
+		entitled_reset_tradition = { TRADITION = tradition_warriors_by_merit }
+		entitled_reset_tradition = { TRADITION = tradition_warrior_monks }
+		entitled_reset_tradition = { TRADITION = tradition_talent_acquisition }
+		entitled_reset_tradition = { TRADITION = tradition_strength_in_numbers }
+		entitled_reset_tradition = { TRADITION = tradition_frugal_armorsmiths }
+		entitled_reset_tradition = { TRADITION = tradition_malleable_invaders }
+		entitled_reset_tradition = { TRADITION = tradition_quarrelsome }
+		entitled_reset_tradition = { TRADITION = tradition_swords_for_hire }
+		entitled_reset_tradition = { TRADITION = tradition_reverence_for_veterans }
+		entitled_reset_tradition = { TRADITION = tradition_stalwart_defenders }
+		entitled_reset_tradition = { TRADITION = tradition_battlefield_looters }
+		entitled_reset_tradition = { TRADITION = tradition_hit_and_run }
+		entitled_reset_tradition = { TRADITION = tradition_stand_and_fight }
+		entitled_reset_tradition = { TRADITION = tradition_adaptive_skirmishing }
+		entitled_reset_tradition = { TRADITION = tradition_formation_fighting }
+		entitled_reset_tradition = { TRADITION = tradition_horse_breeder }
+		entitled_reset_tradition = { TRADITION = tradition_longbow_competitions }
+		#common\culture\traditions\00_maa_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_futuwaa }
+		entitled_reset_tradition = { TRADITION = tradition_mubarizuns }
+		entitled_reset_tradition = { TRADITION = tradition_desert_ribat }
+		entitled_reset_tradition = { TRADITION = tradition_land_of_the_bow }
+		entitled_reset_tradition = { TRADITION = tradition_druzhina }
+		entitled_reset_tradition = { TRADITION = tradition_hussar }
+		entitled_reset_tradition = { TRADITION = tradition_horn_mountain_skirmishing }
+		entitled_reset_tradition = { TRADITION = tradition_bush_hunting }
+		entitled_reset_tradition = { TRADITION = tradition_mobile_guards }
+		entitled_reset_tradition = { TRADITION = tradition_khadga_puja }
+		entitled_reset_tradition = { TRADITION = tradition_garuda_warriors }
+		entitled_reset_tradition = { TRADITION = tradition_burman_royal_army }
+		entitled_reset_tradition = { TRADITION = tradition_mountain_herding }
+		entitled_reset_tradition = { TRADITION = tradition_forest_wardens }
+		entitled_reset_tradition = { TRADITION = tradition_upland_skirmishing }
+		entitled_reset_tradition = { TRADITION = tradition_strong_kinship }
+		entitled_reset_tradition = { TRADITION = tradition_amharic_highlanders }
+		entitled_reset_tradition = { TRADITION = tradition_polders }
+		entitled_reset_tradition = { TRADITION = tradition_caucasian_wolves }
+		entitled_reset_tradition = { TRADITION = tradition_hird }
+		entitled_reset_tradition = { TRADITION = tradition_chanson_de_geste }
+		#common\culture\traditions\00_realm_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_court_eunuchs }
+		entitled_reset_tradition = { TRADITION = tradition_legalistic }
+		entitled_reset_tradition = { TRADITION = tradition_republican_legacy }
+		entitled_reset_tradition = { TRADITION = tradition_hereditary_hierarchy }
+		entitled_reset_tradition = { TRADITION = tradition_esteemed_hospitality }
+		entitled_reset_tradition = { TRADITION = tradition_gardening }
+		entitled_reset_tradition = { TRADITION = tradition_tribe_unity }
+		entitled_reset_tradition = { TRADITION = tradition_astute_diplomats }
+		entitled_reset_tradition = { TRADITION = tradition_collective_lands }
+		entitled_reset_tradition = { TRADITION = tradition_female_only_inheritance }
+		entitled_reset_tradition = { TRADITION = tradition_equal_inheritance }
+		entitled_reset_tradition = { TRADITION = tradition_roman_legacy }
+		entitled_reset_tradition = { TRADITION = tradition_metal_craftsmanship }
+		entitled_reset_tradition = { TRADITION = tradition_family_entrepreneurship }
+		entitled_reset_tradition = { TRADITION = tradition_wedding_ceremonies }
+		entitled_reset_tradition = { TRADITION = tradition_culture_blending }
+		entitled_reset_tradition = { TRADITION = tradition_isolationist }
+		entitled_reset_tradition = { TRADITION = tradition_fervent_temple_builders }
+		entitled_reset_tradition = { TRADITION = tradition_agrarian }
+		entitled_reset_tradition = { TRADITION = tradition_pastoralists }
+		entitled_reset_tradition = { TRADITION = tradition_parochialism }
+		entitled_reset_tradition = { TRADITION = tradition_ruling_caste }
+		entitled_reset_tradition = { TRADITION = tradition_staunch_traditionalists }
+		entitled_reset_tradition = { TRADITION = tradition_hill_dwellers }
+		entitled_reset_tradition = { TRADITION = tradition_forest_folk }
+		entitled_reset_tradition = { TRADITION = tradition_mountain_homes }
+		entitled_reset_tradition = { TRADITION = tradition_dryland_dwellers }
+		entitled_reset_tradition = { TRADITION = tradition_jungle_dwellers }
+		entitled_reset_tradition = { TRADITION = tradition_wetlanders }
+		entitled_reset_tradition = { TRADITION = tradition_hidden_cities }
+		entitled_reset_tradition = { TRADITION = tradition_ancient_miners }
+		entitled_reset_tradition = { TRADITION = tradition_castle_keepers }
+		entitled_reset_tradition = { TRADITION = tradition_city_keepers }
+		entitled_reset_tradition = { TRADITION = tradition_maritime_mercantilism }
+		entitled_reset_tradition = { TRADITION = tradition_monastic_communities }
+		#common\culture\traditions\00_regional_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_byzantine_succession }
+		entitled_reset_tradition = { TRADITION = tradition_lords_of_the_elephant }
+		entitled_reset_tradition = { TRADITION = tradition_african_tolerance }
+		entitled_reset_tradition = { TRADITION = tradition_the_witenagemot }
+		entitled_reset_tradition = { TRADITION = tradition_things }
+		entitled_reset_tradition = { TRADITION = tradition_caravaneers }
+		entitled_reset_tradition = { TRADITION = tradition_horse_lords }
+		entitled_reset_tradition = { TRADITION = tradition_saharan_nomads }
+		entitled_reset_tradition = { TRADITION = tradition_visigothic_codes }
+		entitled_reset_tradition = { TRADITION = tradition_himalayan_settlers }
+		entitled_reset_tradition = { TRADITION = tradition_desert_nomads }
+		entitled_reset_tradition = { TRADITION = tradition_mountaineer_ruralism }
+		entitled_reset_tradition = { TRADITION = tradition_steppe_tolerance }
+		entitled_reset_tradition = { TRADITION = tradition_longbow_competitions }
+		entitled_reset_tradition = { TRADITION = tradition_nubian_warrior_queens }
+		entitled_reset_tradition = { TRADITION = tradition_nubian_warrior_kings }
+		#common\culture\traditions\00_ritual_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_monogamous }
+		entitled_reset_tradition = { TRADITION = tradition_polygamous }
+		entitled_reset_tradition = { TRADITION = tradition_concubines }
+		entitled_reset_tradition = { TRADITION = tradition_sacred_mountains }
+		entitled_reset_tradition = { TRADITION = tradition_sacred_groves }
+		entitled_reset_tradition = { TRADITION = tradition_culinary_art }
+		entitled_reset_tradition = { TRADITION = tradition_festivities }
+		entitled_reset_tradition = { TRADITION = tradition_sorcerous_metallurgy }
+		entitled_reset_tradition = { TRADITION = tradition_mystical_ancestors }
+		entitled_reset_tradition = { TRADITION = tradition_religion_blending }
+		entitled_reset_tradition = { TRADITION = tradition_religious_patronage }
+		entitled_reset_tradition = { TRADITION = tradition_medicinal_plants }
+		entitled_reset_tradition = { TRADITION = tradition_sacred_hunts }
+		entitled_reset_tradition = { TRADITION = tradition_faith_bound }
+		entitled_reset_tradition = { TRADITION = tradition_by_the_sword }
+		entitled_reset_tradition = { TRADITION = tradition_language_scholars }
+		entitled_reset_tradition = { TRADITION = tradition_runestones }
+		entitled_reset_tradition = { TRADITION = tradition_merciful_blindings }
+		#common\culture\traditions\00_societal_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_xenophilic }
+		entitled_reset_tradition = { TRADITION = tradition_chivalry }
+		entitled_reset_tradition = { TRADITION = tradition_hard_working }
+		entitled_reset_tradition = { TRADITION = tradition_loyal_soldiers }
+		entitled_reset_tradition = { TRADITION = tradition_pacifism }
+		entitled_reset_tradition = { TRADITION = tradition_spartan }
+		entitled_reset_tradition = { TRADITION = tradition_diasporic }
+		entitled_reset_tradition = { TRADITION = tradition_hunters }
+		entitled_reset_tradition = { TRADITION = tradition_vegetarianism }
+		entitled_reset_tradition = { TRADITION = tradition_seafaring }
+		entitled_reset_tradition = { TRADITION = tradition_storytellers }
+		entitled_reset_tradition = { TRADITION = tradition_music_theory }
+		entitled_reset_tradition = { TRADITION = tradition_poetry }
+		entitled_reset_tradition = { TRADITION = tradition_fishermen }
+		entitled_reset_tradition = { TRADITION = tradition_mendicant_mystics }
+		entitled_reset_tradition = { TRADITION = tradition_warrior_culture }
+		entitled_reset_tradition = { TRADITION = tradition_martial_admiration }
+		entitled_reset_tradition = { TRADITION = tradition_philosopher_culture }
+		entitled_reset_tradition = { TRADITION = tradition_welcoming }
+		entitled_reset_tradition = { TRADITION = tradition_eye_for_an_eye }
+		entitled_reset_tradition = { TRADITION = tradition_zealous_people }
+		entitled_reset_tradition = { TRADITION = tradition_forbearing }
+		entitled_reset_tradition = { TRADITION = tradition_equitable }
+		entitled_reset_tradition = { TRADITION = tradition_charitable }
+		entitled_reset_tradition = { TRADITION = tradition_modest }
+		entitled_reset_tradition = { TRADITION = tradition_practiced_pirates }
+		entitled_reset_tradition = { TRADITION = tradition_life_is_just_a_joke }
+		entitled_reset_tradition = { TRADITION = tradition_artisans }
+		#common\culture\traditions\01_fp1_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_fp1_coastal_warriors }
+		entitled_reset_tradition = { TRADITION = tradition_fp1_performative_honour }
+		entitled_reset_tradition = { TRADITION = tradition_fp1_northern_stories }
+		entitled_reset_tradition = { TRADITION = tradition_fp1_trials_by_combat }
+		entitled_reset_tradition = { TRADITION = tradition_fp1_the_right_to_prove }
+		#common\culture\traditions\03_fp2_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_fp2_state_ransoming }
+		entitled_reset_tradition = { TRADITION = tradition_fp2_strategy_gamers }
+		entitled_reset_tradition = { TRADITION = tradition_fp2_malleable_subjects }
+		entitled_reset_tradition = { TRADITION = tradition_fp2_ritualised_friendship }
+		#common\culture\traditions\04_ep2_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_ep2_avid_falconers }
+
 	}
 }

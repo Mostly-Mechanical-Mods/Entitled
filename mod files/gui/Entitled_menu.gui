@@ -1,0 +1,109 @@
+window = {
+	visible = "[Not(GetPlayer.IsValid)]"
+	name = "Entitled_menu"
+	widgetid = "Entitled_menu"
+	parentanchor = top|right
+	size = { 70 140 }
+	position = { -400 0 }
+	layer = windows_layer
+	filter_mouse = all
+	alwaystransparent = no
+
+	# visible = "[GetVariableSystem.Exists('BMU_claim_window')]"
+	
+	using = Window_Background_Sidebar_Multiplayer_Right
+
+
+	state = {
+		name = _show
+	}
+
+	state = {
+		name = _hide
+	}
+
+	margin_widget = {
+		size = { 100% 100% }
+		margin_top = 20
+		# margin = { 0 5 }
+		# # margin_right = 13
+
+		
+		vbox = {
+			layoutpolicy_vertical = expanding
+			spacing = 10
+			button_group = {
+				highlight_icon = {
+					parentanchor = center
+					# position = { 0 5 }
+					size = { 40 40 }
+					texture = "gfx/interface/icons/character_interactions/debug_take_title.dds"
+	
+					glow = {
+						color = { 0 0 0 0.8 }
+						glow_radius = 3
+						using = Glow_Standard
+					}
+				}
+				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+				onclick = "[SetMapMode(  'baronies' )]"
+				onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
+				down = "[GetVariableSystem.HasValue('Entitled','title')]"
+			}
+
+			
+
+			button_group = {
+				visible = "[HasDlcFeature('royal_court')]"
+				highlight_icon = {
+					parentanchor = center
+					# position = { 0 5 }
+					size = { 40 40 }
+					texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
+	
+					glow = {
+						color = { 0 0 0 0.8 }
+						glow_radius = 3
+						using = Glow_Standard
+					}
+				}
+				onclick = "[GetVariableSystem.SetOrToggle('Entitled','culture')]"
+				onclick = "[SetMapMode(  'cultures' )]"
+				enabled = "[GetGlobalVariable('entitled_culture').IsSet]"
+				tooltip = ENTITLED_MENU_CULTURE_ICON
+			}
+			button_group = {
+				visible = "[Not(HasDlcFeature('royal_court'))]"
+				highlight_icon = {
+					parentanchor = center
+					# position = { 0 5 }
+					size = { 40 40 }
+					texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
+	
+					glow = {
+						color = { 0 0 0 0.8 }
+						glow_radius = 3
+						using = Glow_Standard
+					}
+				}
+				enabled = "[HasDlcFeature('royal_court')]"
+				tooltip = ENTITLED_MENU_CULTURE_ICON_NO_DLC
+			}
+			expand = {}
+		}
+	}
+}
+
+Types Entitlement {
+	Type entitled_culture_button = container {
+	button_icon = {
+		datacontext = "[Character.GetCulture]"
+		visible = "[HasDlcFeature('royal_court')]"
+		size = { 20 20 }
+		texture = "gfx/interface/icons/flat_icons/edit_text.dds"
+		onclick = "[GetVariableSystem.SetOrToggle('Entitled','culture')]"
+		onclick = "[GetScriptedGui('Entitled_culture').Execute(GuiScope.SetRoot(Culture.MakeScope).End)]"
+		onclick = "[SetMapMode(  'cultures' )]"
+		# onclick = "[OpenGameViewData('culture_window',Culture.GetID)]"
+	}
+}
