@@ -1,0 +1,323 @@
+﻿bao_tradition_breizh_laid = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+bao_tradition_breizh_collective_lands = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+bao_tradition_free_range = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_guanche_warrior = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_hfc_bedouin_oral_poetry = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_RICE_masters_of_the_river = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_RICE_african_mud_masons = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_RICE_gold_dust_traders = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_RICE_boba_drinkers = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_RICE_music_practice = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_RICE_volga_apiculture = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_RICE_finnic_sorcerers = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_kinship_based_craft_guilds = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_igwebuike = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_ritual_hegemony = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_whalers = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_master_whalers = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_arctic_adaptations = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_seasonal_migrators = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_red_ochre = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_siberian_survivalists = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_swahili_contacts = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_ubiquity_of_poetry = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_xianbei_scions = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_white_huns = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_children_of_the_nile = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_silk_road = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_beyond_the_reach_of_eagles = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_galician_portuguese_poetry = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_kala_settlements = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_akhtarvenik = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_khuzi = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_khuzi_elevated_elymaean = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_khuzi_elevated_community = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_khuzi_elevated_traders = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_northmen = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_adventurers_and_aristocrats = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_adventurers_and_aristocrats_military = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+tradition_RICE_adventurers_and_aristocrats_culture = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}

@@ -1,0 +1,108 @@
+﻿
+
+
+
+tradition_RICE_volga_apiculture = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		RICE_is_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_turkic
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_pillar = heritage_ugro_permian
+			# scope:character = {
+			# 	capital_province = {
+			# 		geographical_region = world_steppe_west # Change to new Volga region
+			# 	}
+			# }
+		}		
+		any_culture_county = {
+			count >= 4
+			any_county_province = {
+				geographical_region = RICE_volga_river_region
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_turkic
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_pillar = heritage_ugro_permian
+			# scope:character = {
+			# 	capital_province = {
+			# 		geographical_region = world_steppe_west # Change to new Volga region
+			# 	}
+			# }
+		}		
+		
+		custom_tooltip = {
+			text = RICE_culture_in_volga_river_basin_desc
+			any_culture_county = {
+				count >= 4
+				any_county_province = {
+					geographical_region = RICE_volga_river_region
+				}
+			}
+		}
+		# custom_tooltip = {
+		# 	text = RICE_culture_in_volga_beekeeper_terrain_desc
+		# 	any_culture_county = {
+		# 		any_county_province = {
+		# 			OR = {
+		# 				terrain = farmlands
+		# 				terrain = floodplains
+		# 				terrain = plains
+		# 				terrain = forest
+		# 				terrain = hills
+		# 				terrain = wetlands
+		# 			}
+		# 		}
+		# 	}
+		# }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_volga_apiculture }
+	}
+}
+
+
+
+
+
+tradition_RICE_finnic_sorcerers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		RICE_is_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_balto_finnic
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_ugro_permian
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_balto_finnic
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_ugro_permian
+		}
+		scope:character = {
+			faith = {
+				has_doctrine = doctrine_witchcraft_accepted
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hfc_bedouin_honor_codes }
+	}
+}
+

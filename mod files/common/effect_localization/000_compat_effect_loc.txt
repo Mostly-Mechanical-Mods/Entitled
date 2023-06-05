@@ -1,7 +1,1 @@
-﻿cannot_have_tradition_music_theory = {
-	third = debug_loc
-}
-
-culture_in_sacred_springs_terrain_desc = {
-	third = debug_loc
-}
+﻿

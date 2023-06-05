@@ -1,0 +1,138 @@
+﻿################################
+# REGIONAL CULTURAL TRADITIONS #
+################################
+
+tradition_byzantine_succession = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_lords_of_the_elephant = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_african_tolerance = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_the_witenagemot = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_things = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_caravaneers = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_horse_lords = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_saharan_nomads = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_visigothic_codes = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_himalayan_settlers = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_desert_nomads = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_mountaineer_ruralism = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_steppe_tolerance = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_nubian_warrior_queens = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_nubian_warrior_kings = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}

@@ -1,0 +1,198 @@
+﻿#######################
+# CULTURAL TRADITIONS #
+#######################
+
+######################
+# MAA Traditions 	 #
+######################
+
+tradition_futuwaa = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_mubarizuns = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_desert_ribat = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_land_of_the_bow = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_druzhina = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_hussar = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_horn_mountain_skirmishing = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_bush_hunting = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_mobile_guards = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_khadga_puja = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_garuda_warriors = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_burman_royal_army = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_mountain_herding = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_forest_wardens = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_upland_skirmishing = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_strong_kinship = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_amharic_highlanders = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+
+tradition_polders = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_caucasian_wolves = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+tradition_hird = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
+
+tradition_chanson_de_geste = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}

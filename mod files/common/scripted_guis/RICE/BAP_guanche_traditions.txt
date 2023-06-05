@@ -1,0 +1,41 @@
+﻿
+#######################
+# MAA TRADITIONS #
+#######################
+
+tradition_guanche_warrior = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		RICE_is_loaded = yes
+		OR = {
+			this = culture:guanches
+			any_parent_culture_or_above = {
+				this = culture:guanches
+			}
+		}
+		NOT = { has_cultural_tradition = tradition_highland_warriors }
+	}
+	is_valid = {
+		OR = {
+			this = culture:guanches
+			any_parent_culture_or_above = {
+				this = culture:guanches
+			}
+		}
+		custom_description = {
+			text = culture_in_hills_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = hills
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_guanche_warrior }
+	}
+}
+
