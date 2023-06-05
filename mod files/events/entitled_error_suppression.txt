@@ -9,8 +9,8 @@ entitled_error_suppression.0001 = {
 	}
 
 	immediate = {	
-		fix_variable_error = { X = entitled_is_loaded }
-		fix_variable_error = { X = entitled_v1_0 }
+		fix_variable_error = { X = Entitled_is_loaded }
+		fix_variable_error = { X = Entitled_v1_0 }
 
 		fix_variable_error = { X = realm }
 		fix_variable_error = { X = societal }
@@ -36,6 +36,48 @@ entitled_error_suppression.0001 = {
 		fix_variable_error = { X = entitled_ethos }
 		fix_variable_error = { X = martial }
 		fix_variable_error = { X = ethos }
+
+		fix_variable_error = { X = independent }
+
+		#TFE
+		fix_variable_error = { X = entitled_traditions_writing }
+		fix_variable_error = { X = tradition_script_syriac }
+		fix_variable_error = { X = tradition_script_brahmi }
+		fix_variable_error = { X = tradition_script_runic }
+		fix_variable_error = { X = tradition_script_mon }
+		fix_variable_error = { X = tradition_script_tifinagh }
+		fix_variable_error = { X = tradition_script_devanagari }
+		fix_variable_error = { X = tradition_script_south_arabian }
+		fix_variable_error = { X = tradition_script_hebrew }
+		fix_variable_error = { X = tradition_script_cyrillic }
+		fix_variable_error = { X = tradition_script_pahlavi }
+		fix_variable_error = { X = tradition_script_meroitic }
+		fix_variable_error = { X = tradition_script_latin }
+		fix_variable_error = { X = tradition_script_coptic }
+		fix_variable_error = { X = tradition_script_gothic }
+		fix_variable_error = { X = tradition_script_etruscan }
+		fix_variable_error = { X = tradition_script_cuneiform }
+		fix_variable_error = { X = tradition_script_georgian }
+		fix_variable_error = { X = tradition_script_sinhala }
+		fix_variable_error = { X = tradition_script_tamil }
+		fix_variable_error = { X = tradition_script_geez }
+		fix_variable_error = { X = tradition_script_arabic }
+		fix_variable_error = { X = tradition_script_gupta }
+		fix_variable_error = { X = tradition_script_greek }
+		fix_variable_error = { X = tradition_script_manichean }
+		fix_variable_error = { X = tradition_script_hungarian }
+		fix_variable_error = { X = tradition_script_phoenician }
+		fix_variable_error = { X = tradition_script_hieroglyphic }
+		fix_variable_error = { X = tradition_script_aramaic }
+		fix_variable_error = { X = tradition_script_tibetan }
+		fix_variable_error = { X = tradition_script_nabatean }
+		fix_variable_error = { X = tradition_script_armenian }
+		fix_variable_error = { X = tradition_script_ogham }
+		fix_variable_error = { X = tradition_script_glagolitic }
+		fix_variable_error = { X = tradition_script_han }
+		fix_variable_error = { X = tradition_script_sogdian }
+		fix_variable_error = { X = tradition_script_turkic }
+
 		
 	}
 }

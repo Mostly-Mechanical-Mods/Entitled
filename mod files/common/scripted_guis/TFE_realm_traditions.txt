@@ -1,0 +1,135 @@
+﻿################################
+# REALM CULTURAL TRADITIONS #
+################################
+
+tradition_migrations = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		NOT = { has_cultural_tradition = tradition_hird }
+	}
+
+	is_valid = {
+		# Must be of a suitable heritage.
+		OR = {
+			has_cultural_pillar = heritage_north_germanic
+			has_cultural_pillar = heritage_west_germanic
+			has_cultural_pillar = heritage_east_germanic
+			has_cultural_pillar = heritage_central_germanic
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_west_slavic
+			has_cultural_pillar = heritage_south_slavic
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_pillar = heritage_slavic
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_migrations }
+	}
+}
+
+tradition_varangians = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		NOT = { has_cultural_tradition = tradition_hird }
+	}
+
+	is_valid = {
+		# Must be of a suitable heritage.
+		OR = {
+			has_cultural_pillar = heritage_north_germanic
+			has_cultural_pillar = heritage_balto_finnic
+			has_cultural_pillar = heritage_baltic
+		}
+		has_dlc_feature = the_northern_lords
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_varangians }
+	}
+}
+
+tradition_roman_hubris = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		NOT = { has_cultural_tradition = tradition_xenophilic }
+	}
+
+	is_valid = {
+		has_cultural_pillar = heritage_latin
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_roman_hubris }
+	}
+}
+
+tradition_nomadic_migrations = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		NOT = { has_cultural_tradition = tradition_hird }
+	}
+
+	is_valid = {
+		# Must be of a suitable heritage.
+		OR = {
+			has_cultural_pillar = heritage_turkic
+			has_cultural_pillar = heritage_magyar
+			has_cultural_pillar = heritage_mongolic
+			has_cultural_pillar = heritage_slavic
+			has_cultural_pillar = heritage_sarmatian
+			scope:character ?= {
+				government_has_flag = government_is_nomadic
+			}
+			AND = {
+				has_cultural_pillar = heritage_iranian
+				scope:character ?= {
+					government_has_flag = government_is_nomadic
+				}
+			}
+			AND = {
+				has_cultural_pillar = heritage_tocharian
+				scope:character ?= {
+					government_has_flag = government_is_nomadic
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_nomadic_migrations }
+	}
+}
+
+tradition_roman_architecture = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_byzantine
+			has_cultural_pillar = heritage_latin
+		}
+	}
+
+	is_valid = { # Shatzi: balancing purposes
+		NOT = { has_cultural_tradition = tradition_hard_working }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_roman_architecture }
+	}
+}

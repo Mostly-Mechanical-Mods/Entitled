@@ -1,0 +1,335 @@
+﻿################################
+# REGIONAL CULTURAL TRADITIONS #
+################################
+
+
+
+# Basically Parochialism with the Chakar MAA and without the negatives
+tradition_sogdian_naf = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = heritage_tocharian
+		}
+		NOT = { has_cultural_tradition = tradition_parochialism }
+		NOT = { has_cultural_tradition = tradition_republican_legacy }
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = heritage_tocharian
+		}
+		NOT = { has_cultural_tradition = tradition_parochialism }
+		NOT = { has_cultural_tradition = tradition_republican_legacy }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sogdian_naf }
+	}
+}
+
+
+tradition_the_witenagemot = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_west_germanic
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_goidelic
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_west_germanic
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_goidelic
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_the_witenagemot }
+	}
+}
+
+# Africagrarian
+tradition_african_agriculture = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			this = culture:afro_roman
+			any_parent_culture_or_above = {
+				this = culture:afro_roman
+			}
+		}
+	}
+	
+	is_valid = {
+		NOT = { has_cultural_tradition = tradition_dryland_dwellers }
+		custom_description = {
+			text = culture_in_dryland_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = drylands
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_african_agriculture }
+	}
+}
+
+# replacement for the ahistorical desert ribat
+tradition_desert_horsemen = { 
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		has_cultural_pillar = heritage_berber
+		NOT = { has_cultural_tradition = tradition_horse_breeder }
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_dryland_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = drylands
+						terrain = desert
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_desert_horsemen }
+	}
+}
+
+tradition_desert_wonders = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			this = culture:garamantian
+			any_parent_culture_or_above = {
+				this = culture:garamantian
+			}
+		}
+	}
+	
+	is_valid = {
+		NOT = { has_cultural_tradition = tradition_dryland_dwellers }
+		custom_description = {
+			text = culture_in_dryland_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = drylands
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_desert_wonders }
+	}
+}
+
+# Mard-o-Mard:
+tradition_mard_o_mard = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = heritage_caucasian
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = heritage_caucasian
+		}
+		NOT = { has_cultural_tradition = tradition_horse_breeder }
+		NOT = { has_cultural_tradition = tradition_horse_lords }
+		NOT = { has_innovation = innovation_elephantry }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mard_o_mard }
+	}
+}
+
+
+tradition_warriors_of_alborz = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = { #Replaced by Horn Mountain Skirmishing & Caucasian Wolves
+		TFE_is_loaded = yes
+		NOR = {
+			has_cultural_pillar = heritage_somalian
+			has_cultural_pillar = heritage_east_african
+			this = culture:georgian
+			any_parent_culture_or_above = {
+				this = culture:georgian
+			}
+			has_cultural_tradition = tradition_caucasian_wolves
+			has_cultural_tradition = tradition_horn_mountain_skirmishing
+		}
+		any_culture_county = {
+			title_province = {
+				geographical_region = world_daylam
+			}
+		}
+	}
+
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_warriors_of_alborz }
+	}
+}
+
+tradition_servile_soldiers = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_central_african
+		}
+	}
+	
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_servile_soldiers }
+	}
+}
+
+
+# Cappadocian Underground Cities
+tradition_underground_cities = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			this = culture:cappadocian
+			any_parent_culture_or_above = {
+				this = culture:cappadocian
+			}
+		}
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_underground_cities }
+	}
+}
+
+
+# Sardinian unique tradition
+tradition_sardinian_barbarians = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+	}
+	is_valid = {
+		OR = {
+			this = culture:nuragic
+			any_parent_culture_or_above = {
+				this = culture:nuragic
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sardinian_barbarians }
+	}
+}
+
+
+# Thracian Orpheus tradition
+# Better version of Music Theory and Poetry in one
+tradition_orpheus = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_ep1_court_positions_dlc_trigger = yes
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:thracian
+			any_parent_culture_or_above = {
+				this = culture:thracian
+			}
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_poetry
+			culture_tradition:tradition_poetry = { is_in_list = traits }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_music_theory
+			culture_tradition:tradition_music_theory = { is_in_list = traits }
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_orpheus }
+	}
+}
+

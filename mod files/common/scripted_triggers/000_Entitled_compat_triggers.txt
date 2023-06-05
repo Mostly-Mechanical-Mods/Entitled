@@ -1,0 +1,4 @@
+﻿TFE_is_loaded = { always = no }
+no_other_script_trigger = { always = yes }
+
+CE_is_loaded = { always = yes }

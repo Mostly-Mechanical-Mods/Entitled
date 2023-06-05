@@ -196,6 +196,16 @@ tradition_music_theory = {
 	is_shown = {
 		has_ep1_court_positions_dlc_trigger = yes
 	}
+
+	is_valid = {
+		trigger_if = {
+			limit = { TFE_is_loaded = yes }
+			custom_tooltip = {
+				text = cannot_have_tradition_orpheus
+				NOT = { has_cultural_tradition = tradition_orpheus }
+			}
+		}
+	}
 	
 	effect = {
 		entitled_toggle_tradition = { TRADITION = tradition_music_theory }
@@ -210,6 +220,13 @@ tradition_poetry = {
 		custom_tooltip = {
 			text = cannot_have_tradition_fp1_northern_stories
 			NOT = { has_cultural_tradition = tradition_fp1_northern_stories }
+		}
+		trigger_if = {
+			limit = { TFE_is_loaded = yes }
+			custom_tooltip = {
+				text = cannot_have_tradition_orpheus
+				NOT = { has_cultural_tradition = tradition_orpheus }
+			}
 		}
 	}
 	

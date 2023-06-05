@@ -1,0 +1,2087 @@
+﻿tradition_script_arabic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_arabic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_arabic
+				}
+			}
+			this = culture:bedouin
+			any_parent_culture_or_above = {
+				this = culture:bedouin
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_arabic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_arabic
+				}
+			}
+			this = culture:bedouin
+			any_parent_culture_or_above = {
+				this = culture:bedouin
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_arabic }
+	}
+}
+
+tradition_script_aramaic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_aramaic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_aramaic
+				}
+			}
+			this = culture:aramean
+			any_parent_culture_or_above = {
+				this = culture:aramean
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_aramaic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_aramaic
+				}
+			}
+			this = culture:aramean
+			any_parent_culture_or_above = {
+				this = culture:aramean
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_aramaic }
+	}
+}
+
+tradition_script_armenian = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_armenian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_armenian
+				}
+			}
+			this = culture:armenian
+			any_parent_culture_or_above = {
+				this = culture:armenian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_armenian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_armenian
+				}
+			}
+			this = culture:armenian
+			any_parent_culture_or_above = {
+				this = culture:armenian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_armenian }
+	}
+}
+
+tradition_script_brahmi = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_brahmi
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_brahmi
+				}
+			}
+			this = culture:pactyan
+			any_parent_culture_or_above = {
+				this = culture:pactyan
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_brahmi
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_brahmi
+				}
+			}
+			this = culture:pactyan
+			any_parent_culture_or_above = {
+				this = culture:pactyan
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_brahmi }
+	}
+}
+
+tradition_script_coptic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_coptic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_coptic
+				}
+			}
+			this = culture:kemetic
+			any_parent_culture_or_above = {
+				this = culture:kemetic
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_coptic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_coptic
+				}
+			}
+			this = culture:kemetic
+			any_parent_culture_or_above = {
+				this = culture:kemetic
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_coptic }
+	}
+}
+
+tradition_script_cuneiform = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_cuneiform
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_cuneiform
+				}
+			}
+			this = culture:assyrian
+			any_parent_culture_or_above = {
+				this = culture:assyrian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_cuneiform
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_cuneiform
+				}
+			}
+			this = culture:assyrian
+			any_parent_culture_or_above = {
+				this = culture:assyrian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_cuneiform }
+	}
+}
+
+tradition_script_cyrillic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_cyrillic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_cyrillic
+				}
+			}
+			this = culture:russian
+			any_parent_culture_or_above = {
+				this = culture:russian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_cyrillic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_cyrillic
+				}
+			}
+			this = culture:russian
+			any_parent_culture_or_above = {
+				this = culture:russian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_cyrillic }
+	}
+}
+
+tradition_script_devanagari = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_devanagari
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_devanagari
+				}
+			}
+			this = culture:hindustani
+			any_parent_culture_or_above = {
+				this = culture:hindustani
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_devanagari
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_devanagari
+				}
+			}
+			this = culture:hindustani
+			any_parent_culture_or_above = {
+				this = culture:hindustani
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_devanagari }
+	}
+}
+
+tradition_script_etruscan = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_etruscan
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_etruscan
+				}
+			}
+			this = culture:etruscan
+			any_parent_culture_or_above = {
+				this = culture:etruscan
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_etruscan
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_etruscan
+				}
+			}
+			this = culture:etruscan
+			any_parent_culture_or_above = {
+				this = culture:etruscan
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_etruscan }
+	}
+}
+
+tradition_script_geez = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_geez
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_geez
+				}
+			}
+			this = culture:ethiopian
+			any_parent_culture_or_above = {
+				this = culture:ethiopian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_geez
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_geez
+				}
+			}
+			this = culture:ethiopian
+			any_parent_culture_or_above = {
+				this = culture:ethiopian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_geez }
+	}
+}
+
+tradition_script_georgian = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_georgian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_georgian
+				}
+			}
+			this = culture:kartvelian
+			any_parent_culture_or_above = {
+				this = culture:kartvelian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_georgian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_georgian
+				}
+			}
+			this = culture:kartvelian
+			any_parent_culture_or_above = {
+				this = culture:kartvelian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_georgian }
+	}
+}
+
+tradition_script_glagolitic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_glagolitic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_glagolitic
+				}
+			}
+			this = culture:czech
+			any_parent_culture_or_above = {
+				this = culture:czech
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_glagolitic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_glagolitic
+				}
+			}
+			this = culture:czech
+			any_parent_culture_or_above = {
+				this = culture:czech
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_glagolitic }
+	}
+}
+
+tradition_script_gothic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_gothic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_gothic
+				}
+			}
+			this = culture:gothic
+			any_parent_culture_or_above = {
+				this = culture:gothic
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_gothic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_gothic
+				}
+			}
+			this = culture:gothic
+			any_parent_culture_or_above = {
+				this = culture:gothic
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_gothic }
+	}
+}
+
+tradition_script_greek = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_greek
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_greek
+				}
+			}
+			this = culture:greek
+			any_parent_culture_or_above = {
+				this = culture:greek
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_greek
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_greek
+				}
+			}
+			this = culture:greek
+			any_parent_culture_or_above = {
+				this = culture:greek
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_greek }
+	}
+}
+
+tradition_script_gupta = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_gupta
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_gupta
+				}
+			}
+			this = culture:bengali
+			any_parent_culture_or_above = {
+				this = culture:bengali
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_gupta
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_gupta
+				}
+			}
+			this = culture:bengali
+			any_parent_culture_or_above = {
+				this = culture:bengali
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_gupta }
+	}
+}
+
+tradition_script_han = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_han
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_han
+				}
+			}
+			this = culture:han
+			any_parent_culture_or_above = {
+				this = culture:han
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_han
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_han
+				}
+			}
+			this = culture:han
+			any_parent_culture_or_above = {
+				this = culture:han
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_han }
+	}
+}
+
+tradition_script_hebrew = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_hebrew
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_hebrew
+				}
+			}
+			this = culture:hebrew
+			any_parent_culture_or_above = {
+				this = culture:hebrew
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_hebrew
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_hebrew
+				}
+			}
+			this = culture:hebrew
+			any_parent_culture_or_above = {
+				this = culture:hebrew
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_hebrew }
+	}
+}
+
+tradition_script_hieroglyphic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_hieroglyphic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_hieroglyphic
+				}
+			}
+			this = culture:kemetic
+			any_parent_culture_or_above = {
+				this = culture:kemetic
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_hieroglyphic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_hieroglyphic
+				}
+			}
+			this = culture:kemetic
+			any_parent_culture_or_above = {
+				this = culture:kemetic
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_hieroglyphic }
+	}
+}
+
+tradition_script_hungarian = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_hungarian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_hungarian
+				}
+			}
+			this = culture:mogyer
+			any_parent_culture_or_above = {
+				this = culture:mogyer
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_hungarian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_hungarian
+				}
+			}
+			this = culture:mogyer
+			any_parent_culture_or_above = {
+				this = culture:mogyer
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_hungarian }
+	}
+}
+
+tradition_script_latin = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_latin
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_latin
+				}
+			}
+			this = culture:roman
+			any_parent_culture_or_above = {
+				this = culture:roman
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_latin
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_latin
+				}
+			}
+			this = culture:roman
+			any_parent_culture_or_above = {
+				this = culture:roman
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_latin }
+	}
+}
+
+tradition_script_manichean = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_manichean
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_manichean
+				}
+			}
+			this = culture:tocharian
+			any_parent_culture_or_above = {
+				this = culture:tocharian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_manichean
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_manichean
+				}
+			}
+			this = culture:tocharian
+			any_parent_culture_or_above = {
+				this = culture:tocharian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_manichean }
+	}
+}
+
+tradition_script_meroitic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_meroitic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_meroitic
+				}
+			}
+			this = culture:nubian
+			any_parent_culture_or_above = {
+				this = culture:nubian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_meroitic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_meroitic
+				}
+			}
+			this = culture:nubian
+			any_parent_culture_or_above = {
+				this = culture:nubian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_meroitic }
+	}
+}
+
+tradition_script_mon = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_mon
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_mon
+				}
+			}
+			this = culture:mon
+			any_parent_culture_or_above = {
+				this = culture:mon
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_mon
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_mon
+				}
+			}
+			this = culture:mon
+			any_parent_culture_or_above = {
+				this = culture:mon
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_mon }
+	}
+}
+
+tradition_script_nabatean = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_nabatean
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_nabatean
+				}
+			}
+			this = culture:nabatean
+			any_parent_culture_or_above = {
+				this = culture:nabatean
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_nabatean
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_nabatean
+				}
+			}
+			this = culture:nabatean
+			any_parent_culture_or_above = {
+				this = culture:nabatean
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_nabatean }
+	}
+}
+
+tradition_script_ogham = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_ogham
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_ogham
+				}
+			}
+			this = culture:gaelic
+			any_parent_culture_or_above = {
+				this = culture:gaelic
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_ogham
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_ogham
+				}
+			}
+			this = culture:gaelic
+			any_parent_culture_or_above = {
+				this = culture:gaelic
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_ogham }
+	}
+}
+
+tradition_script_pahlavi = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_pahlavi
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_pahlavi
+				}
+			}
+			this = culture:persian
+			any_parent_culture_or_above = {
+				this = culture:persian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_pahlavi
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_pahlavi
+				}
+			}
+			this = culture:persian
+			any_parent_culture_or_above = {
+				this = culture:persian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_pahlavi }
+	}
+}
+
+tradition_script_phoenician = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_phoenician
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_phoenician
+				}
+			}
+			this = culture:phoenician
+			any_parent_culture_or_above = {
+				this = culture:phoenician
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_phoenician
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_phoenician
+				}
+			}
+			this = culture:phoenician
+			any_parent_culture_or_above = {
+				this = culture:phoenician
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_phoenician }
+	}
+}
+
+tradition_script_runic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_runic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_runic
+				}
+			}
+			this = culture:norse
+			any_parent_culture_or_above = {
+				this = culture:norse
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_runic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_runic
+				}
+			}
+			this = culture:norse
+			any_parent_culture_or_above = {
+				this = culture:norse
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_runic }
+	}
+}
+
+tradition_script_sinhala = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_sinhala
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_sinhala
+				}
+			}
+			this = culture:sinhala
+			any_parent_culture_or_above = {
+				this = culture:sinhala
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_sinhala
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_sinhala
+				}
+			}
+			this = culture:sinhala
+			any_parent_culture_or_above = {
+				this = culture:sinhala
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_sinhala }
+	}
+}
+
+tradition_script_sogdian = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_sogdian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_sogdian
+				}
+			}
+			this = culture:sogdian
+			any_parent_culture_or_above = {
+				this = culture:sogdian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_sogdian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_sogdian
+				}
+			}
+			this = culture:sogdian
+			any_parent_culture_or_above = {
+				this = culture:sogdian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_sogdian }
+	}
+}
+
+tradition_script_south_arabian = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_south_arabian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_south_arabian
+				}
+			}
+			this = culture:himyarite
+			any_parent_culture_or_above = {
+				this = culture:himyarite
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_south_arabian
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_south_arabian
+				}
+			}
+			this = culture:himyarite
+			any_parent_culture_or_above = {
+				this = culture:himyarite
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_south_arabian }
+	}
+}
+
+tradition_script_syriac = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_syriac
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_syriac
+				}
+			}
+			this = culture:assyrian
+			any_parent_culture_or_above = {
+				this = culture:assyrian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_syriac
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_syriac
+				}
+			}
+			this = culture:assyrian
+			any_parent_culture_or_above = {
+				this = culture:assyrian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_syriac }
+	}
+}
+
+tradition_script_tamil = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_tamil
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_tamil
+				}
+			}
+			this = culture:tamil
+			any_parent_culture_or_above = {
+				this = culture:tamil
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_tamil
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_tamil
+				}
+			}
+			this = culture:tamil
+			any_parent_culture_or_above = {
+				this = culture:tamil
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_tamil }
+	}
+}
+
+tradition_script_tibetan = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_tibetan
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_tibetan
+				}
+			}
+			this = culture:bodpa
+			any_parent_culture_or_above = {
+				this = culture:bodpa
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_tibetan
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_tibetan
+				}
+			}
+			this = culture:bodpa
+			any_parent_culture_or_above = {
+				this = culture:bodpa
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_tibetan }
+	}
+}
+
+tradition_script_tifinagh = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_tifinagh
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_tifinagh
+				}
+			}
+			this = culture:maurian
+			any_parent_culture_or_above = {
+				this = culture:maurian
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_tifinagh
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_tifinagh
+				}
+			}
+			this = culture:maurian
+			any_parent_culture_or_above = {
+				this = culture:maurian
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_tifinagh }
+	}
+}
+
+tradition_script_turkic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+		has_dlc_feature = royal_court
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_turkic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_turkic
+				}
+			}
+			this = culture:uyghur
+			any_parent_culture_or_above = {
+				this = culture:uyghur
+			}
+		}
+		always = no
+	}
+
+	is_valid = {
+		has_dlc_feature = royal_court
+		no_other_script_trigger = yes
+		#has_innovation = innovation_writing
+		OR = {
+			scope:character ?= {
+				any_realm_county = {
+					culture = {
+						has_cultural_tradition = tradition_script_turkic
+					}
+				}
+			}
+			scope:character ?= {
+				liege.culture = {
+					has_cultural_tradition = tradition_script_turkic
+				}
+			}
+			this = culture:uyghur
+			any_parent_culture_or_above = {
+				this = culture:uyghur
+			}
+		}
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_script_turkic }
+	}
+}

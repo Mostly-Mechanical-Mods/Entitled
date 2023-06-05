@@ -1,0 +1,50 @@
+﻿################################
+# COMBAT CULTURAL TRADITIONS #
+################################
+
+tradition_sword_bending = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		OR = {
+			# heritage_group_celtic
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_goidelic
+			has_cultural_pillar = heritage_celtic
+			has_cultural_pillar = heritage_pictish
+			has_cultural_pillar = heritage_celtiberian
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sword_bending }
+	}
+}
+
+tradition_tfe_byzantine_army = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		always = no #unlocked by decision
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_tfe_byzantine_army }
+	}
+}
+
+tradition_pirate_kings = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		TFE_is_loaded = yes
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_pirate_kings }
+	}
+}

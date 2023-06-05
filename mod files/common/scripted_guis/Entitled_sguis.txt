@@ -958,6 +958,111 @@ Entitled_culture_reset = {
 		entitled_reset_tradition = { TRADITION = tradition_fp2_ritualised_friendship }
 		#common\culture\traditions\04_ep2_traditions.txt
 		entitled_reset_tradition = { TRADITION = tradition_ep2_avid_falconers }
-
+		#TFE
+		# 2243307127\common\culture\traditions\TFE_combat_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_sword_bending }
+		entitled_reset_tradition = { TRADITION = tradition_tfe_byzantine_army }
+		entitled_reset_tradition = { TRADITION = tradition_pirate_kings }
+		# 2243307127\common\culture\traditions\TFE_realm_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_migrations }
+		entitled_reset_tradition = { TRADITION = tradition_varangians }
+		entitled_reset_tradition = { TRADITION = tradition_roman_hubris }
+		entitled_reset_tradition = { TRADITION = tradition_nomadic_migrations }
+		entitled_reset_tradition = { TRADITION = tradition_roman_architecture }
+		# 2243307127\common\culture\traditions\TFE_regional_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_sogdian_naf }
+		entitled_reset_tradition = { TRADITION = tradition_the_witenagemot }
+		entitled_reset_tradition = { TRADITION = tradition_african_agriculture }
+		entitled_reset_tradition = { TRADITION = tradition_desert_horsemen }
+		entitled_reset_tradition = { TRADITION = tradition_desert_wonders }
+		entitled_reset_tradition = { TRADITION = tradition_mard_o_mard }
+		entitled_reset_tradition = { TRADITION = tradition_warriors_of_alborz }
+		entitled_reset_tradition = { TRADITION = tradition_servile_soldiers }
+		entitled_reset_tradition = { TRADITION = tradition_underground_cities }
+		entitled_reset_tradition = { TRADITION = tradition_sardinian_barbarians }
+		entitled_reset_tradition = { TRADITION = tradition_orpheus }
+		# 2243307127\common\culture\traditions\TFE_ritual_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_sacred_springs }
+		# 2243307127\common\culture\traditions\TFE_societal_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_bread_and_circuses }
+		# 2243307127\common\culture\traditions\TFE_writing_traditions.txt
+		# entitled_reset_tradition = { TRADITION = tradition_script_arabic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_aramaic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_armenian }
+		# entitled_reset_tradition = { TRADITION = tradition_script_brahmi }
+		# entitled_reset_tradition = { TRADITION = tradition_script_coptic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_cuneiform }
+		# entitled_reset_tradition = { TRADITION = tradition_script_cyrillic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_devanagari }
+		# entitled_reset_tradition = { TRADITION = tradition_script_etruscan }
+		# entitled_reset_tradition = { TRADITION = tradition_script_geez }
+		# entitled_reset_tradition = { TRADITION = tradition_script_georgian }
+		# entitled_reset_tradition = { TRADITION = tradition_script_glagolitic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_gothic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_greek }
+		# entitled_reset_tradition = { TRADITION = tradition_script_gupta }
+		# entitled_reset_tradition = { TRADITION = tradition_script_han }
+		# entitled_reset_tradition = { TRADITION = tradition_script_hebrew }
+		# entitled_reset_tradition = { TRADITION = tradition_script_hieroglyphic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_hungarian }
+		# entitled_reset_tradition = { TRADITION = tradition_script_latin }
+		# entitled_reset_tradition = { TRADITION = tradition_script_manichean }
+		# entitled_reset_tradition = { TRADITION = tradition_script_meroitic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_mon }
+		# entitled_reset_tradition = { TRADITION = tradition_script_nabatean }
+		# entitled_reset_tradition = { TRADITION = tradition_script_ogham }
+		# entitled_reset_tradition = { TRADITION = tradition_script_pahlavi }
+		# entitled_reset_tradition = { TRADITION = tradition_script_phoenician }
+		# entitled_reset_tradition = { TRADITION = tradition_script_runic }
+		# entitled_reset_tradition = { TRADITION = tradition_script_sinhala }
+		# entitled_reset_tradition = { TRADITION = tradition_script_sogdian }
+		# entitled_reset_tradition = { TRADITION = tradition_script_south_arabian }
+		# entitled_reset_tradition = { TRADITION = tradition_script_syriac }
+		# entitled_reset_tradition = { TRADITION = tradition_script_tamil }
+		# entitled_reset_tradition = { TRADITION = tradition_script_tibetan }
+		# entitled_reset_tradition = { TRADITION = tradition_script_tifinagh }
+		# entitled_reset_tradition = { TRADITION = tradition_script_turkic }
+		# CE
+		entitled_reset_tradition = { TRADITION = tradition_karabisianoi }
+		entitled_reset_tradition = { TRADITION = tradition_justinian_code }
+		entitled_reset_tradition = { TRADITION = tradition_veche }
+		entitled_reset_tradition = { TRADITION = tradition_rashidun_army }
+		entitled_reset_tradition = { TRADITION = tradition_pagan_protectors }
+		entitled_reset_tradition = { TRADITION = tradition_sasanian_army }
+		entitled_reset_tradition = { TRADITION = tradition_teulu }
+		entitled_reset_tradition = { TRADITION = tradition_barbary_corsairs }
+		entitled_reset_tradition = { TRADITION = tradition_almogavars }
+		entitled_reset_tradition = { TRADITION = tradition_mamluk_military }
+		entitled_reset_tradition = { TRADITION = tradition_irish_cliathairi }
+		entitled_reset_tradition = { TRADITION = tradition_damascus_steel }
+		entitled_reset_tradition = { TRADITION = tradition_toledo_steel }
+		entitled_reset_tradition = { TRADITION = tradition_barb_horses }
+		entitled_reset_tradition = { TRADITION = tradition_nile_agriculture }
+		entitled_reset_tradition = { TRADITION = tradition_dzukijan_horsemen }
+		entitled_reset_tradition = { TRADITION = tradition_akritai }
+		entitled_reset_tradition = { TRADITION = tradition_portage }
+		entitled_reset_tradition = { TRADITION = tradition_eyres }
+		entitled_reset_tradition = { TRADITION = tradition_assizes_ariano }
+		entitled_reset_tradition = { TRADITION = tradition_pravda_russkaya }
+		entitled_reset_tradition = { TRADITION = tradition_outremer_armies }
+		entitled_reset_tradition = { TRADITION = tradition_mudejar_art }
+		entitled_reset_tradition = { TRADITION = tradition_exechequer }
+		entitled_reset_tradition = { TRADITION = tradition_fatimid_royal_guard }
+		entitled_reset_tradition = { TRADITION = tradition_islamic_furusiyya }
+		entitled_reset_tradition = { TRADITION = tradition_kulgrinda }
+		entitled_reset_tradition = { TRADITION = tradition_professional_army }
+		entitled_reset_tradition = { TRADITION = tradition_military_engineering }
+		entitled_reset_tradition = { TRADITION = tradition_fierce_independence }
+		entitled_reset_tradition = { TRADITION = tradition_african_agriculture }
+		entitled_reset_tradition = { TRADITION = tradition_merc_armies }
+		entitled_reset_tradition = { TRADITION = tradition_norman_traditions }
+		# BAP
+		entitled_reset_tradition = { TRADITION = tradition_sacred_rulership }
+		entitled_reset_tradition = { TRADITION = tradition_way_of_the_thiedo }
+		entitled_reset_tradition = { TRADITION = tradition_bush_schools }
+		entitled_reset_tradition = { TRADITION = tradition_laawol_pulaaku }
+		entitled_reset_tradition = { TRADITION = tradition_griots }
+		entitled_reset_tradition = { TRADITION = tradition_savanna_raiders }
+		entitled_reset_tradition = { TRADITION = tradition_eldership }
 	}
 }

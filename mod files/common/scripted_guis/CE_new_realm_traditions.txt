@@ -1,0 +1,925 @@
+﻿## Completely New Traditions ##
+tradition_karabisianoi = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_byzantine
+    }
+	
+	is_valid = {
+		custom_description = {
+			text = percentage_of_culture_on_coast_desc
+			any_culture_county = {
+				percent >= 0.5
+				any_county_province = {
+					is_coastal = yes
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_karabisianoi }
+	}
+}
+
+tradition_justinian_code = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_byzantine
+		scope:character.faith = {
+			OR = {
+				has_doctrine = doctrine_spiritual_head
+				has_doctrine = doctrine_temporal_head
+			}
+		}
+    }
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_justinian_code }
+	}
+}
+
+tradition_veche = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_east_slavic
+    }
+	
+    is_valid = {
+        has_cultural_pillar = heritage_east_slavic
+		NOT = {
+			has_cultural_tradition = tradition_things
+			has_cultural_tradition = tradition_the_witenagemot
+		}
+    }
+    
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_veche }
+	}
+}
+
+tradition_rashidun_army = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_mamluk_military
+			has_cultural_tradition = tradition_sasanian_army
+		}
+		AND = {
+			has_cultural_pillar = heritage_arabic
+			scope:character = {
+				has_religion = religion:islam_religion #You need to be Muslim
+			}
+		}
+    }
+	
+    is_valid = {
+        has_cultural_pillar = heritage_arabic
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_rashidun_army }
+	}
+}
+
+tradition_pagan_protectors = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		AND = {
+			has_cultural_pillar = heritage_baltic
+			scope:character = {
+				has_religion = religion:baltic_religion #You need to be of the Baltic religious family
+			}
+		}
+    }
+	
+    is_valid = {
+		culture_not_pacifistic_trigger = yes
+        has_cultural_pillar = heritage_baltic
+		custom_description = {
+			text = culture_not_egalitarian
+			NOT = {
+				any_in_list = { list = traits this = flag:ethos_egalitarian }
+			}
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_pagan_protectors }
+	}
+}
+
+tradition_sasanian_army = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_mamluk_military
+			has_cultural_tradition = tradition_rashidun_army
+		}
+        AND = {
+			has_cultural_pillar = heritage_iranian
+			scope:character = {
+				has_religion = religion:zoroastrianism_religion #You need to be Zoroastrian
+			}
+		}	
+    }
+	
+    is_valid = {
+		culture_not_pacifistic_trigger = yes
+        has_cultural_pillar = heritage_iranian
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_mamluk_military
+			has_cultural_tradition = tradition_rashidun_army
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sasanian_army }
+	}
+}
+
+tradition_teulu = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_brythonic
+    }
+    is_valid = {
+        has_cultural_pillar = heritage_brythonic
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_teulu }
+	}
+}
+
+tradition_barbary_corsairs = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_berber
+    }
+	
+    is_valid = {
+        has_cultural_pillar = heritage_berber
+		custom_description = {
+			text = percentage_of_culture_on_coast_desc
+			any_culture_county = {
+				percent >= 0.5
+				any_county_province = {
+					is_coastal = yes
+				}
+			}
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_barbary_corsairs }
+	}
+}
+
+tradition_almogavars = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_iberian
+    }
+    is_valid = {
+		culture_not_pacifistic_trigger = yes
+        has_cultural_pillar = heritage_iberian
+		custom_description = {
+			text = culture_not_egalitarian
+			NOT = {
+				any_in_list = { list = traits this = flag:ethos_egalitarian }
+			}
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_almogavars }
+	}
+}
+
+tradition_mamluk_military = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_arabic
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_rashidun_army
+		}
+    }
+	
+    is_valid = {
+		culture_not_pacifistic_trigger = yes
+        has_cultural_pillar = heritage_arabic
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_rashidun_army
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mamluk_military }
+	}
+}
+
+tradition_irish_cliathairi = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_goidelic
+		any_culture_county = {
+			title_province = {
+				geographical_region = custom_ireland
+			}
+		}
+    }
+	
+    is_valid = {
+		
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_irish_cliathairi }
+	}
+}
+
+tradition_damascus_steel = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        any_culture_county = {
+			title_province = {
+				geographical_region = world_middle_east
+			}
+		}
+    }
+	
+    is_valid = {
+        any_culture_county = {
+			title_province = {
+				geographical_region = ce_custom_damascus
+			}
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_damascus_steel }
+	}
+}
+
+tradition_toledo_steel = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        any_culture_county = {
+			title_province = {
+				geographical_region = custom_roman_hispania
+			}
+		}
+    }
+	
+    is_valid = {
+        any_culture_county = {
+			title_province = {
+				geographical_region = ce_custom_toledo
+			}
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_toledo_steel }
+	}
+}
+
+tradition_barb_horses = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        has_cultural_pillar = heritage_berber
+    }
+	
+    is_valid = {
+        has_cultural_pillar = heritage_berber
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_barb_horses }
+	}
+}
+
+tradition_nile_agriculture = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		any_culture_county = {
+			title_province = {
+				geographical_region = ce_nile_river
+			}
+		}
+	}
+	
+	is_valid = {
+		any_culture_county = {
+			percent >= 0.5
+			any_county_province = {
+				geographical_region = ce_nile_river
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_nile_agriculture }
+	}
+}
+
+tradition_dzukijan_horsemen = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		any_culture_county = {
+			title_province = {
+				geographical_region = ce_dzukija
+			}
+		}
+    }
+	
+    is_valid = {
+		any_culture_county = {
+			title_province = {
+				geographical_region = ce_dzukija
+			}
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_dzukijan_horsemen }
+	}
+}
+
+tradition_akritai = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		AND = {
+			NOT = {
+				scope:character = {
+				has_title = title:e_byzantium
+				}
+			}	
+			any_culture_county = {
+				title_province = {
+					geographical_region = ce_byzantine_frontier
+				}
+			}
+			has_cultural_pillar = heritage_byzantine
+		}
+	}
+	
+    is_valid = {
+        has_cultural_pillar = heritage_byzantine
+		scope:character.capital_barony.title_province = {
+			geographical_region = ce_byzantine_frontier
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_akritai }
+	}
+}
+
+tradition_portage = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		any_culture_county = {
+			title_province = {
+				geographical_region = dlc_fp1_achievement_vladimirs_second_choice
+			}
+		}
+	}
+	
+	is_valid = {
+		any_culture_county = {
+			percent >= 0.5
+			any_county_province = {
+				geographical_region = dlc_fp1_achievement_vladimirs_second_choice
+			}
+		}
+	}
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_portage }
+	}
+}
+
+tradition_eyres = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		any_culture_county = {
+			title_province = {
+				geographical_region = custom_england
+			}
+		}
+	}
+	
+    is_valid = {
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_eyres }
+	}
+}
+
+tradition_assizes_ariano = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		AND = {
+			any_culture_county = {
+				title_province = {
+					geographical_region = custom_sicily
+				}
+			}
+			OR = {
+				this = culture:norman
+				this = culture:sicilian
+				any_parent_culture_or_above = {
+					OR = {
+						this = culture:norman
+						this = culture:sicilian
+					}
+				}
+			}
+		}
+	}
+	
+    is_valid = {
+		
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_assizes_ariano }
+	}
+}
+
+tradition_pravda_russkaya = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		AND = {
+			any_culture_county = {
+				title_province = {
+					geographical_region = dlc_fp1_achievement_vladimirs_second_choice
+				}
+			}
+			OR = {
+				this = culture:russian
+				any_parent_culture_or_above = {
+						this = culture:russian
+				}
+			}
+		}
+	}
+	
+    is_valid = {
+
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_pravda_russkaya }
+	}
+}
+
+tradition_outremer_armies = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_rashidun_army
+			has_cultural_tradition = tradition_mamluk_military
+		}
+        AND = {
+            OR = {
+                culture_overlaps_geographical_region = custom_outremer
+                scope:character.capital_barony.title_province = {
+                    geographical_region = custom_outremer
+                }
+                scope:character = {
+                    has_trait = crusader_king
+                }
+            }
+            scope:character.faith = faith:catholic
+        }
+    }
+	
+    is_valid = {
+		scope:character = {
+			has_title = title:k_jerusalem
+		}
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_rashidun_army
+			has_cultural_tradition = tradition_mamluk_military
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_outremer_armies }
+	}
+}
+
+tradition_mudejar_art = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		AND = {
+			any_culture_county = {
+				title_province = {
+					geographical_region = custom_andalusian
+				}
+			}
+			scope:character = {
+				has_religion = religion:christianity_religion #You need to be Christian
+			}
+		}
+	}
+	
+    is_valid = {
+
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mudejar_art }
+	}
+}
+
+tradition_exechequer = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		OR = {
+			this = culture:english
+			any_parent_culture_or_above = {
+					this = culture:english
+			}
+		}
+	}
+	
+    is_valid = {
+
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_exechequer }
+	}
+}
+
+tradition_fatimid_royal_guard = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_rashidun_army
+		}
+		AND = {
+			any_culture_county = {
+				title_province = {
+					geographical_region = custom_roman_aegyptus
+				}
+			}
+			scope:character = {
+				has_religion = religion:islam_religion #You need to be Muslim
+			}
+		}
+	}
+	
+    is_valid = {
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_rashidun_army
+		}
+    }
+    
+    effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fatimid_royal_guard }
+	}
+}
+
+tradition_islamic_furusiyya = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		AND = {
+			has_cultural_pillar = heritage_arabic
+			any_culture_county = {
+				title_province = {
+					geographical_region = world_middle_east_arabia
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_islamic_furusiyya }
+	}
+}
+
+tradition_kulgrinda = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		has_cultural_pillar = heritage_baltic
+	}
+
+	is_valid = {
+		any_culture_county = {
+			percent >= 0.4
+			any_county_province = {
+				geographical_region = custom_eastern_baltic
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_kulgrinda }
+	}
+}
+
+tradition_professional_army = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_rashidun_army
+			has_cultural_tradition = tradition_mamluk_military
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_outremer_armies
+		}
+	}
+
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_rashidun_army
+			has_cultural_tradition = tradition_mamluk_military
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_outremer_armies
+			has_cultural_tradition = tradition_merc_armies
+		}
+		
+		NOT = { # Can not be picked by tribals
+			scope:character = {
+				has_government = tribal_government
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_kulgrinda }
+	}
+}
+
+tradition_military_engineering = {
+    scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+        
+    }
+	
+    is_valid = {
+		NOT = { # Can not be picked by tribals
+			scope:character = {
+				has_government = tribal_government
+			}
+		}
+    }
+    
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_military_engineering }
+	}
+}
+
+tradition_fierce_independence = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		has_cultural_pillar = heritage_vlach
+	}
+	
+	is_valid = {
+
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fierce_independence }
+	}
+}
+
+tradition_african_agriculture = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		any_culture_county = {
+			title_province = {
+				geographical_region = custom_roman_africa
+			}
+		}
+	}
+	
+	is_valid = {
+		any_culture_county = {
+			percent >= 0.5
+			any_county_province = {
+				geographical_region = custom_roman_africa
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_african_agriculture }
+	}
+}
+
+tradition_merc_armies = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_rashidun_army
+			has_cultural_tradition = tradition_mamluk_military
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_outremer_armies
+		}
+	}
+	
+	is_valid = {
+		NOT = { # Can not be picked by tribals
+			scope:character = {
+				has_government = tribal_government
+			}
+		}
+		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
+			has_cultural_tradition = tradition_roman_legacy
+			has_cultural_tradition = tradition_strength_in_numbers
+			has_cultural_tradition = tradition_professional_army
+			has_cultural_tradition = tradition_rashidun_army
+			has_cultural_tradition = tradition_mamluk_military
+			has_cultural_tradition = tradition_sasanian_army
+			has_cultural_tradition = tradition_outremer_armies
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_merc_armies }
+	}
+}
+
+tradition_norman_traditions = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		CE_is_loaded = yes
+		OR = {
+			OR = {
+				any_parent_culture_or_above = {
+					OR = {
+						this = culture:norman				
+						this = culture:norse								
+					}
+				}
+			}		
+		}
+	}
+
+	is_valid = {
+		OR = {
+			OR = {
+				any_parent_culture_or_above = {
+					OR = {
+						this = culture:norman	
+						this = culture:norse						
+					}
+				}
+			}		
+		}		
+	}	
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_norman_traditions }
+	}
+}

@@ -1,0 +1,159 @@
+﻿# Geographical regions
+# Regions can be declared with one or more of the following fields:
+#	duchies = { }, takes duchy title names declared in landed_titles.txt
+#	counties = { }, takes county title names declared in landed_titles.txt
+#	provinces = { }, takes province id numbers declared in /history/provinces
+#	regions = { }, a region can also include other regions, however the subregions needs to be declared before the parent region. 
+#		E.g. If the region world_europe contains the region world_europe_west then world_europe_west needs to be declared as a region before (i.e. higher up in this file) world_europe.
+
+custom_core_franconia = {
+	
+}
+
+custom_core_swabia = {
+
+}
+
+custom_core_portucale = {
+
+}
+
+custom_grand_saxony = {
+
+}
+
+custom_saxony = {
+
+}
+
+custom_avaria = { 
+
+}
+
+custom_yemen = {
+
+}
+
+custom_persian_gulf = {
+
+}
+
+custom_persian_caucasus = {
+
+}
+
+custom_egypt = {
+
+}
+
+special_seljuk_empire_start_region = {
+
+}
+
+special_seljuk_empire_cb_extent = {
+
+}
+
+special_seljuk_empire_borderlands = {
+
+}
+
+wendish_empire = {
+
+}
+
+custom_samos_empire = {
+
+}
+
+custom_aquitaine_full = {
+
+}
+
+custom_aquitaine = {
+
+}
+
+custom_frisia01 = {
+
+}
+
+ce_custom_illyria = {
+
+}
+
+ce_custom_royal_croatia = {
+
+}
+
+ce_custom_royal_serbia = {
+
+}
+
+ce_custom_bosnia = {
+
+}
+
+ce_custom_serbo_croatia = {
+
+}
+
+ce_custom_transdanubia = {
+
+}
+
+ce_custom_roman_pannonia = {
+
+}
+
+ce_custom_england = {
+
+}
+
+ce_custom_poland = {
+
+}
+
+ce_special_russian_culture_region = {
+
+}
+
+ce_custom_wallachia = {
+
+}
+
+ce_custom_moldavia = {
+
+}
+
+ce_custom_toledo = {
+
+}
+
+ce_custom_damascus = {
+
+}
+
+ce_nile_river = {
+
+}
+
+ce_dzukija = {
+
+}
+
+ce_byzantine_frontier = {
+
+}
+
+ce_southern_andalusia = {
+
+}
+
+ce_northern_iberia = {
+
+}
+
+ce_island_of_sicily = {
+
+}

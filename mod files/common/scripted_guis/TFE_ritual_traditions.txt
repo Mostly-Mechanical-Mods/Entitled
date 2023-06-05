@@ -1,0 +1,34 @@
+﻿##############################
+# RITUAL CULTURAL TRADITIONS #
+##############################
+
+
+tradition_sacred_springs = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		TFE_is_loaded = yes
+	}
+
+	is_valid = {
+		custom_description = {
+			text = culture_in_sacred_springs_terrain_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = forest
+						terrain = jungle
+						terrain = farmlands
+						terrain = floodplains
+						terrain = wetlands
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sacred_springs }
+	}
+}
