@@ -630,7 +630,7 @@ Entitled_create_title = {
 			type = swear_fealty
 			save_scope_as = vassalize
 		}
-		scope:player = {
+		scope:player ?= {
 			if = {
 				limit = {
 					exists = scope:de_jure_liege.holder
@@ -663,6 +663,115 @@ Entitled_create_title = {
 		remove_global_variable = custom_kingdom
 		remove_global_variable = custom_duchy
 		remove_global_variable = entitled_setup
+
+		clear_global_variable_list = Entitled_de_jure
+		every_in_global_list = {
+			variable = entitled_setup_title
+			clear_variable_list = de_jure
+		}
+		clear_global_variable_list = entitled_setup_title
+
+		every_ruler = {
+			limit = { highest_held_title_tier = tier_county }
+			every_held_title = {
+				limit = { tier = tier_county }
+				ordered_this_title_or_de_jure_above = {
+					order_by = tier
+					add_to_list = top_de_jure
+					add_to_global_variable_list = {
+						name = entitled_setup_title
+						target = this
+					}
+					every_in_de_jure_hierarchy = {
+						limit = { NOT = { this = prev }}
+						continue = { tier >= tier_duchy }
+						add_to_global_variable_list = {
+							name = entitled_setup_title
+							target = this
+						}
+						if = {
+							limit = {
+								tier < tier_duchy
+								exists = duchy
+							}
+							duchy = {
+								add_to_variable_list = {
+									name = de_jure
+									target = prev
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								tier < tier_kingdom
+								exists = kingdom
+							}
+							kingdom = {
+								add_to_variable_list = {
+									name = de_jure
+									target = prev
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								tier < tier_empire
+								exists = empire
+							}
+							empire = {
+								add_to_variable_list = {
+									name = de_jure
+									target = prev
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		scope:primary_title = {
+			ordered_this_title_or_de_jure_above = {
+				order_by = tier
+				add_to_global_variable_list = {
+					name = Entitled_top_de_jure
+					target = this
+				}
+				title_capital_county = { save_scope_as = first_in_list }
+				remove_from_list = top_de_jure
+			}
+		}
+		while = {
+			limit = {
+				any_in_list = {
+					list = top_de_jure
+					count > 0
+				}
+			}
+			ordered_in_list = {
+				list = top_de_jure
+				order_by = {
+					title_capital_county = { save_temporary_scope_as = temp }
+					ordered_in_global_list = {
+						variable = Entitled_top_de_jure
+						limit = { NOT = { this = prev }}
+						title_capital_county = {
+							subtract = "squared_distance(scope:temp)"
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = Entitled_top_de_jure
+					target = this
+				}
+				remove_from_list = top_de_jure
+			}
+		}
+		every_province = {
+			barony = {
+				set_color_from_title = title:d_entitled_blank
+			}
+		}
 	}
 }
 
@@ -678,6 +787,17 @@ Entitled_clean = {
 				set_color_from_title = title:d_entitled_blank
 			}
 		}
+		
+		random_living_character = {
+			destroy_title = global_var:custom_empire
+			destroy_title = global_var:custom_kingdom
+			destroy_title = global_var:custom_duchy
+		}
+		remove_global_variable = custom_empire
+		remove_global_variable = custom_kingdom
+		remove_global_variable = custom_duchy
+
+		remove_global_variable = entitled_setup
 	}
 }
 

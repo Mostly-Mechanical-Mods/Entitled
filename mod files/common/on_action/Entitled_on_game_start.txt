@@ -909,9 +909,17 @@ Entitled_on_game_start = {
 				ordered_this_title_or_de_jure_above = {
 					order_by = tier
 					add_to_list = top_de_jure
+					add_to_global_variable_list = {
+						name = entitled_setup_title
+						target = this
+					}
 					every_in_de_jure_hierarchy = {
 						limit = { NOT = { this = prev }}
 						continue = { tier >= tier_duchy }
+						add_to_global_variable_list = {
+							name = entitled_setup_title
+							target = this
+						}
 						if = {
 							limit = {
 								tier < tier_duchy

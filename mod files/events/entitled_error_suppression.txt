@@ -12,6 +12,9 @@ entitled_error_suppression.0001 = {
 		fix_variable_error = { X = Entitled_is_loaded }
 		fix_variable_error = { X = Entitled_v1_0 }
 
+		fix_variable_error = { X = entitled_used }
+		fix_variable_error = { X = Entitled_de_jure }
+
 		fix_variable_error = { X = realm }
 		fix_variable_error = { X = societal }
 		fix_variable_error = { X = regional }
@@ -29,7 +32,6 @@ entitled_error_suppression.0001 = {
 		fix_variable_error = { X = entitled_tradition_grouping_ritual }
 		fix_variable_error = { X = custom_county }
 		fix_variable_error = { X = test }
-		fix_variable_error = { X = entitled_used }
 
 		fix_variable_error = { X = entitled_cultures }
 		fix_variable_error = { X = entitled_martial }
