@@ -1,3 +1,4 @@
 ﻿culture_in_sacred_springs_terrain_desc = {
 	global = debug_loc
 }
+

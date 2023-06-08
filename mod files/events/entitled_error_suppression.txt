@@ -39,45 +39,6 @@ entitled_error_suppression.0001 = {
 
 		fix_variable_error = { X = independent }
 
-		#TFE
-		fix_variable_error = { X = entitled_traditions_writing }
-		fix_variable_error = { X = tradition_script_syriac }
-		fix_variable_error = { X = tradition_script_brahmi }
-		fix_variable_error = { X = tradition_script_runic }
-		fix_variable_error = { X = tradition_script_mon }
-		fix_variable_error = { X = tradition_script_tifinagh }
-		fix_variable_error = { X = tradition_script_devanagari }
-		fix_variable_error = { X = tradition_script_south_arabian }
-		fix_variable_error = { X = tradition_script_hebrew }
-		fix_variable_error = { X = tradition_script_cyrillic }
-		fix_variable_error = { X = tradition_script_pahlavi }
-		fix_variable_error = { X = tradition_script_meroitic }
-		fix_variable_error = { X = tradition_script_latin }
-		fix_variable_error = { X = tradition_script_coptic }
-		fix_variable_error = { X = tradition_script_gothic }
-		fix_variable_error = { X = tradition_script_etruscan }
-		fix_variable_error = { X = tradition_script_cuneiform }
-		fix_variable_error = { X = tradition_script_georgian }
-		fix_variable_error = { X = tradition_script_sinhala }
-		fix_variable_error = { X = tradition_script_tamil }
-		fix_variable_error = { X = tradition_script_geez }
-		fix_variable_error = { X = tradition_script_arabic }
-		fix_variable_error = { X = tradition_script_gupta }
-		fix_variable_error = { X = tradition_script_greek }
-		fix_variable_error = { X = tradition_script_manichean }
-		fix_variable_error = { X = tradition_script_hungarian }
-		fix_variable_error = { X = tradition_script_phoenician }
-		fix_variable_error = { X = tradition_script_hieroglyphic }
-		fix_variable_error = { X = tradition_script_aramaic }
-		fix_variable_error = { X = tradition_script_tibetan }
-		fix_variable_error = { X = tradition_script_nabatean }
-		fix_variable_error = { X = tradition_script_armenian }
-		fix_variable_error = { X = tradition_script_ogham }
-		fix_variable_error = { X = tradition_script_glagolitic }
-		fix_variable_error = { X = tradition_script_han }
-		fix_variable_error = { X = tradition_script_sogdian }
-		fix_variable_error = { X = tradition_script_turkic }
-
 
 		fix_variable_error = { X = tenet_aniconism }
 		fix_variable_error = { X = tenet_alexandrian_catechism }
@@ -305,5 +266,68 @@ entitled_error_suppression.0001 = {
 		fix_variable_error = { X = entitled_faith }
 		fix_variable_error = { X = entitled_doctrine_for_toggle }
 		fix_variable_error = { X = not_creatable }
+
+
+
+		#TFE
+		fix_variable_error = { X = entitled_traditions_writing }
+		fix_variable_error = { X = tradition_script_syriac }
+		fix_variable_error = { X = tradition_script_brahmi }
+		fix_variable_error = { X = tradition_script_runic }
+		fix_variable_error = { X = tradition_script_mon }
+		fix_variable_error = { X = tradition_script_tifinagh }
+		fix_variable_error = { X = tradition_script_devanagari }
+		fix_variable_error = { X = tradition_script_south_arabian }
+		fix_variable_error = { X = tradition_script_hebrew }
+		fix_variable_error = { X = tradition_script_cyrillic }
+		fix_variable_error = { X = tradition_script_pahlavi }
+		fix_variable_error = { X = tradition_script_meroitic }
+		fix_variable_error = { X = tradition_script_latin }
+		fix_variable_error = { X = tradition_script_coptic }
+		fix_variable_error = { X = tradition_script_gothic }
+		fix_variable_error = { X = tradition_script_etruscan }
+		fix_variable_error = { X = tradition_script_cuneiform }
+		fix_variable_error = { X = tradition_script_georgian }
+		fix_variable_error = { X = tradition_script_sinhala }
+		fix_variable_error = { X = tradition_script_tamil }
+		fix_variable_error = { X = tradition_script_geez }
+		fix_variable_error = { X = tradition_script_arabic }
+		fix_variable_error = { X = tradition_script_gupta }
+		fix_variable_error = { X = tradition_script_greek }
+		fix_variable_error = { X = tradition_script_manichean }
+		fix_variable_error = { X = tradition_script_hungarian }
+		fix_variable_error = { X = tradition_script_phoenician }
+		fix_variable_error = { X = tradition_script_hieroglyphic }
+		fix_variable_error = { X = tradition_script_aramaic }
+		fix_variable_error = { X = tradition_script_tibetan }
+		fix_variable_error = { X = tradition_script_nabatean }
+		fix_variable_error = { X = tradition_script_armenian }
+		fix_variable_error = { X = tradition_script_ogham }
+		fix_variable_error = { X = tradition_script_glagolitic }
+		fix_variable_error = { X = tradition_script_han }
+		fix_variable_error = { X = tradition_script_sogdian }
+		fix_variable_error = { X = tradition_script_turkic }
+
+
+		#RICE
+		fix_variable_error = { X = RICE_khuzestan_khuzi_dignity_restored }
+		fix_variable_error = { X = RICE_greenland_adopted_arctic_adaptations }
+		fix_variable_error = { X = RICE_normandy_historia_normannorum_done }
+		fix_variable_error = { X = RICE_normandy_ending_norman_assimilation }
+		fix_variable_error = { X = RICE_khuzestan_khuzi_elymais }
+		fix_variable_error = { X = RICE_khuzestan_khuzi_traders }
+		fix_variable_error = { X = RICE_khuzestan_khuzi_community }
+		fix_variable_error = { X = RICE_game_started_on_TFE_start_date }
+		fix_variable_error = { X = RICE_normandy_ending_norman_conquest }
+		fix_variable_error = { X = RICE_khuzestan_khuzi_dignity_restored }
+		fix_variable_error = { X = RICE_greenland_adopted_arctic_adaptations }
+		fix_variable_error = { X = RICE_normandy_historia_normannorum_done }
+		fix_variable_error = { X = RICE_normandy_ending_norman_assimilation }
+		fix_variable_error = { X = RICE_khuzestan_khuzi_elymais }
+		fix_variable_error = { X = RICE_khuzestan_khuzi_traders }
+		fix_variable_error = { X = RICE_khuzestan_khuzi_community }
+		fix_variable_error = { X = RICE_game_started_on_TFE_start_date }
+		fix_variable_error = { X = RICE_normandy_ending_norman_conquest }
+		
 	}
 }

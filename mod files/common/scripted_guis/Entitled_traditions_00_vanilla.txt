@@ -1,0 +1,3195 @@
+﻿tradition_winter_warriors = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		culture_in_winter_geographical_region_trigger = yes
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_winter_warriors }
+	}
+}
+
+tradition_forest_fighters = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_forest_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = forest
+						terrain = taiga
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_forest_fighters }
+	}
+}
+
+tradition_mountaineers = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		NOR = {
+			has_cultural_pillar = heritage_somalian
+			has_cultural_pillar = heritage_east_african
+			this = culture:georgian
+			any_parent_culture_or_above = {
+				this = culture:georgian
+			}
+			has_cultural_tradition = tradition_caucasian_wolves
+			has_cultural_tradition = tradition_horn_mountain_skirmishing
+		}
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mountaineers }
+	}
+}
+
+tradition_warriors_of_the_dry = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = { #Replaced by Mubarizuns
+		NOT = { has_cultural_pillar = heritage_arabic }
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_dryland_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = drylands
+						terrain = desert
+					}
+				}
+			}
+		}
+		NOT = { has_cultural_tradition = tradition_mubarizuns } #To prevent stacking after hybridization
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_warriors_of_the_dry }
+	}
+}
+
+tradition_highland_warriors = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = { #Replaced by Upland Skirmishing
+		NOR = {
+			has_cultural_pillar = heritage_west_african
+			has_cultural_tradition = tradition_upland_skirmishing
+		}
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_hills_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = hills
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_highland_warriors }
+	}
+}
+
+tradition_jungle_warriors = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = { #Replaced by Bush Hunting
+		NOR = {
+			has_cultural_pillar = heritage_akan
+			has_cultural_pillar = heritage_yoruba
+			has_cultural_tradition = tradition_bush_hunting
+		}
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_jungle_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = jungle
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_jungle_warriors }
+	}
+}
+
+tradition_only_the_strong = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+		custom_description = {
+			text = culture_not_egalitarian
+			NOT = { has_cultural_pillar = ethos_egalitarian }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_only_the_strong }
+	}
+}
+
+tradition_warriors_by_merit = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_warriors_by_merit }
+	}
+}
+
+tradition_warrior_monks = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_warrior_monks }
+	}
+}
+
+tradition_talent_acquisition = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_talent_acquisition }
+	}
+}
+
+tradition_strength_in_numbers = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_strength_in_numbers }
+	}
+}
+
+tradition_frugal_armorsmiths = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_frugal_armorsmiths }
+	}
+}
+
+tradition_malleable_invaders = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		has_dlc_feature = hybridize_culture
+	}
+	is_valid = {
+		culture_in_non_sedentary_geographical_region_trigger = yes
+		culture_not_pacifistic_trigger = yes
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_malleable_invaders }
+	}
+}
+
+tradition_quarrelsome = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_quarrelsome }
+	}
+}
+
+tradition_swords_for_hire = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_swords_for_hire }
+	}
+}
+
+tradition_reverence_for_veterans = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_reverence_for_veterans }
+	}
+}
+
+tradition_stalwart_defenders = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_stalwart_defenders }
+	}
+}
+
+tradition_battlefield_looters = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_battlefield_looters }
+	}
+}
+
+tradition_hit_and_run = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		NOR = { #Replaced by Konni Raids (tradition_hussar)
+			has_cultural_pillar = heritage_south_slavic
+			has_cultural_pillar = heritage_magyar
+			has_cultural_pillar = heritage_west_slavic
+		}
+	}
+	is_valid = {
+		trigger_if = {
+			limit = {
+				OR = {
+					NOT = { exists = scope:replacing }
+					NOT = { scope:replacing = culture_tradition:tradition_hussar }
+				}	
+			}
+			NOT = { has_cultural_tradition = tradition_hussar } #To prevent stacking after hybridization
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hit_and_run }
+	}
+}
+
+tradition_stand_and_fight = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		NOR = { #Replaced by Mobile Guards
+			has_cultural_pillar = heritage_israelite
+			has_cultural_tradition = tradition_mobile_guards
+		}
+	}
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_stand_and_fight }
+	}
+}
+
+tradition_adaptive_skirmishing = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_adaptive_skirmishing }
+	}
+}
+
+tradition_formation_fighting = {
+	scope = culture
+	saved_scopes = { add character }
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_formation_fighting }
+	}
+}
+
+tradition_horse_breeder = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		OR = {
+			culture_has_light_cavalry_maa = yes
+			culture_has_heavy_cavalry_maa = yes
+			culture_has_archer_cavalry_maa = yes
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_horse_breeder }
+	}
+}
+
+tradition_longbow_competitions = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_west_germanic
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_goidelic
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_west_germanic
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_goidelic
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_longbow_competitions }
+	}
+}
+
+#######################
+# CULTURAL TRADITIONS #
+#######################
+
+######################
+# MAA Traditions 	 #
+######################
+
+tradition_futuwaa = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		has_cultural_pillar = heritage_iranian
+		NOR = { #Replaces Martial Admiration
+			has_cultural_tradition = tradition_chanson_de_geste
+			has_cultural_tradition = tradition_druzhina
+			has_cultural_tradition = tradition_martial_admiration
+		}
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_iranian
+		NOR = { #Replaces Martial Admiration
+			has_cultural_tradition = tradition_chanson_de_geste
+			has_cultural_tradition = tradition_druzhina
+			has_cultural_tradition = tradition_martial_admiration
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_futuwaa }
+	}
+}
+
+tradition_mubarizuns = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	#Can pick this if you have arabic heritage.
+	is_shown = { #Replaces Warriors of the Dry
+		has_cultural_pillar = heritage_arabic
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		trigger_if = {
+			limit = {
+				OR = {
+					NOT = { exists = scope:replacing }
+					NOT = { scope:replacing = culture_tradition:tradition_warriors_of_the_dry }
+				}
+			}
+			NOT = { has_cultural_tradition = tradition_warriors_of_the_dry } #To prevent stacking after hybridization
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mubarizuns }
+	}
+}
+
+tradition_desert_ribat = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		has_cultural_pillar = heritage_berber
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_dryland_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = drylands
+						terrain = desert
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_desert_ribat }
+	}
+}
+
+tradition_land_of_the_bow = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		has_cultural_pillar = heritage_east_african
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_east_african
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_land_of_the_bow }
+	}
+}
+
+tradition_druzhina = {
+	scope = culture
+	saved_scopes = { add character }
+
+	#East Slavic
+	#This replaces Martial Admiration
+	is_shown = {
+		has_cultural_pillar = heritage_east_slavic
+		NOR = { #Replaces Martial Admiration
+			has_cultural_tradition = tradition_futuwaa
+			has_cultural_tradition = tradition_chanson_de_geste
+			has_cultural_tradition = tradition_martial_admiration
+		}
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_east_slavic
+		NOR = { #Replaces Martial Admiration
+			has_cultural_tradition = tradition_futuwaa
+			has_cultural_tradition = tradition_chanson_de_geste
+			has_cultural_tradition = tradition_martial_admiration
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_druzhina }
+	}
+}
+
+tradition_hussar = { #Konni Raids
+	scope = culture
+	saved_scopes = { add character }
+
+	#This replaces Hit and Run
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_south_slavic
+			has_cultural_pillar = heritage_magyar
+			has_cultural_pillar = heritage_west_slavic
+		}
+	}
+	is_valid = {
+		trigger_if = {
+			limit = {
+				OR = {
+					NOT = { exists = scope:replacing }
+					NOT = { scope:replacing = culture_tradition:tradition_hit_and_run }
+				}
+			}
+			NOT = { has_cultural_tradition = tradition_hit_and_run } #To prevent stacking after hybridization
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hussar }
+	}
+}
+
+tradition_horn_mountain_skirmishing = {
+	scope = culture
+	saved_scopes = { add character }
+
+	#In the Horn of Africa this replaces the Mountaineers tradition
+	is_shown = {
+		OR ={
+			has_cultural_pillar = heritage_somalian
+			has_cultural_pillar = heritage_east_african
+		}
+		NOR = {
+			has_cultural_tradition = tradition_mountaineers
+			has_cultural_tradition = tradition_caucasian_wolves
+		}
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_horn_mountain_skirmishing }
+	}
+}
+
+tradition_bush_hunting = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	#Replaces Jungle Warriors
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_akan
+			has_cultural_pillar = heritage_yoruba
+		}
+		NOT = { has_cultural_tradition = tradition_jungle_warriors }
+	}
+	is_valid = {
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_bush_hunting }
+	}
+}
+
+tradition_mobile_guards = {
+	scope = culture
+	saved_scopes = { add character }
+
+	#Replaces Stand and Fight
+	is_shown = {
+		has_cultural_pillar = heritage_israelite
+		NOT = { has_cultural_tradition = tradition_stand_and_fight }
+	}
+	is_valid = {
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mobile_guards }
+	}
+}
+
+tradition_khadga_puja = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		has_cultural_pillar = heritage_indo_aryan
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_not_egalitarian
+			NOT = {	has_cultural_pillar = ethos_egalitarian }
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_khadga_puja }
+	}
+}
+
+tradition_garuda_warriors = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		has_cultural_pillar = heritage_dravidian
+	}
+	is_valid = {
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_garuda_warriors }
+	}
+}
+
+tradition_burman_royal_army = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		has_cultural_pillar = heritage_burman
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_burman
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_burman_royal_army }
+	}
+}
+
+tradition_mountain_herding = {
+	scope = culture
+	saved_scopes = { add character }
+
+	#Replaces Mountain Homes
+	is_shown = {
+		OR ={
+			has_cultural_pillar = heritage_arabic
+			has_cultural_pillar = heritage_berber
+		}
+	}
+	is_valid = {
+		OR ={
+			has_cultural_pillar = heritage_arabic
+			has_cultural_pillar = heritage_berber
+		}
+		culture_not_pacifistic_trigger = yes
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mountain_herding }
+	}
+}
+
+tradition_forest_wardens = {
+	scope = culture
+	saved_scopes = { add character }
+
+	#Replaces Forest Folk
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_balto_finnic
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_ugro_permian
+			has_cultural_pillar = heritage_baltic
+		}
+		NOT = { has_cultural_tradition = tradition_forest_folk }
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_balto_finnic
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_ugro_permian
+			has_cultural_pillar = heritage_baltic
+		}
+		custom_description = {
+			text = culture_in_forest_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = forest
+						terrain = taiga
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_forest_wardens }
+	}
+}
+
+tradition_upland_skirmishing = {
+	scope = culture
+	saved_scopes = { add character }
+
+	#Replaces Highland Warriors
+	is_shown = {
+		has_cultural_pillar = heritage_west_african
+		NOT = { has_cultural_tradition = tradition_highland_warriors }
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_west_african
+		custom_description = {
+			text = culture_in_hills_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = hills
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_upland_skirmishing }
+	}
+}
+
+tradition_strong_kinship = { #There can be only one!
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			this = culture:gaelic
+			this = culture:scottish
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:gaelic
+					this = culture:scottish
+				}
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			this = culture:gaelic
+			this = culture:scottish
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:gaelic
+					this = culture:scottish
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_strong_kinship }
+	}
+}
+
+tradition_amharic_highlanders = { #Ethiopian Unique Tradition, replaces hill dwellers, Unlocks MAA innovation & Castration
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		NOT = { has_cultural_tradition = tradition_hill_dwellers }
+		OR = {
+			this = culture:ethiopian
+			any_parent_culture_or_above = {
+				this = culture:ethiopian
+			}
+		}
+	}
+	is_valid = {
+		NOT = { has_cultural_tradition = tradition_hill_dwellers }
+		OR = {
+			this = culture:ethiopian
+			any_parent_culture_or_above = {
+				this = culture:ethiopian
+			}
+		}
+		custom_description = {
+			text = culture_in_hills_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = hills
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_amharic_highlanders }
+	}
+}
+
+
+tradition_polders = { #Dutch Unique Tradition, bonuses to buildings along coastline, Unlocks MAA innovation
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			this = culture:dutch
+			any_parent_culture_or_above = {
+				this = culture:dutch
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			this = culture:dutch
+			any_parent_culture_or_above = {
+				this = culture:dutch
+			}
+		}
+		custom_description = {
+			text = culture_on_coast_desc
+			any_culture_county = {
+				any_county_province = {
+					is_coastal = yes
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_polders }
+	}
+}
+
+tradition_caucasian_wolves = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	#For Georgians this replaces the Mountaineers tradition
+	is_shown = {
+		OR = {
+			this = culture:georgian
+			any_parent_culture_or_above = {
+				this = culture:georgian
+			}
+		}
+		NOR = {
+			has_cultural_tradition = tradition_mountaineers
+			has_cultural_tradition = tradition_horn_mountain_skirmishing
+		}
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_caucasian_wolves }
+	}
+}
+
+tradition_hird = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = { #Replaces Warrior Culture
+		NOR = {
+			has_cultural_tradition = tradition_warrior_culture
+			has_cultural_tradition = tradition_fp1_coastal_warriors
+		}
+		OR = {
+			AND = {
+				has_cultural_pillar = heritage_north_germanic
+				has_fp1_dlc_trigger = no
+			}
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:old_saxon
+					this = culture:norse #For instance Norman culture
+				}
+			}
+		}
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		scope:character ?= {
+			government_has_flag = government_is_tribal
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hird }
+	}
+}
+
+
+tradition_chanson_de_geste = {
+#Replaces Martial Admiration
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		has_cultural_pillar = heritage_frankish
+		NOR = { #Replaces Martial Admiration
+			has_cultural_tradition = tradition_futuwaa
+			has_cultural_tradition = tradition_druzhina
+			has_cultural_tradition = tradition_martial_admiration
+		}
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_frankish
+		NOR = { #Replaces Martial Admiration
+			has_cultural_tradition = tradition_futuwaa
+			has_cultural_tradition = tradition_druzhina
+			has_cultural_tradition = tradition_martial_admiration
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_chanson_de_geste }
+	}
+}
+
+
+#############################
+# REALM CULTURAL TRADITIONS #
+#############################
+
+tradition_court_eunuchs = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_valid = {
+		custom_tooltip = {
+			text = cannot_have_tradition_byzantine_succession
+			NOT = { has_cultural_tradition = tradition_byzantine_succession }
+		}
+		custom_tooltip = {
+			scope:character ?= {
+				OR = {
+					any_courtier = {
+						has_trait = eunuch
+					}
+					any_vassal = {
+						has_trait = eunuch
+					}
+					any_councillor = {
+						has_trait = eunuch
+					}
+				}
+			}
+			text = no_eunuch_in_realms
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_court_eunuchs }
+	}
+}
+
+tradition_legalistic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = { # strict laws are heavily tied to the Religion during this era
+		scope:character.faith = {
+			OR = {
+				has_doctrine = doctrine_spiritual_head
+				has_doctrine = doctrine_temporal_head
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_legalistic }
+	}
+}
+
+tradition_republican_legacy = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR ={
+			this = culture:roman
+			any_parent_culture_or_above = {
+				this = culture:roman
+			}
+		}
+		NOT = { has_cultural_tradition = tradition_parochialism }
+	}
+	is_valid = {
+		OR ={
+			this = culture:roman
+			any_parent_culture_or_above = {
+				this = culture:roman
+			}
+		}
+		NOT = { has_cultural_tradition = tradition_parochialism }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_republican_legacy }
+	}
+}
+
+tradition_hereditary_hierarchy = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		scope:character ?= {
+			government_has_flag = government_is_feudal
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hereditary_hierarchy }
+	}
+}
+
+tradition_esteemed_hospitality = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+	}
+	is_valid = {
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_esteemed_hospitality }
+	}
+}
+
+tradition_gardening = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_gardening }
+	}
+}
+
+tradition_tribe_unity = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = { #Replaced by Strong Kinship
+		NOR = {
+			this = culture:gaelic
+			this = culture:scottish
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:gaelic
+					this = culture:scottish
+				}
+			}
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = requires_tribal_or_clan_government_trigger
+			scope:character ?= {
+				OR = {
+					government_has_flag = government_is_clan
+					government_has_flag = government_is_tribal
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_tribe_unity }
+	}
+}
+
+tradition_astute_diplomats = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_astute_diplomats }
+	}
+}
+
+tradition_collective_lands = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_collective_lands }
+	}
+}
+
+tradition_female_only_inheritance = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		NOT = { has_game_rule = inversed_gender_equality }
+	}
+	
+	is_valid = {
+		custom_tooltip = {
+			NOT = { has_cultural_tradition = tradition_nubian_warrior_queens }
+			OR = {
+				has_cultural_pillar = heritage_senegambian
+				has_cultural_pillar = heritage_akan
+				has_cultural_pillar = heritage_west_african
+				has_cultural_pillar = heritage_yoruba
+				any_parent_culture_or_above = {
+					OR = {
+						this = culture:nubian
+						this = culture:daju
+					}
+				}
+				scope:character.faith = {
+					has_doctrine_parameter = female_dominated_law
+				}
+			}
+			text = tradition_female_only_inheritance_requirements
+		}
+		scope:character ?= {
+			primary_title = {
+				NOR = {
+					has_title_law = male_only_law
+					has_title_law = male_preference_law
+				}
+			}
+			NOR = {
+				has_realm_law = male_only_law
+				has_realm_law = male_preference_law
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_female_only_inheritance }
+	}
+}
+
+tradition_equal_inheritance = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_valid = {
+		NOR = {
+			has_cultural_tradition = tradition_nubian_warrior_queens
+			has_cultural_tradition = tradition_nubian_warrior_kings
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_equal_inheritance }
+	}
+}
+
+tradition_roman_legacy = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_byzantine
+			trigger_if = {
+				limit = { TFE_is_loaded = yes }
+				has_cultural_pillar = heritage_latin
+			}
+		}
+	}
+	is_valid = {
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_roman_legacy }
+	}
+}
+
+tradition_metal_craftsmanship = {
+	scope = culture
+	saved_scopes = { add character }
+}
+
+tradition_family_entrepreneurship = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = not_numerous_close_family_desc
+			scope:character ?= {
+				any_close_family_member = {
+					count >= 10
+					is_alive = yes
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_family_entrepreneurship }
+	}
+}
+
+tradition_wedding_ceremonies = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_wedding_ceremonies }
+	}
+}
+
+tradition_culture_blending = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		has_dlc_feature = hybridize_culture
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_culture_blending }
+	}
+}
+
+tradition_isolationist = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_isolationist }
+	}
+}
+
+tradition_fervent_temple_builders = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_valid = {
+		custom_tooltip = {
+			any_culture_county = {
+				percent >= 0.2
+				any_county_province = {
+					has_holding_type = church_holding
+				}
+			}
+			text = 20_percent_churches
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fervent_temple_builders }
+	}
+}
+
+tradition_agrarian = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		trigger_if = {
+			limit = { CE_is_loaded = yes }
+			NOR = { #Cant be taken by Cultures who already are good at farming
+				has_cultural_tradition = tradition_nile_agriculture
+			}
+			custom_tooltip = {
+				text = culture_in_plains_farmlands_or_floodplains_terrain_desc
+				any_culture_county = {
+					any_county_province = {
+						OR = {
+							terrain = plains
+							terrain = farmlands
+							terrain = floodplains
+						}
+					}
+				}
+			}
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = culture_in_farmlands_or_floodplains_terrain_desc
+				any_culture_county = {
+					any_county_province = {
+						OR = {
+							terrain = farmlands
+							terrain = floodplains
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_agrarian }
+	}
+}
+
+tradition_pastoralists = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = culture_in_plains_or_steppe_terrain_desc
+			any_culture_county = {
+				percent >= 0.4
+				any_county_province = {
+					OR = {
+						terrain = plains
+						terrain = steppe
+						geographical_region = world_steppe
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_pastoralists }
+	}
+}
+
+tradition_parochialism = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = { #Replaced by tradition_republican_legacy
+		NOT = { has_cultural_tradition = tradition_republican_legacy }
+		trigger_if = {
+			limit = { TFE_is_loaded = yes }
+			NOT = { has_cultural_tradition = tradition_sogdian_naf }
+		}
+		NOR ={
+			this = culture:roman
+			any_parent_culture_or_above = {
+				this = culture:roman
+			}
+		}
+	}
+	is_valid = {
+		NOR ={
+			this = culture:roman
+			any_parent_culture_or_above = {
+				this = culture:roman
+			}
+		}
+		NOT = { has_cultural_tradition = tradition_republican_legacy }
+		trigger_if = {
+			limit = { TFE_is_loaded = yes }
+			NOT = { has_cultural_tradition = tradition_sogdian_naf }
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_parochialism }
+	}
+}
+
+tradition_ruling_caste = {
+	scope = culture
+	saved_scopes = { add character }
+}
+
+tradition_staunch_traditionalists = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		has_dlc_feature = hybridize_culture
+	}
+	is_valid = {
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_ruling_caste }
+	}
+}
+
+tradition_hill_dwellers = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = { #Cannot be picked if you have access to Highland Farming
+		NOT = { has_cultural_tradition = tradition_amharic_highlanders }
+		NOR = {
+			this = culture:ethiopian
+			any_parent_culture_or_above = {
+				this = culture:ethiopian
+			}
+		}
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_hills_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = hills
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hill_dwellers }
+	}
+}
+
+tradition_forest_folk = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		NOR = { #These cultures instead get Forest Wardens Tradition
+			has_cultural_pillar = heritage_balto_finnic
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_ugro_permian
+			has_cultural_pillar = heritage_baltic
+			has_cultural_tradition = tradition_forest_wardens
+		}
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_forest_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = forest
+						terrain = taiga
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_forest_folk }
+	}
+}
+
+tradition_mountain_homes = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		NOR = { #This is replaced by Himalayan Settlers, Mountaineer Ruralism and Mountain Herding. 
+			has_cultural_tradition = tradition_himalayan_settlers
+			has_cultural_tradition = tradition_mountaineer_ruralism
+			has_cultural_pillar = heritage_arabic
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_tibetan
+			has_cultural_pillar = heritage_qiangic
+			has_cultural_pillar = heritage_west_slavic
+			any_culture_county = {
+				title_province = {
+					geographical_region = world_himalaya
+				}
+			}
+		}
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mountain_homes }
+	}
+}
+
+tradition_dryland_dwellers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		trigger_if = {
+			limit = { TFE_is_loaded = yes }
+			NOT = { has_cultural_tradition = tradition_desert_wonders }
+		}
+		custom_description = {
+			text = culture_in_dryland_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = drylands
+						terrain = desert
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_dryland_dwellers }
+	}
+}
+
+tradition_jungle_dwellers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		NOR = {
+			has_cultural_pillar = heritage_akan
+			has_cultural_pillar = heritage_yoruba
+			has_cultural_tradition = tradition_hidden_cities
+		}
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_jungle_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = jungle
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_jungle_dwellers }
+	}
+}
+
+tradition_wetlanders = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = culture_in_wetlands_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = wetlands
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_wetlanders }
+	}
+}
+
+tradition_hidden_cities = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_akan
+			has_cultural_pillar = heritage_yoruba
+		}
+		NOT = { has_cultural_tradition = tradition_jungle_dwellers }
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_jungle_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = jungle
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hidden_cities }
+	}
+}
+
+tradition_ancient_miners = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		always = no
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_ancient_miners }
+	}
+}
+
+tradition_castle_keepers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			scope:character ?= {
+				OR = {
+					government_has_flag = government_is_feudal
+					government_has_flag = government_is_clan
+				}
+			}
+			text = must_be_feudal_or_clan
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_city_keepers
+			NOT = { has_cultural_tradition = tradition_city_keepers }
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_castle_keepers }
+	}
+}
+
+tradition_city_keepers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		scope:character ?= {
+			government_has_flag = government_is_feudal
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_castle_keepers
+			NOT = { has_cultural_tradition = tradition_castle_keepers }
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_city_keepers }
+	}
+}
+
+tradition_maritime_mercantilism = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_description = {
+			text = culture_on_coast_desc
+			any_culture_county = {
+				any_county_province = {
+					is_coastal = yes
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_maritime_mercantilism }
+	}
+}
+
+tradition_monastic_communities = {
+	scope = culture
+	saved_scopes = { add character }
+	# is_shown = {}
+	is_valid = {
+		scope:character ?= {
+			faith = {
+				has_doctrine_parameter = take_vows_active
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_monastic_communities }
+	}
+}
+
+################################
+# REGIONAL CULTURAL TRADITIONS #
+################################
+
+tradition_byzantine_succession = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_byzantine
+			scope:character ?= {
+				has_title = title:e_byzantium
+			}
+		}
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_byzantine
+		scope:character ?= {
+			has_title = title:e_byzantium
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_court_eunuchs
+			NOT = { has_cultural_tradition = tradition_court_eunuchs }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_merciful_blindings
+			NOT = { has_cultural_tradition = tradition_merciful_blindings }
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_byzantine_succession }
+	}
+}
+
+tradition_lords_of_the_elephant = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			any_culture_county = {
+				title_province = {
+					geographical_region = world_innovation_elephants
+				}
+			}
+			has_innovation = innovation_elephantry
+		}
+	}
+	is_valid = {
+		has_innovation = innovation_elephantry
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_lords_of_the_elephant }
+	}
+}
+
+tradition_african_tolerance = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = { # For cultures with any heritage from western or central Africa
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_west_african
+			has_cultural_pillar = heritage_central_african
+			has_cultural_pillar = heritage_sahelian
+			has_cultural_pillar = heritage_senegambian
+			has_cultural_pillar = heritage_akan
+			has_cultural_pillar = heritage_yoruba
+		}
+		NOT = {
+			has_cultural_tradition = tradition_steppe_tolerance
+		}
+	}
+	is_valid = {
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_african_tolerance }
+	}
+}
+
+tradition_the_witenagemot = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_west_germanic
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_goidelic
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_west_germanic
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_goidelic
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_the_witenagemot }
+	}
+}
+
+tradition_things = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		has_cultural_pillar = heritage_north_germanic
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_north_germanic
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_things }
+	}
+}
+
+tradition_caravaneers = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		always = no
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_caravaneers }
+	}
+}
+
+tradition_horse_lords = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_mongolic
+			has_cultural_pillar = heritage_turkic
+		}
+	}
+
+	is_valid = {
+		custom_description = {
+			text = culture_in_steppe_desc
+			any_culture_county = {
+				percent >= 0.4
+				any_county_province = {
+					geographical_region = world_steppe
+				}
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_horse_lords }
+	}
+}
+
+tradition_saharan_nomads = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		any_culture_county = {
+			title_province = {
+				geographical_region = world_africa_sahara
+			}
+		}
+	}
+	is_valid = {
+		any_culture_county = {
+			title_province = {
+				geographical_region = world_africa_sahara
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_saharan_nomads }
+	}
+}
+
+tradition_visigothic_codes = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			this = culture:visigothic
+			this = culture:basque
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:visigothic
+					this = culture:basque
+				}
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			this = culture:visigothic
+			this = culture:basque
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:visigothic
+					this = culture:basque
+				}
+			}
+		}
+		scope:character ?= {
+			has_religion = religion:christianity_religion #The Visigothic code is strongly associated with Christian canon law.
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_visigothic_codes }
+	}
+}
+
+tradition_himalayan_settlers = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = { #Replaces Mountain Homes
+		OR = {
+			has_cultural_pillar = heritage_tibetan
+			has_cultural_pillar = heritage_qiangic
+			any_culture_county = {
+				title_province = {
+					geographical_region = world_himalaya
+				}
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_tibetan
+			has_cultural_pillar = heritage_qiangic
+			any_culture_county = {
+				title_province = {
+					geographical_region = world_himalaya
+				}
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_himalayan_settlers }
+	}
+}
+
+tradition_desert_nomads = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		OR = {
+			this = culture:bedouin
+			any_parent_culture_or_above = {
+				this = culture:bedouin
+			}
+			any_parent_culture = {
+				has_cultural_tradition = tradition_desert_nomads
+			}
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = culture_in_camel_region_desc
+			any_culture_county = {
+				any_county_province = {
+					geographical_region = world_innovation_camels
+				}
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_desert_nomads }
+	}
+}
+
+tradition_mountaineer_ruralism = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		has_cultural_pillar = heritage_west_slavic
+		NOR = {
+			has_cultural_tradition = tradition_himalayan_settlers
+			has_cultural_tradition = tradition_mountain_homes
+			any_culture_county = {
+				title_province = {
+					geographical_region = world_himalaya
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		has_cultural_pillar = heritage_west_slavic
+		NOT = {
+			has_cultural_tradition = tradition_mountain_homes
+		}
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mountaineer_ruralism }
+	}
+}
+
+tradition_steppe_tolerance = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		NOR = {
+			has_cultural_tradition = tradition_african_tolerance
+			has_cultural_tradition = tradition_religion_blending
+		}
+		OR = {
+			has_cultural_pillar = heritage_mongolic
+			has_cultural_pillar = heritage_turkic
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = culture_in_steppe_desc
+			any_culture_county = {
+				percent >= 0.4
+				any_county_province = {
+					geographical_region = world_steppe
+				}
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_steppe_tolerance }
+	}
+}
+
+tradition_nubian_warrior_queens = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		NOT = { has_game_rule = inversed_gender_equality }
+		any_parent_culture_or_above = {
+			OR = {
+				this = culture:nubian
+				this = culture:daju
+			}
+		}
+	}
+	is_valid = {
+		any_parent_culture_or_above = {
+			OR = {
+				this = culture:nubian
+				this = culture:daju
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_nubian_warrior_queens }
+	}
+}
+
+tradition_nubian_warrior_kings = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		has_game_rule = inversed_gender_equality
+		any_parent_culture_or_above = {
+			OR = {
+				this = culture:nubian
+				this = culture:daju
+			}
+		}
+	}
+	is_valid = {
+		any_parent_culture_or_above = {
+			OR = {
+				this = culture:nubian
+				this = culture:daju
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_nubian_warrior_kings }
+	}
+}
+
+
+##############################
+# RITUAL CULTURAL TRADITIONS #
+##############################
+
+tradition_monogamous = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_polygamous
+							scope:replacing = culture_tradition:tradition_concubines
+						}
+					}
+				}
+				NOR = {
+					has_cultural_tradition = tradition_polygamous
+					has_cultural_tradition = tradition_concubines
+				}
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_monogamous }
+	}
+}
+
+tradition_polygamous = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_concubines
+						}
+					}
+				}
+				NOR = {
+					has_cultural_tradition = tradition_monogamous
+					has_cultural_tradition = tradition_concubines
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_polygamous }
+	}
+}
+
+tradition_concubines = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_polygamous
+						}
+					}
+				}
+				NOR = {
+					has_cultural_tradition = tradition_monogamous
+					has_cultural_tradition = tradition_polygamous
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_concubines }
+	}
+}
+
+tradition_sacred_mountains = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		NOR = {
+			has_cultural_pillar = heritage_somalian
+			has_cultural_pillar = heritage_east_african
+			has_cultural_pillar = heritage_tibetan
+			has_cultural_pillar = heritage_qiangic
+			any_culture_county = {
+				title_province = {
+					geographical_region = world_himalaya
+				}
+			}
+			has_cultural_tradition = tradition_himalayan_settlers
+		}
+		scope:character ?= { government_has_flag = government_is_tribal }
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sacred_mountains }
+	}
+}
+
+tradition_sacred_groves = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		scope:character ?= { government_has_flag = government_is_tribal }
+	}
+	is_valid = {
+		custom_description = {
+			text = culture_in_forest_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = forest
+						terrain = taiga
+						terrain = jungle
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sacred_groves }
+	}
+}
+
+tradition_culinary_art = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = culture_in_farmlands_or_floodplains_terrain_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = farmlands
+						terrain = floodplains
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_culinary_art }
+	}
+}
+
+tradition_festivities = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_festivities }
+	}
+}
+
+tradition_sorcerous_metallurgy = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+	}
+
+	is_valid = {
+		scope:character ?= {
+			faith = {
+				has_doctrine_parameter = witchcraft_accepted
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sorcerous_metallurgy }
+	}
+}
+
+tradition_mystical_ancestors = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		any_parent_culture_or_above = {
+			has_cultural_tradition = tradition_mystical_ancestors
+		}
+	}
+
+	is_valid = { #Can pick if your culture has mystical ancestors in its history
+		custom_tooltip = {
+			text = any_ancestor_culture_was_mystical
+			any_parent_culture_or_above = {
+				has_cultural_tradition = tradition_mystical_ancestors
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mystical_ancestors }
+	}
+}
+
+tradition_religion_blending = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		NOT = {
+			has_cultural_tradition = tradition_steppe_tolerance
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = rulers_following_different_faiths_trigger_desc
+			scope:character ?= {
+				any_vassal = {
+					count >= 2
+					culture = prev.culture
+					NOT = { faith = prev.faith }
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_religion_blending }
+	}
+}
+
+tradition_religious_patronage = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			any_culture_county = {
+				percent >= 0.2
+				any_county_province = {
+					has_holding_type = church_holding
+				}
+			}
+			text = 20_percent_churches
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_religious_patronage }
+	}
+}
+
+tradition_medicinal_plants = {
+	scope = culture
+	saved_scopes = { add character }
+}
+
+tradition_sacred_hunts = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_tooltip = {
+			text = cannot_have_tradition_vegetarianism
+			NOT = { has_cultural_tradition = tradition_vegetarianism }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_sacred_hunts }
+	}
+}
+
+tradition_faith_bound = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_faith_bound }
+	}
+}
+
+tradition_by_the_sword = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = faith_not_allowed_holy_war_desc
+			scope:character ?= {
+				faith = {
+					NOT = { has_doctrine_parameter = holy_wars_forbidden }	# Pacifists cannot Holy War
+				}
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_by_the_sword }
+	}
+}
+
+tradition_language_scholars = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_language_scholars }
+	}
+}
+
+# This is the free version of runestones.
+tradition_runestones = {
+	scope = culture
+	saved_scopes = { add character }
+
+	# Runestones are available in a slightly reduced form in the base title, so we let you access this tradition regardless of whether you have FP1 or not.
+	is_shown = {
+		has_cultural_pillar = heritage_north_germanic
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_northern_stories
+			has_cultural_tradition = tradition_fp1_northern_stories
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_runestones }
+	}
+}
+
+tradition_merciful_blindings = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = cannot_have_tradition_byzantine_succession
+			NOT = { has_cultural_tradition = tradition_byzantine_succession }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_merciful_blindings }
+	}
+}
+
+
+################################
+# SOCIETAL CULTURAL TRADITIONS #
+################################
+
+tradition_xenophilic = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_tooltip = {
+			text = culture_acceptance_trigger_desc
+			any_culture_global = {
+				count >= xenophilic_nr_of_cultures_value
+				NOT = { this = prev }
+				cultural_acceptance = { target = prev value >= xenophilic_acceptance_value }
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_xenophilic }
+	}
+}
+
+tradition_chivalry = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_central_germanic
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_goidelic
+			has_cultural_pillar = heritage_iberian
+			has_cultural_pillar = heritage_latin
+			has_cultural_pillar = heritage_west_germanic
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_chivalry }
+	}
+}
+
+tradition_hard_working = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hard_working }
+	}
+}
+
+tradition_loyal_soldiers = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_loyal_soldiers }
+	}
+}
+
+tradition_pacifism = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_description = {
+			text = culture_not_bellicose
+			NOT = {
+				has_cultural_pillar = ethos_bellicose
+			}
+		}
+		culture_not_warlike_trigger = yes
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_pacifism }
+	}
+}
+
+tradition_spartan = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		NOT = {
+			scope:character ?= {
+				government_has_flag = government_is_tribal
+			}
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_spartan }
+	}
+}
+
+tradition_diasporic = {
+	scope = culture
+	saved_scopes = { add character }
+
+	# Disaporic peoples are marginalized people who have lost their traditional homeland and been forced to live elsewhere. Any hybrid or divergent culture will, by definition, have a new homeland. As a result, new cultures can never pick this tradition, and only historical cultures may start with it.
+	is_shown = { always = no }
+	is_valid = { always = no }
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_diasporic }
+	}
+}
+
+tradition_hunters = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_tooltip = {
+			text = cannot_have_tradition_vegetarianism
+			NOT = {has_cultural_tradition = tradition_vegetarianism }
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hunters }
+	}
+}
+
+tradition_vegetarianism = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_indo_aryan
+			has_cultural_pillar = heritage_dravidian
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_indo_aryan
+			has_cultural_pillar = heritage_dravidian
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_sacred_hunts
+			NOT = { has_cultural_tradition = tradition_sacred_hunts }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_hunters
+			NOT = { has_cultural_tradition = tradition_hunters }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_vegetarianism }
+	}
+}
+
+tradition_seafaring = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_description = {
+			text = percentage_of_culture_on_coast_desc
+			any_culture_county = {
+				percent >= 0.5
+				any_county_province = {
+					is_coastal = yes
+				}
+			}
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_coastal_warriors
+			NOT = { has_cultural_tradition = tradition_fp1_coastal_warriors }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_seafaring }
+	}
+}
+
+tradition_storytellers = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_valid = {
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_northern_stories
+			NOT = { has_cultural_tradition = tradition_fp1_northern_stories }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_storytellers }
+	}
+}
+
+tradition_music_theory = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		has_ep1_court_positions_dlc_trigger = yes
+	}
+
+	is_valid = {
+		trigger_if = {
+			limit = { TFE_is_loaded = yes }
+			custom_tooltip = {
+				text = cannot_have_tradition_orpheus
+				NOT = { has_cultural_tradition = tradition_orpheus }
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_music_theory }
+	}
+}
+
+tradition_poetry = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_valid = {
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_northern_stories
+			NOT = { has_cultural_tradition = tradition_fp1_northern_stories }
+		}
+		trigger_if = {
+			limit = { TFE_is_loaded = yes }
+			custom_tooltip = {
+				text = cannot_have_tradition_orpheus
+				NOT = { has_cultural_tradition = tradition_orpheus }
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_poetry }
+	}
+}
+
+tradition_fishermen = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_description = {
+			text = culture_on_coast_desc
+			any_culture_county = {
+				any_county_province = {
+					is_coastal = yes
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fishermen }
+	}
+}
+
+tradition_mendicant_mystics = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_mendicant_mystics }
+	}
+}
+
+tradition_warrior_culture = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		NOT = { has_cultural_tradition = tradition_hird }
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		scope:character ?= {
+			government_has_flag = government_is_tribal
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_coastal_warriors
+			NOT = { has_cultural_tradition = tradition_fp1_coastal_warriors }
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_warrior_culture }
+	}
+}
+
+tradition_martial_admiration = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		NOR = { #Replaced by Futuwaa and Druzhina
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_tradition = tradition_futuwaa
+			has_cultural_tradition = tradition_druzhina
+			has_cultural_tradition = tradition_chanson_de_geste
+		}
+	}
+
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		NOR = { #Replaced by Futuwaa and Druzhina
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_tradition = tradition_futuwaa
+			has_cultural_tradition = tradition_druzhina
+			has_cultural_tradition = tradition_chanson_de_geste
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_martial_admiration }
+	}
+}
+
+tradition_philosopher_culture = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_description = {
+			text = culture_not_bellicose
+			NOT = {
+				has_cultural_pillar = ethos_bellicose
+			}
+		}
+		NOT = { has_cultural_tradition = tradition_warrior_culture }
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_philosopher_culture }
+	}
+}
+
+tradition_welcoming = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_welcoming }
+	}
+}
+
+tradition_eye_for_an_eye = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_eye_for_an_eye }
+	}
+}
+
+tradition_zealous_people = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_zealous_people }
+	}
+}
+
+tradition_forbearing = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_forbearing }
+	}
+}
+
+tradition_equitable = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_equitable }
+	}
+}
+
+tradition_charitable = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_charitable }
+	}
+}
+
+tradition_modest = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_modest }
+	}
+}
+
+tradition_practiced_pirates = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_valid = {
+		custom_description = {
+			text = percentage_of_culture_on_coast_desc
+			any_culture_county = {
+				percent >= 0.5
+				any_county_province = {
+					is_coastal = yes
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_practiced_pirates }
+	}
+}
+
+tradition_life_is_just_a_joke = {
+	scope = culture
+	saved_scopes = { add character }
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_life_is_just_a_joke }
+	}
+}
+
+tradition_artisans = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		has_dlc_feature = royal_court
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_artisans }
+	}
+}
+
+
+tradition_fp1_coastal_warriors = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		# DLC check.
+		has_fp1_dlc_trigger = yes
+		NOT = { has_cultural_tradition = tradition_hird }
+		has_cultural_pillar = heritage_north_germanic
+	}
+	is_valid = {
+		# Must be of a suitable heritage.
+		custom_tooltip = {
+			text = northern_germanic_heritage_trigger
+			has_cultural_pillar = heritage_north_germanic
+		}
+		# And have a coastal presence.
+		custom_description = {
+			text = culture_on_coast_desc
+			any_culture_county = {
+				any_county_province = {
+					is_coastal = yes
+				}
+			}
+		}
+		# Shouldn't be combined with the following traditions:
+		custom_tooltip = {
+			text = cannot_have_tradition_warrior_culture
+			NOT = { has_cultural_tradition = tradition_warrior_culture }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_seafaring
+			NOT = { has_cultural_tradition = tradition_seafaring }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp1_coastal_warriors }
+	}
+}
+
+tradition_fp1_performative_honour = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		# DLC check.
+		has_fp1_dlc_trigger = yes
+		has_cultural_pillar = heritage_north_germanic
+	}
+	is_valid = {
+		# Must be of a suitable heritage.
+		custom_tooltip = {
+			text = northern_germanic_heritage_trigger
+			has_cultural_pillar = heritage_north_germanic
+		}
+		# Shouldn't be combined with the following traditions:
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_trials_by_combat
+			NOT = {	has_cultural_tradition = tradition_fp1_trials_by_combat }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_the_right_to_prove
+			NOT = { has_cultural_tradition = tradition_fp1_the_right_to_prove }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp1_performative_honour }
+	}
+}
+
+tradition_fp1_northern_stories = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		# DLC check.
+		has_fp1_dlc_trigger = yes
+		has_cultural_pillar = heritage_north_germanic
+	}
+	is_valid = {
+		# Must be of a suitable heritage.
+		custom_tooltip = {
+			text = northern_germanic_heritage_trigger
+			has_cultural_pillar = heritage_north_germanic
+		}
+		# Shouldn't be combined with the following traditions:
+		custom_tooltip = {
+			text = cannot_have_tradition_runestones
+			NOT = {	has_cultural_tradition = tradition_runestones }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_poetry
+			NOT = {	has_cultural_tradition = tradition_poetry }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_storytellers
+			NOT = {	has_cultural_tradition = tradition_storytellers }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp1_northern_stories }
+	}
+}
+
+#######################
+# Generic
+#######################
+
+tradition_fp1_trials_by_combat = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		# DLC check.
+		has_fp1_dlc_trigger = yes
+		has_cultural_pillar = heritage_north_germanic
+	}
+	
+	is_valid = {
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_performative_honour
+			NOT = {	has_cultural_tradition = tradition_fp1_performative_honour }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp1_trials_by_combat }
+	}
+	
+}
+
+tradition_fp1_the_right_to_prove = {
+	scope = culture
+	saved_scopes = { add character }
+
+	is_shown = {
+		# DLC check.
+		has_fp1_dlc_trigger = yes
+	}
+	
+	is_valid = {
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_performative_honour
+			NOT = {	has_cultural_tradition = tradition_fp1_performative_honour }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp1_the_right_to_prove }
+	}
+}
+
+
+###########################
+# FP2 CULTURAL TRADITIONS 
+###########################
+
+#######################
+# Aragonese Specific
+#######################
+
+tradition_fp2_state_ransoming = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		# DLC check.
+		has_fp2_dlc_trigger = yes
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp2_state_ransoming }
+	}
+}
+
+#######################
+# Castilian Specific
+#######################
+
+tradition_fp2_strategy_gamers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		# DLC check.
+		has_fp2_dlc_trigger = yes
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp2_strategy_gamers }
+	}
+}
+
+#######################
+# Andalusian Specific
+#######################
+
+tradition_fp2_malleable_subjects = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		# DLC check.
+		has_fp2_dlc_trigger = yes
+		has_cultural_pillar = heritage_iberian
+	}
+
+	is_valid = {
+		# Must be of a suitable heritage.
+		custom_tooltip = {
+			text = iberian_heritage_trigger
+			has_cultural_pillar = heritage_iberian
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp2_malleable_subjects }
+	}
+}
+
+#######################
+# Generic
+#######################
+
+tradition_fp2_ritualised_friendship = {
+	scope = culture
+	saved_scopes = { add character }
+	
+	is_shown = {
+		# DLC check.
+		#has_fp2_dlc_trigger = yes
+	}
+
+	is_valid = {
+		# Must have at least one friend. No friendless losers. Especially you, Nick.
+		custom_tooltip = {
+			text = need_at_least_one_friend
+			culture_head ?= {
+				any_relation = {
+					type = friend
+					count >= 1
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_fp2_ritualised_friendship }
+	}
+}
+
+
+tradition_ep2_avid_falconers = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		# DLC check.
+		has_dlc_feature = tours_and_tournaments
+	}
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_tooltip = {
+			text = cannot_have_tradition_vegetarianism
+			NOT = { has_cultural_tradition = tradition_vegetarianism }
+		}
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_ep2_avid_falconers }
+	}
+}

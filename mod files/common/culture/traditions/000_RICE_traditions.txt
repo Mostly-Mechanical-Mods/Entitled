@@ -34,6 +34,15 @@ tradition_guanche_warrior = {
 	ai_will_do = { value = 0 }
 }
 
+tradition_hfc_bedouin_honor_codes = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}
+
 tradition_hfc_bedouin_oral_poetry = {
 	category = regional
 	is_shown = { always = no }

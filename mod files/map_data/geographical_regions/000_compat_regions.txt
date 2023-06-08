@@ -1,159 +1,79 @@
-﻿# Geographical regions
-# Regions can be declared with one or more of the following fields:
-#	duchies = { }, takes duchy title names declared in landed_titles.txt
-#	counties = { }, takes county title names declared in landed_titles.txt
-#	provinces = { }, takes province id numbers declared in /history/provinces
-#	regions = { }, a region can also include other regions, however the subregions needs to be declared before the parent region. 
-#		E.g. If the region world_europe contains the region world_europe_west then world_europe_west needs to be declared as a region before (i.e. higher up in this file) world_europe.
-
-custom_core_franconia = {
-	
-}
-
-custom_core_swabia = {
-
-}
-
-custom_core_portucale = {
-
-}
-
-custom_grand_saxony = {
-
-}
-
-custom_saxony = {
-
-}
-
-custom_avaria = { 
-
-}
-
-custom_yemen = {
-
-}
-
-custom_persian_gulf = {
-
-}
-
-custom_persian_caucasus = {
-
-}
-
-custom_egypt = {
-
-}
-
-special_seljuk_empire_start_region = {
-
-}
-
-special_seljuk_empire_cb_extent = {
-
-}
-
-special_seljuk_empire_borderlands = {
-
-}
-
-wendish_empire = {
-
-}
-
-custom_samos_empire = {
-
-}
-
-custom_aquitaine_full = {
-
-}
-
-custom_aquitaine = {
-
-}
-
-custom_frisia01 = {
-
-}
-
-ce_custom_illyria = {
-
-}
-
-ce_custom_royal_croatia = {
-
-}
-
-ce_custom_royal_serbia = {
-
-}
-
-ce_custom_bosnia = {
-
-}
-
-ce_custom_serbo_croatia = {
-
-}
-
-ce_custom_transdanubia = {
-
-}
-
-ce_custom_roman_pannonia = {
-
-}
-
-ce_custom_england = {
-
-}
-
-ce_custom_poland = {
-
-}
-
-ce_special_russian_culture_region = {
-
-}
-
-ce_custom_wallachia = {
-
-}
-
-ce_custom_moldavia = {
-
-}
-
-ce_custom_toledo = {
-
-}
-
-ce_custom_damascus = {
-
-}
-
-ce_nile_river = {
-
-}
-
-ce_dzukija = {
-
-}
-
-ce_byzantine_frontier = {
-
-}
-
-ce_southern_andalusia = {
-
-}
-
-ce_northern_iberia = {
-
-}
-
-ce_island_of_sicily = {
-
-}
+﻿# CE
+custom_core_franconia = {}
+custom_core_swabia = {}
+custom_core_portucale = {}
+custom_grand_saxony = {}
+custom_saxony = {}
+custom_avaria = {}
+custom_yemen = {}
+custom_persian_gulf = {}
+custom_persian_caucasus = {}
+custom_egypt = {}
+special_seljuk_empire_start_region = {}
+special_seljuk_empire_cb_extent = {}
+special_seljuk_empire_borderlands = {}
+wendish_empire = {}
+custom_samos_empire = {}
+custom_aquitaine_full = {}
+custom_aquitaine = {}
+custom_frisia01 = {}
+ce_custom_illyria = {}
+ce_custom_royal_croatia = {}
+ce_custom_royal_serbia = {}
+ce_custom_bosnia = {}
+ce_custom_serbo_croatia = {}
+ce_custom_transdanubia = {}
+ce_custom_roman_pannonia = {}
+ce_custom_england = {}
+ce_custom_poland = {}
+ce_special_russian_culture_region = {}
+ce_custom_wallachia = {}
+ce_custom_moldavia = {}
+ce_custom_toledo = {}
+ce_custom_damascus = {}
+ce_nile_river = {}
+ce_dzukija = {}
+ce_byzantine_frontier = {}
+ce_southern_andalusia = {}
+ce_northern_iberia = {}
+ce_island_of_sicily = {}
+
+# RICE
+RICE_niger_delta_region = {}
+RICE_yorubaland_region = {}
+RICE_qanat_region = {}
+RICE_hephthalite_heartland_region = {}
+RICE_hephthalite_former_empire_region = {}
+RICE_nile_river_valley = {}
+RICE_southern_egypt_and_northern_nubia = {}
+RICE_silk_road_region = {}
+RICE_sogdia = {}
+RICE_greater_pamir_region = {}
+RICE_land_silk_road_region = {}
+RICE_southern_tarim_basin = {}
+RICE_northern_tarim_basin = {}
+RICE_greater_khotan_area = {}
+RICE_former_tang_western_region = {}
+RICE_granada_region = {}
+RICE_dunhuang_region = {}
+RICE_galicia_region = {}
+RICE_close_to_galicia_region = {}
+RICE_distant_from_galicia_region = {}
+RICE_brittany_horse_region = {}
+RICE_west_africa_trade_region = {}
+RICE_lower_oxus_region = {}
+RICE_khuzestan_region = {}
+RICE_normandy_region = {}
+RICE_northern_europe_region = {}
+RICE_southern_europe_region = {}
+RICE_greater_normandy_region = {}
+RICE_normandy_and_brittany_region = {}
+RICE_trans_saharan_trade_region = {}
+RICE_volga_river_region = {}
+RICE_greenland_struggle_region = {}
+RICE_norse_frontier_region = {}
+RICE_northern_islands = {}
+RICE_atlantic_region = {}
+RICE_europe_and_mediterranean_region = {}
+RICE_greater_scotland = {}
+RICE_mandaean_heartland = {}

@@ -316,11 +316,12 @@ Entitled_culture = {
 				entitled_record_tradition = { TRADITION = tradition_eldership }
 			}
 			if = {
-				limit = { RICE_is_loaded = yes }
+				limit = { is_RICE_loaded = yes }
 				entitled_record_tradition = { TRADITION = bao_tradition_breizh_laid }
 				entitled_record_tradition = { TRADITION = bao_tradition_breizh_collective_lands }
 				entitled_record_tradition = { TRADITION = bao_tradition_free_range }
 				entitled_record_tradition = { TRADITION = tradition_guanche_warrior }
+				entitled_record_tradition = { TRADITION = tradition_hfc_bedouin_honor_codes }
 				entitled_record_tradition = { TRADITION = tradition_hfc_bedouin_oral_poetry }
 				entitled_record_tradition = { TRADITION = tradition_RICE_masters_of_the_river }
 				entitled_record_tradition = { TRADITION = tradition_RICE_african_mud_masons }
@@ -707,11 +708,12 @@ Entitled_culture = {
 		}
 		# RICE
 		if = {
-			limit = { RICE_is_loaded = yes }
+			limit = { is_RICE_loaded = yes }
 			entitled_tradition_setup = { GROUPING = regional TRADITION = bao_tradition_breizh_laid }
 			entitled_tradition_setup = { GROUPING = regional TRADITION = bao_tradition_breizh_collective_lands }
 			entitled_tradition_setup = { GROUPING = regional TRADITION = bao_tradition_free_range }
 			entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_guanche_warrior }
+			entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_hfc_bedouin_honor_codes }
 			entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_hfc_bedouin_oral_poetry }
 			entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_RICE_masters_of_the_river }
 			entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_RICE_african_mud_masons }

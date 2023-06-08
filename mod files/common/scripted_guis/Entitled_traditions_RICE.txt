@@ -1,0 +1,1293 @@
+﻿
+
+tradition_RICE_masters_of_the_river = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		any_culture_county = {
+			#count >= 4
+			any_county_province = {
+				geographical_region = ghw_region_the_sahel # Temp
+			}
+		}
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = RICE_culture_in_niger_river_basin_desc
+			any_culture_county = {
+				count >= 4
+				any_county_province = {
+					geographical_region = ghw_region_the_sahel # Temp
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_masters_of_the_river }
+	}
+}
+
+
+tradition_RICE_african_mud_masons = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_sahelian
+			has_cultural_pillar = heritage_west_african
+			has_cultural_pillar = heritage_senegambian
+			has_cultural_pillar = heritage_central_african
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_sahelian
+			has_cultural_pillar = heritage_west_african
+			has_cultural_pillar = heritage_senegambian
+			has_cultural_pillar = heritage_central_african
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_african_mud_masons }
+	}
+}
+
+
+tradition_RICE_gold_dust_traders = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		any_culture_county = {
+			title_province = {
+				geographical_region = RICE_trans_saharan_trade_region
+			}
+		}
+	}
+
+	is_valid = {
+		any_culture_county = {
+			title_province = {
+				geographical_region = RICE_trans_saharan_trade_region
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_gold_dust_traders }
+	}
+}
+
+
+tradition_RICE_boba_drinkers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		debug_only = yes
+		scope:character ?= {
+			is_ai = no
+		}
+	}
+
+	is_valid = {
+		debug_only = yes
+	}
+
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_boba_drinkers }
+	}
+}
+
+
+tradition_RICE_music_practice = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		debug_only = yes
+		scope:character ?= {
+			is_ai = no
+		}
+		has_ep1_court_positions_dlc_trigger = yes
+	}
+
+	is_valid = {
+		debug_only = yes
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_music_practice }
+	}
+}
+
+
+
+
+
+tradition_RICE_volga_apiculture = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_turkic
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_pillar = heritage_ugro_permian
+			# scope:character ?= {
+			# 	capital_province = {
+			# 		geographical_region = world_steppe_west # Change to new Volga region
+			# 	}
+			# }
+		}		
+		any_culture_county = {
+			count >= 4
+			any_county_province = {
+				geographical_region = RICE_volga_river_region
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_turkic
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_pillar = heritage_ugro_permian
+			# scope:character ?= {
+			# 	capital_province = {
+			# 		geographical_region = world_steppe_west # Change to new Volga region
+			# 	}
+			# }
+		}		
+		
+		custom_tooltip = {
+			text = RICE_culture_in_volga_river_basin_desc
+			any_culture_county = {
+				count >= 4
+				any_county_province = {
+					geographical_region = RICE_volga_river_region
+				}
+			}
+		}
+		# custom_tooltip = {
+		# 	text = RICE_culture_in_volga_beekeeper_terrain_desc
+		# 	any_culture_county = {
+		# 		any_county_province = {
+		# 			OR = {
+		# 				terrain = farmlands
+		# 				terrain = floodplains
+		# 				terrain = plains
+		# 				terrain = forest
+		# 				terrain = hills
+		# 				terrain = wetlands
+		# 			}
+		# 		}
+		# 	}
+		# }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_volga_apiculture }
+	}
+}
+
+
+tradition_RICE_finnic_sorcerers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_balto_finnic
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_ugro_permian
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_balto_finnic
+			has_cultural_pillar = heritage_volga_finnic
+			has_cultural_pillar = heritage_ugro_permian
+		}
+		scope:character ?= {
+			faith = {
+				has_doctrine = doctrine_witchcraft_accepted
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hfc_bedouin_honor_codes }
+	}
+}
+
+
+tradition_RICE_kinship_based_craft_guilds = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_yoruba
+		# OR = {
+		# 	has_cultural_pillar = heritage_yoruba
+		# 	scope:character ?= {
+		# 		AND = {
+		# 			OR = {
+		# 				religion = religion:west_african_orisha_religion
+		# 				religion = religion:odinala_religion
+		# 				religion = religion:ijaw_religion
+		# 				culture = {
+		# 					OR = {
+		# 						culture_has_west_african_heritage_pillar_trigger = yes
+		# 						culture_has_central_african_heritage_pillar_trigger = yes
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	any_culture_county = {
+		# 		title_province = {
+		# 			geographical_region = RICE_niger_delta_region
+		# 		}
+		# 	}
+		# }
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_yoruba
+		# OR = {
+		# 	has_cultural_pillar = heritage_yoruba
+		# 	scope:character ?= {
+		# 		AND = {
+		# 			OR = {
+		# 				religion = religion:west_african_orisha_religion
+		# 				religion = religion:odinala_religion
+		# 				religion = religion:ijaw_religion
+		# 			}
+		# 			culture = {
+		# 				OR = {
+		# 					culture_has_west_african_heritage_pillar_trigger = yes
+		# 					culture_has_central_african_heritage_pillar_trigger = yes
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	any_culture_county = {
+		# 		count >= 3
+		# 		title_province = {
+		# 			geographical_region = RICE_niger_delta_region
+		# 		}
+		# 	}
+		# }
+		NOT = { has_cultural_tradition = tradition_RICE_ritual_hegemony }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_kinship_based_craft_guilds }
+	}
+}
+
+tradition_RICE_igwebuike = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_yoruba
+		custom_description = {
+			text = culture_not_bellicose
+			NOT = {
+				any_in_list = { list = traits this = flag:ethos_bellicose }
+			}
+		}
+		culture_not_warlike_trigger = yes
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_yoruba
+		custom_description = {
+			text = culture_not_bellicose
+			NOT = {
+				any_in_list = { list = traits this = flag:ethos_bellicose }
+			}
+		}
+		culture_not_warlike_trigger = yes
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_igwebuike }
+	}
+}
+
+tradition_RICE_ritual_hegemony = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_yoruba
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_yoruba
+		NOT = { has_cultural_tradition = tradition_RICE_kinship_based_craft_guilds }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_ritual_hegemony }
+	}
+}
+
+
+
+tradition_RICE_whalers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+	}
+
+	is_valid = {
+		culture_not_pacifistic_trigger = yes
+		custom_tooltip = {
+			text = cannot_have_tradition_vegetarianism
+			NOT = { any_in_list = { list = traits this = flag:tradition_vegetarianism } }
+		}
+		NOT = { has_cultural_tradition = tradition_RICE_master_whalers }
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_whalers }
+	}
+}
+
+
+
+tradition_RICE_master_whalers = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			this = culture:basque
+			any_parent_culture_or_above = {
+				this = culture:basque
+			}
+			any_parent_culture = {
+				has_cultural_tradition = tradition_RICE_master_whalers
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:basque
+			any_parent_culture_or_above = {
+				this = culture:basque
+			}
+			any_parent_culture = {
+				has_cultural_tradition = tradition_RICE_master_whalers
+			}
+		}
+		culture_not_pacifistic_trigger = yes
+		custom_tooltip = {
+			text = cannot_have_tradition_vegetarianism
+			NOT = { any_in_list = { list = traits this = flag:tradition_vegetarianism } }
+		}
+		NOT = { has_cultural_tradition = tradition_RICE_whalers }
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_master_whalers }
+	}
+}
+
+
+tradition_RICE_arctic_adaptations = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_inuit
+			has_cultural_pillar = heritage_paleo_inuit
+			scope:character ?= {
+				capital_province = {
+					geographical_region = RICE_greenland_struggle_region
+				}
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_inuit
+			has_cultural_pillar = heritage_paleo_inuit
+			AND = {
+				custom_tooltip = {
+					text = RICE_greenland_arctic_adaptations_inuit_decision_req
+					has_global_variable = RICE_greenland_adopted_arctic_adaptations
+				}
+				scope:character ?= {
+					custom_tooltip = {
+						text = RICE_greenland_struggle_region_capital_req
+						capital_county = {
+							title_province = { geographical_region = RICE_greenland_struggle_region }
+						}
+					}
+				}				
+			}
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_arctic_adaptations }
+	}
+}
+
+
+tradition_RICE_seasonal_migrators = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_algonquian
+			has_cultural_pillar = heritage_iroquoian
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_algonquian
+			has_cultural_pillar = heritage_iroquoian
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_seasonal_migrators }
+	}
+}
+
+
+tradition_RICE_red_ochre = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_algonquian
+			has_cultural_pillar = heritage_iroquoian
+		}
+	}
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_algonquian
+			has_cultural_pillar = heritage_iroquoian
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_red_ochre }
+	}
+}
+
+
+#######################
+# CULTURAL TRADITIONS #
+#######################
+
+######################
+# MAA Traditions 	 #
+######################
+
+tradition_RICE_siberian_survivalists = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_siberian
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_siberian
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_siberian_survivalists }
+	}
+}
+
+
+tradition_RICE_swahili_contacts = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_east_bantu
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_east_bantu
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_swahili_contacts }
+	}
+}
+
+######################
+# Regional Traditions #
+######################
+
+tradition_RICE_ubiquity_of_poetry = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		any_culture_county = {
+			title_province = {
+				OR = {
+					geographical_region = world_middle_east_arabia
+					geographical_region = ghw_region_horn_of_africa
+				}
+			}
+		}
+	}
+	is_valid = {
+		any_culture_county = {
+			title_province = {
+				OR = {
+					geographical_region = world_middle_east_arabia
+					geographical_region = ghw_region_horn_of_africa
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_ubiquity_of_poetry }
+	}
+}
+
+
+tradition_RICE_xianbei_scions = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			this = culture:tuyuhun
+			this = culture:qiang
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:tuyuhun
+					this = culture:qiang
+				}
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			this = culture:tuyuhun
+			this = culture:qiang
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:tuyuhun
+					this = culture:qiang
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_xianbei_scions }
+	}
+}
+
+
+
+
+tradition_RICE_white_huns = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		NOT = { has_global_variable = RICE_game_started_on_TFE_start_date }
+		OR = {
+			this = culture:hephthalite
+			any_parent_culture_or_above = {
+				this = culture:hephthalite
+			}
+			scope:character ?= {
+				# Zunbils were Hephthalite remnants
+				religion = religion:zunism_religion	
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			this = culture:hephthalite
+			any_parent_culture_or_above = {
+				this = culture:hephthalite
+			}
+			scope:character ?= {
+				# Zunbils were Hephthalite remnants
+				religion = religion:zunism_religion	
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_white_huns }
+	}
+}
+
+
+
+
+tradition_RICE_children_of_the_nile = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		any_culture_county = {
+			#count >= 4
+			any_county_province = {
+				geographical_region = RICE_nile_river_valley
+			}
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = RICE_culture_along_the_nile_desc
+			any_culture_county = {
+				count >= 4
+				any_county_province = {
+					geographical_region = RICE_nile_river_valley
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_children_of_the_nile }
+	}
+}
+
+
+
+tradition_RICE_silk_road = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		any_culture_county = {
+			title_province = {
+				geographical_region = RICE_land_silk_road_region
+			}
+		}
+	}
+	is_valid = {
+		any_culture_county = {
+			count >= 4
+			title_province = {
+				geographical_region = RICE_land_silk_road_region
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_silk_road }
+	}
+}
+
+
+
+
+
+tradition_RICE_beyond_the_reach_of_eagles = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		any_culture_county = {
+			title_province = {
+				geographical_region = RICE_greater_pamir_region
+			}
+		}
+	}
+	is_valid = {
+		any_culture_county = {
+			count >= 3
+			title_province = {
+				geographical_region = RICE_greater_pamir_region
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_beyond_the_reach_of_eagles }
+	}
+}
+
+
+
+
+
+tradition_RICE_galician_portuguese_poetry = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_iberian
+			has_cultural_pillar = language_iberian
+			scope:character ?= {
+				AND = {
+					religion = religion:christianity_religion
+					capital_province = {
+						geographical_region = world_europe_west_iberia
+					}
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_iberian
+			has_cultural_pillar = language_iberian
+			scope:character ?= {
+				AND = {
+					religion = religion:christianity_religion
+					capital_province = {
+						geographical_region = world_europe_west_iberia
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_galician_portuguese_poetry }
+	}
+}
+
+
+
+
+
+tradition_RICE_kala_settlements = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = heritage_tocharian
+			has_cultural_pillar = heritage_turkic
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = heritage_tocharian
+			has_cultural_pillar = heritage_turkic
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_kala_settlements }
+	}
+}
+
+tradition_RICE_akhtarvenik = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			this = culture:khwarezmian
+			any_parent_culture_or_above = {
+				this = culture:khwarezmian
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:khwarezmian
+			any_parent_culture_or_above = {
+				this = culture:khwarezmian
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_akhtarvenik }
+	}
+}
+
+tradition_RICE_khuzi = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		NOT = {	
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:RICE_khuzestan_khuzi_dignity_restored
+			}		
+		}
+		OR = {
+			this = culture:elamite
+			any_parent_culture_or_above = {
+				this = culture:elamite
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:elamite
+			any_parent_culture_or_above = {
+				this = culture:elamite
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_khuzi }
+	}
+}
+
+tradition_RICE_khuzi_elevated_elymaean = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:RICE_khuzestan_khuzi_dignity_restored
+		}
+		has_global_variable = RICE_khuzestan_khuzi_elymais
+		OR = {
+			this = culture:elamite
+			any_parent_culture_or_above = {
+				this = culture:elamite
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:elamite
+			any_parent_culture_or_above = {
+				this = culture:elamite
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_khuzi_elevated_elymaean = {
+ }
+	}
+}
+
+tradition_RICE_khuzi_elevated_community = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:RICE_khuzestan_khuzi_dignity_restored
+		}
+		has_global_variable = RICE_khuzestan_khuzi_community
+		OR = {
+			this = culture:elamite
+			any_parent_culture_or_above = {
+				this = culture:elamite
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:elamite
+			any_parent_culture_or_above = {
+				this = culture:elamite
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_khuzi_elevated_community }
+	}
+}
+
+tradition_RICE_khuzi_elevated_traders = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:RICE_khuzestan_khuzi_dignity_restored
+		}
+		has_global_variable = RICE_khuzestan_khuzi_traders
+		OR = {
+			this = culture:elamite
+			any_parent_culture_or_above = {
+				this = culture:elamite
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:elamite
+			any_parent_culture_or_above = {
+				this = culture:elamite
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_khuzi_elevated_traders }
+	}
+}
+
+
+
+
+tradition_RICE_northmen = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			this = culture:norman
+			any_parent_culture_or_above = {
+				this = culture:norman
+			}
+		}
+		# No longer available after Historia Normannorum is done
+		NOT = { 
+			has_global_variable = RICE_normandy_historia_normannorum_done
+		}
+		# GLOBAL VARIABLE TO REMOVE
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:norman
+			any_parent_culture_or_above = {
+				this = culture:norman
+			}
+		}
+		# GLOBAL VARIABLE TO REMOVE
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_northmen }
+	}
+}
+
+
+
+tradition_RICE_adventurers_and_aristocrats = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			this = culture:norman
+			any_parent_culture_or_above = {
+				this = culture:norman
+			}
+		}
+		# Only available after Historia Normannorum is done
+		has_global_variable = RICE_normandy_historia_normannorum_done
+		# Not shown if Norman struggle has ended successfully
+		NOR = {
+			has_global_variable = RICE_normandy_ending_norman_conquest
+			has_global_variable = RICE_normandy_ending_norman_assimilation
+		}
+		# GLOBAL VARIABLE TO REMOVE
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:norman
+			any_parent_culture_or_above = {
+				this = culture:norman
+			}
+		}
+		# GLOBAL VARIABLE TO REMOVE
+	}
+
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats }
+	}
+}
+
+
+tradition_RICE_adventurers_and_aristocrats_military = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			this = culture:norman
+			any_parent_culture_or_above = {
+				this = culture:norman
+			}
+		}
+		# Only available after Historia Normannorum is done
+		has_global_variable = RICE_normandy_historia_normannorum_done
+		# Only available if Norman struggle ended in conquest
+		has_global_variable = RICE_normandy_ending_norman_conquest
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:norman
+			any_parent_culture_or_above = {
+				this = culture:norman
+			}
+		}
+		# GLOBAL VARIABLE TO REMOVE
+	}
+
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats_military }
+	}
+}
+
+
+tradition_RICE_adventurers_and_aristocrats_culture = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			this = culture:norman
+			any_parent_culture_or_above = {
+				this = culture:norman
+			}
+		}
+		# Only available after Historia Normannorum is done
+		has_global_variable = RICE_normandy_historia_normannorum_done
+		# Only available if Norman struggle ended in assimilation
+		has_global_variable = RICE_normandy_ending_norman_assimilation
+	}
+
+	is_valid = {
+		OR = {
+			this = culture:norman
+			any_parent_culture_or_above = {
+				this = culture:norman
+			}
+		}
+		# GLOBAL VARIABLE TO REMOVE
+	}
+
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats_culture }
+	}
+}
+
+
+ #######################
+ # CREDITS TO BAO
+ # BY SHATZI
+ #######################
+
+#############################
+# REALM CULTURAL TRADITIONS #
+#############################
+
+
+bao_tradition_breizh_laid = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_brythonic
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_brythonic
+		NOR = { #Replaces Martial Admiration
+			has_cultural_tradition = tradition_chanson_de_geste
+			has_cultural_tradition = tradition_druzhina
+			has_cultural_tradition = tradition_martial_admiration
+		}
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = bao_tradition_breizh_laid }
+	}
+}
+
+bao_tradition_breizh_collective_lands = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_brythonic
+	}
+	is_valid = {
+		has_cultural_pillar = heritage_brythonic
+		NOT = { has_cultural_tradition = tradition_collective_lands }
+	}
+
+	effect = {
+		entitled_toggle_tradition = { TRADITION = bao_tradition_breizh_collective_lands }
+	}
+}
+
+bao_tradition_free_range = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_brythonic
+	}
+	is_valid = {
+		NOT = { has_cultural_tradition = tradition_pastoralists }
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = bao_tradition_free_range }
+	}
+}
+
+
+
+#######################
+# MAA TRADITIONS #
+#######################
+
+tradition_guanche_warrior = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		OR = {
+			this = culture:guanches
+			any_parent_culture_or_above = {
+				this = culture:guanches
+			}
+		}
+		NOT = { has_cultural_tradition = tradition_highland_warriors }
+	}
+	is_valid = {
+		OR = {
+			this = culture:guanches
+			any_parent_culture_or_above = {
+				this = culture:guanches
+			}
+		}
+		custom_description = {
+			text = culture_in_hills_desc
+			any_culture_county = {
+				any_county_province = {
+					terrain = hills
+				}
+			}
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_guanche_warrior }
+	}
+}
+
+
+tradition_hfc_bedouin_honor_codes = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_arabic
+	}
+
+	is_valid = {
+		has_cultural_pillar = heritage_arabic
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hfc_bedouin_honor_codes }
+	}
+}
+
+tradition_hfc_bedouin_oral_poetry = {
+	scope = culture
+	saved_scopes = { add character }
+	
+    is_shown = {
+		is_RICE_loaded = yes
+		has_cultural_pillar = heritage_arabic
+	}
+
+	is_valid = {
+		has_cultural_pillar = heritage_arabic
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_northern_stories
+			NOT = { any_in_list = { list = traits this = flag:tradition_fp1_northern_stories } }
+		}
+	}
+	
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_hfc_bedouin_oral_poetry }
+	}
+}
+
+
+

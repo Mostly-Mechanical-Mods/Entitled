@@ -2,40 +2,171 @@
 
 heritage_celtic = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_pictish = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_celtiberian = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_east_germanic = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_slavic = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_sarmatian = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_caucasian = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_celtic = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_celtic = {
 	type = heritage
+	is_shown = { always = no }
 }
 
 heritage_celtic = {
 	type = heritage
+	is_shown = { always = no }
+}
+
+#RICE
+
+heritage_algonquian = {
+	type = heritage
+	is_shown = { always = no }
+}
+heritage_iroquoian = {
+	type = heritage
+	is_shown = { always = no }
+}
+heritage_paleo_inuit = {
+	type = heritage
+	is_shown = { always = no }
+}
+heritage_inuit = {
+	type = heritage
+	is_shown = { always = no }
+}
+heritage_siberian = {
+	type = heritage
+	is_shown = { always = no }
+}
+heritage_east_bantu = {
+	type = heritage
+	is_shown = { always = no }
+}
+heritage_guanche = {
+	type = heritage
+	is_shown = { always = no }
+}
+heritage_elamite = {
+	type = heritage
+	is_shown = { always = no }
+}
+
+language_inuit = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_beothuk = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_cree = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_eastern_algonquian = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_iroquoian = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_south_arabian = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_brahui = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_swahili = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_malagasy = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_shona = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_nuristani = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_burusho = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_nivkh = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_yeniseian = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_yukaghir = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_sayhadic = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
+}
+language_elamite = {
+	type = language
+	is_shown = { always = no }
+	color = { 0 0 0 }
 }
