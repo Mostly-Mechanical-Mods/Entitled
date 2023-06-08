@@ -98,7 +98,7 @@ window = {
 		hbox = {
 			spacing = 10
 			layoutpolicy_horizontal = expanding
-			margin_left = 27
+			margin_left = 70
 			margin_right = 20
 			text_single = {
 				text = "ENTITLED_RANK"
@@ -188,7 +188,7 @@ window = {
 		}
 		hbox = {
 			layoutpolicy_horizontal = expanding
-			margin_left = 27
+			margin_left = 70
 			margin_right = 20
 			spacing = 10
 			text_single = {
@@ -218,7 +218,7 @@ window = {
 		}
 		hbox = {
 			layoutpolicy_horizontal = expanding
-			margin_left = 27
+			margin_left = 70
 			margin_right = 20
 			spacing = 10
 			text_single = {
@@ -238,83 +238,208 @@ window = {
 				text = "ENTITLED_DOMAIN_SIZE"
 			}
 		}
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			margin_left = 70
+			margin_right = 20
+			spacing = 10
+			text_single = {
+				text = "ENTITLED_FAITH"
+			}
+			text_single = {
+				visible = "[GetGlobalVariable('capital_county').IsSet]"
+				text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetFaith.GetName]"
+			}
+			expand = {}
+			# button_round = {
+			# 	# visible = "[Or(And(GuiPotentialCouncilTask.CanSelect, Not(CouncilWindow.IsLiegeCouncilShown)), GuiPotentialCouncilTask.IsActive)]"
+			# 	# parentanchor = center
+			# 	size = { 38 38 }
+			# 	gfxtype = togglepushbuttongfx
+			# 	effectname = "NoHighlight"
+
+			# 	# onclick = "[GuiPotentialCouncilTask.SelectTaskType]"
+			# 	# enabled = "[Not(CouncilWindow.IsLiegeCouncilShown)]"
+			# 	# down = "[GuiPotentialCouncilTask.IsActive]"
+
+			# 	using = tooltip_ws
+
+			# 	# tooltipwidget = {
+			# 	# 	council_task_icon_tooltip_widget = {
+			# 	# 		using = DefaultTooltipBackground
+			# 	# 		using = GeneralTooltipSetup
+			# 	# 		alwaystransparent = no
+			# 	# 	}
+			# 	# }
+
+			# 	upframe = 1
+			# 	downframe = 1
+			# 	uphoverframe = 2
+			# 	disableframe = 6
+
+			# 	button_normal = {
+			# 		name = "potential_task"
+			# 		parentanchor = center
+			# 		widgetanchor = center
+			# 		# datacontext = "[GuiPotentialCouncilTask.GetCouncilTaskType]"
+			# 		effectname = "NoHighlight"
+			# 		gfxtype = togglepushbuttongfx
+			# 		shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
+			# 		texture = "gfx/interface/icons/council_task_types/task_conversion.dds"
+			# 		alwaystransparent = yes
+			# 		size = { 30 30 }
+			# 	}
+			# }
+		}
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			margin_left = 70
+			margin_right = 20
+			spacing = 10
+			text_single = {
+				text = "ENTITLED_CULTURE"
+			}
+			text_single = {
+				visible = "[GetGlobalVariable('capital_county').IsSet]"
+				text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetCulture.GetName]"
+			}
+			expand = {}
+
+			# button_round = {
+			# 	# visible = "[Or(And(GuiPotentialCouncilTask.CanSelect, Not(CouncilWindow.IsLiegeCouncilShown)), GuiPotentialCouncilTask.IsActive)]"
+			# 	# parentanchor = center
+			# 	size = { 38 38 }
+			# 	gfxtype = togglepushbuttongfx
+			# 	effectname = "NoHighlight"
+
+			# 	# onclick = "[GuiPotentialCouncilTask.SelectTaskType]"
+			# 	# enabled = "[Not(CouncilWindow.IsLiegeCouncilShown)]"
+			# 	# down = "[GuiPotentialCouncilTask.IsActive]"
+
+			# 	using = tooltip_ws
+
+			# 	# tooltipwidget = {
+			# 	# 	council_task_icon_tooltip_widget = {
+			# 	# 		using = DefaultTooltipBackground
+			# 	# 		using = GeneralTooltipSetup
+			# 	# 		alwaystransparent = no
+			# 	# 	}
+			# 	# }
+
+			# 	upframe = 1
+			# 	downframe = 1
+			# 	uphoverframe = 2
+			# 	disableframe = 6
+
+			# 	button_normal = {
+			# 		name = "potential_task"
+			# 		parentanchor = center
+			# 		widgetanchor = center
+			# 		# datacontext = "[GuiPotentialCouncilTask.GetCouncilTaskType]"
+			# 		effectname = "NoHighlight"
+			# 		gfxtype = togglepushbuttongfx
+			# 		shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
+			# 		texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
+			# 		alwaystransparent = yes
+			# 		size = { 30 30 }
+			# 	}
+			# }
+			# button_group = {
+			# 	icon = {
+			# 		size = { 30 30 }
+			# 		texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
+			# 	}
+			# }
+		}
 		spacer = { size = { 0 5 }}
-		button_standard = {
+		widget = {
 			size = { 450 45 }
-			visible = "[Not(GetVariableSystem.Exists('title_rank'))]"
-			enabled = "[GetPlayer.IsValid]"
-			tooltip = entitled_pick_rank_tooltip
-
-			text = "ENTITLED_CREATE_TITLE"
-
-			icon = {
-				visible = "[And( ShouldPromptForRulerDesigner, LobbyView.CanTryStartRulerDesigning( Character.Self ) )]"
-				size = { 100% 100% }
-				texture = "gfx/interface/component_masks/mask_fade_circle.dds"
-				using = Color_Bright_Yellow
-				alpha = 0
+			button_standard = {
+				set_parent_size_to_minimum = yes
+				size = { 450 45 }
+				visible = "[Not(GetVariableSystem.Exists('title_rank'))]"
+				enabled = "[GetPlayer.IsValid]"
+				tooltip = entitled_pick_rank_tooltip
+	
+				text = "ENTITLED_CREATE_TITLE"
+	
+				icon = {
+					visible = "[And( ShouldPromptForRulerDesigner, LobbyView.CanTryStartRulerDesigning( Character.Self ) )]"
+					size = { 100% 100% }
+					texture = "gfx/interface/component_masks/mask_fade_circle.dds"
+					using = Color_Bright_Yellow
+					alpha = 0
+				}
+	
+				button_edit_text = {
+					size = { 30 30 }
+					parentanchor = left|vcenter
+					position = { 5 0 }
+					alwaystransparent = yes
+				}
 			}
-
-			button_edit_text = {
-				size = { 30 30 }
-				parentanchor = left|vcenter
-				position = { 5 0 }
-				alwaystransparent = yes
+			button_standard = {
+				set_parent_size_to_minimum = yes
+				size = { 450 45 }
+				visible = "[And(GetVariableSystem.Exists('title_rank'),Not(GetGlobalVariable('capital_county').IsSet))]"
+				enabled = "[GetPlayer.IsValid]"
+				tooltip = entitled_pick_capital_county_tooltip
+	
+				text = "ENTITLED_CREATE_TITLE"
+	
+				icon = {
+					visible = "[And( ShouldPromptForRulerDesigner, LobbyView.CanTryStartRulerDesigning( Character.Self ) )]"
+					size = { 100% 100% }
+					texture = "gfx/interface/component_masks/mask_fade_circle.dds"
+					using = Color_Bright_Yellow
+					alpha = 0
+				}
+	
+				button_edit_text = {
+					size = { 30 30 }
+					parentanchor = left|vcenter
+					position = { 5 0 }
+					alwaystransparent = yes
+				}
 			}
-		}
-		button_standard = {
-			size = { 450 45 }
-			visible = "[And(GetVariableSystem.Exists('title_rank'),Not(GetGlobalVariable('capital_county').IsSet))]"
-			enabled = "[GetPlayer.IsValid]"
-			tooltip = entitled_pick_capital_county_tooltip
-
-			text = "ENTITLED_CREATE_TITLE"
-
-			icon = {
-				visible = "[And( ShouldPromptForRulerDesigner, LobbyView.CanTryStartRulerDesigning( Character.Self ) )]"
-				size = { 100% 100% }
-				texture = "gfx/interface/component_masks/mask_fade_circle.dds"
-				using = Color_Bright_Yellow
-				alpha = 0
-			}
-
-			button_edit_text = {
-				size = { 30 30 }
-				parentanchor = left|vcenter
-				position = { 5 0 }
-				alwaystransparent = yes
-			}
-		}
-		button_standard = {
-			size = { 450 45 }
-			visible = "[And(GetVariableSystem.Exists('title_rank'),GetGlobalVariable('capital_county').IsSet)]"
-			datacontext = "[GetScriptedGui('Entitled_create_title')]"
-			enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).AddScope('independent',MakeScopeFlag(GetVariableSystem.Get('Entitled_independent'))).End)]"
-			tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).AddScope('independent',MakeScopeFlag(GetVariableSystem.Get('Entitled_independent'))).End)]"
-			onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).AddScope('independent',MakeScopeFlag(GetVariableSystem.Get('Entitled_independent'))).End)]"
-			onclick = "[GetVariableSystem.Clear('empire')]"
-			onclick = "[GetVariableSystem.Clear('kingdom')]"
-			onclick = "[GetVariableSystem.Clear('duchy')]"
-			onclick = "[GetVariableSystem.Clear('capital_county')]"
-			onclick = "[GetVariableSystem.Clear('title_rank')]"
-			onclick = "[GetScriptedGui('Entitled_clean').Execute(GuiScope.End)]"
-			onclick = "[GetVariableSystem.Clear('Entitled')]"
-			onclick = "[SetMapMode(  'realms' )]"
-			text = "ENTITLED_CREATE_TITLE"
-
-			icon = {
-				visible = "[And( ShouldPromptForRulerDesigner, LobbyView.CanTryStartRulerDesigning( Character.Self ) )]"
-				size = { 100% 100% }
-				texture = "gfx/interface/component_masks/mask_fade_circle.dds"
-				using = Color_Bright_Yellow
-				alpha = 0
-			}
-
-			button_edit_text = {
-				size = { 30 30 }
-				parentanchor = left|vcenter
-				position = { 5 0 }
-				alwaystransparent = yes
+			button_standard = {
+				set_parent_size_to_minimum = yes
+				size = { 450 45 }
+				visible = "[And(GetVariableSystem.Exists('title_rank'),GetGlobalVariable('capital_county').IsSet)]"
+				datacontext = "[GetScriptedGui('Entitled_create_title')]"
+				enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).AddScope('independent',MakeScopeFlag(GetVariableSystem.Get('Entitled_independent'))).End)]"
+				tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).AddScope('independent',MakeScopeFlag(GetVariableSystem.Get('Entitled_independent'))).End)]"
+				onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).AddScope('independent',MakeScopeFlag(GetVariableSystem.Get('Entitled_independent'))).End)]"
+				onclick = "[GetVariableSystem.Clear('empire')]"
+				onclick = "[GetVariableSystem.Clear('kingdom')]"
+				onclick = "[GetVariableSystem.Clear('duchy')]"
+				onclick = "[GetVariableSystem.Clear('capital_county')]"
+				onclick = "[GetVariableSystem.Clear('title_rank')]"
+				onclick = "[GetScriptedGui('Entitled_clean').Execute(GuiScope.End)]"
+				onclick = "[GetVariableSystem.Clear('Entitled')]"
+				onclick = "[SetMapMode(  'realms' )]"
+				# text = "ENTITLED_CREATE_TITLE"
+				text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetCapital.GetHolding.GetType.GetKey]"
+	
+				icon = {
+					visible = "[And( ShouldPromptForRulerDesigner, LobbyView.CanTryStartRulerDesigning( Character.Self ) )]"
+					size = { 100% 100% }
+					texture = "gfx/interface/component_masks/mask_fade_circle.dds"
+					using = Color_Bright_Yellow
+					alpha = 0
+				}
+	
+				button_edit_text = {
+					size = { 30 30 }
+					parentanchor = left|vcenter
+					position = { 5 0 }
+					alwaystransparent = yes
+				}
+				warning_icon = {
+					visible = "[EqualTo_string(GetGlobalVariable('capital_county').Title.GetCountyData.GetCapital.GetHolding.GetType.GetKey,'church_holding')]"
+					parentanchor = right|vcenter
+					tooltip = "ENTITLEMENT_THEOCRATIC_RULER_WARNING"
+				}
 			}
 		}
 		spacer = { size = { 0 5 }}

@@ -5,7 +5,7 @@
 	is_shown = {
 		CE_is_loaded = yes
 		OR = {
-			scope:character = {
+			scope:character ?= {
 				faith = {
 					has_doctrine = doctrine_temporal_head
 				}
@@ -200,7 +200,7 @@ tradition_eldership = {
 		}
 	}
 	is_valid = {
-		scope:character = {
+		scope:character ?= {
 			OR = {
 				has_government = tribal_government
 				has_government = clan_government

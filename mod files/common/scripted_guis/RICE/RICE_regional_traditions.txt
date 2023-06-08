@@ -127,7 +127,7 @@ tradition_RICE_white_huns = {
 			any_parent_culture_or_above = {
 				this = culture:hephthalite
 			}
-			scope:character = {
+			scope:character ?= {
 				# Zunbils were Hephthalite remnants
 				religion = religion:zunism_religion	
 			}
@@ -139,7 +139,7 @@ tradition_RICE_white_huns = {
 			any_parent_culture_or_above = {
 				this = culture:hephthalite
 			}
-			scope:character = {
+			scope:character ?= {
 				# Zunbils were Hephthalite remnants
 				religion = religion:zunism_religion	
 			}
@@ -255,7 +255,7 @@ tradition_RICE_galician_portuguese_poetry = {
 		OR = {
 			has_cultural_pillar = heritage_iberian
 			has_cultural_pillar = language_iberian
-			scope:character = {
+			scope:character ?= {
 				AND = {
 					religion = religion:christianity_religion
 					capital_province = {
@@ -270,7 +270,7 @@ tradition_RICE_galician_portuguese_poetry = {
 		OR = {
 			has_cultural_pillar = heritage_iberian
 			has_cultural_pillar = language_iberian
-			scope:character = {
+			scope:character ?= {
 				AND = {
 					religion = religion:christianity_religion
 					capital_province = {

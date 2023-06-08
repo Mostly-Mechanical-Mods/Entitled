@@ -1,6 +1,6 @@
 ﻿l_english:
 
-ENTITLED_CUSTOM_TITLE: "#TOOLTIP:ENTITLED_CUSTOM_NAME #L Custom Name#!#!"
+ENTITLED_CUSTOM_TITLE: "Custom Name"
 ENTITLED_CUSTOM_NAME: "You can customize the title name in the Ruler Designer"
 
 entitled_copy_title_tooltip: "#T Copy title #!\n\nUse [Scope.Title.GetNameNoTierNoTooltip] name and coat of arms for your Primary Title."
@@ -36,7 +36,7 @@ ENTITLED_DOMAIN_SIZE: "Domain Size: [GuiScope.ScriptValue('entitled_domain_size'
 ENTITLED_CREATE_TITLE: "Create Title"
 
 
-knight_culture_player_plural_vanilla: "GetPlayer.Custom( 'KnightCulturePlural' )"
+knight_culture_player_plural_vanilla: "[GetPlayer.Custom( 'KnightCulturePlural' )]"
 knight_culture_player_plural_entitled: "[knights|E]"
 COA_TOOLTIP_HOLDER_vanilla: "[GetPlayer.Custom2_Title( 'TitleRelationToMe', TITLE.Self )]"
 
@@ -46,7 +46,22 @@ entitled_create_title_county_lost: "     [TARGET_TITLE.GetName]"
 
 ENTITLED_MAPMODE_TOOLTIP: "Switch back to the Title Creation map mode"
 ENTITLED_CLEAR_TOOLTIP: "Clear all changes and start over"
-ENTITLED_MENU_CULTURE_ICON: "Chose a ruler, and click the @edit_text_icon! icon next to their Culture's name."
-ENTITLED_MENU_CULTURE_ICON_NO_DLC: "The Royal Court DLC is required to enable Culture Customization"
+
+ENTITLED_MENU_CREATE_TITLE: "#T Create Title#!\nCreate your own title, complete with Title Rank, Capital County, De Jure hierarchy, Realm and Domain"
+ENTITLED_MENU_CUSTOMIZE_TITLE: "#T Customize Title#!\n#help Coming Soon!#!"
+ENTITLED_MENU_CUSTOMIZE_FAITH: "#T Customize Faith $ENTITLED_MENU_CUSTOMIZE_FAITH_SELECTED$#!\n#help Chose a ruler, and click the @edit_text_icon! icon next to their Faith#!"
+ENTITLED_MENU_CUSTOMIZE_FAITH_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_faith').IsSet,GetGlobalVariable('entitled_faith').Faith.GetName,'')]"
+ENTITLED_MENU_CONVERT_FAITH: "#T Faith Conversion#!\n#help Coming Soon!#!"
+ENTITLED_MENU_CUSTOMIZE_CULTURE: "#T Customize Culture $ENTITLED_MENU_CUSTOMIZE_CULTURE_SELECTED$#!\n#help Chose a ruler, and click the @edit_text_icon! icon next to their Culture#!"
+ENTITLED_MENU_CUSTOMIZE_CULTURE_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_culture').IsSet,GetGlobalVariable('entitled_culture').Culture.GetName,'')]"
+ENTITLED_MENU_CUSTOMIZE_CULTURE_NO_DLC: "#T Culture Conversion#!\nRoyal Court DLC required"
+ENTITLED_MENU_CONVERT_CULTURE: "#T Culture Conversion#!\n#help Coming Soon!#!"
 
 ENTITLED_WINDOW_TITLE: "Create Title"
+
+ENTITLED_FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH:1 "#T [FaithDoctrine.GetNameNoTooltip( Faith.Self )]#!\n[Scope.GetFlagName]\n[FaithDoctrine.GetEffectsDescription( Faith.Self )]\n\n[FaithDoctrine.GetDescription( Faith.Self )|F]\n\n"
+
+ENTITLEMENT_THEOCRATIC_RULER_WARNING: "This will create a non-playable Theocratic ruler"
+
+ENTITLED_FAITH: "Faith:"
+ENTITLED_CULTURE: "Culture:"

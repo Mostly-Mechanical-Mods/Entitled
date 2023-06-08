@@ -11,7 +11,7 @@
 
 	is_shown = {
 		scope:actor = scope:recipient
-		NOT = { has_global_variable = Entitled_v1_0_3 }
+		NOT = { has_global_variable = Entitled_v1_0_4 }
 	}
 
 	is_valid_showing_failures_only = {
@@ -30,7 +30,10 @@
 	}
 
 	on_send = {
+		set_global_variable = Entitled_v1_0_4
 		set_global_variable = Entitled_v1_0_3
+		set_global_variable = Entitled_v1_0_2
+		set_global_variable = Entitled_v1_0_1
 	}
 
 	on_auto_accept = {
@@ -43,6 +46,18 @@
 		every_in_list = {
 			list = debug
 			custom = Entitled_changelog_alert_introduction
+		}
+		if = {
+			limit = { NOT = { has_global_variable = Entitled_v1_0_4 }}
+			every_in_list = {
+				list = debug
+				custom = Entitled_v1_0_4_changelog
+				custom_tooltip = Entitled_v1_0_4_changelog_patch
+				custom_tooltip = Entitled_v1_0_4_changelog_1
+				custom_tooltip = Entitled_v1_0_4_changelog_2
+				custom_tooltip = Entitled_v1_0_4_changelog_3
+				custom_tooltip = Entitled_v1_0_4_changelog_4
+			}
 		}
 		if = {
 			limit = { NOT = { has_global_variable = Entitled_v1_0_3 }}

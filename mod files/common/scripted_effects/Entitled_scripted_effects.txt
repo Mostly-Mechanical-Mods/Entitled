@@ -86,3 +86,103 @@ entitled_reset_tradition = {
 		add_culture_tradition = $TRADITION$
 	}
 }
+
+entitled_doctrine_setup = {
+	add_to_global_variable_list = {
+		name = $GROUP$
+		target = flag:$DOCTRINE$
+	}
+	add_to_global_variable_list = {
+		name = $GUI_GROUP$
+		target = flag:$DOCTRINE$
+	}
+	set_global_variable = {
+		name = $DOCTRINE$
+		value = flag:$GROUP$
+	}
+}
+
+entitled_record_doctrine = {
+	if = {
+		limit = { has_doctrine = $DOCTRINE$ }
+		debug_log = $DOCTRINE$_yes
+		add_to_variable_list = {
+			name = doctrines
+			target = flag:$DOCTRINE$
+		}
+		add_to_variable_list = {
+			name = current_doctrines
+			target = flag:$DOCTRINE$
+		}
+		add_to_variable_list = {
+			name = $GUI_GROUP$
+			target = flag:$DOCTRINE$
+		}
+	}
+	else = {
+		debug_log = $DOCTRINE$_no
+	}
+	if = {
+		limit = { exists = scope:$GROUP$_$GUI_GROUP$ }
+	}
+}
+
+entitled_toggle_doctrine = {
+	debug_log = $DOCTRINE$_name
+	debug_log_scopes = yes
+	if = {
+		limit = { has_doctrine = $DOCTRINE$ }
+		remove_list_variable = {
+			name = current_doctrines
+			target = flag:$DOCTRINE$
+		}
+		remove_list_variable = {
+			name = $GUI_GROUP$
+			target = flag:$DOCTRINE$
+		}
+		remove_doctrine = $DOCTRINE$
+	}
+	else = {
+		add_to_variable_list = {
+			name = current_doctrines
+			target = flag:$DOCTRINE$
+		}
+		add_to_variable_list = {
+			name = $GUI_GROUP$
+			target = flag:$DOCTRINE$
+		}
+		add_doctrine = $DOCTRINE$
+		set_global_variable = {
+			name = entitled_doctrine_for_toggle
+			value = flag:$DOCTRINE$
+		}
+	}
+	if = {
+		limit = { exists = scope:$GROUP$ }
+	}
+	entitled_get_faith_sins_and_virtues = yes
+}
+
+entitled_get_faith_sins_and_virtues = {
+	clear_variable_list = sins
+	clear_variable_list = virtues
+	every_trait = {
+		save_scope_as = trait
+		prev = {
+			if = {
+				limit = { trait_is_sin = scope:trait }
+				add_to_variable_list = {
+					name = sins
+					target = scope:trait
+				}
+			}
+			else_if = {
+				limit = { trait_is_virtue = scope:trait }
+				add_to_variable_list = {
+					name = virtues
+					target = scope:trait
+				}
+			}
+		}
+	}
+}

@@ -463,6 +463,7 @@ Entitled_create_title = {
 		}
 
 		set_delete_on_destroy = no
+		set_capital_county = global_var:capital_county
 
 		set_global_variable = {
 			name = player
@@ -1112,6 +1113,206 @@ Entitled_culture_reset = {
 			entitled_reset_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats }
 			entitled_reset_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats_military }
 			entitled_reset_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats_culture }
+		}
+	}
+}
+
+Entitled_faith = {
+	scope = faith
+	effect = {
+		set_global_variable = { name = entitled_faith value = this }
+		if = {
+			# limit = { NOT = { has_variable = entitled_setup }}
+			set_variable = entitled_setup
+			random_faith_character = {
+				prev = {
+					set_variable = {
+						name = player
+						value = prev
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_variable = player }}
+				random_independent_ruler = {
+					prev = {
+						set_variable = {
+							name = player
+							value = prev
+						}
+					}
+				}
+			}
+			entitled_get_faith_sins_and_virtues = yes
+
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_aniconism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_alexandrian_catechism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_armed_pilgrimages }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_carnal_exaltation }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_communal_identity }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_communion }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_consolamentum }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_divine_marriage }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_gnosticism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_mendicant_preachers }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_monasticism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_pacifism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_pentarchy }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_unrelenting_faith }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_vows_of_poverty }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_pastoral_isolation }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_rite }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_adaptive }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_esotericism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_legalism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_literalism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_reincarnation }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_religious_legal_pronouncements }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_struggle_submission }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_false_conversion_sanction }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_tax_nonbelievers }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_asceticism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_bhakti }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_dharmic_pacifism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_inner_journey }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_ritual_hospitality }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_adorcism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_ancestor_worship }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_astrology }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_hedonistic }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_human_sacrifice }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_mystical_birthright }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_ritual_celebrations }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sacred_childbirth }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sanctity_of_nature }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sky_burials }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sun_worship }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_warmonger }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_gruesome_festivals }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_cthonic_redoubts }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_eastern_syncretism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_unreformed_syncretism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_christian_syncretism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_islamic_syncretism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_exaltation_of_pain }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_natural_primitivism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_pursuit_of_power }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_ritual_cannibalism }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sacred_shadows }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_polyamory }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sacrificial_ceremonies }
+			entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_megaliths }
+			entitled_record_doctrine = { GROUP = doctrine_muhammad_succession GUI_GROUP = main_group DOCTRINE = muhammad_succession_sunni_doctrine }
+			entitled_record_doctrine = { GROUP = doctrine_muhammad_succession GUI_GROUP = main_group DOCTRINE = muhammad_succession_shia_doctrine }
+			entitled_record_doctrine = { GROUP = doctrine_muhammad_succession GUI_GROUP = main_group DOCTRINE = muhammad_succession_muhakkima_doctrine }
+			entitled_record_doctrine = { GROUP = doctrine_muhammad_succession GUI_GROUP = main_group DOCTRINE = muhammad_succession_zandaqa_doctrine }
+			entitled_record_doctrine = { GROUP = doctrine_temple_authority GUI_GROUP = main_group DOCTRINE = temple_authority_rabbinic_doctrine }
+			entitled_record_doctrine = { GROUP = doctrine_temple_authority GUI_GROUP = main_group DOCTRINE = temple_authority_toric_doctrine }
+			entitled_record_doctrine = { GROUP = doctrine_temple_authority GUI_GROUP = main_group DOCTRINE = temple_authority_kohanim_doctrine }
+			entitled_record_doctrine = { GROUP = doctrine_temple_authority GUI_GROUP = main_group DOCTRINE = temple_authority_samaritan_torah_doctrine }
+			entitled_record_doctrine = { GROUP = doctrine_marriage_type GUI_GROUP = marriage DOCTRINE = doctrine_monogamy }
+			entitled_record_doctrine = { GROUP = doctrine_marriage_type GUI_GROUP = marriage DOCTRINE = doctrine_polygamy }
+			entitled_record_doctrine = { GROUP = doctrine_marriage_type GUI_GROUP = marriage DOCTRINE = doctrine_concubines }
+			entitled_record_doctrine = { GROUP = doctrine_divorce GUI_GROUP = marriage DOCTRINE = doctrine_divorce_disallowed }
+			entitled_record_doctrine = { GROUP = doctrine_divorce GUI_GROUP = marriage DOCTRINE = doctrine_divorce_approval }
+			entitled_record_doctrine = { GROUP = doctrine_divorce GUI_GROUP = marriage DOCTRINE = doctrine_divorce_allowed }
+			entitled_record_doctrine = { GROUP = doctrine_bastardry GUI_GROUP = marriage DOCTRINE = doctrine_bastardry_none }
+			entitled_record_doctrine = { GROUP = doctrine_bastardry GUI_GROUP = marriage DOCTRINE = doctrine_bastardry_legitimization }
+			entitled_record_doctrine = { GROUP = doctrine_bastardry GUI_GROUP = marriage DOCTRINE = doctrine_bastardry_all }
+			entitled_record_doctrine = { GROUP = doctrine_homosexuality GUI_GROUP = crimes DOCTRINE = doctrine_homosexuality_crime }
+			entitled_record_doctrine = { GROUP = doctrine_homosexuality GUI_GROUP = crimes DOCTRINE = doctrine_homosexuality_shunned }
+			entitled_record_doctrine = { GROUP = doctrine_homosexuality GUI_GROUP = crimes DOCTRINE = doctrine_homosexuality_accepted }
+			entitled_record_doctrine = { GROUP = doctrine_deviancy GUI_GROUP = crimes DOCTRINE = doctrine_deviancy_crime }
+			entitled_record_doctrine = { GROUP = doctrine_deviancy GUI_GROUP = crimes DOCTRINE = doctrine_deviancy_shunned }
+			entitled_record_doctrine = { GROUP = doctrine_deviancy GUI_GROUP = crimes DOCTRINE = doctrine_deviancy_accepted }
+			entitled_record_doctrine = { GROUP = doctrine_deviancy GUI_GROUP = crimes DOCTRINE = doctrine_deviancy_virtuous }
+			entitled_record_doctrine = { GROUP = doctrine_adultery_men GUI_GROUP = crimes DOCTRINE = doctrine_adultery_men_crime }
+			entitled_record_doctrine = { GROUP = doctrine_adultery_men GUI_GROUP = crimes DOCTRINE = doctrine_adultery_men_shunned }
+			entitled_record_doctrine = { GROUP = doctrine_adultery_men GUI_GROUP = crimes DOCTRINE = doctrine_adultery_men_accepted }
+			entitled_record_doctrine = { GROUP = doctrine_adultery_women GUI_GROUP = crimes DOCTRINE = doctrine_adultery_women_crime }
+			entitled_record_doctrine = { GROUP = doctrine_adultery_women GUI_GROUP = crimes DOCTRINE = doctrine_adultery_women_shunned }
+			entitled_record_doctrine = { GROUP = doctrine_adultery_women GUI_GROUP = crimes DOCTRINE = doctrine_adultery_women_accepted }
+			entitled_record_doctrine = { GROUP = doctrine_kinslaying GUI_GROUP = crimes DOCTRINE = doctrine_kinslaying_any_dynasty_member_crime }
+			entitled_record_doctrine = { GROUP = doctrine_kinslaying GUI_GROUP = crimes DOCTRINE = doctrine_kinslaying_extended_family_crime }
+			entitled_record_doctrine = { GROUP = doctrine_kinslaying GUI_GROUP = crimes DOCTRINE = doctrine_kinslaying_close_kin_crime }
+			entitled_record_doctrine = { GROUP = doctrine_kinslaying GUI_GROUP = crimes DOCTRINE = doctrine_kinslaying_shunned }
+			entitled_record_doctrine = { GROUP = doctrine_kinslaying GUI_GROUP = crimes DOCTRINE = doctrine_kinslaying_accepted }
+			entitled_record_doctrine = { GROUP = doctrine_witchcraft GUI_GROUP = crimes DOCTRINE = doctrine_witchcraft_crime }
+			entitled_record_doctrine = { GROUP = doctrine_witchcraft GUI_GROUP = crimes DOCTRINE = doctrine_witchcraft_shunned }
+			entitled_record_doctrine = { GROUP = doctrine_witchcraft GUI_GROUP = crimes DOCTRINE = doctrine_witchcraft_accepted }
+			entitled_record_doctrine = { GROUP = doctrine_witchcraft GUI_GROUP = crimes DOCTRINE = doctrine_witchcraft_virtuous }
+			entitled_record_doctrine = { GROUP = doctrine_gender GUI_GROUP = main_group DOCTRINE = doctrine_gender_male_dominated }
+			entitled_record_doctrine = { GROUP = doctrine_gender GUI_GROUP = main_group DOCTRINE = doctrine_gender_equal }
+			entitled_record_doctrine = { GROUP = doctrine_gender GUI_GROUP = main_group DOCTRINE = doctrine_gender_female_dominated }
+			entitled_record_doctrine = { GROUP = doctrine_consanguinity GUI_GROUP = marriage DOCTRINE = doctrine_consanguinity_restricted }
+			entitled_record_doctrine = { GROUP = doctrine_consanguinity GUI_GROUP = marriage DOCTRINE = doctrine_consanguinity_cousins }
+			entitled_record_doctrine = { GROUP = doctrine_consanguinity GUI_GROUP = marriage DOCTRINE = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
+			entitled_record_doctrine = { GROUP = doctrine_consanguinity GUI_GROUP = marriage DOCTRINE = doctrine_consanguinity_unrestricted }
+			entitled_record_doctrine = { GROUP = doctrine_pluralism GUI_GROUP = main_group DOCTRINE = doctrine_pluralism_fundamentalist }
+			entitled_record_doctrine = { GROUP = doctrine_pluralism GUI_GROUP = main_group DOCTRINE = doctrine_pluralism_righteous }
+			entitled_record_doctrine = { GROUP = doctrine_pluralism GUI_GROUP = main_group DOCTRINE = doctrine_pluralism_pluralistic }
+			entitled_record_doctrine = { GROUP = doctrine_theocracy GUI_GROUP = main_group DOCTRINE = doctrine_theocracy_temporal }
+			entitled_record_doctrine = { GROUP = doctrine_theocracy GUI_GROUP = main_group DOCTRINE = doctrine_theocracy_lay_clergy }
+			entitled_record_doctrine = { GROUP = doctrine_head_of_faith GUI_GROUP = main_group DOCTRINE = doctrine_no_head }
+			entitled_record_doctrine = { GROUP = doctrine_head_of_faith GUI_GROUP = main_group DOCTRINE = doctrine_spiritual_head }
+			entitled_record_doctrine = { GROUP = doctrine_head_of_faith GUI_GROUP = main_group DOCTRINE = doctrine_temporal_head }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_function GUI_GROUP = clergy DOCTRINE = doctrine_clerical_function_taxation }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_function GUI_GROUP = clergy DOCTRINE = doctrine_clerical_function_alms_and_pacification }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_function GUI_GROUP = clergy DOCTRINE = doctrine_clerical_function_recruitment }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_gender GUI_GROUP = clergy DOCTRINE = doctrine_clerical_gender_male_only }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_gender GUI_GROUP = clergy DOCTRINE = doctrine_clerical_gender_female_only }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_gender GUI_GROUP = clergy DOCTRINE = doctrine_clerical_gender_either }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_marriage GUI_GROUP = clergy DOCTRINE = doctrine_clerical_marriage_allowed }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_marriage GUI_GROUP = clergy DOCTRINE = doctrine_clerical_marriage_disallowed }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_succession GUI_GROUP = clergy DOCTRINE = doctrine_clerical_succession_temporal_appointment }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_succession GUI_GROUP = clergy DOCTRINE = doctrine_clerical_succession_spiritual_appointment }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_succession GUI_GROUP = clergy DOCTRINE = doctrine_clerical_succession_temporal_fixed_appointment }
+			entitled_record_doctrine = { GROUP = doctrine_clerical_succession GUI_GROUP = clergy DOCTRINE = doctrine_clerical_succession_spiritual_fixed_appointment }
+			entitled_record_doctrine = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = 	doctrine_pilgrimage_forbidden }
+			entitled_record_doctrine = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_encouraged }
+			entitled_record_doctrine = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_mandatory }
+			entitled_record_doctrine = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_mandatory_hajj }
+			entitled_record_doctrine = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = abrahamic_hostility_doctrine }
+			entitled_record_doctrine = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = pagan_hostility_doctrine }
+			entitled_record_doctrine = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = eastern_hostility_doctrine }
+			entitled_record_doctrine = { GROUP = is_christian_faith GUI_GROUP = special DOCTRINE = special_doctrine_is_christian_faith }
+			entitled_record_doctrine = { GROUP = is_islamic_faith GUI_GROUP = special DOCTRINE = special_doctrine_is_islamic_faith }
+			entitled_record_doctrine = { GROUP = is_jewish_faith GUI_GROUP = special DOCTRINE = special_doctrine_is_jewish_faith }
+			entitled_record_doctrine = { GROUP = is_eastern_faith GUI_GROUP = special DOCTRINE = special_doctrine_is_eastern_faith }
+			entitled_record_doctrine = { GROUP = is_gnostic_faith GUI_GROUP = special DOCTRINE = special_doctrine_is_gnostic_faith }
+			entitled_record_doctrine = { GROUP = special_tolerance GUI_GROUP = main_group DOCTRINE = special_doctrine_ecumenical_christian }
+			entitled_record_doctrine = { GROUP = heresy_hostility GUI_GROUP = special DOCTRINE = heresy_hostility_doctrine }
+			entitled_record_doctrine = { GROUP = nudity_doctrine GUI_GROUP = special DOCTRINE = special_doctrine_naked_priests }
+			entitled_record_doctrine = { GROUP = unreformed_faith GUI_GROUP = not_creatable DOCTRINE = unreformed_faith_doctrine }
+			entitled_record_doctrine = { GROUP = unreformed_faith GUI_GROUP = not_creatable DOCTRINE = west_african_unreformed_faith_doctrine }
+			entitled_record_doctrine = { GROUP = divine_destiny GUI_GROUP = special DOCTRINE = divine_destiny_doctrine }
+			entitled_record_doctrine = { GROUP = adoptionist_school GUI_GROUP = special DOCTRINE = special_doctrine_adoptionist_school_elipandic_doctrine }
+			entitled_record_doctrine = { GROUP = adoptionist_school GUI_GROUP = special DOCTRINE = special_doctrine_adoptionist_school_felicitous_doctrine }
+			entitled_record_doctrine = { GROUP = adoptionist_school GUI_GROUP = special DOCTRINE = special_doctrine_adoptionist_school_radical_doctrine }
+			entitled_record_doctrine = { GROUP = not_allowed_to_hof GUI_GROUP = special DOCTRINE = special_doctrine_not_allowed_to_hof }
+			entitled_record_doctrine = { GROUP = full_tolerance GUI_GROUP = special DOCTRINE = special_doctrine_full_tolerance }
+		}
+	}
+}
+
+entitled_has_doctrine = {
+	scope = faith
+	saved_scopes = { doctrine }
+	is_shown = {
+		is_target_in_variable_list = {
+			name = current_doctrines
+			target = scope:doctrine
+		}
+	}
+}
+
+entitled_doctrine_for_toggle = {
+	scope = faith
+	saved_scopes = { doctrine }
+	effect = {
+		set_global_variable = {
+			name = entitled_doctrine_for_toggle
+			value = scope:doctrine
 		}
 	}
 }

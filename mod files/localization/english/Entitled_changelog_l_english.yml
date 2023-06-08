@@ -29,4 +29,7 @@ Entitled_v1_0_3_changelog_2: "Culture Customization compatibility with Cultures 
 
 Entitled_v1_0_4_changelog: "#bold Entitled v1.0.4#!"
 Entitled_v1_0_4_changelog_patch: "No patch is necessary on your current savegame."
-Entitled_v1_0_4_changelog_1: "Culture Customization compatibility with Regional Immersion and Cultural Enrichment"
+Entitled_v1_0_4_changelog_1: "#bold New Feature: Faith Customization#!"
+Entitled_v1_0_4_changelog_2: "Culture Customization compatibility with Regional Immersion and Cultural Enrichment"
+Entitled_v1_0_4_changelog_3: "De Jure capital now correctly set"
+Entitled_v1_0_4_changelog_4: "Added a warning when choosing a capital county which will create a non-playable Theocratic ruler"

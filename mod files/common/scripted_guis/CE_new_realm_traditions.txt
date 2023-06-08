@@ -82,7 +82,7 @@ tradition_rashidun_army = {
 		}
 		AND = {
 			has_cultural_pillar = heritage_arabic
-			scope:character = {
+			scope:character ?= {
 				has_religion = religion:islam_religion #You need to be Muslim
 			}
 		}
@@ -105,7 +105,7 @@ tradition_pagan_protectors = {
 		CE_is_loaded = yes
 		AND = {
 			has_cultural_pillar = heritage_baltic
-			scope:character = {
+			scope:character ?= {
 				has_religion = religion:baltic_religion #You need to be of the Baltic religious family
 			}
 		}
@@ -142,7 +142,7 @@ tradition_sasanian_army = {
 		}
         AND = {
 			has_cultural_pillar = heritage_iranian
-			scope:character = {
+			scope:character ?= {
 				has_religion = religion:zoroastrianism_religion #You need to be Zoroastrian
 			}
 		}	
@@ -420,7 +420,7 @@ tradition_akritai = {
 		CE_is_loaded = yes
 		AND = {
 			NOT = {
-				scope:character = {
+				scope:character ?= {
 				has_title = title:e_byzantium
 				}
 			}	
@@ -577,7 +577,7 @@ tradition_outremer_armies = {
                 scope:character.capital_barony.title_province = {
                     geographical_region = custom_outremer
                 }
-                scope:character = {
+                scope:character ?= {
                     has_trait = crusader_king
                 }
             }
@@ -586,7 +586,7 @@ tradition_outremer_armies = {
     }
 	
     is_valid = {
-		scope:character = {
+		scope:character ?= {
 			has_title = title:k_jerusalem
 		}
 		NOR = { #Cant be taken by Cultures who favor massed troops or a variant
@@ -616,7 +616,7 @@ tradition_mudejar_art = {
 					geographical_region = custom_andalusian
 				}
 			}
-			scope:character = {
+			scope:character ?= {
 				has_religion = religion:christianity_religion #You need to be Christian
 			}
 		}
@@ -673,7 +673,7 @@ tradition_fatimid_royal_guard = {
 					geographical_region = custom_roman_aegyptus
 				}
 			}
-			scope:character = {
+			scope:character ?= {
 				has_religion = religion:islam_religion #You need to be Muslim
 			}
 		}
@@ -772,7 +772,7 @@ tradition_professional_army = {
 		}
 		
 		NOT = { # Can not be picked by tribals
-			scope:character = {
+			scope:character ?= {
 				has_government = tribal_government
 			}
 		}
@@ -794,7 +794,7 @@ tradition_military_engineering = {
 	
     is_valid = {
 		NOT = { # Can not be picked by tribals
-			scope:character = {
+			scope:character ?= {
 				has_government = tribal_government
 			}
 		}
@@ -868,7 +868,7 @@ tradition_merc_armies = {
 	
 	is_valid = {
 		NOT = { # Can not be picked by tribals
-			scope:character = {
+			scope:character ?= {
 				has_government = tribal_government
 			}
 		}

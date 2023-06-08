@@ -2,3 +2,35 @@
 
 knight_culture_player_plural:0 "[SelectLocalization(GetPlayer.IsValid,'knight_culture_player_plural_vanilla','knight_culture_player_plural_entitled')]"
 COA_TOOLTIP_HOLDER:1 "[SelectLocalization(GetPlayer.IsValid,'COA_TOOLTIP_HOLDER_vanilla','')][TITLE.GetLeaseInfo][holder|E]: [TITLE.GetHolder.GetFullNameNicknamed]\n[SelectLocalization(DataModelHasItems(TITLE.GetLineOfSuccession), 'COA_LINE_OF_SUCCESSION', '')][TITLE.GetLineOfSuccessionDesc]\n"
+
+ FAITH_WINDOW_DOCTRINE_TOOLTIP:1 "#T [FaithDoctrine.GetNameNoTooltip( Faith.Self )]#!\n[FaithDoctrine.GetEffectsDescription( Faith.Self )]\n\n[FaithDoctrine.GetDescription( Faith.Self )|F]"
+ FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH:1 "#T [FaithDoctrine.GetNameNoTooltip( Faith.Self )]#!\n[FaithDoctrine.GetEffectsDescription( Faith.Self )]\n\n[FaithDoctrine.GetDescription( Faith.Self )|F]"
+
+
+ ENTITLED_INCOMPATIBLE_TENET_ARMED_PILGRIMAGES_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_armed_pilgrimages').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_MONASTICISM_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_monasticism').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_PACIFISM_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_pacifism').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_DHARMIC_PACIFISM_TRIGGER:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_dharmic_pacifism').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_GRUESOME_FESTIVALS_TRIGGER:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_gruesome_festivals').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_HUMAN_SACRIFICE_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_human_sacrifice').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_MENDICANT_PREACHERS_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_mendicant_preachers').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_HEDONISTIC_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_hedonistic').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_GNOSTICISM_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_gnosticism').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_EASTERN_SYNCRETISM_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_eastern_syncretism').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_OTHER_SYNCRETISM_TRIGGER:0 "You may only select one syncretic [core_tenet|E] for your [faith|E]"
+ ENTITLED_INCOMPATIBLE_TENET_FALSE_CONVERSION_SANCTION_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_false_conversion_sanction').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_PENTARCHY_TRIGGER:1 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_pentarchy').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_SACRIFICIAL_CEREMONIES_TRIGGER:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_sacrificial_ceremonies').GetName( Faith.Self )]"
+ ENTITLED_INCOMPATIBLE_TENET_CONSOLAMENTUM_TRIGGER:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_consolamentum').GetName( Faith.Self )]"
+
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_BILATERAL:0 "[GetFaithDoctrine('tenet_rite').GetName( Faith.Self )] cannot be taken if you and your [head_of_faith|E] have different stances on"
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_UNILATERAL:0 "[GetFaithDoctrine('tenet_rite').GetName( Faith.Self )] cannot be taken if your [head_of_faith|E] cannot condone your stance on"
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_PACIFISTS_VS_WARMONGERS:0 "$ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_BILATERAL$ pacifism verses warmongering"
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_CRIMINAL_WITCHES_VS_ADORCISTS:0 "$ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_BILATERAL$ illegal witchcraft verses spirit possession"
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_HEDONISTS_VS_ASCETICS:0 "$ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_BILATERAL$ hedonism verses asceticism"
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_CANNIBALS_VS_NON_CANNIBALS:0 "$ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_BILATERAL$ cannibalism"
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_WORLD_VS_HUMSAC_GRUFES:0 "$ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_UNILATERAL$ human sacrifice"
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_MONOGAMY_VS_POLYGAMY:0 "$ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_UNILATERAL$ polygamy"
+ ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_WORLD_VS_UNRESTRICTED_INCEST:0 "$ENTITLED_INCOMPATIBLE_TENET_SHARED_HOF_INTRO_UNILATERAL$ unrestricted incest"
+
+ ENTITLED_INCOMPATIBLE_TENET_ARMED_PILGRIMAGES_VS_FORBIDDEN_PILGRIMAGES:0 "Incompatible with the [doctrine|E] $doctrine_pilgrimage_name$: [GetFaithDoctrine('doctrine_pilgrimage_forbidden').GetBaseName]"

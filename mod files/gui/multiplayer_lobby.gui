@@ -350,9 +350,7 @@ JominiMultiplayerLobby = {
 
 										hbox = {
 											layoutpolicy_horizontal = expanding
-											spacer = { size = { 20 0 }}
-											
-
+											entitled_faith_button = {}
 											text_single = {
 												datacontext = "[Character.GetFaith]"
 												layoutpolicy_horizontal = expanding

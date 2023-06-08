@@ -13,7 +13,7 @@ tradition_RICE_volga_apiculture = {
 			has_cultural_pillar = heritage_turkic
 			has_cultural_pillar = heritage_east_slavic
 			has_cultural_pillar = heritage_ugro_permian
-			# scope:character = {
+			# scope:character ?= {
 			# 	capital_province = {
 			# 		geographical_region = world_steppe_west # Change to new Volga region
 			# 	}
@@ -33,7 +33,7 @@ tradition_RICE_volga_apiculture = {
 			has_cultural_pillar = heritage_turkic
 			has_cultural_pillar = heritage_east_slavic
 			has_cultural_pillar = heritage_ugro_permian
-			# scope:character = {
+			# scope:character ?= {
 			# 	capital_province = {
 			# 		geographical_region = world_steppe_west # Change to new Volga region
 			# 	}
@@ -94,7 +94,7 @@ tradition_RICE_finnic_sorcerers = {
 			has_cultural_pillar = heritage_volga_finnic
 			has_cultural_pillar = heritage_ugro_permian
 		}
-		scope:character = {
+		scope:character ?= {
 			faith = {
 				has_doctrine = doctrine_witchcraft_accepted
 			}

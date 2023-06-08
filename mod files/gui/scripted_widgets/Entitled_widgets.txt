@@ -6,3 +6,6 @@ gui/Entitled_window_culture.gui = entitled_culture_window
 # gui/Entitled_custom_culture.gui = Entitled_custom_culture_list
 gui/Entitled_menu.gui = Entitled_menu
 gui/Entitled_window_replace_pillar.gui = Entitled_replace_pillar_window
+
+gui/Entitled_window_faith.gui = entitled_faith_window
+gui/Entitled_window_faith.gui = entitled_faith_window_tenets

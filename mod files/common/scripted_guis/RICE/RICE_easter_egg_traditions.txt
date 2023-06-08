@@ -9,7 +9,7 @@ tradition_RICE_boba_drinkers = {
     is_shown = {
 		RICE_is_loaded = yes
 		debug_only = yes
-		scope:character = {
+		scope:character ?= {
 			is_ai = no
 		}
 	}
@@ -32,7 +32,7 @@ tradition_RICE_music_practice = {
     is_shown = {
 		RICE_is_loaded = yes
 		debug_only = yes
-		scope:character = {
+		scope:character ?= {
 			is_ai = no
 		}
 		has_ep1_court_positions_dlc_trigger = yes

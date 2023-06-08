@@ -103,7 +103,7 @@ window = {
 	name = "Entitled_custom_culture_list"
 	widgetid = "Entitled_custom_culture_list"
 	parentanchor = top|hcenter
-	size = { 1000 800 }
+	size = { 1000 100% }
 	layer = windows_layer
 	# visible = "[GetVariableSystem.HasValue('Entitled','culture')]"
 	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
@@ -168,20 +168,28 @@ window = {
 			blockoverride "scrollbox_content" {
 				vbox = {
 					layoutpolicy_horizontal = expanding
-					fixedgridbox = {
-						datamodel = "[GetGlobalList('entitled_cultures')]"
-						addrow = 70
-						addcolumn = 200
+					layoutpolicy_vertical = expanding
+					datamodel = "[GetGlobalList('entitled_cultures')]"
+					# fixedgridbox = {
+					# 	datamodel = "[GetGlobalList('entitled_cultures')]"
+					# 	addrow = 70
+					# 	addcolumn = 200
 				
-						flipdirection = yes
-						datamodel_wrap = 5
-						item = {
-							widget = {
+					# 	flipdirection = yes
+					# 	datamodel_wrap = 5
+					# 	item = {
+					# 		widget = {
 				
-								button_standard = {
-									text = "[Scope.Culture.GetName]"
-								}
-							}
+					# 			button_standard = {
+					# 				text = "[Scope.Culture.GetName]"
+					# 			}
+					# 		}
+					# 	}
+					# }
+					item = {
+						widget = {
+							visible = "[GreaterThan_int32(GetDataModelSize(Scope.Culture.GetTraditions),Scope.Culture.GetMaxNumberOfTraditions)]"
+							text_single = { text = "[Scope.Culture.GetName] Has [GetDataModelSize(Scope.Culture.GetTraditions)] Max [Scope.Culture.GetMaxNumberOfTraditions]"}
 						}
 					}
 				}
