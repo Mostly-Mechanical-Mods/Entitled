@@ -197,3 +197,92 @@ entitled_doctrine_for_toggle = {
 		}
 	}
 }
+
+entitled_convert_faith_counties = {
+	scope = title
+	effect = {
+		debug_log = "entitled_convert_faith_counties"
+		every_in_de_jure_hierarchy = {
+			limit = { tier = tier_county }
+			continue = { tier > tier_county }
+			if = {
+				limit = { NOT = { has_variable = entitled_faith }}
+				set_variable = { name = entitled_faith value = faith }
+			}
+			debug_log_scopes = no
+			set_county_faith = global_var:entitled_faith
+		}
+	}
+}
+
+entitled_convert_faith_people = {
+	scope = title
+	effect = {
+		debug_log = "entitled_convert_faith_counties"
+		every_in_de_jure_hierarchy = {
+			limit = { tier = tier_county }
+			continue = { tier > tier_county }
+			holder = {
+				add_to_list = counts
+			}
+		}
+		every_in_list = {
+			list = counts
+			add_to_list = convert
+			every_courtier = { add_to_list = convert }
+			every_vassal = {
+				limit = { tier = tier_barony }
+				add_to_list = convert
+			}
+		}
+		every_in_list = {
+			list = convert
+			if = {
+				limit = { NOT = { has_variable = entitled_faith }}
+				set_variable = { name = entitled_faith value = faith }
+			}
+			set_character_faith = global_var:entitled_faith
+		}
+	}
+}
+
+entitled_revert_faith_counties = {
+	scope = title
+	effect = {
+		every_in_de_jure_hierarchy = {
+			limit = { tier = tier_county }
+			continue = { tier > tier_county }
+			if = {
+				limit = { has_variable = entitled_faith }
+				set_county_faith = var:entitled_faith
+				remove_variable = entitled_faith
+			}
+			holder = {
+				add_to_list = counts
+			}
+		}
+		every_in_list = {
+			list = counts
+			if = {
+				limit = { has_variable = entitled_faith }
+				add_to_list = revert
+			}
+			every_courtier = {
+				limit = { has_variable = entitled_faith }
+				add_to_list = revert
+			}
+			every_vassal = {
+				limit = {
+					tier = tier_barony
+					has_variable = entitled_faith
+				}
+				add_to_list = revert
+			}
+		}
+		every_in_list = {
+			list = revert
+			set_character_faith = var:entitled_faith
+			remove_variable = entited_faith
+		}
+	}
+}

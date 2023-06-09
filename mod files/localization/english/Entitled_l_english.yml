@@ -51,7 +51,11 @@ ENTITLED_MENU_CREATE_TITLE: "#T Create Title#!\nCreate your own title, complete 
 ENTITLED_MENU_CUSTOMIZE_TITLE: "#T Customize Title#!\n#help Coming Soon!#!"
 ENTITLED_MENU_CUSTOMIZE_FAITH: "#T Customize Faith $ENTITLED_MENU_CUSTOMIZE_FAITH_SELECTED$#!\n#help Chose a ruler, and click the @edit_text_icon! icon next to their Faith#!"
 ENTITLED_MENU_CUSTOMIZE_FAITH_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_faith').IsSet,GetGlobalVariable('entitled_faith').Faith.GetName,'')]"
-ENTITLED_MENU_CONVERT_FAITH: "#T Faith Conversion#!\n#help Coming Soon!#!"
+
+ENTITLED_MENU_CONVERT_FAITH: "#T Faith Conversion#!\n$ENTITLED_MENU_CONVERT_FAITH_SELECTED$\n$ENTITLED_MENU_CONVERT_FAITH_ONGOING_CUSTOMIZE_TITLE$#help Chose a ruler, and click the @edit_text_icon! icon next to their Faith#!"
+ENTITLED_MENU_CONVERT_FAITH_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_faith').IsSet,GetGlobalVariable('entitled_faith').Faith.GetName,'#warning @warning_icon! No Faith Selected#!')]"
+ENTITLED_MENU_CONVERT_FAITH_ONGOING_CUSTOMIZE_TITLE: "[SelectLocalization(GetGlobalVariable('entitled_setup').IsSet,'#warning @warning_icon! Title Customization is on-going. Finish creating the title or clear all changes.#!\n','')]"
+
 ENTITLED_MENU_CUSTOMIZE_CULTURE: "#T Customize Culture $ENTITLED_MENU_CUSTOMIZE_CULTURE_SELECTED$#!\n#help Chose a ruler, and click the @edit_text_icon! icon next to their Culture#!"
 ENTITLED_MENU_CUSTOMIZE_CULTURE_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_culture').IsSet,GetGlobalVariable('entitled_culture').Culture.GetName,'')]"
 ENTITLED_MENU_CUSTOMIZE_CULTURE_NO_DLC: "#T Culture Conversion#!\nRoyal Court DLC required"
@@ -65,3 +69,6 @@ ENTITLEMENT_THEOCRATIC_RULER_WARNING: "This will create a non-playable Theocrati
 
 ENTITLED_FAITH: "Faith:"
 ENTITLED_CULTURE: "Culture:"
+
+
+ENTITLED_WINDOW_TITLE_CONVERT_FAITH: "Convert Faith"

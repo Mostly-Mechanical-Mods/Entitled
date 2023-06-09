@@ -46,6 +46,7 @@ window = {
 					}
 				}
 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+				onclick = "[GetVariableSystem.Set('Entitled_title_window','create_title')]"
 				onclick = "[SetMapMode(  'baronies' )]"
 				onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
 				down = "[GetVariableSystem.HasValue('Entitled','title')]"
@@ -67,6 +68,7 @@ window = {
 					}
 				}
 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+				onclick = "[GetVariableSystem.SetOrToggle('Entitled_title_window','customize_title')]"
 				onclick = "[SetMapMode(  'baronies' )]"
 				# onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
 				down = "[GetVariableSystem.HasValue('Entitled','title')]"
@@ -112,7 +114,9 @@ window = {
 				}
 				
 				onclick = "[SetMapMode(  'religions' )]"
-				enabled = "[GetPlayer.IsValid]"
+				onclick = "[GetVariableSystem.Set('Entitled','title')]"
+				onclick = "[GetVariableSystem.SetOrToggle('Entitled_title_window','convert_faith')]"
+				enabled = "[And(Not(GetGlobalVariable('entitled_setup').IsSet),GetGlobalVariable('entitled_faith').IsSet)]"
 				tooltip = ENTITLED_MENU_CONVERT_FAITH
 				using = tooltip_ws
 			}
@@ -171,7 +175,8 @@ window = {
 						using = Glow_Standard
 					}
 				}
-				onclick = "[GetVariableSystem.SetOrToggle('Entitled','faith')]"
+				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+				onclick = "[GetVariableSystem.SetOrToggle('Entitled_title_window','convert_culture')]"
 				onclick = "[SetMapMode(  'religions' )]"
 				enabled = "[GetPlayer.IsValid]"
 				tooltip = ENTITLED_MENU_CONVERT_CULTURE

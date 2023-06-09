@@ -13,3 +13,7 @@ entitled_domain_size = {
 		add = 1
 	}
 }
+
+entitled_num_county_followers = { value = num_county_followers }
+
+entitled_culture_number_of_counties = { value = culture_number_of_counties }

@@ -20,8 +20,13 @@ window = {
 		name = _hide
 		using = Animation_FadeOut_Quick
 		using = Sound_WindowHide_Standard
-
 		position = { -90 0 }
+	}
+
+	state = {
+		name = "refresh_religion_mapmode"
+		delay = 0.1
+		on_start = "[SetMapMode('religions')]"
 	}
 
 	margin_widget = {
@@ -34,60 +39,204 @@ window = {
 	vbox = {
 		using = Window_Margins_Sidebar
 
-		header_pattern = {
-			layoutpolicy_horizontal = expanding
-
+		entitled_header_pattern = {
+			visible = "[GetVariableSystem.HasValue('Entitled_title_window','create_title')]"
+			# visible = "[Not(GetPlayer.IsValid)]"
 			blockoverride "header_text"
 			{
 				text = "ENTITLED_WINDOW_TITLE"
 			}
+		}
 
-			blockoverride "button_close"
+		entitled_header_pattern = {
+			visible = "[GetVariableSystem.HasValue('Entitled_title_window','convert_faith')]"
+			blockoverride "header_text"
 			{
-				onclick = "[GetVariableSystem.Clear('Entitled')]"
-				onclick = "[SetMapMode(  'realms' )]"
-				# shortcut = "innovations_window"
-			}
-
-			blockoverride "button_back"
-			{
-				visible = "[HasViewHistory]"
-				onclick = "[OpenFromViewHistory]"
-				tooltip = "[GetViewHistoryTooltip]"
-			}
-
-			blockoverride "button_me"
-			{
-				visible = "[GetPlayer.IsValid]"
-				# onclick = "[DefaultOnCharacterClick(GetPlayer.GetID)]"
-			}
-
-			hbox = {
-				margin_left = 10
-				button_icon = {
-					size = { 30 30 }
-					texture = "gfx/map_mode.dds"
-					onclick = "[SetMapMode(  'baronies' )]"
-					tooltip = ENTITLED_MAPMODE_TOOLTIP
-					down = "[IsMapMode('baronies')]"
-					enabled = "[Not(IsMapMode('baronies'))]"
-				}
-				button_icon = {
-					size = { 30 30 }
-					texture = "gfx/interface/icons/flat_icons/clear.dds"
-					onclick = "[GetVariableSystem.Clear('Entitled')]"
-					onclick = "[SetMapMode(  'realms' )]"
-					onclick = "[GetVariableSystem.Clear('empire')]"
-					onclick = "[GetVariableSystem.Clear('kingdom')]"
-					onclick = "[GetVariableSystem.Clear('duchy')]"
-					onclick = "[GetVariableSystem.Clear('capital_county')]"
-					onclick = "[GetVariableSystem.Clear('title_rank')]"
-					onclick = "[GetScriptedGui('Entitled_clean').Execute(GuiScope.End)]"
-					tooltip = ENTITLED_CLEAR_TOOLTIP
-				}
-				expand = {}
+				text = "ENTITLED_WINDOW_TITLE_CONVERT_FAITH"
 			}
 		}
+
+		# header_with_picture = {
+		# 	name = "header"
+		# 	datacontext = "[GetIllustration( 'religion_interior' )]"
+		# 	datacontext = "[GetGlobalVariable('entitled_faith').Faith]"
+		# 	size = { 0 130 }
+		# 	layoutpolicy_horizontal = expanding
+		# 	layoutpolicy_vertical = fixed
+
+		# 	blockoverride "size" {
+		# 		size = { 100% 143 }
+		# 	}
+
+		# 	blockoverride "header_text"
+		# 	{
+		# 		text = "FAITH_VIEW_HEADING"
+		# 		using = tooltip_es
+
+		# 		state = {
+		# 			name = "faith_view_refresh"
+		# 			using = Animation_Refresh_FadeOut
+		# 		}
+
+		# 		state = {
+		# 			using = Animation_Refresh_FadeIn
+		# 		}
+		# 	}
+
+		# 	blockoverride "button_close"
+		# 	{
+		# 		onclick = "[GetVariableSystem.Clear('Entitled')]"
+		# 	}
+
+		# 	blockoverride "button_back"
+		# 	{
+		# 		visible = "[HasViewHistory]"
+		# 		onclick = "[OpenFromViewHistory]"
+		# 		tooltip = "[GetViewHistoryTooltip]"
+		# 	}
+
+		# 	blockoverride "button_me"
+		# 	{
+		# 		visible = "[GetPlayer.IsValid]"
+		# 		# onclick = "[DefaultOnCharacterClick(GetPlayer.GetID)]"
+		# 	}
+
+		# 	blockoverride "illustration_texture"
+		# 	{
+		# 		texture = "[Illustration.GetTexture( Faith.MakeScope )]"
+		# 		spriteType = stretched
+		# 		fittype = centercrop
+		# 		alpha = 0.35
+		# 	}
+
+		# 	hbox = {
+		# 		# datacontext = "[FaithWindow.GetFaith]"
+
+		# 		watch_window_button = {
+		# 			size = { 60 40 }
+		# 			onclick = "[AddWatchWindow( Faith.MakeScope )]"
+		# 		}
+
+		# 		vbox = {
+		# 			margin_top = 30
+		# 			margin_left = 10
+
+		# 			icon = {
+		# 				name = "faith_icon"
+		# 				size = { 100 100 }
+		# 				texture = "[Faith.GetIcon]"
+		# 				using = tooltip_se
+		# 				tooltipwidget = {
+		# 					faith_tooltip = {}
+		# 				}
+
+		# 				state = {
+		# 					name = "faith_view_refresh"
+		# 					using = Animation_Refresh_FadeOut
+		# 				}
+
+		# 				state = {
+		# 					using = Animation_Refresh_FadeIn
+		# 				}
+		# 			}
+		# 		}
+
+		# 		vbox = {
+		# 			layoutpolicy_horizontal = expanding
+		# 			layoutpolicy_vertical = expanding
+
+		# 			expand = {}
+
+		# 			# hbox = {
+		# 			# 	layoutpolicy_horizontal = expanding
+
+		# 			# 	expand = {}
+
+		# 			# 	vbox = {
+		# 			# 		layoutpolicy_vertical = expanding
+		# 			# 		margin_bottom = 4
+		# 			# 		margin_left = 25
+		# 			# 		spacing = 1
+
+		# 			# 		text_single = {
+		# 			# 			name = "your_faith"
+		# 			# 			visible = "[ObjectsEqual( GetPlayer.GetFaith, Faith.Self )]"
+		# 			# 			text = "FAITH_VIEW_YOUR_FAITH"
+		# 			# 			align = nobaseline|center
+		# 			# 		}
+
+		# 			# 		expand = {}
+
+		# 			# 		text_single = {
+		# 			# 			name = "our_view"
+		# 			# 			visible = "[Not(ObjectsEqual( GetPlayer.GetFaith, Faith.Self ))]"
+		# 			# 			layoutpolicy_horizontal = expanding
+		# 			# 			text = "FAITH_VIEW_OUR_VIEW"
+		# 			# 			align = nobaseline|center
+		# 			# 		}
+
+		# 			# 		text_single = {
+		# 			# 			name = "their_view"
+		# 			# 			visible = "[Not(ObjectsEqual( GetPlayer.GetFaith, Faith.Self ))]"
+		# 			# 			layoutpolicy_horizontal = expanding
+		# 			# 			text = "FAITH_VIEW_THEIR_VIEW"
+		# 			# 			align = nobaseline|center
+		# 			# 		}
+		# 			# 	}
+
+		# 			# 	expand = {}
+
+		# 			# 	vbox = {
+		# 			# 		margin = { 10 0 }
+		# 			# 		spacing = 2
+
+		# 			# 		fervor_container_vbox = {}
+
+		# 			# 		button_sidepanel_right = {
+		# 			# 			name = "religion_information"
+		# 			# 			datacontext = "[Faith.GetReligion]"
+		# 			# 			# onclick = "[FaithWindow.ToggleReligionWindow]"
+		# 			# 			tooltip = "TOGGLE_RELIGION_VIEW_TOOLTIP"
+
+		# 			# 			using = tooltip_nw
+
+		# 			# 			blockoverride "button_text"
+		# 			# 			{
+		# 			# 				text = "TOGGLE_RELIGION_VIEW"
+		# 			# 			}
+		# 			# 		}
+		# 			# 	}
+		# 			# }
+		# 		}
+		# 	}
+
+		# 	text_single = {
+		# 		visible = "[And( Not( Faith.GetReligion.HasPaganRoots ), Not( Faith.IsUnreformed ) )]"
+		# 		text = "FAITH_VIEW_SUBHEADING"
+		# 		align = center
+		# 		parentanchor = top|hcenter
+		# 		position = {0 40}
+		# 		alpha = 0.9
+		# 	}
+
+		# 	text_label_center = {
+		# 		visible = "[Faith.IsUnreformed]"
+		# 		text = "FAITH_VIEW_UNREFORMED_SUBHEADING"
+		# 		align = center
+		# 		parentanchor = top|hcenter
+		# 		position = {0 40}
+		# 		alpha = 0.8
+		# 	}
+
+		# 	text_label_center = {
+		# 		visible = "[And( Faith.GetReligion.HasPaganRoots, Not( Faith.IsUnreformed ) )]"
+		# 		text = "FAITH_VIEW_REFORMED_SUBHEADING"
+		# 		align = center
+		# 		parentanchor = top|hcenter
+		# 		position = {0 40}
+		# 		alpha = 0.8
+		# 	}
+		# }
 
 		spacing = 5
 		hbox = {
@@ -97,265 +246,182 @@ window = {
 			
 			
 		}
-		hbox = {
-			spacing = 10
-			layoutpolicy_horizontal = expanding
-			margin_left = 70
-			margin_right = 20
-			text_single = {
-				text = "ENTITLED_RANK"
-			}
-			button_round = {
-				size = { 40 40 }
-				icon = {
-					name = "empire"
-					parentanchor = center
-					texture = "gfx/interface/coat_of_arms/crown_strip_44.dds"
-					frame = 6
-					framesize = { 28 20 }
 
-					block "crown" {
-						
+		vbox = {
+			visible = "[GetVariableSystem.HasValue('Entitled_title_window','create_title')]"
+			layoutpolicy_horizontal = expanding
+			hbox = {
+				spacing = 10
+				layoutpolicy_horizontal = expanding
+				margin_left = 70
+				margin_right = 20
+				text_single = {
+					text = "ENTITLED_RANK"
+				}
+				button_round = {
+					size = { 40 40 }
+					icon = {
+						name = "empire"
+						parentanchor = center
+						texture = "gfx/interface/coat_of_arms/crown_strip_44.dds"
+						frame = 6
+						framesize = { 28 20 }
+	
+						block "crown" {
+							
+						}
+					}
+					onclick = "[GetVariableSystem.Set('title_rank','empire')]"
+					down = "[GetVariableSystem.HasValue('title_rank','empire')]"
+				}
+				button_round = {
+					size = { 40 40 }
+					icon = {
+						name = "kingdom"
+						parentanchor = center
+						texture = "gfx/interface/coat_of_arms/crown_strip_44.dds"
+						frame = 5
+						framesize = { 28 20 }
+	
+						block "crown" {
+							
+						}
+					}
+					onclick = "[GetVariableSystem.Set('title_rank','kingdom')]"
+					down = "[GetVariableSystem.HasValue('title_rank','kingdom')]"
+				}
+				button_round = {
+					size = { 40 40 }
+					icon = {
+						name = "crown"
+						parentanchor = center
+						texture = "gfx/interface/coat_of_arms/crown_strip_44.dds"
+						frame = 4
+						framesize = { 28 20 }
+	
+						block "crown" {
+							
+						}
+					}
+					onclick = "[GetVariableSystem.Set('title_rank','duchy')]"
+					down = "[GetVariableSystem.HasValue('title_rank','duchy')]"
+				}
+				button_round = {
+					size = { 40 40 }
+					icon = {
+						name = "crown"
+						parentanchor = center
+						texture = "gfx/interface/coat_of_arms/crown_strip_44.dds"
+						frame = 3
+						framesize = { 28 20 }
+	
+						block "crown" {
+							
+						}
+					}
+					onclick = "[GetVariableSystem.Set('title_rank','county')]"
+					down = "[GetVariableSystem.HasValue('title_rank','county')]"
+				}
+				expand = {}
+				button_checkbox_label = {
+					visible = "[And(GetVariableSystem.Exists('title_rank'),GetGlobalVariable('capital_county').IsSet)]"
+					# parentanchor = vcenter
+					# position = { 10 0 }
+					enabled = "[GetScriptedGui('Entitled_independent').IsShown(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).End)]"
+					tooltip = "[GetScriptedGui('Entitled_independent').ExecuteTooltip(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).AddScope('independent',MakeScopeFlag(GetVariableSystem.Get('Entitled_independent'))).End)]"
+					onclick = "[GetVariableSystem.SetOrToggle( 'Entitled_independent','yes')]"
+					blockoverride "checkbox"
+					{
+	
+						checked = "[Or(GetVariableSystem.Exists('Entitled_independent'),Not(GetScriptedGui('Entitled_independent').IsShown(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).End)))]"
+					}
+					blockoverride "text"
+					{
+						text = "ENTITLED_INDEPENDENT"
 					}
 				}
-				onclick = "[GetVariableSystem.Set('title_rank','empire')]"
-				down = "[GetVariableSystem.HasValue('title_rank','empire')]"
 			}
-			button_round = {
-				size = { 40 40 }
-				icon = {
-					name = "kingdom"
-					parentanchor = center
-					texture = "gfx/interface/coat_of_arms/crown_strip_44.dds"
-					frame = 5
-					framesize = { 28 20 }
-
-					block "crown" {
-						
-					}
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				margin_left = 70
+				margin_right = 20
+				spacing = 10
+				text_single = {
+					text = "ENTITLED_PRIMARY_TITLE"
 				}
-				onclick = "[GetVariableSystem.Set('title_rank','kingdom')]"
-				down = "[GetVariableSystem.HasValue('title_rank','kingdom')]"
-			}
-			button_round = {
-				size = { 40 40 }
-				icon = {
-					name = "crown"
-					parentanchor = center
-					texture = "gfx/interface/coat_of_arms/crown_strip_44.dds"
-					frame = 4
-					framesize = { 28 20 }
-
-					block "crown" {
-						
-					}
+				text_single = {
+					visible = "[Not(GetVariableSystem.Exists('title_rank'))]"
+					text = "ENTITLED_CHOSE_RANK"
 				}
-				onclick = "[GetVariableSystem.Set('title_rank','duchy')]"
-				down = "[GetVariableSystem.HasValue('title_rank','duchy')]"
-			}
-			button_round = {
-				size = { 40 40 }
-				icon = {
-					name = "crown"
-					parentanchor = center
-					texture = "gfx/interface/coat_of_arms/crown_strip_44.dds"
-					frame = 3
-					framesize = { 28 20 }
-
-					block "crown" {
-						
-					}
+				text_single = {
+					visible = "[And(GetVariableSystem.Exists('title_rank'),Not(GetVariableSystem.HasValue('title_rank','county')))]"
+					text = "[GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.GetNameNoTooltip]"
 				}
-				onclick = "[GetVariableSystem.Set('title_rank','county')]"
-				down = "[GetVariableSystem.HasValue('title_rank','county')]"
-			}
-			expand = {}
-			button_checkbox_label = {
-				visible = "[And(GetVariableSystem.Exists('title_rank'),GetGlobalVariable('capital_county').IsSet)]"
-				# parentanchor = vcenter
-				# position = { 10 0 }
-				enabled = "[GetScriptedGui('Entitled_independent').IsShown(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).End)]"
-				tooltip = "[GetScriptedGui('Entitled_independent').ExecuteTooltip(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).AddScope('independent',MakeScopeFlag(GetVariableSystem.Get('Entitled_independent'))).End)]"
-				onclick = "[GetVariableSystem.SetOrToggle( 'Entitled_independent','yes')]"
-				blockoverride "checkbox"
-				{
-
-					checked = "[Or(GetVariableSystem.Exists('Entitled_independent'),Not(GetScriptedGui('Entitled_independent').IsShown(GuiScope.SetRoot(GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.MakeScope).End)))]"
+				text_single = {
+					visible = "[And(And(GetVariableSystem.Exists('title_rank'),GetVariableSystem.HasValue('title_rank','county')),GetGlobalVariable('capital_county').IsSet)]"
+					text = "[GetGlobalVariable('capital_county').Title.GetNameNoTooltip]"
 				}
-				blockoverride "text"
-				{
-					text = "ENTITLED_INDEPENDENT"
+				text_single = {
+					visible = "[And(And(GetVariableSystem.Exists('title_rank'),GetVariableSystem.HasValue('title_rank','county')),Not(GetGlobalVariable('capital_county').IsSet))]"
+					text = "ENTITLED_CHOSE_CAPITAL_COUNTY"
+				}
+				expand = {}
+				text_single = {
+					visible = "[GetGlobalVariable('capital_county').IsSet]"
+					text = "ENTITLED_REALM_SIZE"
 				}
 			}
-		}
-		hbox = {
-			layoutpolicy_horizontal = expanding
-			margin_left = 70
-			margin_right = 20
-			spacing = 10
-			text_single = {
-				text = "ENTITLED_PRIMARY_TITLE"
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				margin_left = 70
+				margin_right = 20
+				spacing = 10
+				text_single = {
+					text = "ENTITLED_CAPITAL_COUNTY"
+				}
+				text_single = {
+					visible = "[Not(GetGlobalVariable('capital_county').IsSet)]"
+					text = "ENTITLED_CHOSE_CAPITAL_COUNTY"
+				}
+				text_single = {
+					visible = "[GetGlobalVariable('capital_county').IsSet]"
+					text = "[GetGlobalVariable('capital_county').Title.GetNameNoTooltip]"
+				}
+				expand = {}
+				text_single = {
+					visible = "[GetGlobalVariable('capital_county').IsSet]"
+					text = "ENTITLED_DOMAIN_SIZE"
+				}
 			}
-			text_single = {
-				visible = "[Not(GetVariableSystem.Exists('title_rank'))]"
-				text = "ENTITLED_CHOSE_RANK"
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				margin_left = 70
+				margin_right = 20
+				spacing = 10
+				text_single = {
+					text = "ENTITLED_FAITH"
+				}
+				text_single = {
+					visible = "[GetGlobalVariable('capital_county').IsSet]"
+					text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetFaith.GetName]"
+				}
+				expand = {}
 			}
-			text_single = {
-				visible = "[And(GetVariableSystem.Exists('title_rank'),Not(GetVariableSystem.HasValue('title_rank','county')))]"
-				text = "[GetGlobalVariable(Concatenate('custom_',GetVariableSystem.Get('title_rank'))).Title.GetNameNoTooltip]"
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				margin_left = 70
+				margin_right = 20
+				spacing = 10
+				text_single = {
+					text = "ENTITLED_CULTURE"
+				}
+				text_single = {
+					visible = "[GetGlobalVariable('capital_county').IsSet]"
+					text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetCulture.GetName]"
+				}
+				expand = {}
 			}
-			text_single = {
-				visible = "[And(And(GetVariableSystem.Exists('title_rank'),GetVariableSystem.HasValue('title_rank','county')),GetGlobalVariable('capital_county').IsSet)]"
-				text = "[GetGlobalVariable('capital_county').Title.GetNameNoTooltip]"
-			}
-			text_single = {
-				visible = "[And(And(GetVariableSystem.Exists('title_rank'),GetVariableSystem.HasValue('title_rank','county')),Not(GetGlobalVariable('capital_county').IsSet))]"
-				text = "ENTITLED_CHOSE_CAPITAL_COUNTY"
-			}
-			expand = {}
-			text_single = {
-				visible = "[GetGlobalVariable('capital_county').IsSet]"
-				text = "ENTITLED_REALM_SIZE"
-			}
-		}
-		hbox = {
-			layoutpolicy_horizontal = expanding
-			margin_left = 70
-			margin_right = 20
-			spacing = 10
-			text_single = {
-				text = "ENTITLED_CAPITAL_COUNTY"
-			}
-			text_single = {
-				visible = "[Not(GetGlobalVariable('capital_county').IsSet)]"
-				text = "ENTITLED_CHOSE_CAPITAL_COUNTY"
-			}
-			text_single = {
-				visible = "[GetGlobalVariable('capital_county').IsSet]"
-				text = "[GetGlobalVariable('capital_county').Title.GetNameNoTooltip]"
-			}
-			expand = {}
-			text_single = {
-				visible = "[GetGlobalVariable('capital_county').IsSet]"
-				text = "ENTITLED_DOMAIN_SIZE"
-			}
-		}
-		hbox = {
-			layoutpolicy_horizontal = expanding
-			margin_left = 70
-			margin_right = 20
-			spacing = 10
-			text_single = {
-				text = "ENTITLED_FAITH"
-			}
-			text_single = {
-				visible = "[GetGlobalVariable('capital_county').IsSet]"
-				text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetFaith.GetName]"
-			}
-			expand = {}
-			# button_round = {
-			# 	# visible = "[Or(And(GuiPotentialCouncilTask.CanSelect, Not(CouncilWindow.IsLiegeCouncilShown)), GuiPotentialCouncilTask.IsActive)]"
-			# 	# parentanchor = center
-			# 	size = { 38 38 }
-			# 	gfxtype = togglepushbuttongfx
-			# 	effectname = "NoHighlight"
-
-			# 	# onclick = "[GuiPotentialCouncilTask.SelectTaskType]"
-			# 	# enabled = "[Not(CouncilWindow.IsLiegeCouncilShown)]"
-			# 	# down = "[GuiPotentialCouncilTask.IsActive]"
-
-			# 	using = tooltip_ws
-
-			# 	# tooltipwidget = {
-			# 	# 	council_task_icon_tooltip_widget = {
-			# 	# 		using = DefaultTooltipBackground
-			# 	# 		using = GeneralTooltipSetup
-			# 	# 		alwaystransparent = no
-			# 	# 	}
-			# 	# }
-
-			# 	upframe = 1
-			# 	downframe = 1
-			# 	uphoverframe = 2
-			# 	disableframe = 6
-
-			# 	button_normal = {
-			# 		name = "potential_task"
-			# 		parentanchor = center
-			# 		widgetanchor = center
-			# 		# datacontext = "[GuiPotentialCouncilTask.GetCouncilTaskType]"
-			# 		effectname = "NoHighlight"
-			# 		gfxtype = togglepushbuttongfx
-			# 		shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
-			# 		texture = "gfx/interface/icons/council_task_types/task_conversion.dds"
-			# 		alwaystransparent = yes
-			# 		size = { 30 30 }
-			# 	}
-			# }
-		}
-		hbox = {
-			layoutpolicy_horizontal = expanding
-			margin_left = 70
-			margin_right = 20
-			spacing = 10
-			text_single = {
-				text = "ENTITLED_CULTURE"
-			}
-			text_single = {
-				visible = "[GetGlobalVariable('capital_county').IsSet]"
-				text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetCulture.GetName]"
-			}
-			expand = {}
-
-			# button_round = {
-			# 	# visible = "[Or(And(GuiPotentialCouncilTask.CanSelect, Not(CouncilWindow.IsLiegeCouncilShown)), GuiPotentialCouncilTask.IsActive)]"
-			# 	# parentanchor = center
-			# 	size = { 38 38 }
-			# 	gfxtype = togglepushbuttongfx
-			# 	effectname = "NoHighlight"
-
-			# 	# onclick = "[GuiPotentialCouncilTask.SelectTaskType]"
-			# 	# enabled = "[Not(CouncilWindow.IsLiegeCouncilShown)]"
-			# 	# down = "[GuiPotentialCouncilTask.IsActive]"
-
-			# 	using = tooltip_ws
-
-			# 	# tooltipwidget = {
-			# 	# 	council_task_icon_tooltip_widget = {
-			# 	# 		using = DefaultTooltipBackground
-			# 	# 		using = GeneralTooltipSetup
-			# 	# 		alwaystransparent = no
-			# 	# 	}
-			# 	# }
-
-			# 	upframe = 1
-			# 	downframe = 1
-			# 	uphoverframe = 2
-			# 	disableframe = 6
-
-			# 	button_normal = {
-			# 		name = "potential_task"
-			# 		parentanchor = center
-			# 		widgetanchor = center
-			# 		# datacontext = "[GuiPotentialCouncilTask.GetCouncilTaskType]"
-			# 		effectname = "NoHighlight"
-			# 		gfxtype = togglepushbuttongfx
-			# 		shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
-			# 		texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
-			# 		alwaystransparent = yes
-			# 		size = { 30 30 }
-			# 	}
-			# }
-			# button_group = {
-			# 	icon = {
-			# 		size = { 30 30 }
-			# 		texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
-			# 	}
-			# }
-		}
-		spacer = { size = { 0 5 }}
-		widget = {
-			size = { 450 45 }
+			spacer = { size = { 0 5 }}
 			button_standard = {
 				set_parent_size_to_minimum = yes
 				size = { 450 45 }
@@ -381,7 +447,7 @@ window = {
 				}
 			}
 			button_standard = {
-				set_parent_size_to_minimum = yes
+				# set_parent_size_to_minimum = yes
 				size = { 450 45 }
 				visible = "[And(GetVariableSystem.Exists('title_rank'),Not(GetGlobalVariable('capital_county').IsSet))]"
 				enabled = "[GetPlayer.IsValid]"
@@ -405,7 +471,7 @@ window = {
 				}
 			}
 			button_standard = {
-				set_parent_size_to_minimum = yes
+				# set_parent_size_to_minimum = yes
 				size = { 450 45 }
 				visible = "[And(GetVariableSystem.Exists('title_rank'),GetGlobalVariable('capital_county').IsSet)]"
 				datacontext = "[GetScriptedGui('Entitled_create_title')]"
@@ -443,8 +509,104 @@ window = {
 					tooltip = "ENTITLEMENT_THEOCRATIC_RULER_WARNING"
 				}
 			}
+			spacer = { size = { 0 5 }}
 		}
-		spacer = { size = { 0 5 }}
+
+		
+		hbox = {
+			visible = "[GetVariableSystem.HasValue('Entitled_title_window','convert_faith')]"
+			datacontext = "[GetGlobalVariable('entitled_faith').Faith]"
+			layoutpolicy_horizontal = expanding
+			margin_left = 20
+			spacing = 20
+			minimumsize = { 200 70 }
+			widget = {
+				
+				vbox = {
+					parentanchor = center
+					layoutpolicy_vertical = expanding
+					margin_top = 5
+					spacing = 5
+					text_single = {
+						# align = left
+						text = "[Faith.GetName]"
+					}
+					text_single = {
+						# align = left
+						text = "[Faith.MakeScope.ScriptValue('entitled_num_county_followers')] Counties"
+					}
+					expand = {}
+				}
+				icon = {
+					name = "faith_icon"
+					size = { 50 50 }
+					parentanchor = left|vcenter
+					position = { -100 0 }
+					texture = "[Faith.GetIcon]"
+					using = tooltip_se
+					tooltipwidget = {
+						faith_tooltip = {}
+					}
+	
+					state = {
+						name = "faith_view_refresh"
+						using = Animation_Refresh_FadeOut
+					}
+	
+					state = {
+						using = Animation_Refresh_FadeIn
+					}
+				}
+			}
+		}
+
+		hbox = {
+			visible = "[GetVariableSystem.HasValue('Entitled_title_window','convert_culture')]"
+			datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+			layoutpolicy_horizontal = expanding
+			margin_left = 20
+			spacing = 20
+			minimumsize = { 200 70 }
+			widget = {
+				
+				vbox = {
+					parentanchor = center
+					layoutpolicy_vertical = expanding
+					margin_top = 5
+					spacing = 5
+					text_single = {
+						# align = left
+						text = "[Culture.GetName]"
+					}
+					text_single = {
+						# align = left
+						text = "[Culture.MakeScope.ScriptValue('entitled_culture_number_of_counties')] Counties"
+					}
+					expand = {}
+				}
+				icon = {
+					name = "culture_icon"
+					size = { 50 50 }
+					parentanchor = left|vcenter
+					position = { -100 0 }
+					texture = "[Culture.GetIcon]"
+					using = tooltip_se
+					tooltipwidget = {
+						culture_tooltip = {}
+					}
+	
+					state = {
+						name = "culture_view_refresh"
+						using = Animation_Refresh_FadeOut
+					}
+	
+					state = {
+						using = Animation_Refresh_FadeIn
+					}
+				}
+			}
+		}
+
 		scrollarea = {
 			name = "scrollarea"
 			layoutpolicy_horizontal = expanding
@@ -464,6 +626,7 @@ window = {
 							name = "empire"
 							spacing = 10
 							hbox = {
+								datacontext = "[Scope.Title]"
 								layoutpolicy_horizontal = expanding
 								button_group = {
 									# onclick = "[CountyGroup.ToggleExpanded]"
@@ -493,7 +656,8 @@ window = {
 									text = "[Scope.Title.GetName]"
 									margin = { 60 0 }
 									
-									enabled = "[GetScriptedGui('Entitled_title_selected').IsShown(GuiScope.SetRoot(Scope.Title.GetKey).End)]"
+									onclick = "[GetVariableSystem.SetOrToggle('empire',Scope.Title.GetKey)]"
+									using = State_Title_MouseEntry
 								}
 								expand = {}
 								
@@ -511,6 +675,7 @@ window = {
 											name = "kingdom"
 											spacing = 10
 											hbox = {
+												datacontext = "[Scope.Title]"
 												layoutpolicy_horizontal = expanding
 												button_group = {
 													# onclick = "[CountyGroup.ToggleExpanded]"
@@ -541,6 +706,7 @@ window = {
 													margin = { 60 0 }
 													
 													onclick = "[GetVariableSystem.SetOrToggle('kingdom',Scope.Title.GetKey)]"
+													using = State_Title_MouseEntry
 												}
 												expand = {}
 												Entitled_set_title_buttons = {}
@@ -557,6 +723,7 @@ window = {
 															name = "duchy"
 															spacing = 10
 															hbox = {
+																datacontext = "[Scope.Title]"
 																button_group = {
 																	# onclick = "[CountyGroup.ToggleExpanded]"
 																	layoutpolicy_horizontal = expanding
@@ -573,6 +740,7 @@ window = {
 																	}
 																	
 																	onclick = "[GetVariableSystem.SetOrToggle('duchy',Scope.Title.GetKey)]"
+																	using = State_Title_MouseEntry
 																}
 																button_multi = {
 																	name = "custom_title"
@@ -602,6 +770,7 @@ window = {
 																	item = {
 																		vbox = {
 																			hbox = {
+																				datacontext = "[Scope.Title]"
 																				spacer = { size = { 18 0 }}
 																				button_multi = {
 																					name = "custom_title"
@@ -613,6 +782,7 @@ window = {
 																					}
 																					text = "[Scope.Title.GetName]"
 																					margin = { 60 0 }
+																					using = State_Title_MouseEntry
 																				}
 																				expand = {}
 																				Entitled_set_title_buttons = {}
@@ -728,120 +898,201 @@ window = {
 }
 
 types EntitledTypes {
-	type Entitled_set_title_buttons = hbox {
-		spacing = 1
-		margin_left = 5
-		layoutpolicy_horizontal = expanding
-		widget = {
-			size = { 30 30 }
-			button_group = {
-				button_icon = {
-					size = { 30 30 }
-					parentanchor = center
-					texture = "gfx/interface/icons/flat_icons/copy.dds"
-					down = "[EqualTo_string(Scope.Title.GetKey,GetVariableSystem.Get('copy_title'))]"
+	type Entitled_set_title_buttons = container {
+		hbox = {
+			visible = "[GetGlobalVariable('entitled_setup').IsSet]"
+			spacing = 1
+			margin_left = 5
+			layoutpolicy_horizontal = expanding
+			widget = {
+				size = { 30 30 }
+				button_group = {
+					button_icon = {
+						size = { 30 30 }
+						parentanchor = center
+						texture = "gfx/interface/icons/flat_icons/copy.dds"
+						down = "[EqualTo_string(Scope.Title.GetKey,GetVariableSystem.Get('copy_title'))]"
+					}
+					onclick = "[GetVariableSystem.Set('copy_title',Scope.Title.GetKey)]"
+					onclick = "[GetScriptedGui('Entitled_copy_title').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+					tooltip = entitled_copy_title_tooltip
 				}
-				onclick = "[GetVariableSystem.Set('copy_title',Scope.Title.GetKey)]"
-				onclick = "[GetScriptedGui('Entitled_copy_title').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				tooltip = entitled_copy_title_tooltip
+
+			}
+			widget = {
+				size = { 30 30 }
+				button_group = {
+					visible = "[GetScriptedGui('Entitled_set_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					enabled = "[GetScriptedGui('Entitled_set_de_jure').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					button_icon = {
+						size = { 30 30 }
+						parentanchor = center
+						texture = "gfx/de_jure.dds"
+					}
+					onclick = "[GetScriptedGui('Entitled_set_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					tooltip = entitled_set_de_jure_tooltip
+				}
+				button_group = {
+					visible = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					button_icon = {
+						down = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+						size = { 30 30 }
+						parentanchor = center
+						texture = "gfx/de_jure.dds"
+					}
+					onclick = "[GetScriptedGui('Entitled_remove_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					tooltip = entitled_remove_de_jure_tooltip
+				}
+
 			}
 
+			widget = {
+				size = { 30 30 }
+				button_group = {
+					visible = "[GetScriptedGui('Entitled_add_to_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					enabled = "[GetScriptedGui('Entitled_add_to_realm').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					button_icon = {
+						size = { 30 30 }
+						parentanchor = center
+						texture = "gfx/title.dds"
+					}
+					onclick = "[GetScriptedGui('Entitled_add_to_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					tooltip = entitled_add_to_realm_tooltip
+				}
+				button_group = {
+					visible = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					button_icon = {
+						down = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+						size = { 30 30 }
+						parentanchor = center
+						texture = "gfx/title.dds"
+					}
+					onclick = "[GetScriptedGui('Entitled_remove_from_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					tooltip = entitled_remove_from_realm_tooltip
+				}
+
+			}
+
+			widget = {
+				size = { 30 30 }
+				button_group = {
+					visible = "[GetScriptedGui('Entitled_add_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					enabled = "[GetScriptedGui('Entitled_add_holdings').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					button_icon = {
+						size = { 30 30 }
+						parentanchor = center
+						texture = "gfx/holding.dds"
+					}
+					onclick = "[GetScriptedGui('Entitled_add_holdings').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					tooltip = entitled_add_to_holdings_tooltip
+				}
+				button_group = {
+					visible = "[GetScriptedGui('Entitled_remove_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					button_icon = {
+						down = "[GetScriptedGui('Entitled_remove_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+						size = { 30 30 }
+						parentanchor = center
+						texture = "gfx/holding.dds"
+					}
+					onclick = "[GetScriptedGui('Entitled_remove_holdings').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+					tooltip = entitled_remove_from_holdings_tooltip
+				}
+
+			}
+
+			widget = {
+				size = { 30 30 }
+				button_group = {
+					visible = "[Scope.Title.IsCounty]"
+					enabled = "[GetScriptedGui('Entitled_set_capital_county').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+					button_icon = {
+						size = { 30 30 }
+						parentanchor = center
+						texture = "gfx/interface/icons/flat_icons/move_capital.dds"
+						down = "[GetScriptedGui('Entitled_set_capital_county').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+					}
+					onclick = "[GetScriptedGui('Entitled_set_capital_county').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+					tooltip = entitled_set_capital_county_tooltip
+				}
+			}
 		}
-		widget = {
-			size = { 30 30 }
-			button_group = {
-				visible = "[GetScriptedGui('Entitled_set_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				enabled = "[GetScriptedGui('Entitled_set_de_jure').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				button_icon = {
-					size = { 30 30 }
-					parentanchor = center
-					texture = "gfx/de_jure.dds"
-				}
-				onclick = "[GetScriptedGui('Entitled_set_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				tooltip = entitled_set_de_jure_tooltip
-			}
-			button_group = {
-				visible = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				button_icon = {
-					down = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					size = { 30 30 }
-					parentanchor = center
-					texture = "gfx/de_jure.dds"
-				}
-				onclick = "[GetScriptedGui('Entitled_remove_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				tooltip = entitled_remove_de_jure_tooltip
-			}
 
+		hbox = {
+			visible = "[GetVariableSystem.HasValue('Entitled_title_window','convert_faith')]"
+			spacing = 5
+			margin_left = 5
+			layoutpolicy_horizontal = expanding
+			entitled_tite_window_button = {
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/council_task_types/task_conversion.dds"
+				}
+				onclick = "[GetScriptedGui('entitled_convert_faith_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[GetScriptedGui('entitled_convert_faith_people').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				tooltip = ENTITLED_CONVERT_FAITH_ALL
+			}
+			entitled_tite_window_button = {
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/portraits/liege.dds"
+				}
+				onclick = "[GetScriptedGui('entitled_convert_faith_people').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				tooltip = ENTITLED_CONVERT_FAITH_RULERS
+			}
+			entitled_tite_window_button = {
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/icon_domain.dds"
+				}
+				onclick = "[GetScriptedGui('entitled_convert_faith_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				tooltip = ENTITLED_CONVERT_FAITH_COUNTIES
+			}
+			button_icon = {
+				texture = "gfx/interface/icons/flat_icons/revert.dds"
+				onclick = "[GetScriptedGui('entitled_revert_faith_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				tooltip = ENTITLED_REVERT_FAITH_COUNTIES
+			}
+			expand = {}
 		}
 
-		widget = {
-			size = { 30 30 }
-			button_group = {
-				visible = "[GetScriptedGui('Entitled_add_to_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				enabled = "[GetScriptedGui('Entitled_add_to_realm').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				button_icon = {
-					size = { 30 30 }
-					parentanchor = center
-					texture = "gfx/title.dds"
+		hbox = {
+			visible = "[GetVariableSystem.HasValue('Entitled_title_window','convert_culture')]"
+			spacing = 5
+			margin_left = 5
+			layoutpolicy_horizontal = expanding
+			entitled_tite_window_button = {
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
 				}
-				onclick = "[GetScriptedGui('Entitled_add_to_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				tooltip = entitled_add_to_realm_tooltip
+				onclick = "[GetScriptedGui('entitled_convert_culture_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[GetScriptedGui('entitled_convert_culture_people').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				tooltip = ENTITLED_CONVERT_CULTURE_ALL
 			}
-			button_group = {
-				visible = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				button_icon = {
-					down = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					size = { 30 30 }
-					parentanchor = center
-					texture = "gfx/title.dds"
+			entitled_tite_window_button = {
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/portraits/liege.dds"
 				}
-				onclick = "[GetScriptedGui('Entitled_remove_from_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				tooltip = entitled_remove_from_realm_tooltip
+				onclick = "[GetScriptedGui('entitled_convert_culture_people').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				tooltip = ENTITLED_CONVERT_CULTURE_RULERS
 			}
-
-		}
-
-		widget = {
-			size = { 30 30 }
-			button_group = {
-				visible = "[GetScriptedGui('Entitled_add_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				enabled = "[GetScriptedGui('Entitled_add_holdings').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				button_icon = {
-					size = { 30 30 }
-					parentanchor = center
-					texture = "gfx/holding.dds"
+			entitled_tite_window_button = {
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/icon_domain.dds"
 				}
-				onclick = "[GetScriptedGui('Entitled_add_holdings').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				tooltip = entitled_add_to_holdings_tooltip
+				onclick = "[GetScriptedGui('entitled_convert_culture_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				tooltip = ENTITLED_CONVERT_CULTURE_COUNTIES
 			}
-			button_group = {
-				visible = "[GetScriptedGui('Entitled_remove_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				button_icon = {
-					down = "[GetScriptedGui('Entitled_remove_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					size = { 30 30 }
-					parentanchor = center
-					texture = "gfx/holding.dds"
-				}
-				onclick = "[GetScriptedGui('Entitled_remove_holdings').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-				tooltip = entitled_remove_from_holdings_tooltip
+			button_icon = {
+				texture = "gfx/interface/icons/flat_icons/revert.dds"
+				onclick = "[GetScriptedGui('entitled_revert_culture_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				tooltip = ENTITLED_REVERT_CULTURE_COUNTIES
 			}
-
-		}
-
-		widget = {
-			size = { 30 30 }
-			button_group = {
-				visible = "[Scope.Title.IsCounty]"
-				enabled = "[GetScriptedGui('Entitled_set_capital_county').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				button_icon = {
-					size = { 30 30 }
-					parentanchor = center
-					texture = "gfx/interface/icons/flat_icons/move_capital.dds"
-					down = "[GetScriptedGui('Entitled_set_capital_county').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				}
-				onclick = "[GetScriptedGui('Entitled_set_capital_county').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				tooltip = entitled_set_capital_county_tooltip
-			}
+			expand = {}
 		}
 	}
 
@@ -965,4 +1216,76 @@ types EntitledTypes {
             }
         }
     }
+
+	type entitled_header_pattern = header_pattern {
+		layoutpolicy_horizontal = expanding
+		blockoverride "button_close"
+		{
+			onclick = "[GetVariableSystem.Clear('Entitled')]"
+			onclick = "[SetMapMode(  'realms' )]"
+			# shortcut = "innovations_window"
+		}
+
+		blockoverride "button_back"
+		{
+			visible = "[HasViewHistory]"
+			onclick = "[OpenFromViewHistory]"
+			tooltip = "[GetViewHistoryTooltip]"
+		}
+
+		blockoverride "button_me"
+		{
+			visible = "[GetPlayer.IsValid]"
+			# onclick = "[DefaultOnCharacterClick(GetPlayer.GetID)]"
+		}
+
+		hbox = {
+			margin_left = 10
+			button_icon = {
+				size = { 30 30 }
+				texture = "gfx/map_mode.dds"
+				onclick = "[SetMapMode(  'baronies' )]"
+				tooltip = ENTITLED_MAPMODE_TOOLTIP
+				down = "[IsMapMode('baronies')]"
+				enabled = "[Not(IsMapMode('baronies'))]"
+			}
+			button_icon = {
+				size = { 30 30 }
+				texture = "gfx/interface/icons/flat_icons/clear.dds"
+				onclick = "[GetVariableSystem.Clear('Entitled')]"
+				onclick = "[SetMapMode(  'realms' )]"
+				onclick = "[GetVariableSystem.Clear('empire')]"
+				onclick = "[GetVariableSystem.Clear('kingdom')]"
+				onclick = "[GetVariableSystem.Clear('duchy')]"
+				onclick = "[GetVariableSystem.Clear('capital_county')]"
+				onclick = "[GetVariableSystem.Clear('title_rank')]"
+				onclick = "[GetScriptedGui('Entitled_clean').Execute(GuiScope.End)]"
+				tooltip = ENTITLED_CLEAR_TOOLTIP
+			}
+			expand = {}
+		}
+	}
+
+	type entitled_tite_window_button = button_group {
+		datacontext = "[Scope.Title]"
+		# visible = "[HasDlcFeature('royal_court')]"
+		highlight_icon = {
+			parentanchor = center
+			# position = { 0 5 }
+			size = { 30 30 }
+			block "texture" {
+				texture = "gfx/interface/icons/council_task_types/task_conversion.dds"
+			}
+
+			glow = {
+				color = { 0 0 0 0.8 }
+				glow_radius = 3
+				using = Glow_Standard
+			}
+		}
+		
+		using = tooltip_se
+
+		using = State_Title_MouseEntry
+	}
 }
