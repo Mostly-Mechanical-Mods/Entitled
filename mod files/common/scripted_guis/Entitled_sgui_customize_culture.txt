@@ -348,3 +348,83 @@ Entitled_culture_reset = {
 		}
 	}
 }
+
+entitled_convert_culture_counties = {
+	scope = title
+	effect = {
+		every_in_de_jure_hierarchy = {
+			limit = { tier = tier_county }
+			continue = { tier > tier_county }
+			if = {
+				limit = { NOT = { has_variable = entitled_culture }}
+				set_variable = { name = entitled_culture value = culture }
+			}
+			set_county_culture = global_var:entitled_culture
+		}
+	}
+}
+
+entitled_convert_culture_people = {
+	scope = title
+	effect = {
+		every_in_de_jure_hierarchy = {
+			limit = {
+				tier <= tier_county
+				holder.capital_county ?= this
+			}
+			holder = {
+				if = {
+					limit = { NOT = { has_variable = entitled_culture }}
+					set_variable = { name = entitled_culture value = culture }
+				}
+				set_culture = global_var:entitled_culture
+				every_courtier = {
+					if = {
+						limit = { NOT = { has_variable = entitled_culture }}
+						set_variable = { name = entitled_culture value = culture }
+					}
+					set_culture = global_var:entitled_culture
+				}
+			}
+		}
+	}
+}
+
+entitled_revert_culture_counties = {
+	scope = title
+	effect = {
+		every_in_de_jure_hierarchy = {
+			limit = { tier <= tier_county }
+			if = {
+				limit = {
+					tier = tier_county
+					has_variable = entitled_culture
+					NOT = { culture = var:entitled_culture }
+				}
+				set_county_culture = var:entitled_culture
+				remove_variable = entitled_culture
+			}
+			if = {
+				limit = { holder.capital_county ?= this }
+				holder = {
+					if = {
+						limit = {
+							has_variable = entitled_culture
+							NOT = { culture = var:entitled_culture }
+						}
+						set_culture = var:entitled_culture
+						remove_variable = entitled_culture
+					}
+					every_courtier = {
+						limit = {
+							has_variable = entitled_culture
+							NOT = { culture = var:entitled_culture }
+						}
+						set_culture = var:entitled_culture
+						remove_variable = entitled_culture
+					}
+				}
+			}
+		}
+	}
+}

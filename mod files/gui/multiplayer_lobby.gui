@@ -465,7 +465,8 @@ JominiMultiplayerLobby = {
 						coa_realm_medium_crown = {
 							name = "realm_flag"
 							alwaystransparent = yes
-							blockoverride "OnClickDefault" {}
+							blockoverride "OnClickDefault" {
+							}
 						}
 					}
 

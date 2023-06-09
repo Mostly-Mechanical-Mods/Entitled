@@ -8,14 +8,13 @@
 
 Entitled_changelog = {
 	effect = {
-		set_global_variable = {
-			name = Entitled_is_loaded
-			value = yes
-		}
+		set_global_variable = Entitled_is_loaded
 		set_global_variable = Entitled_v1_0
 		set_global_variable = Entitled_v1_0_1
 		set_global_variable = Entitled_v1_0_2
 		set_global_variable = Entitled_v1_0_3
+		set_global_variable = Entitled_v1_0_4
+		set_global_variable = Entitled_v1_0_5
 	}
 }
 

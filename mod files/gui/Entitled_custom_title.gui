@@ -26,7 +26,15 @@ window = {
 	state = {
 		name = "refresh_religion_mapmode"
 		delay = 0.1
+		trigger_when = "[IsMapMode('religions')]"
 		on_start = "[SetMapMode('religions')]"
+	}
+
+	state = {
+		name = "refresh_culture_mapmode"
+		delay = 0.1
+		trigger_when = "[IsMapMode('cultures')]"
+		on_start = "[SetMapMode('cultures')]"
 	}
 
 	margin_widget = {
@@ -53,6 +61,14 @@ window = {
 			blockoverride "header_text"
 			{
 				text = "ENTITLED_WINDOW_TITLE_CONVERT_FAITH"
+			}
+		}
+
+		entitled_header_pattern = {
+			visible = "[GetVariableSystem.HasValue('Entitled_title_window','convert_culture')]"
+			blockoverride "header_text"
+			{
+				text = "ENTITLED_WINDOW_TITLE_CONVERT_CULTURE"
 			}
 		}
 
@@ -486,8 +502,8 @@ window = {
 				onclick = "[GetScriptedGui('Entitled_clean').Execute(GuiScope.End)]"
 				onclick = "[GetVariableSystem.Clear('Entitled')]"
 				onclick = "[SetMapMode(  'realms' )]"
-				# text = "ENTITLED_CREATE_TITLE"
-				text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetCapital.GetHolding.GetType.GetKey]"
+				text = "ENTITLED_CREATE_TITLE"
+				# text = "[GetGlobalVariable('capital_county').Title.GetCountyData.GetCapital.GetHolding.GetType.GetKey]"
 	
 				icon = {
 					visible = "[And( ShouldPromptForRulerDesigner, LobbyView.CanTryStartRulerDesigning( Character.Self ) )]"
@@ -533,7 +549,7 @@ window = {
 					}
 					text_single = {
 						# align = left
-						text = "[Faith.MakeScope.ScriptValue('entitled_num_county_followers')] Counties"
+						text = "ENTITLED_FAITH_COUNTY_COUNT"
 					}
 					expand = {}
 				}
@@ -568,7 +584,7 @@ window = {
 			spacing = 20
 			minimumsize = { 200 70 }
 			widget = {
-				
+				size = { 200 70 }
 				vbox = {
 					parentanchor = center
 					layoutpolicy_vertical = expanding
@@ -580,29 +596,9 @@ window = {
 					}
 					text_single = {
 						# align = left
-						text = "[Culture.MakeScope.ScriptValue('entitled_culture_number_of_counties')] Counties"
+						text = "ENTITLED_CULTURE_COUNTY_COUNT"
 					}
 					expand = {}
-				}
-				icon = {
-					name = "culture_icon"
-					size = { 50 50 }
-					parentanchor = left|vcenter
-					position = { -100 0 }
-					texture = "[Culture.GetIcon]"
-					using = tooltip_se
-					tooltipwidget = {
-						culture_tooltip = {}
-					}
-	
-					state = {
-						name = "culture_view_refresh"
-						using = Animation_Refresh_FadeOut
-					}
-	
-					state = {
-						using = Animation_Refresh_FadeIn
-					}
 				}
 			}
 		}
@@ -904,117 +900,150 @@ types EntitledTypes {
 			spacing = 1
 			margin_left = 5
 			layoutpolicy_horizontal = expanding
-			widget = {
-				size = { 30 30 }
-				button_group = {
-					button_icon = {
-						size = { 30 30 }
-						parentanchor = center
-						texture = "gfx/interface/icons/flat_icons/copy.dds"
-						down = "[EqualTo_string(Scope.Title.GetKey,GetVariableSystem.Get('copy_title'))]"
-					}
-					onclick = "[GetVariableSystem.Set('copy_title',Scope.Title.GetKey)]"
-					onclick = "[GetScriptedGui('Entitled_copy_title').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-					tooltip = entitled_copy_title_tooltip
-				}
 
-			}
-			widget = {
-				size = { 30 30 }
-				button_group = {
-					visible = "[GetScriptedGui('Entitled_set_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					enabled = "[GetScriptedGui('Entitled_set_de_jure').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					button_icon = {
-						size = { 30 30 }
-						parentanchor = center
-						texture = "gfx/de_jure.dds"
-					}
-					onclick = "[GetScriptedGui('Entitled_set_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					tooltip = entitled_set_de_jure_tooltip
+			button_group = {
+				button_icon = {
+					size = { 30 30 }
+					parentanchor = center
+					texture = "gfx/interface/icons/flat_icons/copy.dds"
+					down = "[EqualTo_string(Scope.Title.GetKey,GetVariableSystem.Get('copy_title'))]"
 				}
-				button_group = {
-					visible = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					button_icon = {
-						down = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-						size = { 30 30 }
-						parentanchor = center
-						texture = "gfx/de_jure.dds"
-					}
-					onclick = "[GetScriptedGui('Entitled_remove_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					tooltip = entitled_remove_de_jure_tooltip
-				}
-
+				onclick = "[GetVariableSystem.Set('copy_title',Scope.Title.GetKey)]"
+				onclick = "[GetScriptedGui('Entitled_copy_title').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				tooltip = entitled_copy_title_tooltip
 			}
 
-			widget = {
-				size = { 30 30 }
-				button_group = {
-					visible = "[GetScriptedGui('Entitled_add_to_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					enabled = "[GetScriptedGui('Entitled_add_to_realm').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					button_icon = {
-						size = { 30 30 }
-						parentanchor = center
-						texture = "gfx/title.dds"
-					}
-					onclick = "[GetScriptedGui('Entitled_add_to_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					tooltip = entitled_add_to_realm_tooltip
-				}
-				button_group = {
-					visible = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					button_icon = {
-						down = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-						size = { 30 30 }
-						parentanchor = center
-						texture = "gfx/title.dds"
-					}
-					onclick = "[GetScriptedGui('Entitled_remove_from_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					tooltip = entitled_remove_from_realm_tooltip
-				}
+			# button_group = {
+			# 	visible = "[GetScriptedGui('Entitled_set_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	enabled = "[GetScriptedGui('Entitled_set_de_jure').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	button_icon = {
+			# 		size = { 30 30 }
+			# 		parentanchor = center
+			# 		texture = "gfx/de_jure.dds"
+			# 	}
+			# 	onclick = "[GetScriptedGui('Entitled_set_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	tooltip = entitled_set_de_jure_tooltip
+			# }
+			# button_group = {
+			# 	visible = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	button_icon = {
+			# 		down = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 		size = { 30 30 }
+			# 		parentanchor = center
+			# 		texture = "gfx/de_jure.dds"
+			# 	}
+			# 	onclick = "[GetScriptedGui('Entitled_remove_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	tooltip = entitled_remove_de_jure_tooltip
+			# }
 
+			entitled_tite_window_button = {
+				visible = "[GetScriptedGui('Entitled_set_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				enabled = "[GetScriptedGui('Entitled_set_de_jure').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/casus_bellis/de_jure_cb.dds"
+				}
+				onclick = "[GetScriptedGui('Entitled_set_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				tooltip = entitled_set_de_jure_tooltip
+			}
+			entitled_tite_window_button = {
+				visible = "[GetScriptedGui('Entitled_remove_de_jure').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				enabled = "[GetScriptedGui('Entitled_set_de_jure').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/casus_bellis/de_jure_cb.dds"
+				}
+				onclick = "[GetScriptedGui('Entitled_remove_de_jure').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				tooltip = entitled_remove_de_jure_tooltip
+				icon = {
+					parentanchor = center
+					size = { 30 30 }
+					texture = "gfx/interface/icons/symbols/icon_cross.dds"
+				}
 			}
 
-			widget = {
-				size = { 30 30 }
-				button_group = {
-					visible = "[GetScriptedGui('Entitled_add_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					enabled = "[GetScriptedGui('Entitled_add_holdings').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					button_icon = {
-						size = { 30 30 }
-						parentanchor = center
-						texture = "gfx/holding.dds"
-					}
-					onclick = "[GetScriptedGui('Entitled_add_holdings').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					tooltip = entitled_add_to_holdings_tooltip
-				}
-				button_group = {
-					visible = "[GetScriptedGui('Entitled_remove_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					button_icon = {
-						down = "[GetScriptedGui('Entitled_remove_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-						size = { 30 30 }
-						parentanchor = center
-						texture = "gfx/holding.dds"
-					}
-					onclick = "[GetScriptedGui('Entitled_remove_holdings').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
-					tooltip = entitled_remove_from_holdings_tooltip
-				}
+			# button_group = {
+			# 	visible = "[GetScriptedGui('Entitled_add_to_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	enabled = "[GetScriptedGui('Entitled_add_to_realm').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	button_icon = {
+			# 		size = { 30 30 }
+			# 		parentanchor = center
+			# 		texture = "gfx/title.dds"
+			# 	}
+			# 	onclick = "[GetScriptedGui('Entitled_add_to_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	tooltip = entitled_add_to_realm_tooltip
+			# }
+			# button_group = {
+			# 	visible = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	button_icon = {
+			# 		down = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 		size = { 30 30 }
+			# 		parentanchor = center
+			# 		texture = "gfx/title.dds"
+			# 	}
+			# 	onclick = "[GetScriptedGui('Entitled_remove_from_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+			# 	tooltip = entitled_remove_from_realm_tooltip
+			# }
 
+			entitled_tite_window_button = {
+				visible = "[GetScriptedGui('Entitled_add_to_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				enabled = "[GetScriptedGui('Entitled_add_to_realm').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				blockoverride "texture" {
+					texture = "gfx/interface/skins/iberian/hud_maintab/maintab_my_realm.dds"
+				}
+				onclick = "[GetScriptedGui('Entitled_add_to_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				tooltip = entitled_add_to_realm_tooltip
+			}
+			entitled_tite_window_button = {
+				visible = "[GetScriptedGui('Entitled_remove_from_realm').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				blockoverride "texture" {
+					texture = "gfx/interface/skins/iberian/hud_maintab/maintab_my_realm.dds"
+				}
+				onclick = "[GetScriptedGui('Entitled_remove_from_realm').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				tooltip = entitled_remove_from_realm_tooltip
+				icon = {
+					parentanchor = center
+					size = { 30 30 }
+					texture = "gfx/interface/icons/symbols/icon_cross.dds"
+				}
 			}
 
-			widget = {
-				size = { 30 30 }
-				button_group = {
-					visible = "[Scope.Title.IsCounty]"
-					enabled = "[GetScriptedGui('Entitled_set_capital_county').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-					button_icon = {
-						size = { 30 30 }
-						parentanchor = center
-						texture = "gfx/interface/icons/flat_icons/move_capital.dds"
-						down = "[GetScriptedGui('Entitled_set_capital_county').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-					}
-					onclick = "[GetScriptedGui('Entitled_set_capital_county').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-					tooltip = entitled_set_capital_county_tooltip
+			entitled_tite_window_button = {
+				visible = "[GetScriptedGui('Entitled_add_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				enabled = "[GetScriptedGui('Entitled_add_holdings').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/icon_domain.dds"
+				}
+				onclick = "[GetScriptedGui('Entitled_add_holdings').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				tooltip = entitled_add_to_holdings_tooltip
+			}
+			entitled_tite_window_button = {
+				visible = "[GetScriptedGui('Entitled_remove_holdings').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/icon_domain.dds"
+				}
+				onclick = "[GetScriptedGui('Entitled_remove_holdings').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).AddScope('title_rank',MakeScopeFlag(GetVariableSystem.Get('title_rank'))).End)]"
+				tooltip = entitled_remove_from_holdings_tooltip
+				icon = {
+					parentanchor = center
+					size = { 30 30 }
+					texture = "gfx/interface/icons/symbols/icon_cross.dds"
 				}
 			}
+
+			button_group = {
+				visible = "[Scope.Title.IsCounty]"
+				enabled = "[GetScriptedGui('Entitled_set_capital_county').IsValid(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				button_icon = {
+					size = { 30 30 }
+					parentanchor = center
+					texture = "gfx/interface/icons/flat_icons/move_capital.dds"
+					down = "[GetScriptedGui('Entitled_set_capital_county').IsShown(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				}
+				onclick = "[GetScriptedGui('Entitled_set_capital_county').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				tooltip = entitled_set_capital_county_tooltip
+			}
+
+			expand = {}
+
 		}
 
 		hbox = {
@@ -1067,7 +1096,7 @@ types EntitledTypes {
 				}
 				onclick = "[GetScriptedGui('entitled_convert_culture_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
 				onclick = "[GetScriptedGui('entitled_convert_culture_people').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_culture_mapmode')]"
 				tooltip = ENTITLED_CONVERT_CULTURE_ALL
 			}
 			entitled_tite_window_button = {
@@ -1075,7 +1104,7 @@ types EntitledTypes {
 					texture = "gfx/interface/icons/portraits/liege.dds"
 				}
 				onclick = "[GetScriptedGui('entitled_convert_culture_people').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_culture_mapmode')]"
 				tooltip = ENTITLED_CONVERT_CULTURE_RULERS
 			}
 			entitled_tite_window_button = {
@@ -1083,13 +1112,13 @@ types EntitledTypes {
 					texture = "gfx/interface/icons/icon_domain.dds"
 				}
 				onclick = "[GetScriptedGui('entitled_convert_culture_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_culture_mapmode')]"
 				tooltip = ENTITLED_CONVERT_CULTURE_COUNTIES
 			}
 			button_icon = {
 				texture = "gfx/interface/icons/flat_icons/revert.dds"
 				onclick = "[GetScriptedGui('entitled_revert_culture_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				onclick = "[PdxGuiTriggerAllAnimations('refresh_religion_mapmode')]"
+				onclick = "[PdxGuiTriggerAllAnimations('refresh_culture_mapmode')]"
 				tooltip = ENTITLED_REVERT_CULTURE_COUNTIES
 			}
 			expand = {}

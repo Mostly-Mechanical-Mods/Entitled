@@ -59,7 +59,10 @@ ENTITLED_MENU_CONVERT_FAITH_ONGOING_CUSTOMIZE_TITLE: "[SelectLocalization(GetGlo
 ENTITLED_MENU_CUSTOMIZE_CULTURE: "#T Customize Culture $ENTITLED_MENU_CUSTOMIZE_CULTURE_SELECTED$#!\n#help Chose a ruler, and click the @edit_text_icon! icon next to their Culture#!"
 ENTITLED_MENU_CUSTOMIZE_CULTURE_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_culture').IsSet,GetGlobalVariable('entitled_culture').Culture.GetName,'')]"
 ENTITLED_MENU_CUSTOMIZE_CULTURE_NO_DLC: "#T Culture Conversion#!\nRoyal Court DLC required"
-ENTITLED_MENU_CONVERT_CULTURE: "#T Culture Conversion#!\n#help Coming Soon!#!"
+
+ENTITLED_MENU_CONVERT_CULTURE: "#T Culture Conversion#!\n$ENTITLED_MENU_CONVERT_CULTURE_SELECTED$\n$ENTITLED_MENU_CONVERT_CULTURE_ONGOING_CUSTOMIZE_TITLE$#help Chose a ruler, and click the @edit_text_icon! icon next to their Culture#!"
+ENTITLED_MENU_CONVERT_CULTURE_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_culture').IsSet,GetGlobalVariable('entitled_culture').Culture.GetName,'#warning @warning_icon! No Culture Selected#!')]"
+ENTITLED_MENU_CONVERT_CULTURE_ONGOING_CUSTOMIZE_TITLE: "[SelectLocalization(GetGlobalVariable('entitled_setup').IsSet,'#warning @warning_icon! Title Customization is on-going. Finish creating the title or clear all changes.#!\n','')]"
 
 ENTITLED_WINDOW_TITLE: "Create Title"
 
@@ -72,3 +75,16 @@ ENTITLED_CULTURE: "Culture:"
 
 
 ENTITLED_WINDOW_TITLE_CONVERT_FAITH: "Convert Faith"
+ENTITLED_CONVERT_FAITH_ALL: "Convert all De Jure counties in the [Scope.Title.GetName].\nIf the county is a Capital County, the holder and their court are converted as well."
+ENTITLED_CONVERT_FAITH_RULERS: "Convert all Rulers whose Capital County is De Jure in the [Scope.Title.GetName], as well as their courtiers and baron vassals."
+ENTITLED_CONVERT_FAITH_COUNTIES: "Convert all De Jure counties in the [Scope.Title.GetName]"
+ENTITLED_REVERT_FAITH_COUNTIES: "Reset the Faith of all counties in the [Scope.Title.GetName], as well as all Rulers whose Capital County is De Jure in the [Scope.Title.GetName], their courtiers and their baron vassals, to their original Faith."
+
+ENTITLED_WINDOW_TITLE_CONVERT_CULTURE: "Convert Culture"
+ENTITLED_CONVERT_CULTURE_ALL: "Convert all De Jure counties in the [Scope.Title.GetName].\nIf the county is a Capital County, the holder and their court are converted as well."
+ENTITLED_CONVERT_CULTURE_RULERS: "Convert all Rulers whose Capital County is De Jure in the [Scope.Title.GetName], as well as their courtiers and baron vassals."
+ENTITLED_CONVERT_CULTURE_COUNTIES: "Convert all De Jure counties in the [Scope.Title.GetName]"
+ENTITLED_REVERT_CULTURE_COUNTIES: "Reset the Culture of all counties in the [Scope.Title.GetName], as well as all Rulers whose Capital County is De Jure in the [Scope.Title.GetName], their courtiers and their baron vassals, to their original Culture."
+
+ENTITLED_FAITH_COUNTY_COUNT: "[Faith.MakeScope.ScriptValue('entitled_num_county_followers')] Counties"
+ENTITLED_CULTURE_COUNTY_COUNT: "[Culture.MakeScope.ScriptValue('entitled_culture_number_of_counties')] Counties"
