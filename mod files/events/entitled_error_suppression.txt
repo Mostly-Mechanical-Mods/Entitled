@@ -331,5 +331,12 @@ entitled_error_suppression.0001 = {
 		fix_variable_error = { X = RICE_game_started_on_TFE_start_date }
 		fix_variable_error = { X = RICE_normandy_ending_norman_conquest }
 		
+		fix_variable_error = { X = remove }
+		fix_variable_error = { X = entitled_de_jure_liege }
+		fix_variable_error = { X = entitled_de_facto_liege }
+		fix_variable_error = { X = entitled_culture_auto }
+		fix_variable_error = { X = entitled_religions }
+		fix_variable_error = { X = faiths }
+		fix_variable_error = { X = entitled_faith_auto }
 	}
 }

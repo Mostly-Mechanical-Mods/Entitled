@@ -1,4 +1,5 @@
 JominiMultiplayerLobby = {
+	widgetid = "JominiMultiplayerLobby"
 	state = {
 		name = _show
 		on_start = "[GetVariableSystem.Set( 'mp_lobby_tabs', 'show_players' )]"
@@ -272,18 +273,25 @@ JominiMultiplayerLobby = {
 						margin_top = 10
 						spacing = 5
 
-						text_single = {
-							name = "character_name"
+						hbox = {
 							layoutpolicy_horizontal = expanding
-							raw_text = "[Character.GetUINameNotMeNoTooltip], #low [Character.GetAge]#!"
-							default_format = "#high"
-							using = Font_Size_Medium
-							fontsize_min = 14
-							align = left|nobaseline
-							max_width = 390
-							autoresize = yes
-
-							tooltip = "[Character.GetCharacterViewNameNicknamedNoTooltipRegnal]"
+							entitled_pin_ruler = {
+								datacontext = "[LobbyView.GetSelectedPlayable.GetCharacter]"
+							}
+							text_single = {
+								name = "character_name"
+								layoutpolicy_horizontal = expanding
+								raw_text = "[Character.GetUINameNotMeNoTooltip], #low [Character.GetAge]#!"
+								default_format = "#high"
+								using = Font_Size_Medium
+								fontsize_min = 14
+								align = left|nobaseline
+								max_width = 390
+								autoresize = yes
+	
+								tooltip = "[Character.GetCharacterViewNameNicknamedNoTooltipRegnal]"
+							}
+							expand = {}
 						}
 
 						divider_light = {
@@ -350,7 +358,7 @@ JominiMultiplayerLobby = {
 
 										hbox = {
 											layoutpolicy_horizontal = expanding
-											entitled_faith_button = {}
+											entitled_pin_faith = {}
 											text_single = {
 												datacontext = "[Character.GetFaith]"
 												layoutpolicy_horizontal = expanding
@@ -368,7 +376,7 @@ JominiMultiplayerLobby = {
 
 										hbox = {
 											layoutpolicy_horizontal = expanding
-											entitled_culture_button = {}
+											entitled_pin_culture = {}
 											text_single = {
 												datacontext = "[Character.GetCulture]"
 												layoutpolicy_horizontal = expanding
@@ -409,7 +417,6 @@ JominiMultiplayerLobby = {
 								maximumsize = { 100 0 }
 								datacontext = "[Character.GetHouse]"
 								visible = "[Character.HasDynasty]"
-
 								coa_house_medium = {
 									alwaystransparent = yes
 									using = tooltip_ws
@@ -460,6 +467,9 @@ JominiMultiplayerLobby = {
 
 					visible = "[Character.HasLandedTitles]"
 
+					entitled_pin_title = {
+						datacontext = "[LobbyView.GetSelectedPlayable.GetCharacter.GetPrimaryTitle]"
+					}
 					widget = {
 						size = { 85 100 }
 						coa_realm_medium_crown = {

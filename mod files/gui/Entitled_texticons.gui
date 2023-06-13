@@ -7,3 +7,43 @@
 		fontsize = 16
 	}
 }
+
+texticon = {
+	icon = revert_icon
+	iconsize = {
+		texture = "gfx/interface/icons/flat_icons/revert.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = pin_icon
+	iconsize = {
+		texture = "gfx/interface/icons/flat_icons/pin.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = paste_icon
+	iconsize = {
+		texture = "gfx/interface/icons/flat_icons/paste.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = auto_icon
+	iconsize = {
+		texture = "gfx/interface/icons/flat_icons/menu.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}

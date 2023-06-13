@@ -186,3 +186,84 @@ entitled_get_faith_sins_and_virtues = {
 		}
 	}
 }
+
+entitled_set_de_jure_liege = {
+	debug_log = "entitled_set_de_jure_liege"
+	if = {
+		limit = { global_var:entitled_de_jure_liege_display ?= flag:reset }
+		global_var:capital_county ?= {
+			ordered_this_title_or_de_jure_above = {
+				limit = { tier > global_var:custom_title.tier }
+				order_by = { subtract = tier }
+				save_scope_as = de_jure_liege
+			}
+		}
+		if = {
+			limit = { exists = scope:de_jure_liege }
+			set_global_variable = {
+				name = entitled_de_jure_liege_auto
+				value = scope:de_jure_liege
+			}
+		}
+		else = { remove_global_variable = entitled_de_jure_liege_auto }
+	}
+	else = { remove_global_variable = entitled_de_jure_liege_auto }
+}
+
+entitled_set_de_facto_liege = {
+	debug_log = "entitled_set_de_facto_liege"
+	if = {
+		limit = { global_var:entitled_de_facto_liege_display ?= flag:reset }
+		global_var:capital_county.holder.top_liege ?= {
+			debug_log_scopes = no
+			add_gold = 1
+			# ordered_liege_or_above = {
+			# 	limit = { highest_held_title_tier > global_var:custom_title.tier }
+			# 	order_by = { subtract = highest_held_title_tier }
+			# 	save_scope_as = de_facto_liege
+			# 	debug_log_scopes = no
+			# 	add_prestige = 1
+			# }
+			if = {
+				limit = { highest_held_title_tier > global_var:custom_title.tier }
+				ordered_vassal_or_below = {
+					limit = {
+						highest_held_title_tier > global_var:custom_title.tier
+						any_sub_realm_county = {
+							this = global_var:capital_county
+						}
+					}
+					order_by = { subtract = highest_held_title_tier }
+					save_scope_as = de_facto_liege
+				}
+				if = {
+					limit = { NOT = { exists = scope:de_facto_liege }}
+					save_scope_as = de_facto_liege
+				}
+			}
+		}
+		if = {
+			limit = { exists = scope:de_facto_liege }
+			set_global_variable = {
+				name = entitled_de_facto_liege_auto
+				value = scope:de_facto_liege
+			}
+		}
+		else = { remove_global_variable = entitled_de_facto_liege_auto }
+	}
+	else = { remove_global_variable = entitled_de_facto_liege_auto }
+}
+
+entitled_set_faith = {
+	set_global_variable = {
+		name = entitled_faith_auto
+		value = global_var:capital_county.faith
+	}
+}
+
+entitled_set_culture = {
+	set_global_variable = {
+		name = entitled_culture_auto
+		value = global_var:capital_county.culture
+	}
+}

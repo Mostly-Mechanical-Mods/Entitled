@@ -5,7 +5,7 @@
 window = {
 	visible = "[GetVariableSystem.HasValue('Entitled','culture')]"
 	name = "entitled_culture_window"
-	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+	datacontext = "[GetGlobalVariable('entitled_pinned_culture').Culture]"
 	# datacontext = "[Culture.GetReformation]"
 	widgetid = "culture_window_id"
 	layer = windows_layer

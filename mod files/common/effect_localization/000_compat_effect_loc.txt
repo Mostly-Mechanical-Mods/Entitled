@@ -1,1 +1,3 @@
-﻿
+﻿entitled_set_de_facto_liege_info = {
+	global = entitled_set_de_facto_liege_info
+}

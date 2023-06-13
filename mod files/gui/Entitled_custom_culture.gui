@@ -9,7 +9,7 @@ window = {
 	size = { 300 200 }
 	layer = windows_layer
 	visible = "[GetVariableSystem.HasValue('Entitled','culture')]"
-	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+	datacontext = "[GetGlobalVariable('entitled_pinned_culture').Culture]"
 
 	background = {
 		using = Background_Area_Dark
@@ -106,7 +106,7 @@ window = {
 	size = { 1000 100% }
 	layer = windows_layer
 	# visible = "[GetVariableSystem.HasValue('Entitled','culture')]"
-	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+	datacontext = "[GetGlobalVariable('entitled_pinned_culture').Culture]"
 
 	background = {
 		using = Background_Area_Dark
@@ -205,7 +205,7 @@ window = {
 	size = { 400 950 }
 	layer = windows_layer
 	visible = "[GetVariableSystem.HasValue('Entitled_culture','traditions')]"
-	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+	datacontext = "[GetGlobalVariable('entitled_pinned_culture').Culture]"
 
 	using = Window_Background
 	using = Window_Decoration

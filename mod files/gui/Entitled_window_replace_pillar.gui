@@ -9,7 +9,7 @@ window = {
 	layoutpolicy_vertical = expanding
 
 	visible = "[Or(GetVariableSystem.HasValue('Entitled_culture','ethos'),GetVariableSystem.HasValue('Entitled_culture','martial'))]"
-	datacontext = "[GetGlobalVariable('entitled_culture').Culture]"
+	datacontext = "[GetGlobalVariable('entitled_pinned_culture').Culture]"
 
 	using = Window_Background
 	using = Window_Decoration
@@ -34,7 +34,7 @@ window = {
 
 			blockoverride "header_text"
 			{
-				raw_text = "Replace [GetCulturePillar(GetGlobalVariable('entitled_culture').Var(GetVariableSystem.Get('Entitled_culture')).GetFlagName).GetNameNoTooltip]"
+				raw_text = "Replace [GetCulturePillar(GetGlobalVariable('entitled_pinned_culture').Var(GetVariableSystem.Get('Entitled_culture')).GetFlagName).GetNameNoTooltip]"
 			}
 
 			blockoverride "button_close"
@@ -164,7 +164,7 @@ types CultureReplacePillarTypes
 
 				icon = {
 					name = "selection_glow"
-					visible = "[ObjectsEqual( GetCulturePillar(GetGlobalVariable('entitled_culture').Var('ethos').GetFlagName), CulturePillar.Self )]"
+					visible = "[ObjectsEqual( GetCulturePillar(GetGlobalVariable('entitled_pinned_culture').Var('ethos').GetFlagName), CulturePillar.Self )]"
 					parentanchor = center
 					size = { 100% 100% }
 

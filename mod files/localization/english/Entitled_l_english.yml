@@ -10,6 +10,7 @@ entitled_add_to_realm_tooltip: "#T Bring in the Realm#!\n\nGrab all De Jure titl
 entitled_remove_from_realm_tooltip: "#T Remove from Realm#!\n\nRemove all De Jure titles in the [Scope.Title.GetNameNoTooltip] from your Realm."
 entitled_add_to_holdings_tooltip: "#T Take Holdings#!\n\nMake all De Jure counties in the [Scope.Title.GetNameNoTooltip] your own."
 entitled_remove_from_holdings_tooltip: "#T Remove Holdings#!\n\nRelinquish direct ownership of all De Jure counties in the [Scope.Title.GetNameNoTooltip] your own. They will remain in your Realm."
+ENTITLED_SET_DE_JURE_LIEGE_TOOLTIP: "#T Set De Jure Liege#!\n\n[Scope.Title.GetNameNoTooltip]\n\n$ENTITLED_SET_DE_JURE_LIEGE_HELP$"
 entitled_set_capital_county_tooltip: "#T Make Capital County#!\n\nMake the [Scope.Title.GetNameNoTooltip] your Capital County."
 
 entitled_pick_rank_tooltip: "Chose a Rank"
@@ -19,9 +20,9 @@ entitled_independent_liege: "You will start as a Vassal of [liege.GetNameNoToolt
 entitled_independent_no_liege: "There is no ruler you could be liege to.\n\n#help You can start as the vassal of the lower-tiered ruler which holds a title of higher tier than your own, and De Jure above your Capital County.#!"
 entitled_independent_checked: "You will start independent"
 
-entitled_create_title_holding: "You get the [THIS.Title.GetName]"
-entitled_create_title_vassal: "[THIS.Char.GetName] becomes your vassal"
-entitled_create_title_vassal_created: "[THIS.Title.GetHolder.GetName] loses the [THIS.Title.GetName].\nThe title will be granted to a randomly generated vassal."
+# entitled_create_title_holding: "Titles you get"
+# entitled_create_title_vassal: "[THIS.Char.GetName]"
+# entitled_create_title_vassal_created: "[THIS.Title.GetHolder.GetName] loses [THIS.Title.GetName]"
 
 ENTITLED_OPEN: "Create your own Primary Title"
 ENTITLED_RANK: "Rank:"
@@ -49,20 +50,29 @@ ENTITLED_CLEAR_TOOLTIP: "Clear all changes and start over"
 
 ENTITLED_MENU_CREATE_TITLE: "#T Create Title#!\nCreate your own title, complete with Title Rank, Capital County, De Jure hierarchy, Realm and Domain"
 ENTITLED_MENU_CUSTOMIZE_TITLE: "#T Customize Title#!\n#help Coming Soon!#!"
-ENTITLED_MENU_CUSTOMIZE_FAITH: "#T Customize Faith $ENTITLED_MENU_CUSTOMIZE_FAITH_SELECTED$#!\n#help Chose a ruler, and click the @edit_text_icon! icon next to their Faith#!"
-ENTITLED_MENU_CUSTOMIZE_FAITH_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_faith').IsSet,GetGlobalVariable('entitled_faith').Faith.GetName,'')]"
 
-ENTITLED_MENU_CONVERT_FAITH: "#T Faith Conversion#!\n$ENTITLED_MENU_CONVERT_FAITH_SELECTED$\n$ENTITLED_MENU_CONVERT_FAITH_ONGOING_CUSTOMIZE_TITLE$#help Chose a ruler, and click the @edit_text_icon! icon next to their Faith#!"
-ENTITLED_MENU_CONVERT_FAITH_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_faith').IsSet,GetGlobalVariable('entitled_faith').Faith.GetName,'#warning @warning_icon! No Faith Selected#!')]"
-ENTITLED_MENU_CONVERT_FAITH_ONGOING_CUSTOMIZE_TITLE: "[SelectLocalization(GetGlobalVariable('entitled_setup').IsSet,'#warning @warning_icon! Title Customization is on-going. Finish creating the title or clear all changes.#!\n','')]"
+ENTITLED_MENU_CUSTOMIZE_FAITH: "Customize Faith"
+ENTITLED_MENU_CUSTOMIZE_FAITH_DESC: "Modify Tenets and Doctrines"
 
-ENTITLED_MENU_CUSTOMIZE_CULTURE: "#T Customize Culture $ENTITLED_MENU_CUSTOMIZE_CULTURE_SELECTED$#!\n#help Chose a ruler, and click the @edit_text_icon! icon next to their Culture#!"
-ENTITLED_MENU_CUSTOMIZE_CULTURE_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_culture').IsSet,GetGlobalVariable('entitled_culture').Culture.GetName,'')]"
-ENTITLED_MENU_CUSTOMIZE_CULTURE_NO_DLC: "#T Culture Conversion#!\nRoyal Court DLC required"
+ENTITLED_MENU_CONVERT_FAITH: "Convert Faith"
+ENTITLED_MENU_CONVERT_FAITH_DESC: "Convert Counties and Rulers"
 
-ENTITLED_MENU_CONVERT_CULTURE: "#T Culture Conversion#!\n$ENTITLED_MENU_CONVERT_CULTURE_SELECTED$\n$ENTITLED_MENU_CONVERT_CULTURE_ONGOING_CUSTOMIZE_TITLE$#help Chose a ruler, and click the @edit_text_icon! icon next to their Culture#!"
-ENTITLED_MENU_CONVERT_CULTURE_SELECTED: "[SelectLocalization(GetGlobalVariable('entitled_culture').IsSet,GetGlobalVariable('entitled_culture').Culture.GetName,'#warning @warning_icon! No Culture Selected#!')]"
-ENTITLED_MENU_CONVERT_CULTURE_ONGOING_CUSTOMIZE_TITLE: "[SelectLocalization(GetGlobalVariable('entitled_setup').IsSet,'#warning @warning_icon! Title Customization is on-going. Finish creating the title or clear all changes.#!\n','')]"
+ENTITLED_MENU_FAITH_PIN_MISSING: "No Faith pinned in the Outliner"
+
+ENTITLED_MENU_FAITH_HELP: "Select a Ruler and click the @pin_icon! icon next to their Faith, or use the search function in the Outliner"
+
+ENTITLED_MENU_CUSTOMIZE_CULTURE: "Customize Culture"
+ENTITLED_MENU_CUSTOMIZE_CULTURE_DESC: "Modify Ethos, Martial Custom and Traditions"
+
+ENTITLED_MENU_CONVERT_CULTURE: "Convert Culture"
+ENTITLED_MENU_CONVERT_CULTURE_DESC: "Convert Counties and Rulers"
+
+ENTITLED_MENU_DIVERGE_CULTURE_FEATURE_LOCKED: "Access to the Culture Divergence mechanic required (currently only available with Royal Court)"
+ENTITLED_MENU_TITLE_CUSTOMIZATION_ONGOING: "Title Customization is on-going.\nFinish creating the title or clear all changes."
+ENTITLED_MENU_CULTURE_PIN_MISSING: "No Culture pinned in the Outliner"
+
+ENTITLED_MENU_CULTURE_HELP: "Select a ruler and click the @pin_icon! icon next to their Culture, or use the search function in the Outliner"
+
 
 ENTITLED_WINDOW_TITLE: "Create Title"
 
@@ -88,3 +98,142 @@ ENTITLED_REVERT_CULTURE_COUNTIES: "Reset the Culture of all counties in the [Sco
 
 ENTITLED_FAITH_COUNTY_COUNT: "[Faith.MakeScope.ScriptValue('entitled_num_county_followers')] Counties"
 ENTITLED_CULTURE_COUNTY_COUNT: "[Culture.MakeScope.ScriptValue('entitled_culture_number_of_counties')] Counties"
+
+ENTITLED_DE_JURE_LIEGE: "[de_jure|E]:"
+ENTITLED_DE_JURE_LIEGE_SET: "[GetGlobalVariable('entitled_de_jure_liege').Title.GetName]"
+
+ENTITLED_DE_JURE_LIEGE_AUTO: "Auto-select De Jure"
+ENTITLED_DE_JURE_LIEGE_AUTO_PICK: "[SelectLocalization(GetGlobalVariable('entitled_de_jure_liege_auto').IsSet,'ENTITLED_DE_JURE_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_JURE_LIEGE_AUTO_UNAVAILABLE')]"
+ENTITLED_DE_JURE_LIEGE_AUTO_AVAILABLE: "[GetGlobalVariable('entitled_de_jure_liege_auto').Title.GetBaseName]"
+ENTITLED_DE_JURE_LIEGE_AUTO_UNAVAILABLE: "#help No valid De Jure#!"
+ENTITLED_DE_JURE_LIEGE_AUTO_DESC: "Automatically selects the lowest tier Title above the Primary Title which currently includes the Capital County in its De Jure territory"
+
+ENTITLED_DE_JURE_LIEGE_AUTO_INVALID: "@warning_icon! #warning Pick a Rank and Capital County#!"
+
+ENTITLED_DE_JURE_LIEGE_CUSTOM: "Set De Jure"
+ENTITLED_DE_JURE_LIEGE_CUSTOM_PICK: "[SelectLocalization(GetGlobalVariable('entitled_pinned_title').IsSet,'ENTITLED_DE_JURE_LIEGE_CUSTOM_AVAILABLE','ENTITLED_DE_JURE_LIEGE_CUSTOM_UNAVAILABLE')]"
+ENTITLED_DE_JURE_LIEGE_CUSTOM_AVAILABLE: "[SelectLocalization(GreaterThan_CFixedPoint(GetGlobalVariable('entitled_pinned_title').ScriptValue('entitled_title_tier'),GetGlobalVariable('custom_title').ScriptValue('entitled_title_tier')),'ENTITLED_DE_JURE_LIEGE_CUSTOM_VALID','ENTITLED_DE_JURE_LIEGE_CUSTOM_INVALID')]"
+ENTITLED_DE_JURE_LIEGE_CUSTOM_VALID: "[GetGlobalVariable('entitled_de_jure_liege_custom').Title.GetBaseName]"
+ENTITLED_DE_JURE_LIEGE_CUSTOM_INVALID: "#warning [GetGlobalVariable('entitled_de_jure_liege_custom').Title.GetName] is not of high enough tier"
+ENTITLED_DE_JURE_LIEGE_CUSTOM_UNAVAILABLE: "Pin a Title to the Outliner"
+ENTITLED_DE_JURE_LIEGE_CUSTOM_DESC: "Set the Title currently pinned in the Outliner as De Jure"
+
+
+ENTITLED_DE_JURE_LIEGE_REMOVE: "Remove De Jure"
+ENTITLED_DE_JURE_LIEGE_REMOVE_DESC: "The Title will have no De Jure Liege."
+ENTITLED_DE_JURE_LIEGE_REMOVE_TEXT: "#help (Optional) #TOOLTIP:ENTITLED_DE_JURE_LIEGE_CHOOSE_TOOLTIP #underline Choose a De Jure liege#!#!#!"
+ENTITLED_DE_JURE_LIEGE_CHOOSE_TOOLTIP: "#T Choose De Jure Liege#!\n\n@paste_icon! Set the Title currently pinned in the Outliner\nor @auto_icon! Auto-select the Title with the lowest tier but higher than the Primary Title, and which currently includes the Capital County in its De Jure territory."
+
+
+ENTITLED_DE_FACTO_LIEGE: "[liege|E]:"
+
+ENTITLED_DE_FACTO_LIEGE_AUTO: "Auto-select Liege"
+ENTITLED_DE_FACTO_LIEGE_AUTO_PICK: "[SelectLocalization(GetGlobalVariable('entitled_de_facto_liege_auto').IsSet,'ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE')]"
+ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE: "[GetGlobalVariable('entitled_de_facto_liege_auto').Char.GetName]"
+ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE: "#help No valid Liege#!"
+ENTITLED_DE_FACTO_LIEGE_AUTO_DESC: "Automatically selects the lowest tier Ruler above the Primary Title which currently includes the Capital County in its Realm"
+
+ENTITLED_DE_FACTO_LIEGE_CUSTOM: "Set Liege"
+ENTITLED_DE_FACTO_LIEGE_CUSTOM_PICK: "[SelectLocalization(GetGlobalVariable('entitled_pinned_ruler').IsSet,'ENTITLED_DE_FACTO_LIEGE_CUSTOM_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_CUSTOM_UNAVAILABLE')]"
+ENTITLED_DE_FACTO_LIEGE_CUSTOM_AVAILABLE: "[SelectLocalization(GreaterThan_CFixedPoint(GetGlobalVariable('entitled_pinned_ruler').ScriptValue('entitled_ruler_tier'),GetGlobalVariable('custom_title').ScriptValue('entitled_title_tier')),'ENTITLED_DE_FACTO_LIEGE_CUSTOM_VALID','ENTITLED_DE_FACTO_LIEGE_CUSTOM_INVALID')]"
+ENTITLED_DE_FACTO_LIEGE_CUSTOM_VALID: "[GetGlobalVariable('entitled_de_facto_liege_custom').Char.GetName]"
+ENTITLED_DE_FACTO_LIEGE_CUSTOM_INVALID: "#warning [GetGlobalVariable('entitled_de_facto_liege_custom').Char.GetName] is not of high enough tier"
+ENTITLED_DE_FACTO_LIEGE_CUSTOM_UNAVAILABLE: "Pin a Ruler to the Outliner"
+ENTITLED_DE_FACTO_LIEGE_CUSTOM_DESC: "Set the Ruler currently pinned in the Outliner as Liege"
+
+ENTITLED_DE_FACTO_LIEGE_REMOVE: "Remove Liege"
+ENTITLED_DE_FACTO_LIEGE_REMOVE_DESC: "The Title holder will be [independent|E]."
+ENTITLED_DE_FACTO_LIEGE_REMOVE_TEXT: "#help (Optional) #TOOLTIP:ENTITLED_DE_FACTO_LIEGE_CHOOSE_TOOLTIP #underline Choose a Liege#!#!#!"
+ENTITLED_DE_FACTO_LIEGE_CHOOSE_TOOLTIP: "#T Choose Liege#!\n\n@paste_icon! Set the Ruler currently pinned in the Outliner\nor @auto_icon! Auto-select the Ruler with the lowest tier but higher than the Primary Title, and which currently includes the Capital County in its Realm."
+
+# ENTITLED_DE_FACTO_LIEGE_SET: "[GetGlobalVariable('entitled_de_facto_liege').Char.GetName]"
+
+# ENTITLED_DE_FACTO_LIEGE_AUTO: "[SelectLocalization(And(GetGlobalVariable('custom_title').IsSet,GetGlobalVariable('capital_county').IsSet),Select_CString(GetGlobalVariable('entitled_de_facto_liege_auto').IsSet,'ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE'),'ENTITLED_DE_FACTO_LIEGE_AUTO_INVALID')]"
+# ENTITLED_DE_FACTO_LIEGE_AUTO_TOOLTIP: "#T Auto-select De Facto Liege#!\n\n[SelectLocalization(And(GetGlobalVariable('custom_title').IsSet,GetGlobalVariable('capital_county').IsSet),Select_CString(GetGlobalVariable('entitled_de_facto_liege_auto').IsSet,'ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE_TOOLTIP','ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE_TOOLTIP'),'ENTITLED_DE_FACTO_LIEGE_AUTO_INVALID')]\n\n$ENTITLED_DE_FACTO_LIEGE_AUTO_HELP$"
+
+# ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE: "[GetGlobalVariable('entitled_de_facto_liege_auto').Char.GetShortUIName]"
+# ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE_TOOLTIP: "[GetGlobalVariable('entitled_de_facto_liege_auto').Char.GetShortUIName] will be set as De Facto liege to the [GetGlobalVariable('custom_title').Title.GetName]"
+
+# ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE: "#help No valid De Facto liege#!"
+# ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE_TOOLTIP: "There is no valid De Facto liege for the [GetGlobalVariable('custom_title').Title.GetName]"
+
+# ENTITLED_DE_FACTO_LIEGE_AUTO_INVALID: "@warning_icon! #warning Pick a Rank and Capital County#!"
+# ENTITLED_DE_FACTO_LIEGE_AUTO_HELP: "#help Automatically selects the lowest tier Ruler above the Primary Title which currently includes the Capital County in its De Facto territory#!"
+
+# ENTITLED_DE_FACTO_LIEGE_CUSTOM: "[SelectLocalization(GreaterThan_CFixedPoint(GetGlobalVariable('entitled_de_facto_liege_custom').ScriptValue('entitled_ruler_tier'),GetGlobalVariable('custom_title').ScriptValue('entitled_title_tier')),GetGlobalVariable('entitled_de_facto_liege_custom').Char.GetShortUIName,'ENTITLED_DE_FACTO_LIEGE_CUSTOM_INVALID')]"
+# ENTITLED_DE_FACTO_LIEGE_CUSTOM_INVALID: "#warning [GetGlobalVariable('entitled_de_facto_liege_custom').Char.GetShortUIName] is not of high enough tier"
+
+# ENTITLED_DE_FACTO_LIEGE_CUSTOM_TOOLTIP: "#T Set De Facto Liege#!\n\n[SelectLocalization(GetGlobalVariable('entitled_pinned_ruler').IsSet,'ENTITLED_DE_FACTO_LIEGE_CUSTOM_AVAILABLE_TOOLTIP','ENTITLED_DE_FACTO_LIEGE_CUSTOM_UNAVAILABLE_TOOLTIP')]\n\n$ENTITLED_DE_FACTO_LIEGE_CUSTOM_HELP$"
+# ENTITLED_DE_FACTO_LIEGE_CUSTOM_AVAILABLE: "[GetGlobalVariable('entitled_pinned_ruler').Char.GetShortUIName]"
+# ENTITLED_DE_FACTO_LIEGE_CUSTOM_UNAVAILABLE: "@warning_icon! #warning Pin a Ruler to the Outliner#!"
+# ENTITLED_DE_FACTO_LIEGE_CUSTOM_HELP: "#help The pinned Ruler will be set as De Facto of the Primary Title if it is of higher tier"
+
+# ENTITLED_DE_FACTO_LIEGE_REMOVE: "#help (Optional) #TOOLTIP:ENTITLED_DE_FACTO_LIEGE_CHOOSE_TOOLTIP #underline Choose a De Facto liege#!#!#!"
+# ENTITLED_DE_FACTO_LIEGE_REMOVE_TOOLTIP: "#T Remove De Facto Liege#!\n\n#help The Primary Title will be independent#!"
+
+# ENTITLED_DE_FACTO_LIEGE_CHOOSE_TOOLTIP: "#T Choose De Facto Liege#!\n\n@paste_icon! Set the Ruler currently pinned in the Outliner\nor @auto_icon! Auto-select the Ruler with the lowest tier but higher than the Primary Title, and which currently includes the Capital County in its Realm."
+
+
+
+# ENTITLED_DE_FACTO_LIEGE: "Liege:"
+# ENTITLED_DE_FACTO_LIEGE_SET: "[GetGlobalVariable('entitled_de_jure_liege').Title.GetName]"
+# ENTITLED_DE_JURE_LIEGE_UNSET: "#help Chose title below or remain independent#!"
+
+
+# entitled_select_character: "Select a Character on the map"
+# entitled_selected_character_tier: "[GetGlobalVariable('entitled_selected_character').Char.GetShortUIName] is not of a high enough rank"
+# entitled_set_de_facto_liege_info: "\n#help The character last selected will be automatically picked for this."
+
+
+ENTITLED_FAITH_AUTO: "[SelectLocalization(GetGlobalVariable('capital_county').IsSet,GetGlobalVariable('capital_county').Title.GetCountyData.GetFaith.GetName,'ENTITLED_FAITH_AUTO_UNAVAILABLE_TOOLTIP')]"
+ENTITLED_FAITH_AUTO_TOOLTIP: "#T Auto-select Culture#!\n\n[SelectLocalization(GetGlobalVariable('capital_county').IsSet,'ENTITLED_CULTURE_AUTO_AVAILABLE_TOOLTIP','ENTITLED_CULTURE_AUTO_UNAVAILABLE_TOOLTIP')]\n\n$ENTITLED_CULTURE_AUTO_HELP$"
+ENTITLED_FAITH_AUTO_AVAILABLE_TOOLTIP: "[GetGlobalVariable('capital_county').Title.GetCountyData.GetFaith.GetName]"
+ENTITLED_FAITH_AUTO_UNAVAILABLE_TOOLTIP: "#warning Pick a Capital County#!"
+ENTITLED_FAITH_AUTO_HELP: "#help Automatically selects the Faith of the Capital County#!"
+ENTITLED_FAITH_CUSTOM: "[GetGlobalVariable('entitled_faith_custom').Faith.GetName]"
+ENTITLED_FAITH_CUSTOM_TOOLTIP: "#T Set Faith#!\n\n[SelectLocalization(GetGlobalVariable('entitled_pinned_faith').IsSet,'ENTITLED_FAITH_CUSTOM_AVAILABLE_TOOLTIP','ENTITLED_FAITH_CUSTOM_UNAVAILABLE_TOOLTIP')]"
+ENTITLED_FAITH_CUSTOM_AVAILABLE_TOOLTIP: "[GetGlobalVariable('entitled_pinned_faith').Faith.GetName]"
+ENTITLED_FAITH_CUSTOM_UNAVAILABLE_TOOLTIP: "#warning Pin a Faith to the Outliner#!"
+
+ENTITLED_CULTURE_AUTO: "[SelectLocalization(GetGlobalVariable('capital_county').IsSet,GetGlobalVariable('capital_county').Title.GetCountyData.GetCulture.GetName,'ENTITLED_CULTURE_AUTO_UNAVAILABLE_TOOLTIP')]"
+ENTITLED_CULTURE_AUTO_TOOLTIP: "#T Auto-select Culture#!\n\n[SelectLocalization(GetGlobalVariable('capital_county').IsSet,'ENTITLED_CULTURE_AUTO_AVAILABLE_TOOLTIP','ENTITLED_CULTURE_AUTO_UNAVAILABLE_TOOLTIP')]\n\n$ENTITLED_CULTURE_AUTO_HELP$"
+# ENTITLED_CULTURE_AUTO_TOOLTIP: "test"
+ENTITLED_CULTURE_AUTO_AVAILABLE_TOOLTIP: "[GetGlobalVariable('capital_county').Title.GetCountyData.GetCulture.GetName]"
+ENTITLED_CULTURE_AUTO_UNAVAILABLE_TOOLTIP: "#warning Pick a Capital County#!"
+ENTITLED_CULTURE_AUTO_HELP: "#help Automatically selects the Culture of the Capital County#!"
+ENTITLED_CULTURE_CUSTOM: "[GetGlobalVariable('entitled_culture_custom').Culture.GetName]"
+ENTITLED_CULTURE_CUSTOM_TOOLTIP: "#T Set Culture#!\n\n[SelectLocalization(GetGlobalVariable('entitled_pinned_culture').IsSet,'ENTITLED_CULTURE_CUSTOM_AVAILABLE_TOOLTIP','ENTITLED_CULTURE_CUSTOM_UNAVAILABLE_TOOLTIP')]"
+ENTITLED_CULTURE_CUSTOM_AVAILABLE_TOOLTIP: "[GetGlobalVariable('entitled_pinned_culture').Culture.GetName]"
+ENTITLED_CULTURE_CUSTOM_UNAVAILABLE_TOOLTIP: "#warning Pin a Culture to the Outliner#!"
+
+
+ENTITLED_FAITH_ITEM_TOOLTIP: "#I Click to pin [Faith.GetNameNoTooltip] to the Outliner#!"
+ENTITLED_RELIGION_WINDOW_TITLE: "Pin Faith"
+
+
+entitled_create_title_holding: "Titles"
+entitled_create_title_holding_detail: "[THIS.Title.GetName]"
+entitled_create_title_vassal: "Vassals"
+entitled_create_title_vassal_detail: "[THIS.Char.GetName]"
+entitled_create_title_vassal_created: "[THIS.Title.GetHolder.GetName] loses [THIS.Title.GetName]"
+
+entitled_create_title_de_jure_liege: "becomes [de_jure|E] vassal of [de_jure_liege.GetName]"
+entitled_create_title_de_facto_liege: "becomes [vassal|E] of [de_facto_liege.GetShortUIName]"
+entitled_create_title_independent: "becomes [independent|E]"
+
+entitled_create_title_de_jure: "De Jure drift"
+entitled_create_title_de_jure_detail: "[THIS.Title.GetName]"
+
+ENTITLED_PIN_TITLE_HELP: "Select a Ruler and click the @pin_icon! next to their Primary Title, or use the @search_icon! Title search function in the Outliner"
+
+
+
+
+# CUSTOM TOOLTIP
+entitled_chose_rank_and_capital_county: "Chose a Rank and Capital County"
+entitled_no_pinned_title: "Pin a Title to the Outliner"
+entitled_no_pinned_ruler: "Pin a Ruler to the Outliner"
+entitled_pinned_title_tier: "[GetGlobalVariable('entitled_pinned_title').Title.GetName] tier is too low"
+entitled_pinned_ruler_tier: "[GetGlobalVariable('entitled_pinned_ruler').Char.GetNamePossessive] tier is too low"
+
+ENTITLED_COMING_SOON: "#help Coming soon!"

@@ -1,216 +1,848 @@
-window = {
-	visible = "[Not(GetPlayer.IsValid)]"
-	name = "Entitled_menu"
-	widgetid = "Entitled_menu"
-	parentanchor = top|right
-	size = { 80 330 }
-	position = { -400 0 }
-	layer = windows_layer
-	filter_mouse = all
-	alwaystransparent = no
+# window = {
+# 	visible = "[Not(GetPlayer.IsValid)]"
+# 	name = "Entitled_menu"
+# 	widgetid = "Entitled_menu"
+# 	parentanchor = top|right
+# 	size = { 80 330 }
+# 	position = { -400 0 }
+# 	layer = windows_layer
+# 	filter_mouse = all
+# 	alwaystransparent = no
 
-	# visible = "[GetVariableSystem.Exists('BMU_claim_window')]"
+# 	# visible = "[GetVariableSystem.Exists('BMU_claim_window')]"
 	
-	using = Window_Background_Sidebar_Multiplayer_Right
+# 	using = Window_Background_Sidebar_Multiplayer_Right
 
+
+# 	state = {
+# 		name = _show
+# 	}
+
+# 	state = {
+# 		name = _hide
+# 	}
+
+# 	margin_widget = {
+# 		size = { 100% 100% }
+# 		margin_top = 20
+# 		# margin = { 0 5 }
+# 		# # margin_right = 13
+
+		
+# 		vbox = {
+# 			layoutpolicy_vertical = expanding
+# 			spacing = 10
+# 			button_group = {
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/character_interactions/debug_take_title.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+# 				onclick = "[GetVariableSystem.Set('Entitled_title_window','create_title')]"
+# 				onclick = "[SetMapMode(  'baronies' )]"
+# 				onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
+# 				down = "[GetVariableSystem.HasValue('Entitled','title')]"
+# 				tooltip = ENTITLED_MENU_CREATE_TITLE
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/council_task_types/task_convince_dejure.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled_title_window','customize_title')]"
+# 				onclick = "[SetMapMode(  'baronies' )]"
+# 				# onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
+# 				down = "[GetVariableSystem.HasValue('Entitled','title')]"
+# 				enabled = "[GetPlayer.IsValid]"
+# 				tooltip = ENTITLED_MENU_CUSTOMIZE_TITLE
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				# visible = "[HasDlcFeature('royal_court')]"
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/event_types/type_faith.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','faith')]"
+# 				onclick = "[SetMapMode(  'religions' )]"
+# 				enabled = "[GetGlobalVariable('entitled_pinned_faith').IsSet]"
+# 				tooltip = ENTITLED_MENU_CUSTOMIZE_FAITH
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				# visible = "[HasDlcFeature('royal_court')]"
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/council_task_types/task_conversion.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+				
+# 				onclick = "[SetMapMode(  'religions' )]"
+# 				onclick = "[GetVariableSystem.Set('Entitled','title')]"
+# 				onclick = "[GetVariableSystem.Set('Entitled_title_window','convert_faith')]"
+# 				enabled = "[And(Not(GetGlobalVariable('entitled_setup').IsSet),GetGlobalVariable('entitled_pinned_faith').IsSet)]"
+# 				tooltip = ENTITLED_MENU_CONVERT_FAITH
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				visible = "[HasDlcFeature('royal_court')]"
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','culture')]"
+# 				onclick = "[SetMapMode(  'cultures' )]"
+# 				enabled = "[GetGlobalVariable('entitled_pinned_culture').IsSet]"
+# 				tooltip = ENTITLED_MENU_CUSTOMIZE_CULTURE
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				visible = "[Not(HasDlcFeature('royal_court'))]"
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				enabled = "[HasDlcFeature('royal_court')]"
+# 				tooltip = ENTITLED_MENU_CUSTOMIZE_CULTURE_NO_DLC
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				# visible = "[HasDlcFeature('royal_court')]"
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.Set('Entitled','title')]"
+# 				onclick = "[GetVariableSystem.Set('Entitled_title_window','convert_culture')]"
+# 				onclick = "[SetMapMode(  'cultures' )]"
+# 				enabled = "[And(Not(GetGlobalVariable('entitled_setup').IsSet),GetGlobalVariable('entitled_pinned_culture').IsSet)]"
+# 				tooltip = ENTITLED_MENU_CONVERT_CULTURE
+# 				using = tooltip_ws
+# 			}
+
+# 			expand = {}
+# 		}
+# 	}
+# }
+
+# window = {
+# 	visible = "[GetGlobalVariable('entitled_on').IsSet]"
+# 	name = "Entitled_menu"
+# 	widgetid = "Entitled_menu"
+# 	parentanchor = bottom|hcenter
+# 	size = { 330 80 }
+# 	position = { 0 -50 }
+# 	layer = windows_layer
+# 	filter_mouse = all
+# 	alwaystransparent = no
+
+# 	# visible = "[GetVariableSystem.Exists('BMU_claim_window')]"
+	
+# 	# using = Window_Background_Sidebar_Multiplayer_Right
+
+
+# 	state = {
+# 		name = _show
+# 	}
+
+# 	state = {
+# 		name = _hide
+# 	}
+
+# 	margin_widget = {
+# 		size = { 100% 100% }
+# 		margin_top = 20
+# 		# margin = { 0 5 }
+# 		# # margin_right = 13
+
+		
+# 		hbox = {
+# 			layoutpolicy_vertical = expanding
+# 			spacing = 10
+# 			button_group = {
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/character_interactions/debug_take_title.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+# 				onclick = "[GetVariableSystem.Set('Entitled_title_window','create_title')]"
+# 				onclick = "[SetMapMode(  'baronies' )]"
+# 				onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
+# 				down = "[GetVariableSystem.HasValue('Entitled','title')]"
+# 				tooltip = ENTITLED_MENU_CREATE_TITLE
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/council_task_types/task_convince_dejure.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled_title_window','customize_title')]"
+# 				onclick = "[SetMapMode(  'baronies' )]"
+# 				# onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
+# 				down = "[GetVariableSystem.HasValue('Entitled','title')]"
+# 				enabled = "[GetPlayer.IsValid]"
+# 				tooltip = ENTITLED_MENU_CUSTOMIZE_TITLE
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/event_types/type_faith.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','faith')]"
+# 				onclick = "[SetMapMode(  'religions' )]"
+# 				enabled = "[GetGlobalVariable('entitled_pinned_faith').IsSet]"
+# 				tooltip = ENTITLED_MENU_CUSTOMIZE_FAITH
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/council_task_types/task_conversion.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+				
+# 				onclick = "[SetMapMode(  'religions' )]"
+# 				onclick = "[GetVariableSystem.Set('Entitled','title')]"
+# 				onclick = "[GetVariableSystem.Set('Entitled_title_window','convert_faith')]"
+# 				enabled = "[And(Not(GetGlobalVariable('entitled_setup').IsSet),GetGlobalVariable('entitled_pinned_faith').IsSet)]"
+# 				tooltip = ENTITLED_MENU_CONVERT_FAITH
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				visible = "[HasDlcFeature('royal_court')]"
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.SetOrToggle('Entitled','culture')]"
+# 				onclick = "[SetMapMode(  'cultures' )]"
+# 				enabled = "[GetGlobalVariable('entitled_pinned_culture').IsSet]"
+# 				tooltip = ENTITLED_MENU_CUSTOMIZE_CULTURE
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				visible = "[Not(HasDlcFeature('royal_court'))]"
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				enabled = "[HasDlcFeature('royal_court')]"
+# 				tooltip = ENTITLED_MENU_CUSTOMIZE_CULTURE_NO_DLC
+# 				using = tooltip_ws
+# 			}
+
+# 			button_group = {
+# 				highlight_icon = {
+# 					parentanchor = center
+# 					# position = { 0 5 }
+# 					size = { 40 40 }
+# 					texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
+	
+# 					glow = {
+# 						color = { 0 0 0 0.8 }
+# 						glow_radius = 3
+# 						using = Glow_Standard
+# 					}
+# 				}
+# 				onclick = "[GetVariableSystem.Set('Entitled','title')]"
+# 				onclick = "[GetVariableSystem.Set('Entitled_title_window','convert_culture')]"
+# 				onclick = "[SetMapMode(  'cultures' )]"
+# 				enabled = "[And(Not(GetGlobalVariable('entitled_setup').IsSet),GetGlobalVariable('entitled_pinned_culture').IsSet)]"
+# 				tooltip = ENTITLED_MENU_CONVERT_CULTURE
+# 				using = tooltip_ws
+# 			}
+
+# 			expand = {}
+# 		}
+# 	}
+# }
+
+window = {
+	visible = "[GetGlobalVariable('entitled_on').IsSet]"
+	name = "Entitled_menu_top"
+	widgetid = "Entitled_menu_top"
+	parentanchor = top|hcenter
+	# position = { -500 50 }
+	alwaystransparent = no
+	filter_mouse = all
+	layer = windows_layer
+	size = { 330 80 }
 
 	state = {
 		name = _show
+		using = Animation_FadeIn_Quick
+		# start_sound = {
+		# 	soundeffect = "event:/SFX/UI/Generic/Windows/sfx_ui_generic_window_outliner_show"
+		# }
 	}
 
 	state = {
 		name = _hide
+		using = Animation_FadeOut_Standard
+		# start_sound = {
+		# 	soundeffect = "event:/SFX/UI/Generic/Windows/sfx_ui_generic_window_outliner_hide"
+		# }
 	}
 
-	margin_widget = {
-		size = { 100% 100% }
-		margin_top = 20
-		# margin = { 0 5 }
-		# # margin_right = 13
+	# state = {
+	# 	name = "hide_outliner"
+	# 	using = Animation_FadeOut_Standard
+	# 	trigger_when = "[Not(IsDefaultGUIMode)]"
+	# }
 
-		
-		vbox = {
-			layoutpolicy_vertical = expanding
-			spacing = 10
-			button_group = {
-				highlight_icon = {
-					parentanchor = center
-					# position = { 0 5 }
-					size = { 40 40 }
-					texture = "gfx/interface/icons/character_interactions/debug_take_title.dds"
-	
-					glow = {
-						color = { 0 0 0 0.8 }
-						glow_radius = 3
-						using = Glow_Standard
-					}
-				}
-				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
-				onclick = "[GetVariableSystem.Set('Entitled_title_window','create_title')]"
-				onclick = "[SetMapMode(  'baronies' )]"
-				onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
-				down = "[GetVariableSystem.HasValue('Entitled','title')]"
-				tooltip = ENTITLED_MENU_CREATE_TITLE
-				using = tooltip_ws
-			}
+	# state = {
+	# 	name = "show_outliner"
+	# 	using = Animation_FadeIn_Quick
+	# 	# trigger_when = "[IsDefaultGUIMode]"
+	# }
 
-			button_group = {
-				highlight_icon = {
-					parentanchor = center
-					# position = { 0 5 }
-					size = { 40 40 }
-					texture = "gfx/interface/icons/council_task_types/task_convince_dejure.dds"
-	
-					glow = {
-						color = { 0 0 0 0.8 }
-						glow_radius = 3
-						using = Glow_Standard
-					}
-				}
-				onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
-				onclick = "[GetVariableSystem.SetOrToggle('Entitled_title_window','customize_title')]"
-				onclick = "[SetMapMode(  'baronies' )]"
-				# onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
-				down = "[GetVariableSystem.HasValue('Entitled','title')]"
-				enabled = "[GetPlayer.IsValid]"
-				tooltip = ENTITLED_MENU_CUSTOMIZE_TITLE
-				using = tooltip_ws
-			}
+	flowcontainer = {
+		# visible = "[And( Not(IsGameViewOpen('barbershop')), And( Not( IsPauseMenuShown ), Not(IsRightWindowOpen) ) )]"
+		resizeparent = yes
+		margin = { 10 10 }
+		# margin_bottom = 5
+		# margin_top = 20
 
-			button_group = {
-				# visible = "[HasDlcFeature('royal_court')]"
-				highlight_icon = {
-					parentanchor = center
-					# position = { 0 5 }
-					size = { 40 40 }
-					texture = "gfx/interface/icons/event_types/type_faith.dds"
-	
-					glow = {
-						color = { 0 0 0 0.8 }
-						glow_radius = 3
-						using = Glow_Standard
-					}
-				}
-				onclick = "[GetVariableSystem.SetOrToggle('Entitled','faith')]"
-				onclick = "[SetMapMode(  'religions' )]"
-				enabled = "[GetGlobalVariable('entitled_faith').IsSet]"
-				tooltip = ENTITLED_MENU_CUSTOMIZE_FAITH
-				using = tooltip_ws
-			}
-
-			button_group = {
-				# visible = "[HasDlcFeature('royal_court')]"
-				highlight_icon = {
-					parentanchor = center
-					# position = { 0 5 }
-					size = { 40 40 }
-					texture = "gfx/interface/icons/council_task_types/task_conversion.dds"
-	
-					glow = {
-						color = { 0 0 0 0.8 }
-						glow_radius = 3
-						using = Glow_Standard
-					}
-				}
-				
-				onclick = "[SetMapMode(  'religions' )]"
-				onclick = "[GetVariableSystem.Set('Entitled','title')]"
-				onclick = "[GetVariableSystem.Set('Entitled_title_window','convert_faith')]"
-				enabled = "[And(Not(GetGlobalVariable('entitled_setup').IsSet),GetGlobalVariable('entitled_faith').IsSet)]"
-				tooltip = ENTITLED_MENU_CONVERT_FAITH
-				using = tooltip_ws
-			}
-
-			button_group = {
-				visible = "[HasDlcFeature('royal_court')]"
-				highlight_icon = {
-					parentanchor = center
-					# position = { 0 5 }
-					size = { 40 40 }
-					texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
-	
-					glow = {
-						color = { 0 0 0 0.8 }
-						glow_radius = 3
-						using = Glow_Standard
-					}
-				}
-				onclick = "[GetVariableSystem.SetOrToggle('Entitled','culture')]"
-				onclick = "[SetMapMode(  'cultures' )]"
-				enabled = "[GetGlobalVariable('entitled_culture').IsSet]"
-				tooltip = ENTITLED_MENU_CUSTOMIZE_CULTURE
-				using = tooltip_ws
-			}
-
-			button_group = {
-				visible = "[Not(HasDlcFeature('royal_court'))]"
-				highlight_icon = {
-					parentanchor = center
-					# position = { 0 5 }
-					size = { 40 40 }
-					texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
-	
-					glow = {
-						color = { 0 0 0 0.8 }
-						glow_radius = 3
-						using = Glow_Standard
-					}
-				}
-				enabled = "[HasDlcFeature('royal_court')]"
-				tooltip = ENTITLED_MENU_CUSTOMIZE_CULTURE_NO_DLC
-				using = tooltip_ws
-			}
-
-			button_group = {
-				# visible = "[HasDlcFeature('royal_court')]"
-				highlight_icon = {
-					parentanchor = center
-					# position = { 0 5 }
-					size = { 40 40 }
-					texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
-	
-					glow = {
-						color = { 0 0 0 0.8 }
-						glow_radius = 3
-						using = Glow_Standard
-					}
-				}
-				onclick = "[GetVariableSystem.Set('Entitled','title')]"
-				onclick = "[GetVariableSystem.Set('Entitled_title_window','convert_culture')]"
-				onclick = "[SetMapMode(  'cultures' )]"
-				enabled = "[And(Not(GetGlobalVariable('entitled_setup').IsSet),GetGlobalVariable('entitled_culture').IsSet)]"
-				tooltip = ENTITLED_MENU_CONVERT_CULTURE
-				using = tooltip_ws
-			}
-
-			expand = {}
+		state = {
+			name = _show
+			using = Animation_FadeIn_Standard
 		}
+
+		state = {
+			name = _hide
+			using = Animation_FadeOut_Quick
+		}
+
+		# background = {
+		# 	name = "paper_texture_shadow"
+		# 	using = Background_Area_Dark
+		# 	margin = { 10 10 }
+		# }
+
+		background = {
+			using = Background_Area_Dark
+			margin_left = 10
+			margin_bottom = 25
+			margin_top = 10
+			margin_right = 10
+			color = { 0.15 0.15 0.15 0.75 }
+		}
+
+		vbox = {
+			set_parent_size_to_minimum = yes
+			min_width = 300
+			margin = { 10 0 }
+			margin_right = 15
+			spacing = 2
+
+			hbox = {
+				layoutpolicy_vertical = expanding
+				spacing = 10
+				button_group = {
+					highlight_icon = {
+						parentanchor = center
+						# position = { 0 5 }
+						size = { 40 40 }
+						texture = "gfx/interface/icons/character_interactions/debug_take_title.dds"
+		
+						glow = {
+							color = { 0 0 0 0.8 }
+							glow_radius = 3
+							using = Glow_Standard
+						}
+					}
+					onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+					onclick = "[GetVariableSystem.Set('Entitled_title_window','create_title')]"
+					onclick = "[SetMapMode(  'baronies' )]"
+					onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
+					down = "[GetVariableSystem.HasValue('Entitled','title')]"
+					tooltip = ENTITLED_MENU_CREATE_TITLE
+					using = tooltip_ws
+				}
+
+				button_group = {
+					highlight_icon = {
+						parentanchor = center
+						# position = { 0 5 }
+						size = { 40 40 }
+						texture = "gfx/interface/icons/council_task_types/task_convince_dejure.dds"
+		
+						glow = {
+							color = { 0 0 0 0.8 }
+							glow_radius = 3
+							using = Glow_Standard
+						}
+					}
+					onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+					onclick = "[GetVariableSystem.SetOrToggle('Entitled_title_window','customize_title')]"
+					onclick = "[SetMapMode(  'baronies' )]"
+					# onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
+					down = "[GetVariableSystem.HasValue('Entitled','title')]"
+					enabled = "[GetPlayer.IsValid]"
+					tooltip = ENTITLED_MENU_CUSTOMIZE_TITLE
+					using = tooltip_ws
+				}
+
+				button_group = {
+					datacontext = "[GetScriptedGui('Entitled_customize_faith_setup')]"
+					highlight_icon = {
+						parentanchor = center
+						# position = { 0 5 }
+						size = { 40 40 }
+						texture = "gfx/interface/icons/event_types/type_faith.dds"
+						glow = {
+							color = { 0 0 0 0.8 }
+							glow_radius = 3
+							using = Glow_Standard
+						}
+					}
+					onclick = "[ScriptedGui.Execute(GuiScope.AddScope('faith',GetGlobalVariable('entitled_pinned_faith').Faith.MakeScope).End)]"
+					onclick = "[GetVariableSystem.SetOrToggle('Entitled','faith')]"
+					onclick = "[SetMapMode(  'religions' )]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.End)]"
+					tooltipwidget = entitled_customize_faith_tooltip
+					using = tooltip_ws
+				}
+
+				button_group = {
+					datacontext = "[GetScriptedGui('Entitled_convert_faith_setup')]"
+					# visible = "[HasDlcFeature('royal_court')]"
+					highlight_icon = {
+						parentanchor = center
+						# position = { 0 5 }
+						size = { 40 40 }
+						texture = "gfx/interface/icons/council_task_types/task_conversion.dds"
+		
+						glow = {
+							color = { 0 0 0 0.8 }
+							glow_radius = 3
+							using = Glow_Standard
+						}
+					}
+					
+					onclick = "[SetMapMode(  'religions' )]"
+					onclick = "[GetVariableSystem.Set('Entitled','title')]"
+					onclick = "[GetVariableSystem.Set('Entitled_title_window','convert_faith')]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.End)]"
+					tooltipwidget = entitled_convert_faith_tooltip
+					using = tooltip_ws
+				}
+
+				button_group = {
+					datacontext = "[GetScriptedGui('Entitled_customize_culture_setup')]"
+					highlight_icon = {
+						parentanchor = center
+						# position = { 0 5 }
+						size = { 40 40 }
+						texture = "gfx/interface/icons/character_interactions/icon_culture.dds"
+		
+						glow = {
+							color = { 0 0 0 0.8 }
+							glow_radius = 3
+							using = Glow_Standard
+						}
+					}
+					onclick = "[ScriptedGui.Execute(GuiScope.AddScope('culture',GetGlobalVariable('entitled_pinned_culture').Culture.MakeScope).End)]"
+					onclick = "[GetVariableSystem.SetOrToggle('Entitled','culture')]"
+					onclick = "[SetMapMode(  'cultures' )]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.End)]"
+					tooltipwidget = entitled_customize_culture_tooltip
+					using = tooltip_ws
+				}
+
+				button_group = {
+					datacontext = "[GetScriptedGui('Entitled_convert_culture_setup')]"
+					highlight_icon = {
+						parentanchor = center
+						# position = { 0 5 }
+						size = { 40 40 }
+						texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
+		
+						glow = {
+							color = { 0 0 0 0.8 }
+							glow_radius = 3
+							using = Glow_Standard
+						}
+					}
+					onclick = "[GetVariableSystem.Set('Entitled','title')]"
+					onclick = "[GetVariableSystem.Set('Entitled_title_window','convert_culture')]"
+					onclick = "[SetMapMode(  'cultures' )]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.End)]"
+					tooltipwidget = entitled_convert_culture_tooltip
+					using = tooltip_ws
+				}
+
+				expand = {}
+			}
+			# hbox = {
+			# 	layoutpolicy_horizontal = expanding
+			# 	text_single = { raw_text = "test" }
+			# }
+			# hbox = {
+			# 	layoutpolicy_horizontal = expanding
+			# 	text_single = { raw_text = "test" }
+			# }
+			# hbox = {
+			# 	layoutpolicy_horizontal = expanding
+			# 	text_single = { raw_text = "test" }
+			# }
+			# hbox = {
+			# 	layoutpolicy_horizontal = expanding
+			# 	text_single = { raw_text = "test" }
+			# }
+		}
+
+		# scrollarea = {
+		# 	autoresizescrollarea = yes
+		# 	scrollbarpolicy_horizontal = always_off
+		# 	maximumsize = { -1 500 }
+		# 	size = { 300 0 }
+
+		# 	scrollbar_vertical = {
+		# 		using = Scrollbar_Vertical
+		# 	}
+
+		# 	scrollwidget = {
+		# 		vbox = {
+		# 			set_parent_size_to_minimum = yes
+		# 			min_width = 300
+		# 			margin = { 10 0 }
+		# 			margin_right = 15
+		# 			spacing = 2
+
+		# 			outliner_pinned_characters_header = {}
+		# 			outliner_pinned_characters_info = {}
+
+		# 			outliner_players_header = {}
+		# 			outliner_players_info = {}
+
+		# 			outliner_units_header = {}
+		# 			outliner_units_info = {}
+
+		# 			outliner_holdings_header = {}
+		# 			outliner_holdings_info = {}
+
+		# 			expand = {}
+		# 		}
+		# 	}
+		# }
+	}
+}
+
+window = {
+	visible = "[GetGlobalVariable('entitled_on').IsSet]"
+	name = "Entitled_outliner"
+	widgetid = "Entitled_outliner"
+	# attachto = {
+	# 	widgetid = JominiMultiplayerLobby_right_panel
+	# }
+	parentanchor = top|right
+	position = { -415 0 }
+	alwaystransparent = no
+	filter_mouse = all
+	layer = windows_layer
+	# size = { 330 80 }
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		# start_sound = {
+		# 	soundeffect = "event:/SFX/UI/Generic/Windows/sfx_ui_generic_window_outliner_show"
+		# }
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Standard
+		# start_sound = {
+		# 	soundeffect = "event:/SFX/UI/Generic/Windows/sfx_ui_generic_window_outliner_hide"
+		# }
+	}
+
+	# state = {
+	# 	name = "hide_outliner"
+	# 	using = Animation_FadeOut_Standard
+	# 	trigger_when = "[Not(IsDefaultGUIMode)]"
+	# }
+
+	# state = {
+	# 	name = "show_outliner"
+	# 	using = Animation_FadeIn_Quick
+	# 	# trigger_when = "[IsDefaultGUIMode]"
+	# }
+
+	flowcontainer = {
+		# visible = "[And( Not(IsGameViewOpen('barbershop')), And( Not( IsPauseMenuShown ), Not(IsRightWindowOpen) ) )]"
+		resizeparent = yes
+		margin = { 10 10 }
+		margin_bottom = 15
+
+		state = {
+			name = _show
+			using = Animation_FadeIn_Standard
+		}
+
+		state = {
+			name = _hide
+			using = Animation_FadeOut_Quick
+		}
+
+		# background = {
+		# 	name = "paper_texture_shadow"
+		# 	using = Background_Area_Dark
+		# 	margin = { 10 10 }
+		# }
+
+		background = {
+			using = Background_Area_Dark
+			# margin_left = 5
+			margin_bottom = 25
+			margin_top = 10
+			margin_right = 10
+			color = { 0.15 0.15 0.15 0.75 }
+		}
+
+		vbox = {
+			set_parent_size_to_minimum = yes
+			min_width = 370
+			margin = { 10 0 }
+			margin_right = 15
+			margin_left = 15
+			spacing = 5
+
+			text_single = { raw_text = "[mmm_entitled|E] Outliner" }
+			hbox = {
+				margin_left = 25
+				spacing = 5
+				layoutpolicy_horizontal = expanding
+				text_single = { raw_text = "Ruler: [GetGlobalVariable('entitled_pinned_ruler').Char.GetShortUIName]" }
+				expand = {}
+			}
+			hbox = {
+				spacing = 5
+				layoutpolicy_horizontal = expanding
+				button_icon = {
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/search.dds"
+					enabled = "[GetPlayer.IsValid]"
+					tooltip = ENTITLED_COMING_SOON
+				}
+				text_single = { raw_text = "Title:" }
+				text_single = {
+					visible = "[GetGlobalVariable('entitled_pinned_title').IsSet]"
+					text = "[GetGlobalVariable('entitled_pinned_title').Title.GetName]"
+				}
+				expand = {}
+			}
+			hbox = {
+				spacing = 5
+				layoutpolicy_horizontal = expanding
+				button_icon = {
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/search.dds"
+					onclick = "[GetVariableSystem.Toggle('entitled_faith_search')]"
+				}
+				text_single = { raw_text = "Faith: [GetGlobalVariable('entitled_pinned_faith').Faith.GetName]" }
+				expand = {}
+			}
+			hbox = {
+				spacing = 5
+				layoutpolicy_horizontal = expanding
+				button_icon = {
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/search.dds"
+					enabled = "[GetPlayer.IsValid]"
+					tooltip = ENTITLED_COMING_SOON
+				}
+				text_single = { raw_text = "Culture: [GetGlobalVariable('entitled_pinned_culture').Culture.GetName]" }
+				expand = {}
+			}
+		}
+
+		# scrollarea = {
+		# 	autoresizescrollarea = yes
+		# 	scrollbarpolicy_horizontal = always_off
+		# 	maximumsize = { -1 500 }
+		# 	size = { 300 0 }
+
+		# 	scrollbar_vertical = {
+		# 		using = Scrollbar_Vertical
+		# 	}
+
+		# 	scrollwidget = {
+		# 		vbox = {
+		# 			set_parent_size_to_minimum = yes
+		# 			min_width = 300
+		# 			margin = { 10 0 }
+		# 			margin_right = 15
+		# 			spacing = 2
+
+		# 			outliner_pinned_characters_header = {}
+		# 			outliner_pinned_characters_info = {}
+
+		# 			outliner_players_header = {}
+		# 			outliner_players_info = {}
+
+		# 			outliner_units_header = {}
+		# 			outliner_units_info = {}
+
+		# 			outliner_holdings_header = {}
+		# 			outliner_holdings_info = {}
+
+		# 			expand = {}
+		# 		}
+		# 	}
+		# }
 	}
 }
 
 Types Entitlement {
-	Type entitled_culture_button = container {
+	Type entitled_pin_culture = container {
 		button_icon = {
 			datacontext = "[Character.GetCulture]"
-			visible = "[HasDlcFeature('royal_court')]"
 			size = { 20 20 }
-			texture = "gfx/interface/icons/flat_icons/edit_text.dds"
-			onclick = "[GetVariableSystem.Set('Entitled','culture')]"
-			onclick = "[GetScriptedGui('Entitled_culture').Execute(GuiScope.SetRoot(Culture.MakeScope).End)]"
-			onclick = "[SetMapMode(  'cultures' )]"
-			# onclick = "[OpenGameViewData('culture_window',Culture.GetID)]"
+			texture = "gfx/interface/icons/flat_icons/pin.dds"
+			onclick = "[GetScriptedGui('Entitled_pin_culture').Execute(GuiScope.SetRoot(Culture.MakeScope).End)]"
 		}
 	}
-	Type entitled_faith_button = container {
+	Type entitled_pin_faith = container {
 		button_icon = {
 			datacontext = "[Character.GetFaith]"
-			# visible = "[HasDlcFeature('royal_court')]"
 			size = { 20 20 }
-			texture = "gfx/interface/icons/flat_icons/edit_text.dds"
-			onclick = "[GetVariableSystem.Set('Entitled','faith')]"
-			onclick = "[GetScriptedGui('Entitled_faith').Execute(GuiScope.SetRoot(Faith.MakeScope).End)]"
-			onclick = "[SetMapMode(  'religions' )]"
-			# onclick = "[OpenGameViewData('culture_window',Culture.GetID)]"
+			texture = "gfx/interface/icons/flat_icons/pin.dds"
+			onclick = "[GetScriptedGui('Entitled_pin_faith').Execute(GuiScope.SetRoot(Faith.MakeScope).End)]"
+		}
+	}
+	Type entitled_pin_ruler = container {
+		button_icon = {
+			size = { 20 20 }
+			texture = "gfx/interface/icons/flat_icons/pin.dds"
+			onclick = "[GetScriptedGui('entitled_pin_ruler').Execute(GuiScope.SetRoot(LobbyView.GetSelectedPlayable.GetCharacter.MakeScope).End)]"
+		}
+	}
+	Type entitled_pin_title = container {
+		button_icon = {
+			size = { 20 20 }
+			texture = "gfx/interface/icons/flat_icons/pin.dds"
+			onclick = "[GetScriptedGui('entitled_pin_title').Execute(GuiScope.SetRoot(Title.MakeScope).End)]"
 		}
 	}
 }
@@ -241,6 +873,366 @@ template entitled_faith_window_trait_tooltip
 		blockoverride "description_text"
 		{
 			text = "[Trait.GetFullDescription( GetPlayer.Self, Faith.Self)]"
+		}
+	}
+}
+
+template entitled_customize_faith_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('Entitled_customize_faith_setup')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_MENU_CUSTOMIZE_FAITH"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				text = "[GetGlobalVariable('entitled_pinned_faith').Faith.GetName]"
+			}
+
+			blockoverride "warning_description_text" {
+				text = "[GetScriptedGui('Entitled_customize_faith_setup').IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_MENU_CUSTOMIZE_FAITH_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				text = "ENTITLED_MENU_FAITH_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				# text = "[CulturePillar.GetTypeName]"
+			}
+		}
+	}
+}
+
+template entitled_convert_faith_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('Entitled_convert_faith_setup')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_MENU_CONVERT_FAITH"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				text = "[GetGlobalVariable('entitled_pinned_faith').Faith.GetName]"
+			}
+
+			blockoverride "warning_description_text" {
+				text = "[ScriptedGui.IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_MENU_CONVERT_FAITH_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				text = "ENTITLED_MENU_FAITH_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				# text = "[CulturePillar.GetTypeName]"
+			}
+		}
+	}
+}
+
+template entitled_customize_culture_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('Entitled_customize_culture_setup')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_MENU_CUSTOMIZE_CULTURE"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				text = "[GetGlobalVariable('entitled_pinned_culture').Culture.GetName]"
+			}
+
+			blockoverride "warning_description_text" {
+				text = "[GetScriptedGui('Entitled_customize_culture_setup').IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_MENU_CUSTOMIZE_CULTURE_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				text = "ENTITLED_MENU_CULTURE_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				# text = "[CulturePillar.GetTypeName]"
+			}
+		}
+	}
+}
+
+template entitled_convert_culture_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('Entitled_convert_culture_setup')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_MENU_CONVERT_CULTURE"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				text = "[GetGlobalVariable('entitled_pinned_culture').Culture.GetName]"
+			}
+
+			blockoverride "warning_description_text" {
+				text = "[ScriptedGui.IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_MENU_CONVERT_CULTURE_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				text = "ENTITLED_MENU_CULTURE_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				# text = "[CulturePillar.GetTypeName]"
+			}
+		}
+	}
+}
+
+template entitled_de_jure_liege_auto_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('entitled_de_jure_liege_auto')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_DE_JURE_LIEGE_AUTO"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				text = "[SelectLocalization(GetGlobalVariable('entitled_de_jure_liege_auto').IsSet,'ENTITLED_DE_JURE_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_JURE_LIEGE_AUTO_UNAVAILABLE')]"
+			}
+
+			blockoverride "warning_description_text" {
+				text = "[ScriptedGui.IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_DE_JURE_LIEGE_AUTO_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				text = "ENTITLED_PIN_TITLE_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[de_jure|E]"
+			}
+		}
+	}
+}
+
+template entitled_de_jure_liege_custom_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('entitled_de_jure_liege_custom')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_DE_JURE_LIEGE_CUSTOM"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				text = "[SelectLocalization(GetGlobalVariable('entitled_de_jure_liege_custom').IsSet,'ENTITLED_DE_JURE_LIEGE_CUSTOM_AVAILABLE','ENTITLED_DE_JURE_LIEGE_CUSTOM_UNAVAILABLE')]"
+			}
+
+			blockoverride "warning_description_text" {
+				text = "[ScriptedGui.IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_DE_JURE_LIEGE_CUSTOM_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				text = "ENTITLED_PIN_TITLE_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[de_jure|E]"
+			}
+		}
+	}
+}
+
+template entitled_de_jure_liege_remove_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('entitled_de_jure_liege_remove')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_DE_JURE_LIEGE_REMOVE"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				# text = "[SelectLocalization(GetGlobalVariable('entitled_de_jure_liege_custom').IsSet,'ENTITLED_DE_JURE_LIEGE_CUSTOM_AVAILABLE','ENTITLED_DE_JURE_LIEGE_CUSTOM_UNAVAILABLE')]"
+			}
+
+			blockoverride "warning_description_text" {
+				# text = "[ScriptedGui.IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_DE_JURE_LIEGE_REMOVE_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				# text = "ENTITLED_PIN_TITLE_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[de_jure|E]"
+			}
+		}
+	}
+}
+
+template entitled_de_facto_liege_auto_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('entitled_de_facto_liege_auto')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_DE_FACTO_LIEGE_AUTO"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				text = "[SelectLocalization(GetGlobalVariable('entitled_de_facto_liege_auto').IsSet,'ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE')]"
+			}
+
+			blockoverride "warning_description_text" {
+				text = "[ScriptedGui.IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_DE_FACTO_LIEGE_AUTO_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				text = "ENTITLED_PIN_TITLE_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[liege|E]"
+			}
+		}
+	}
+}
+
+template entitled_de_facto_liege_custom_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('entitled_de_facto_liege_custom')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_DE_FACTO_LIEGE_CUSTOM"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				text = "[SelectLocalization(GetGlobalVariable('entitled_de_facto_liege_custom').IsSet,'ENTITLED_DE_FACTO_LIEGE_CUSTOM_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_CUSTOM_UNAVAILABLE')]"
+			}
+
+			blockoverride "warning_description_text" {
+				text = "[ScriptedGui.IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_DE_FACTO_LIEGE_CUSTOM_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				text = "ENTITLED_PIN_TITLE_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[liege|E]"
+			}
+		}
+	}
+}
+
+template entitled_de_facto_liege_remove_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+			datacontext = "[GetScriptedGui('entitled_de_facto_liege_remove')]"
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_DE_FACTO_LIEGE_REMOVE"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				# text = "[SelectLocalization(GetGlobalVariable('entitled_de_facto_liege_custom').IsSet,'ENTITLED_DE_FACTO_LIEGE_CUSTOM_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_CUSTOM_UNAVAILABLE')]"
+			}
+
+			blockoverride "warning_description_text" {
+				# text = "[ScriptedGui.IsValidTooltip(GuiScope.End)]"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_DE_FACTO_LIEGE_REMOVE_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				# text = "ENTITLED_PIN_TITLE_HELP"
+				default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[liege|E]"
+			}
 		}
 	}
 }

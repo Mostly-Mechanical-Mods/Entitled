@@ -5,7 +5,7 @@
 window = {
 	visible = "[GetVariableSystem.HasValue('Entitled','faith')]"
 	name = "entitled_faith_window"
-	datacontext = "[GetGlobalVariable('entitled_faith').Faith]"
+	datacontext = "[GetGlobalVariable('entitled_pinned_faith').Faith]"
 	datacontext = "[GetVariableSystem]"
 	movable = no
 	layer = windows_layer
@@ -1150,7 +1150,7 @@ window = {
 	name = "entitled_faith_window_tenets"
 	size = { 590 80% }
 	position = { 620 75 }
-	datacontext = "[GetGlobalVariable('Entitled_faith').Faith]"
+	datacontext = "[GetGlobalVariable('entitled_pinned_faith').Faith]"
 	layer = windows_layer
 
 	using = Window_Movable
@@ -1239,7 +1239,7 @@ window = {
 				# 		vbox = {
 				# 			layoutpolicy_horizontal = expanding
 				# 			datacontext = "[GetDoctrine(Scope.GetFlagName)]"
-				# 			datacontext = "[GetGlobalVariable('entitled_faith').Faith]"
+				# 			datacontext = "[GetGlobalVariable('entitled_pinned_faith').Faith]"
 				# 			datacontext = "[GetScriptedGui(Scope.GetFlagName)]"
 				# 			visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Faith.MakeScope).End)]"
 				# 			# datacontext = "[GetScriptedGui(Scope.GetFlagName)]"
@@ -1254,7 +1254,7 @@ window = {
 				# 				# onclick = "[GuiFaithCreationDoctrineItem.GetFaithCreationWindow.SelectDoctrine( GuiFaithCreationDoctrineItem.Self )]"
 				# 				# onclick = "[VariableSystem.Clear( 'faith_creation_right_view' )]"
 				# 				# enabled = "[And(GetScriptedGui(Scope.GetFlagName).IsValid(GuiScope.SetRoot(Faith.MakeScope).End),Not(EqualTo_string(Scope.GetFlagName,GetGlobalVariable('entitled_doctrine_to_toggle').GetFlagName)))]"
-				# 				# down = "[GetScriptedGui('entitled_has_doctrine').IsShown(GuiScope.SetRoot(GetGlobalVariable('entitled_faith').Faith.MakeScope).AddScope('doctrine',MakeScopeFlag(Scope.GetFlagName)).End)]"
+				# 				# down = "[GetScriptedGui('entitled_has_doctrine').IsShown(GuiScope.SetRoot(GetGlobalVariable('entitled_pinned_faith').Faith.MakeScope).AddScope('doctrine',MakeScopeFlag(Scope.GetFlagName)).End)]"
 				# 				tooltipwidget = entitled_faith_window_doctrine_tooltip
 				# 				onclick = "[GetScriptedGui(GetGlobalVariable('entitled_doctrine_for_toggle').GetFlagName).Execute(GuiScope.SetRoot(Faith.MakeScope).End)]"
 				# 				onclick = "[GetScriptedGui(Scope.GetFlagName).Execute(GuiScope.SetRoot(Faith.MakeScope).End)]"
@@ -1330,7 +1330,7 @@ window = {
 						vbox = {
 							layoutpolicy_horizontal = expanding
 							datacontext = "[GetDoctrine(Scope.GetFlagName)]"
-							datacontext = "[GetGlobalVariable('entitled_faith').Faith]"
+							datacontext = "[GetGlobalVariable('entitled_pinned_faith').Faith]"
 							datacontext = "[GetScriptedGui(Scope.GetFlagName)]"
 							visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Faith.MakeScope).End)]"
 							# datacontext = "[GetScriptedGui(Scope.GetFlagName)]"
@@ -1428,10 +1428,12 @@ window = {
 
 ### RELIGION VIEW
 window = {
-	name = "religion_window"
+	visible = "[GetVariableSystem.Exists('entitled_faith_search')]"
+	name = "entitled_religion_window"
+	widgetid = "entitled_religion_window"
 	size = { 590 80% }
 	position = { 620 75 }
-	datacontext = "[ReligionWindow.GetReligion]"
+	
 	layer = windows_layer
 
 	using = Window_Movable
@@ -1449,10 +1451,10 @@ window = {
 		using = Sound_WindowHide_Standard
 	}
 
-	attachto = {
-		widgetid = "faith_window"
-		inherit_visibility = no
-	}
+	# attachto = {
+	# 	widgetid = "faith_window"
+	# 	inherit_visibility = no
+	# }
 
 	vbox = {
 		margin = { 4 4 }
@@ -1462,12 +1464,12 @@ window = {
 
 			blockoverride "header_text"
 			{
-				text = "RELIGION_WINDOW_TITLE"
+				text = "ENTITLED_RELIGION_WINDOW_TITLE"
 			}
 
 			blockoverride "button_close"
 			{
-				onclick = "[ReligionWindow.Close]"
+				onclick = "[GetVariableSystem.Clear('entitled_faith_search')]"
 			}
 
 			blockoverride "button_back"
@@ -1482,52 +1484,52 @@ window = {
 			margin_bottom = 5
 			spacing = 5
 
-			hbox = {
-				spacing = 5
+			# hbox = {
+			# 	spacing = 5
 
-				text_single = {
-					text = "SORT_BY"
-					align = nobaseline
-				}
+			# 	text_single = {
+			# 		text = "SORT_BY"
+			# 		align = nobaseline
+			# 	}
 
-				dropdown_sort_characterlist = {
-					datamodel = "[ReligionWindow.GetOrderByOptions]"
-					onselectionchanged = "[ReligionWindow.OnOrderBySelectionChanged]"
-					selectedindex = "[ReligionWindow.GetOrderBySelectedIndex]"
+			# 	dropdown_sort_characterlist = {
+			# 		datamodel = "[ReligionWindow.GetOrderByOptions]"
+			# 		onselectionchanged = "[ReligionWindow.OnOrderBySelectionChanged]"
+			# 		selectedindex = "[ReligionWindow.GetOrderBySelectedIndex]"
 
-					blockoverride "text_button_drop" {
-						text = "[OrderFaithOption.GetName]"
-					}
-				}
-			}
+			# 		blockoverride "text_button_drop" {
+			# 			text = "[OrderFaithOption.GetName]"
+			# 		}
+			# 	}
+			# }
 
 			expand = {}
 
 			### Only Selected religion faiths
-			hbox = {
-				layoutpolicy_horizontal = expanding
-				max_width = 550
-				spacing = 5
+			# hbox = {
+			# 	layoutpolicy_horizontal = expanding
+			# 	max_width = 550
+			# 	spacing = 5
 
-				expand = {}
+			# 	expand = {}
 
-				button_checkbox_label = {
-					onclick = "[ReligionWindow.OnShowOnlyReligionFaiths]"
+			# 	button_checkbox_label = {
+			# 		onclick = "[ReligionWindow.OnShowOnlyReligionFaiths]"
 
-					blockoverride "text"
-					{
-						text = "RELIGION_SHOW_ONLY"
-						max_width = 180
-					}
-					blockoverride "checkbox"
-					{
-						checked = "[ReligionWindow.ShowOnlyReligionFaiths]"
-					}
-				}
+			# 		blockoverride "text"
+			# 		{
+			# 			text = "RELIGION_SHOW_ONLY"
+			# 			max_width = 180
+			# 		}
+			# 		blockoverride "checkbox"
+			# 		{
+			# 			checked = "[ReligionWindow.ShowOnlyReligionFaiths]"
+			# 		}
+			# 	}
 
-				tooltip = "[ReligionWindow.GetShowOnlyReligionFaithsTooltip]"
-				using = tooltip_ne
-			}
+			# 	tooltip = "[ReligionWindow.GetShowOnlyReligionFaithsTooltip]"
+			# 	using = tooltip_ne
+			# }
 		}
 
 		scrollbox = {
@@ -1538,101 +1540,130 @@ window = {
 			blockoverride "scrollbox_content"
 			{
 				vbox = {
-					datamodel = "[ReligionWindow.GetFaiths]"
+					datamodel = "[GetGlobalList('entitled_religions')]"
 					layoutpolicy_horizontal = expanding
-
+					
 					item = {
-						button_standard_hover = {
-							name = "show_faith_info"
+						vbox = {
 							layoutpolicy_horizontal = expanding
-							size = { 0 80 }
-							tooltipwidget = { faith_tooltip_click = {} }
-							onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
-
-							using = tooltip_es
-
-							state = {
-								name = _mouse_click
-								on_finish = "[OpenGameViewData( 'faith', Faith.GetID )]"
-							}
-
-							background = {
-								visible = "[Faith.IsSelected]"
-								using = Background_Area
-							}
-
-							divider_light = {
-								alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5')]"
-								size = { 100% 3 }
-								parentanchor = bottom
-								position = { 0 1 }
-							}
-
-							hbox = {
-								margin = { 10 5 }
-								alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5')]"
-
-								icon = {
-									name = "faith_icon"
-									texture = "[Faith.GetIcon]"
-									size = { 60 60 }
-								}
-
-								vbox = {
+							datacontext = "[Scope.Religion]"
+							datamodel = "[Scope.GetList('faiths')]"
+							item = {
+								button_standard_hover = {
+									datacontext = "[Scope.Faith]"
+									name = "show_faith_info"
 									layoutpolicy_horizontal = expanding
-									layoutpolicy_vertical = expanding
-									margin_left = 10
+									size = { 0 80 }
+									tooltipwidget = {
+										faith_tooltip = {
+											blockoverride "extra_info"
+											{
+												divider_light = {
+													layoutpolicy_horizontal = expanding
+												}
 
-									hbox = {
-										layoutpolicy_horizontal = expanding
-										layoutpolicy_vertical = expanding
-
-										text_single = {
-											name = "faith_name"
-											align = left|nobaseline
-											text = "[Faith.GetNameNoTooltip]"
-											using = Font_Size_Medium
-											default_format = "#high"
-											max_width = 240
-										}
-
-										expand = {}
-
-										text_single = {
-											min_width = 160
-											name = "religion_faith_name"
-											align = right|nobaseline
-											text = "FAITH_RELIGION"
-											margin_right = 5
+												hbox = {
+													layoutpolicy_horizontal = expanding
+													text_single = {
+														layoutpolicy_horizontal = expanding
+														text = "ENTITLED_FAITH_ITEM_TOOLTIP"
+														margin = { 10 0 }
+													}
+													expand = {}
+												}
+											}
 										}
 									}
-
+									# onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
+									onclick = "[GetScriptedGui('Entitled_pin_faith').Execute(GuiScope.SetRoot(Faith.MakeScope).End)]"
+									onclick = "[GetVariableSystem.Clear('entitled_faith_search')]"
+		
+									using = tooltip_es
+		
+									state = {
+										name = _mouse_click
+										# on_finish = "[OpenGameViewData( 'faith', Faith.GetID )]"
+									}
+		
+									background = {
+										visible = "[ObjectsEqual(GetGlobalVariable('entitled_pinned_faith').Faith,Faith.Self)]"
+										using = Background_Area
+									}
+		
+									divider_light = {
+										alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5')]"
+										size = { 100% 3 }
+										parentanchor = bottom
+										position = { 0 1 }
+									}
+		
 									hbox = {
-										layoutpolicy_horizontal = expanding
-										layoutpolicy_vertical = expanding
-
+										margin = { 10 5 }
+										alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5')]"
+		
 										icon = {
-											texture = "gfx/interface/icons/icon_fervor.dds"
-											size = { 22 22 }
+											name = "faith_icon"
+											texture = "[Faith.GetIcon]"
+											size = { 60 60 }
 										}
-
-										text_single = {
-											name = "fervor"
-											text = "FAITH_WINDOW_FERVOR"
-											using = Font_Size_Small
-											align = left|nobaseline
+		
+										vbox = {
+											layoutpolicy_horizontal = expanding
+											layoutpolicy_vertical = expanding
+											margin_left = 10
+		
+											hbox = {
+												layoutpolicy_horizontal = expanding
+												layoutpolicy_vertical = expanding
+		
+												text_single = {
+													name = "faith_name"
+													align = left|nobaseline
+													text = "[Faith.GetNameNoTooltip]"
+													using = Font_Size_Medium
+													default_format = "#high"
+													max_width = 240
+												}
+		
+												expand = {}
+		
+												text_single = {
+													min_width = 160
+													name = "religion_faith_name"
+													align = right|nobaseline
+													text = "FAITH_RELIGION"
+													margin_right = 5
+												}
+											}
+		
+											hbox = {
+												layoutpolicy_horizontal = expanding
+												layoutpolicy_vertical = expanding
+		
+												icon = {
+													texture = "gfx/interface/icons/icon_fervor.dds"
+													size = { 22 22 }
+												}
+		
+												text_single = {
+													name = "fervor"
+													text = "FAITH_WINDOW_FERVOR"
+													using = Font_Size_Small
+													align = left|nobaseline
+												}
+		
+												expand = {}
+											}
+		
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												name = "counties"
+												align = left|nobaseline
+												text = "FAITH_WINDOW_COUNTIES"
+												default_format = "#low"
+												autoresize = no
+											}
 										}
-
-										expand = {}
-									}
-
-									text_single = {
-										layoutpolicy_horizontal = expanding
-										name = "counties"
-										align = left|nobaseline
-										text = "FAITH_WINDOW_COUNTIES"
-										default_format = "#low"
-										autoresize = no
 									}
 								}
 							}
