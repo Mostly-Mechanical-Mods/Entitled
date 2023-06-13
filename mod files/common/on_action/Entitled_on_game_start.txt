@@ -23,7 +23,144 @@ Entitled_changelog = {
 Entitled_culture = {
 	effect = {
 		every_culture_global = {
-			
+			add_to_global_variable_list = {
+				name = entitled_cultures
+				target = this
+			}
+			set_variable = {
+				name = counties
+				value = {
+					every_culture_county = {
+						add = 1
+					}
+				}
+			}
+			switch = {
+				trigger = has_cultural_pillar
+				heritage_akan = { entitled_record_heritage = { HERITAGE = heritage_akan }}
+				heritage_arabic = { entitled_record_heritage = { HERITAGE = heritage_arabic }}
+				heritage_baltic = { entitled_record_heritage = { HERITAGE = heritage_baltic }}
+				heritage_balto_finnic = { entitled_record_heritage = { HERITAGE = heritage_balto_finnic }}
+				heritage_berber = { entitled_record_heritage = { HERITAGE = heritage_berber }}
+				heritage_brythonic = { entitled_record_heritage = { HERITAGE = heritage_brythonic }}
+				heritage_burman = { entitled_record_heritage = { HERITAGE = heritage_burman }}
+				heritage_byzantine = { entitled_record_heritage = { HERITAGE = heritage_byzantine }}
+				heritage_central_african = { entitled_record_heritage = { HERITAGE = heritage_central_african }}
+				heritage_central_germanic = { entitled_record_heritage = { HERITAGE = heritage_central_germanic }}
+				heritage_chinese = { entitled_record_heritage = { HERITAGE = heritage_chinese }}
+				heritage_dravidian = { entitled_record_heritage = { HERITAGE = heritage_dravidian }}
+				heritage_east_african = { entitled_record_heritage = { HERITAGE = heritage_east_african }}
+				heritage_east_slavic = { entitled_record_heritage = { HERITAGE = heritage_east_slavic }}
+				heritage_frankish = { entitled_record_heritage = { HERITAGE = heritage_frankish }}
+				heritage_goidelic = { entitled_record_heritage = { HERITAGE = heritage_goidelic }}
+				heritage_iberian = { entitled_record_heritage = { HERITAGE = heritage_iberian }}
+				heritage_indo_aryan = { entitled_record_heritage = { HERITAGE = heritage_indo_aryan }}
+				heritage_iranian = { entitled_record_heritage = { HERITAGE = heritage_iranian }}
+				heritage_israelite = { entitled_record_heritage = { HERITAGE = heritage_israelite }}
+				heritage_latin = { entitled_record_heritage = { HERITAGE = heritage_latin }}
+				heritage_magyar = { entitled_record_heritage = { HERITAGE = heritage_magyar }}
+				heritage_mongolic = { entitled_record_heritage = { HERITAGE = heritage_mongolic }}
+				heritage_north_germanic = { entitled_record_heritage = { HERITAGE = heritage_north_germanic }}
+				heritage_qiangic = { entitled_record_heritage = { HERITAGE = heritage_qiangic }}
+				heritage_sahelian = { entitled_record_heritage = { HERITAGE = heritage_sahelian }}
+				heritage_senegambian = { entitled_record_heritage = { HERITAGE = heritage_senegambian }}
+				heritage_somalian = { entitled_record_heritage = { HERITAGE = heritage_somalian }}
+				heritage_south_slavic = { entitled_record_heritage = { HERITAGE = heritage_south_slavic }}
+				heritage_tibetan = { entitled_record_heritage = { HERITAGE = heritage_tibetan }}
+				heritage_turkic = { entitled_record_heritage = { HERITAGE = heritage_turkic }}
+				heritage_ugro_permian = { entitled_record_heritage = { HERITAGE = heritage_ugro_permian }}
+				heritage_volga_finnic = { entitled_record_heritage = { HERITAGE = heritage_volga_finnic }}
+				heritage_west_african = { entitled_record_heritage = { HERITAGE = heritage_west_african }}
+				heritage_west_germanic = { entitled_record_heritage = { HERITAGE = heritage_west_germanic }}
+				heritage_west_slavic = { entitled_record_heritage = { HERITAGE = heritage_west_slavic }}
+				heritage_yoruba = { entitled_record_heritage = { HERITAGE = heritage_yoruba }}
+				heritage_tocharian = { entitled_record_heritage = { HERITAGE = heritage_tocharian }}
+				heritage_vlach = { entitled_record_heritage = { HERITAGE = heritage_vlach }}
+			}
+			switch = {
+				trigger = has_cultural_pillar
+				ethos_bellicose = { entitled_record_ethos = { ETHOS = ethos_bellicose }}
+				ethos_stoic = { entitled_record_ethos = { ETHOS = ethos_stoic }}
+				ethos_bureaucratic = { entitled_record_ethos = { ETHOS = ethos_bureaucratic }}
+				ethos_spiritual = { entitled_record_ethos = { ETHOS = ethos_spiritual }}
+				ethos_courtly = { entitled_record_ethos = { ETHOS = ethos_courtly }}
+				ethos_egalitarian = { entitled_record_ethos = { ETHOS = ethos_egalitarian }}
+				ethos_communal = { entitled_record_ethos = { ETHOS = ethos_communal }}
+			}
+			switch = {
+				trigger = has_cultural_pillar
+				language_anglic = { entitled_record_language = { LANGUAGE = language_anglic }}
+				language_arabic = { entitled_record_language = { LANGUAGE = language_arabic }}
+				language_aramaic = { entitled_record_language = { LANGUAGE = language_aramaic }}
+				language_baltic = { entitled_record_language = { LANGUAGE = language_baltic }}
+				language_basque = { entitled_record_language = { LANGUAGE = language_basque }}
+				language_berber = { entitled_record_language = { LANGUAGE = language_berber }}
+				language_brythonic = { entitled_record_language = { LANGUAGE = language_brythonic }}
+				language_burmese = { entitled_record_language = { LANGUAGE = language_burmese }}
+				language_central_germanic = { entitled_record_language = { LANGUAGE = language_central_germanic }}
+				language_chadic = { entitled_record_language = { LANGUAGE = language_chadic }}
+				language_chinese = { entitled_record_language = { LANGUAGE = language_chinese }}
+				language_cushitic = { entitled_record_language = { LANGUAGE = language_cushitic }}
+				language_dutch = { entitled_record_language = { LANGUAGE = language_dutch }}
+				language_east_slavic = { entitled_record_language = { LANGUAGE = language_east_slavic }}
+				language_ethiopic = { entitled_record_language = { LANGUAGE = language_ethiopic }}
+				language_finnic = { entitled_record_language = { LANGUAGE = language_finnic }}
+				language_frankish = { entitled_record_language = { LANGUAGE = language_frankish }}
+				language_french = { entitled_record_language = { LANGUAGE = language_french }}
+				language_goidelic = { entitled_record_language = { LANGUAGE = language_goidelic }}
+				language_gur = { entitled_record_language = { LANGUAGE = language_gur }}
+				language_high_german = { entitled_record_language = { LANGUAGE = language_high_german }}
+				language_iberian = { entitled_record_language = { LANGUAGE = language_iberian }}
+				language_sauraseni = { entitled_record_language = { LANGUAGE = language_sauraseni }}
+				language_marathi = { entitled_record_language = { LANGUAGE = language_marathi }}
+				language_magadhan = { entitled_record_language = { LANGUAGE = language_magadhan }}
+				language_pahari = { entitled_record_language = { LANGUAGE = language_pahari }}
+				language_rajasthani = { entitled_record_language = { LANGUAGE = language_rajasthani }}
+				language_vrachada = { entitled_record_language = { LANGUAGE = language_vrachada }}
+				language_sinhalese = { entitled_record_language = { LANGUAGE = language_sinhalese }}
+				language_kashmiri = { entitled_record_language = { LANGUAGE = language_kashmiri }}
+				language_tamil = { entitled_record_language = { LANGUAGE = language_tamil }}
+				language_telugu = { entitled_record_language = { LANGUAGE = language_telugu }}
+				language_kannada = { entitled_record_language = { LANGUAGE = language_kannada }}
+				language_iranian = { entitled_record_language = { LANGUAGE = language_iranian }}
+				language_israelite = { entitled_record_language = { LANGUAGE = language_israelite }}
+				language_latin = { entitled_record_language = { LANGUAGE = language_latin }}
+				language_kru = { entitled_record_language = { LANGUAGE = language_kru }}
+				language_kwa = { entitled_record_language = { LANGUAGE = language_kwa }}
+				language_magyar = { entitled_record_language = { LANGUAGE = language_magyar }}
+				language_manding = { entitled_record_language = { LANGUAGE = language_manding }}
+				language_mongolic = { entitled_record_language = { LANGUAGE = language_mongolic }}
+				language_norse = { entitled_record_language = { LANGUAGE = language_norse }}
+				language_oghur = { entitled_record_language = { LANGUAGE = language_oghur }}
+				language_omotic = { entitled_record_language = { LANGUAGE = language_omotic }}
+				language_qiangic = { entitled_record_language = { LANGUAGE = language_qiangic }}
+				language_sami = { entitled_record_language = { LANGUAGE = language_sami }}
+				language_saxon = { entitled_record_language = { LANGUAGE = language_saxon }}
+				language_senegambian = { entitled_record_language = { LANGUAGE = language_senegambian }}
+				language_soninke = { entitled_record_language = { LANGUAGE = language_soninke }}
+				language_south_slavic = { entitled_record_language = { LANGUAGE = language_south_slavic }}
+				language_slavonic = { entitled_record_language = { LANGUAGE = language_slavonic }}
+				language_sudanic = { entitled_record_language = { LANGUAGE = language_sudanic }}
+				language_tibetan = { entitled_record_language = { LANGUAGE = language_tibetan }}
+				language_tubu = { entitled_record_language = { LANGUAGE = language_tubu }}
+				language_turkic = { entitled_record_language = { LANGUAGE = language_turkic }}
+				language_ugro_permian = { entitled_record_language = { LANGUAGE = language_ugro_permian }}
+				language_volga_finnic = { entitled_record_language = { LANGUAGE = language_volga_finnic }}
+				language_yoruba = { entitled_record_language = { LANGUAGE = language_yoruba }}
+				language_armenian = { entitled_record_language = { LANGUAGE = language_armenian }}
+				language_greek = { entitled_record_language = { LANGUAGE = language_greek }}
+				language_scythian = { entitled_record_language = { LANGUAGE = language_scythian }}
+				language_georgian = { entitled_record_language = { LANGUAGE = language_georgian }}
+				language_occitano_romance = { entitled_record_language = { LANGUAGE = language_occitano_romance }}
+				language_lechitic = { entitled_record_language = { LANGUAGE = language_lechitic }}
+				language_czech_slovak = { entitled_record_language = { LANGUAGE = language_czech_slovak }}
+				language_tocharian = { entitled_record_language = { LANGUAGE = language_tocharian }}
+				language_tungusic = { entitled_record_language = { LANGUAGE = language_tungusic }}
+				language_sardinian = { entitled_record_language = { LANGUAGE = language_sardinian }}
+				language_wallachian = { entitled_record_language = { LANGUAGE = language_wallachian }}
+				language_italian = { entitled_record_language = { LANGUAGE = language_italian }}
+				language_ayneha = { entitled_record_language = { LANGUAGE = language_ayneha }}
+			}
 		}
 		# every_culture_global = {
 		# 	add_to_global_variable_list = {

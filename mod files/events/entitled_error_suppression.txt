@@ -338,5 +338,10 @@ entitled_error_suppression.0001 = {
 		fix_variable_error = { X = entitled_religions }
 		fix_variable_error = { X = faiths }
 		fix_variable_error = { X = entitled_faith_auto }
+
+		fix_variable_error = { X = custom_coa }
+		fix_variable_error = { X = language }
+		fix_variable_error = { X = counties }
+		fix_variable_error = { X = heritage }
 	}
 }

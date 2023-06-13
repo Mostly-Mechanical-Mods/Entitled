@@ -746,7 +746,7 @@ entitled_convert_culture_counties = {
 				limit = { NOT = { has_variable = entitled_culture }}
 				set_variable = { name = entitled_culture value = culture }
 			}
-			set_county_culture = global_var:entitled_culture
+			set_county_culture = global_var:entitled_pinned_culture
 		}
 	}
 }

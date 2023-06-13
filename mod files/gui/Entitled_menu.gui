@@ -658,7 +658,7 @@ window = {
 	position = { -415 0 }
 	alwaystransparent = no
 	filter_mouse = all
-	layer = windows_layer
+	layer = confirmation_layer
 	# size = { 330 80 }
 
 	state = {
@@ -769,8 +769,7 @@ window = {
 				button_icon = {
 					size = { 20 20 }
 					texture = "gfx/interface/icons/flat_icons/search.dds"
-					enabled = "[GetPlayer.IsValid]"
-					tooltip = ENTITLED_COMING_SOON
+					onclick = "[GetVariableSystem.Toggle('entitled_culture_search')]"
 				}
 				text_single = { raw_text = "Culture: [GetGlobalVariable('entitled_pinned_culture').Culture.GetName]" }
 				expand = {}

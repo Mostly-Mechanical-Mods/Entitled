@@ -237,3 +237,5 @@ entitled_pinned_title_tier: "[GetGlobalVariable('entitled_pinned_title').Title.G
 entitled_pinned_ruler_tier: "[GetGlobalVariable('entitled_pinned_ruler').Char.GetNamePossessive] tier is too low"
 
 ENTITLED_COMING_SOON: "#help Coming soon!"
+
+ENTITLED_CULTURE_SEARCH_TITLE: "Pin Culture"

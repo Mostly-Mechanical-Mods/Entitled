@@ -4,6 +4,7 @@ gui/Entitled_custom_title.gui = entitled_create_title_confirmation
 # gui/Entitled_custom_title.gui = Entitled_custom_title_detail
 gui/Entitled_custom_culture.gui = Entitled_traditions
 gui/Entitled_window_culture.gui = entitled_culture_window
+gui/Entitled_window_culture.gui = entitled_culture_search
 # gui/Entitled_custom_culture.gui = Entitled_custom_culture_pick
 # gui/Entitled_custom_culture.gui = Entitled_custom_culture_list
 # gui/Entitled_menu.gui = Entitled_menu

@@ -48,6 +48,13 @@ entitled_reset_ethos = {
 	}
 }
 
+entitled_record_ethos = {
+	set_variable = {
+		name = ethos
+		value = flag:$ETHOS$
+	}
+}
+
 entitled_reset_martial = {
 	if = {
 		limit = {
@@ -265,5 +272,19 @@ entitled_set_culture = {
 	set_global_variable = {
 		name = entitled_culture_auto
 		value = global_var:capital_county.culture
+	}
+}
+
+entitled_record_heritage = {
+	set_variable = {
+		name = heritage
+		value = flag:$HERITAGE$
+	}
+}
+
+entitled_record_language = {
+	set_variable = {
+		name = language
+		value = flag:$LANGUAGE$
 	}
 }

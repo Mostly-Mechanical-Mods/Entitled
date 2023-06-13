@@ -1325,6 +1325,256 @@ window = {
 	}
 }
 
+### SEARCH CULTURE
+window = {
+	visible = "[GetVariableSystem.Exists('entitled_culture_search')]"
+	name = "entitled_culture_search"
+	widgetid = "entitled_culture_search"
+	size = { 700 80% }
+	position = { 620 75 }
+	
+	layer = windows_layer
+
+	using = Window_Movable
+	using = Window_Background_Subwindow
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Sound_WindowShow_Standard
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Sound_WindowHide_Standard
+	}
+
+	# attachto = {
+	# 	widgetid = "faith_window"
+	# 	inherit_visibility = no
+	# }
+
+	vbox = {
+		margin = { 4 4 }
+
+		header_pattern = {
+			layoutpolicy_horizontal = expanding
+
+			blockoverride "header_text"
+			{
+				text = "ENTITLED_CULTURE_SEARCH_TITLE"
+			}
+
+			blockoverride "button_close"
+			{
+				onclick = "[GetVariableSystem.Clear('entitled_culture_search')]"
+			}
+
+			blockoverride "button_back"
+			{
+				visible = no
+			}
+		}
+
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			margin = { 15 0 }
+			margin_bottom = 5
+			spacing = 5
+			expand = {}
+		}
+
+		scrollbox = {
+			name = "cultures_scroll_area"
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			blockoverride "scrollbox_content"
+			{
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					datamodel = "[GetGlobalList('entitled_cultures')]"
+					# datacontext = "[Scope.Religion]"
+					item = {
+						button_standard_hover = {
+							datacontext = "[Scope.Culture]"
+							name = "show_culture_info"
+							layoutpolicy_horizontal = expanding
+							size = { 0 80 }
+
+							onclick = "[GetScriptedGui('Entitled_pin_culture').Execute(GuiScope.SetRoot(Culture.MakeScope).End)]"
+							onclick = "[GetVariableSystem.Clear('entitled_culture_search')]"
+
+							using = tooltip_es
+
+							state = {
+								name = _mouse_click
+								# on_finish = "[OpenGameViewData( 'faith', Faith.GetID )]"
+							}
+
+							# icon = {
+							# 	name = "icon"
+							# 	size = { 592 130 }
+							# 	texture = "[Culture.GetEthos.GetIcon]"
+							# 	using = Mask_Rough_Edges
+							# }
+
+							# divider_light = {
+							# 	alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5')]"
+							# 	size = { 100% 3 }
+							# 	parentanchor = bottom
+							# 	position = { 0 1 }
+							# }
+
+							widget = {
+								size = { 100 33 }
+								parentanchor = left|vcenter
+								position = { 10 0 }
+								text_single = {
+									name = "culture_name"
+									align = left|nobaseline
+									text = "[Culture.GetName]"
+									using = Font_Size_Medium
+									default_format = "#high"
+									max_width = 240
+								}
+							}
+							widget = {
+								size = { 120 33 }
+								parentanchor = left|top
+								position = { 110 0 }
+								vbox = {
+									margin_top = 5
+									layoutpolicy_vertical = expanding
+									hbox = {
+										datacontext = "[Culture.GetHeritage]"
+										layoutpolicy_horizontal = expanding
+										spacing = 5
+										tooltipwidget = {
+											using = culture_pillar_tooltip
+										}
+
+										icon_doctrine = {
+											# visible = "[ObjectsEqual( Culture.GetHeritage, GetPlayer.GetCulture.GetHeritage )]"
+											size = { 30 30 }
+											texture = "gfx/interface/icons/culture_pillars/heritage.dds"
+											
+										}
+										text_single = {
+											min_width = 160
+											name = "culture_heritage_name"
+											# align = right|nobaseline
+											raw_text = "[CulturePillar.GetNameNoTooltip] [CulturePillar.GetTypeNameNoTooltip]"
+											margin_right = 5
+										}
+										expand = {}
+									}
+									expand = {}
+									hbox = {
+										datacontext = "[Culture.GetMartial]"
+										layoutpolicy_horizontal = expanding
+										spacing = 5
+										tooltipwidget = {
+											using = culture_pillar_tooltip
+										}
+
+										icon_doctrine = {
+											# visible = "[ObjectsEqual( Culture.GetHeritage, GetPlayer.GetCulture.GetHeritage )]"
+											size = { 30 30 }
+											texture = "[CulturePillar.GetIcon]"
+										}
+										text_single = {
+											min_width = 160
+											name = "culture_martial_name"
+											# align = right|nobaseline
+											raw_text = "Martial: [CulturePillar.GetNameNoTooltip]"
+											margin_right = 5
+										}
+										expand = {}
+									}
+								}
+							}
+							widget = {
+								size = { 120 33 }
+								parentanchor = left|top
+								position = { 330 0 }
+								vbox = {
+									margin_top = 5
+									layoutpolicy_vertical = expanding
+									hbox = {
+										datacontext = "[Culture.GetLanguage]"
+										layoutpolicy_horizontal = expanding
+										spacing = 5
+										tooltipwidget = {
+											using = culture_pillar_tooltip
+										}
+
+										icon_doctrine = {
+											# visible = "[ObjectsEqual( Culture.GetHeritage, GetPlayer.GetCulture.GetHeritage )]"
+											size = { 30 30 }
+											texture = "gfx/interface/icons/culture_pillars/language.dds"
+										}
+										text_single = {
+											min_width = 160
+											name = "culture_language_name"
+											# align = right|nobaseline
+											raw_text = "[CulturePillar.GetNameNoTooltip] [CulturePillar.GetTypeNameNoTooltip]"
+											margin_right = 5
+										}
+										expand = {}
+									}
+									expand = {}
+									hbox = {
+										datacontext = "[Culture.GetEthos]"
+										layoutpolicy_horizontal = expanding
+										spacing = 5
+										margin_left = 35
+										margin_top = 5
+										tooltipwidget = {
+											using = culture_pillar_tooltip
+										}
+
+										# icon_doctrine = {
+										# 	# visible = "[ObjectsEqual( Culture.GetHeritage, GetPlayer.GetCulture.GetHeritage )]"
+										# 	size = { 30 30 }
+										# 	texture = "gfx/interface/icons/culture_pillars/heritage.dds"
+										# }
+										text_single = {
+											min_width = 160
+											name = "culture_heritage_name"
+											# align = right|nobaseline
+											raw_text = "[CulturePillar.GetNameNoTooltip] [CulturePillar.GetTypeNameNoTooltip]"
+											margin_right = 5
+										}
+										expand = {}
+									}
+								}
+							}
+							widget = {
+								size = { 70 33 }
+								parentanchor = left|top
+								position = { 550 0 }
+								vbox = {
+									margin_top = 5
+									layoutpolicy_vertical = expanding
+									text_single = {
+										min_width = 160
+										name = "culture_language_name"
+										# align = right|nobaseline
+										raw_text = "Counties: [Culture.MakeScope.Var('counties').GetValue]"
+										margin_right = 5
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 ######################################################
 ################ TYPES AND TEMPLATES #################
 ######################################################
