@@ -48,3 +48,8 @@ Entitled_v1_0_6_changelog_1: "New options to better control the De Jure and Lieg
 Entitled_v1_0_6_changelog_2: "Added an Outliner to pin a Ruler / Title / Faith / Culture"
 Entitled_v1_0_6_changelog_3: "Added a Faith Search function, to be able to customize and convert to dead faiths"
 Entitled_v1_0_6_changelog_4: "Tooltips reworked. #italic So many damn tooltips.#!"
+
+Entitled_v1_0_7_changelog: "#bold Entitled v1.0.7#!"
+Entitled_v1_0_7_changelog_patch: "This update is savegame compatible"
+Entitled_v1_0_7_changelog_1: "Fixed Convert Culture not working on Counties"
+Entitled_v1_0_7_changelog_2: "Added a Culture Search function to be able to customize and convert to dead cultures"

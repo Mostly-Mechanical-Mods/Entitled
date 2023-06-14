@@ -38,6 +38,7 @@
 		set_global_variable = Entitled_v1_0_4
 		set_global_variable = Entitled_v1_0_5
 		set_global_variable = Entitled_v1_0_6
+		set_global_variable = Entitled_v1_0_7
 	}
 
 	on_auto_accept = {
@@ -50,6 +51,16 @@
 		every_in_list = {
 			list = debug
 			custom = Entitled_changelog_alert_introduction
+		}
+		if = {
+			limit = { NOT = { has_global_variable = Entitled_v1_0_7 }}
+			every_in_list = {
+				list = debug
+				custom = Entitled_v1_0_7_changelog
+				custom_tooltip = Entitled_v1_0_7_changelog_patch
+				custom_tooltip = Entitled_v1_0_7_changelog_1
+				custom_tooltip = Entitled_v1_0_7_changelog_2
+			}
 		}
 		if = {
 			limit = { NOT = { has_global_variable = Entitled_v1_0_6 }}

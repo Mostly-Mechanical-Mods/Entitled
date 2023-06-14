@@ -658,7 +658,7 @@ window = {
 	position = { -415 0 }
 	alwaystransparent = no
 	filter_mouse = all
-	layer = confirmation_layer
+	layer = confirmation
 	# size = { 330 80 }
 
 	state = {
