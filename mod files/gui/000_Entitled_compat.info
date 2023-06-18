@@ -1,0 +1,20 @@
+Types EntitledCompat {
+	Type SD_button_standard_view_family = widget {
+
+	}
+}
+
+template SD_button_standard_edit_family {
+	datacontext = "[LobbyView.GetSelectedPlayable.GetCharacter]"
+	visible = "[Not( IsPreparationLobby )]"
+
+	enabled = "[LobbyView.CanTryStartRulerDesigning( Character.Self )]"
+
+	onclick = "[TryStartRulerDesigning( Character.Self )]"		
+
+	tooltip = "[LobbyView.GetTryStartRulerDesigningDesc( Character.Self )]"
+	text = "RULER_DESIGNER_OPEN"
+}
+
+template SD_button_standard_edit_family_icon {
+}

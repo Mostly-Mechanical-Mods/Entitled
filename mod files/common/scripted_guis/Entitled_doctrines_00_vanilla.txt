@@ -1692,7 +1692,7 @@ doctrine_pluralism_pluralistic = {
 			NOT = { has_doctrine = tenet_pentarchy }
 		}
 	}
-	effect = { entitled_toggle_doctrine = { GROUP = doctrine_pluralism GUI_GROUP = main_group DOCTRINE = doctrine_pluralism_righteous }}
+	effect = { entitled_toggle_doctrine = { GROUP = doctrine_pluralism GUI_GROUP = main_group DOCTRINE = doctrine_pluralism_pluralistic }}
 }
 
 
