@@ -4,3 +4,5 @@ no_other_script_trigger = { always = yes }
 CE_is_loaded = { always = no }
 
 is_RICE_loaded = { always = no }
+
+GG_is_loaded = { always = no }

@@ -9,6 +9,10 @@ Entitled_customize_faith_setup = {
 	saved_scopes = { faith }
 	is_valid = {
 		custom_tooltip = {
+			text = ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GAMERULE
+			NOT = { has_game_rule = Entitled_is_not_loaded }
+		}
+		custom_tooltip = {
 			text = ENTITLED_MENU_FAITH_PIN_MISSING
 			has_global_variable = entitled_pinned_faith
 		}
@@ -191,6 +195,10 @@ Entitled_customize_faith_setup = {
 
 Entitled_convert_faith_setup = {
 	is_valid = {
+		custom_tooltip = {
+			text = ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GAMERULE
+			NOT = { has_game_rule = Entitled_is_not_loaded }
+		}
 		custom_tooltip = {
 			text = ENTITLED_MENU_FAITH_PIN_MISSING
 			has_global_variable = entitled_pinned_faith

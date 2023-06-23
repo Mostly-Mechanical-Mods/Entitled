@@ -1,5 +1,15 @@
 ﻿l_english:
 
+Entitled_gamerule_alert_interaction_warning: "#warning @warning_icon! You started the game with [mmm_entitled|E] enabled in the game rules.#!\n\nThis should #bold not#! be possible, and is likely the result of a GUI compatibility issue that disabled the safeguards. Your current game is very likely already broken in a variety of ways that might not be immediately visible to you, but trust me - start again, and make sure to disable [mmm_entitled|E] in the game rules before you hit the Start button."
+
+Entitled_gamerule_alert: "[mmm_entitled|E] enabled"
+Entitled_gamerule_alert_desc: "[mmm_entitled|E] should be disabled before starting the game"
+Entitled_gamerule_alert_click: "#N #italic Disable [mmm_entitled|E] before starting the game"
+
+Entitled_gamerule_alert_interaction: "[mmm_entitled|E] Enabled"
+Entitled_gamerule_alert_interaction_desc: "Alert for [mmm_entitled|E] being still enabled on game start"
+Entitled_gamerule_alert_interaction_send: "@warning_icon! $Entitled_gamerule_alert_interaction$"
+
 Entitled_changelog_alert: "[mmm_entitled|E] update"
 Entitled_changelog_alert_desc: "[mmm_entitled|E] has updated since you started this playthrough"
 Entitled_changelog_alert_click: "#P #italic Left-click to read Changelog and remove the alert#!#!"
@@ -53,3 +63,11 @@ Entitled_v1_0_7_changelog: "#bold Entitled v1.0.7#!"
 Entitled_v1_0_7_changelog_patch: "This update is savegame compatible"
 Entitled_v1_0_7_changelog_1: "Fixed Convert Culture not working on Counties"
 Entitled_v1_0_7_changelog_2: "Added a Culture Search function to be able to customize and convert to dead cultures"
+
+Entitled_v1_0_8_changelog: "#bold Entitled v1.0.8#!"
+Entitled_v1_0_8_changelog_patch_gg_is_loaded: "#warning @warning_icon! This update requires disabling [mmm_entitled|E] in the gamerules#!\nPlease do so before doing anything else, to avoid irreversibly breaking your savegame."
+Entitled_v1_0_8_changelog_patch: "#warning @warning_icon! This update requires disabling [mmm_entitled|E] in the gamerules#!\nPlease quit the game, add [mmm_gg|E] to your playset, and disable [mmm_entitled|E] in the game rules, to avoid irreversibly breaking your savegame."
+Entitled_v1_0_8_changelog_no_patch: "This update is savegame compatible"
+Entitled_v1_0_8_changelog_1: "#bold New Feature: Save Progress#! #help (requires [mmm_gg|E])#!\nSave your changes and load back to the lobby later to continue your edits before starting the game."
+Entitled_v1_0_8_changelog_2: "Disabled the Culture Mapmode refresh on Convert Culture to avoid a crash when mass-converting both counties and rulers"
+Entitled_v1_0_8_changelog_3: "Fixed RICE traditions missing their descriptions"

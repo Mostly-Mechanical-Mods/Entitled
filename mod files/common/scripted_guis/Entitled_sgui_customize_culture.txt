@@ -11,6 +11,10 @@ Entitled_customize_culture_setup = {
 		trigger_if = {
 			limit = { has_dlc_feature = diverge_culture }
 			custom_tooltip = {
+				text = ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GAMERULE
+				NOT = { has_game_rule = Entitled_is_not_loaded }
+			}
+			custom_tooltip = {
 				text = ENTITLED_MENU_CULTURE_PIN_MISSING
 				has_global_variable = entitled_pinned_culture
 			}
@@ -360,6 +364,7 @@ Entitled_customize_culture_setup = {
 				entitled_record_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats }
 				entitled_record_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats_military }
 				entitled_record_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats_culture }
+				entitled_record_tradition = { TRADITION = tradition_RICE_munya_estates }
 			}
 	
 			every_in_list = {
@@ -377,6 +382,10 @@ Entitled_customize_culture_setup = {
 
 Entitled_convert_culture_setup = {
 	is_valid = {
+		custom_tooltip = {
+			text = ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GAMERULE
+			NOT = { has_game_rule = Entitled_is_not_loaded }
+		}
 		custom_tooltip = {
 			text = ENTITLED_MENU_CULTURE_PIN_MISSING
 			has_global_variable = entitled_pinned_culture
@@ -732,7 +741,44 @@ Entitled_culture_reset = {
 			entitled_reset_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats }
 			entitled_reset_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats_military }
 			entitled_reset_tradition = { TRADITION = tradition_RICE_adventurers_and_aristocrats_culture }
+			entitled_reset_tradition = { TRADITION = tradition_RICE_munya_estates }
 		}
+	}
+}
+
+entitled_convert_culture_all = {
+	scope = title
+	effect = {
+		every_in_de_jure_hierarchy = {
+			limit = { tier = tier_county }
+			continue = { tier > tier_county }
+			if = {
+				limit = { NOT = { has_variable = entitled_culture }}
+				set_variable = { name = entitled_culture value = culture }
+			}
+			set_county_culture = global_var:entitled_pinned_culture
+		}
+		every_in_de_jure_hierarchy = {
+			limit = {
+				tier <= tier_county
+				holder.capital_county ?= this
+			}
+			holder = {
+				if = {
+					limit = { NOT = { has_variable = entitled_culture }}
+					set_variable = { name = entitled_culture value = culture }
+				}
+				set_culture = global_var:entitled_pinned_culture
+				every_courtier = {
+					if = {
+						limit = { NOT = { has_variable = entitled_culture }}
+						set_variable = { name = entitled_culture value = culture }
+					}
+					set_culture = global_var:entitled_pinned_culture
+				}
+			}
+		}
+		set_global_variable = refresh_culture_mapmode
 	}
 }
 
@@ -748,6 +794,7 @@ entitled_convert_culture_counties = {
 			}
 			set_county_culture = global_var:entitled_pinned_culture
 		}
+		set_global_variable = refresh_culture_mapmode
 	}
 }
 
@@ -774,6 +821,7 @@ entitled_convert_culture_people = {
 				}
 			}
 		}
+		set_global_variable = refresh_culture_mapmode
 	}
 }
 
@@ -813,5 +861,6 @@ entitled_revert_culture_counties = {
 				}
 			}
 		}
+		set_global_variable = refresh_culture_mapmode
 	}
 }

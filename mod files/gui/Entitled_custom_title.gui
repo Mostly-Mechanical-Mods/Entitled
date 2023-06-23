@@ -32,9 +32,10 @@ window = {
 
 	state = {
 		name = "refresh_culture_mapmode"
-		delay = 0.1
+		# delay = 0.1
 		trigger_when = "[IsMapMode('cultures')]"
-		on_start = "[SetMapMode('cultures')]"
+		on_finish = "[SetMapMode('cultures')]"
+		# on_finish = "[GetScriptedGui('refreh_culture_mapmode').Execute(GuiScope.SetRoot).End)]"
 	}
 
 	margin_widget = {
@@ -770,8 +771,9 @@ window = {
 			# visible = "[Character.HasDifficultyInfo]"
 
 			scrollwidget = {
-
+				layoutpolicy_vertical = expanding
 				vbox = {
+					layoutpolicy_vertical = expanding
 					size = { 100% 100% }
 					datamodel = "[GetGlobalList('Entitled_top_de_jure')]"
 					item = {
@@ -957,12 +959,15 @@ window = {
 							}
 						}
 					}
+					expand = {}
 				}
+				expand = {}
 			}
-
+			
 			scrollbar_vertical = {
 				using = Scrollbar_Vertical
 			}
+			expand = {}
 		}
 		expand = {}
 	}
@@ -1368,9 +1373,10 @@ types EntitledTypes {
 				blockoverride "texture" {
 					texture = "gfx/interface/icons/council_task_types/task_accept_culture.dds"
 				}
-				onclick = "[GetScriptedGui('entitled_convert_culture_counties').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				onclick = "[GetScriptedGui('entitled_convert_culture_people').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
-				onclick = "[PdxGuiTriggerAllAnimations('refresh_culture_mapmode')]"
+				# onclick = "[PdxGuiWidget.InterruptThenTriggerAnimation('refresh_culture_mapmode','refresh_culture_mapmode')]"
+				onclick = "[GetScriptedGui('entitled_convert_culture_all').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				# onclick = "[GetScriptedGui('entitled_convert_culture_people').Execute(GuiScope.SetRoot(Scope.Title.MakeScope).End)]"
+				# onclick = "[PdxGuiTriggerAllAnimations('refresh_culture_mapmode')]"
 				tooltip = ENTITLED_CONVERT_CULTURE_ALL
 			}
 			entitled_title_window_button = {

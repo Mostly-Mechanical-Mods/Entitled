@@ -10,6 +10,8 @@ gui/Entitled_window_culture.gui = entitled_culture_search
 # gui/Entitled_menu.gui = Entitled_menu
 gui/Entitled_menu.gui = Entitled_menu_top
 gui/Entitled_menu.gui = Entitled_outliner
+gui/Entitled_menu.gui = Entitled_save_from_lobby_override
+
 
 gui/Entitled_window_replace_pillar.gui = Entitled_replace_pillar_window
 
