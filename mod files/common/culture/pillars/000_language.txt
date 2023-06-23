@@ -1,4 +1,6 @@
-﻿language_anglic = {
+﻿#Vanilla
+
+language_anglic = {
 	type = heritage
 	is_shown = { always = no }
 	#color = english
@@ -427,3 +429,4 @@ language_ayneha = {
 	is_shown = { always = no }
 	#color = english
 }
+

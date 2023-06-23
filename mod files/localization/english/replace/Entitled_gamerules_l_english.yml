@@ -1,0 +1,21 @@
+﻿l_english:
+
+Entitled_foundational_framework_required: "Foundational Framework required"
+
+game_rule_category_mod_toggle: "@mod_coop_icon! Mods Enabled"
+game_rule_category_mostly_mechanical_mods: "@mmm_icon! Mostly Mechanical Mods"
+game_rule_category_mmm_entitled: "@mmm_entitled_icon! Entitled"
+
+rule_Entitled_loaded: "@mmm_entitled_icon! Enable [mmm_entitled|E]"
+setting_Entitled_is_loaded: "On"
+setting_Entitled_is_loaded_desc: "Enable [mmm_entitled|E] mechanics."
+setting_Entitled_is_loaded_debug: "Debug"
+setting_Entitled_is_loaded_debug_desc: "Enable [mmm_entitled|E] mechanics.\nLog relevant data to debug.log."
+setting_Entitled_is_not_loaded: "Off"
+setting_Entitled_is_not_loaded_desc: "Disable [mmm_entitled|E] mechanics.\nThis setting overrides all other Entitled game rules."
+
+rule_Entitled_savegame: "@mmm_entitled_icon! [entitled_lobby_savegame|E]"
+setting_Entitled_savegame_disabled: "Off"
+setting_Entitled_savegame_disabled_desc: ""
+setting_Entitled_savegame_enabled: "On - #warning Experimental#!"
+setting_Entitled_savegame_enabled_desc: "You can save from the lobby to be able to customize your setup over several game sessions."

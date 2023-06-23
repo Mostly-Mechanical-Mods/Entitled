@@ -48,7 +48,10 @@ entitled_create_title_county_lost: "     [TARGET_TITLE.GetName]"
 ENTITLED_MAPMODE_TOOLTIP: "Switch back to the Title Creation map mode"
 ENTITLED_CLEAR_TOOLTIP: "Clear all changes and start over"
 
-ENTITLED_MENU_CREATE_TITLE: "#T Create Title#!\nCreate your own title, complete with Title Rank, Capital County, De Jure hierarchy, Realm and Domain"
+ENTITLED_MENU_CREATE_TITLE: "Create Title"
+ENTITLED_MENU_CREATE_TITLE_DESC: "Create your own title, complete with Title Rank, Capital County, De Jure hierarchy, Realm and Domain"
+ENTITLED_MENU_CREATE_TITLE_WARNING: "$ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GAMERULE$"
+
 ENTITLED_MENU_CUSTOMIZE_TITLE: "#T Customize Title#!\n#help Coming Soon!#!"
 
 ENTITLED_MENU_CUSTOMIZE_FAITH: "Customize Faith"
@@ -227,6 +230,14 @@ entitled_create_title_de_jure_detail: "[THIS.Title.GetName]"
 ENTITLED_PIN_TITLE_HELP: "Select a Ruler and click the @pin_icon! next to their Primary Title, or use the @search_icon! Title search function in the Outliner"
 
 
+# TOOLTIP
+
+ENTITLED_SAVE_FROM_LOBBY_TITLE: "Save Progress"
+ENTITLED_SAVE_FROM_LOBBY_WARNING: "Experimental feature - Use with caution!"
+ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GG: "Requires [mmm_gg|E]"
+ENTITLED_SAVE_FROM_LOBBY_DESC: "Save the current setup\n#warning Experimental feature - Use with caution!#!
+ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GAMERULE: "Enable [mmm_entitled|E] in the game rules"
+
 
 
 # CUSTOM TOOLTIP
@@ -239,3 +250,10 @@ entitled_pinned_ruler_tier: "[GetGlobalVariable('entitled_pinned_ruler').Char.Ge
 ENTITLED_COMING_SOON: "#help Coming soon!"
 
 ENTITLED_CULTURE_SEARCH_TITLE: "Pin Culture"
+
+ENTITLED_START_BUTTON: "Start Disabled"
+ENTITLED_START_BUTTON_TOOLTIP: "Disable [mmm_entitled|E] in the game rules"
+ENTITLED_START_BUTTON_WARNING: "If you already saved your progress, once disabled, [mmm_entitled|E] cannot be turned back on"
+ENTITLED_START_BUTTON_BOOKMARK_WARNING: "You cannot start a game with a bookmark character with Entitled enabled"
+
+ENTITLED_SAVE_FROM_LOBBY_REMOVE: "Sorry for not being subtle about this, it's absolutely necessary to make you click on a button before unpausing, to ensure that the game does not break!\n\nPlease wait for up to 10 seconds to allow for the game to fully execute its game start effects. Once the map is loaded and zoomed in, and all signs of stutter gone, you should be good to go."

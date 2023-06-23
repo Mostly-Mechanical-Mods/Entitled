@@ -1,0 +1,119 @@
+﻿on_title_destroyed = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_title_gain = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_title_gain_inheritance = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_title_gain_usurpation = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_title_lost = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_explicit_claim_gain = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_explicit_claim_lost = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_rank_up = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_rank_down = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_vassal_gained = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_baron_found_or_created_for_title = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+# on_culture_era_changed = {
+# 	# trigger = {
+# 	# 	has_game_rule = Entitled_is_not_loaded
+# 	# }
+# 	effect = {
+# 		debug_log = "on_culture_era_changed"
+# 		debug_log_scopes = yes
+# 	}
+# }
+on_character_culture_change = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_tradition_removed = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_tradition_added = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_county_auto_granted_to_liege_culture = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_baron_county_auto_granted_to_local_cultureon_found_or_created_for_title = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_county_faith_change = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_county_culture_change = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_join_court = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_leave_court = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_court_type_changed = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}
+on_character_faith_change = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
+}

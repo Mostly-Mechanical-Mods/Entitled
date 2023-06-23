@@ -1141,3 +1141,25 @@ entitled_pin_title = {
 		}
 	}
 }
+
+refresh_culture_mapmode = {
+	effect = {
+		remove_global_variable = refresh_culture_mapmode
+	}
+}
+
+entitled_save_from_lobby = {
+	effect = {
+		set_global_variable = entitled_save_from_lobby
+	}
+}
+
+entitled_save_from_lobby_remove = {
+	effect = {
+		remove_global_variable = entitled_save_from_lobby
+	}
+}
+
+GG_is_loaded = {
+	is_valid = { GG_is_loaded = yes }
+}

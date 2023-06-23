@@ -1289,5 +1289,46 @@ tradition_hfc_bedouin_oral_poetry = {
 	}
 }
 
-
-
+tradition_RICE_munya_estates = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+		is_RICE_loaded = yes
+		any_culture_county = {
+			any_county_province = {
+				geographical_region = world_africa
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			custom_tooltip = {
+				text = RICE_iberian_struggle_character_involved_req
+				exists = struggle:iberian_struggle
+				scope:character = {
+					any_character_struggle = {
+						involvement = involved
+					}
+				}
+			}
+			custom_tooltip = {
+				text = RICE_iberian_struggle_ended_req
+				NOT = { exists = struggle:iberian_struggle }
+			}
+		}	
+		custom_tooltip = {
+			text = RICE_culture_in_iberia_desc
+			any_culture_county = {
+				count >= 5
+				any_county_province = {
+					geographical_region = world_europe_west_iberia
+				}
+			}
+		}
+		scope:character = {
+			capital_province = {
+				geographical_region = world_europe_west_iberia
+			}
+		}
+	}
+}

@@ -17,6 +17,7 @@ Entitled_changelog = {
 		set_global_variable = Entitled_v1_0_5
 		set_global_variable = Entitled_v1_0_6
 		set_global_variable = Entitled_v1_0_7
+		set_global_variable = Entitled_v1_0_8
 	}
 }
 
@@ -890,6 +891,7 @@ Entitled_culture = {
 			entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_RICE_adventurers_and_aristocrats }
 			entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_RICE_adventurers_and_aristocrats_military }
 			entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_RICE_adventurers_and_aristocrats_culture }
+			entitled_tradition_setup = { GROUPING = regional TRADITION = tradition_RICE_munya_estates }
 		}
 
 		entitled_doctrine_setup = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_aniconism }
@@ -1046,8 +1048,14 @@ Entitled_faith = {
 }
 
 Entitled_on_game_start = {
+	trigger = {
+		has_game_rule = Entitled_is_loaded
+	}
 	effect = {
 		set_global_variable = entitled_on
+		random_county = {
+			title:d_entitled_blank = { set_capital_county = prev                                                                                                                                                                                                                                         }
+		}
 		every_religion_global = {
 			add_to_global_variable_list = {
 				name = entitled_religions
@@ -1208,7 +1216,7 @@ Entitled_on_game_start = {
 		}
 		debug_log = "DEBUG END"
 		every_province = {
-			barony = {
+			barony ?= {
 				set_color_from_title = title:d_entitled_blank
 			}
 		}
@@ -1216,6 +1224,9 @@ Entitled_on_game_start = {
 }
 
 on_game_start_after_lobby = {
+	trigger = {
+		has_game_rule = Entitled_is_not_loaded
+	}
 	on_actions = {
 		Entitled_cleanup
 	}
@@ -1223,6 +1234,7 @@ on_game_start_after_lobby = {
 
 Entitled_cleanup = {
 	effect = {
+		set_global_variable = entitled_cleanup
 		remove_global_variable = entitled_on
 	}
 }

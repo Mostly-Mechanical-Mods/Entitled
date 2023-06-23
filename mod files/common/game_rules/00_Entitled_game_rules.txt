@@ -1,0 +1,39 @@
+﻿Entitled_loaded = {
+	
+	categories = {
+		mod_toggle mostly_mechanical_mods mmm_entitled
+	}
+	
+	default = Entitled_is_loaded
+
+	Entitled_is_loaded = {
+		flag = GG_can_change_rule
+		flag = entitled_disable_start
+	}
+
+	Entitled_is_loaded_debug = {
+		flag = GG_can_change_rule
+		flag = entitled_disable_start
+	}
+	
+	Entitled_is_not_loaded = {
+		flag = GG_can_change_rule
+	}
+}
+
+# Entitled_savegame = {
+# 	categories = {
+# 		mostly_mechanical_mods mmm_entitled
+# 	}
+
+# 	default = Entitled_savegame_disabled
+
+# 	Entitled_savegame_disabled = {
+# 		# flag = GG_can_change_rule
+# 	}
+
+# 	Entitled_savegame_enabled = {
+# 		flag = entitled_disable_start
+# 		flag = GG_can_change_rule
+# 	}
+# }

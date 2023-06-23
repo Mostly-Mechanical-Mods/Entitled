@@ -330,3 +330,11 @@ tradition_RICE_adventurers_and_aristocrats_culture = {
 	cost = { prestige = 300000 }
 	ai_will_do = { value = 0 }
 }
+tradition_RICE_munya_estates = {
+	category = regional
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+	cost = { prestige = 300000 }
+	ai_will_do = { value = 0 }
+}

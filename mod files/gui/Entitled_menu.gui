@@ -457,6 +457,31 @@ window = {
 				layoutpolicy_vertical = expanding
 				spacing = 10
 				button_group = {
+					button_icon = {
+						parentanchor = center
+						# position = { 0 5 }
+						size = { 40 40 }
+						texture = "gfx/save.dds"
+		
+						# glow = {
+						# 	color = { 0 0 0 0.8 }
+						# 	glow_radius = 3
+						# 	using = Glow_Standard
+						# }
+					}
+					enabled = "[And(AccessGameRules.AccessNamedGameRule('Entitled_loaded').GetSetting.HasFlag('entitled_disable_start'),GetScriptedGui('GG_is_loaded').IsValid(GuiScope.End))]"
+					# enabled = "[GetPlayer.IsValid]"
+					# onclick = "[GetVariableSystem.SetOrToggle('Entitled','title')]"
+					# onclick = "[GetVariableSystem.Set('Entitled_title_window','create_title')]"
+					# onclick = "[SetMapMode(  'baronies' )]"
+					# onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
+					onclick = "[GetScriptedGui('entitled_save_from_lobby').Execute(GuiScope.End)]"
+					onclick = "[OnPauseMenu]"
+					# down = "[GetVariableSystem.HasValue('Entitled','title')]"
+					tooltipwidget = entitled_save_from_lobby_tooltip
+					using = tooltip_ws
+				}
+				button_group = {
 					highlight_icon = {
 						parentanchor = center
 						# position = { 0 5 }
@@ -473,8 +498,10 @@ window = {
 					onclick = "[GetVariableSystem.Set('Entitled_title_window','create_title')]"
 					onclick = "[SetMapMode(  'baronies' )]"
 					onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
-					down = "[GetVariableSystem.HasValue('Entitled','title')]"
-					tooltip = ENTITLED_MENU_CREATE_TITLE
+					# onclick = "[OnPauseMenu]"
+					# down = "[GetVariableSystem.HasValue('Entitled','title')]"
+					tooltipwidget = entitled_create_title_tooltip
+					enabled = "[AccessGameRules.AccessNamedGameRule('Entitled_loaded').GetSetting.HasFlag('entitled_disable_start')]"
 					using = tooltip_ws
 				}
 
@@ -496,7 +523,7 @@ window = {
 					onclick = "[SetMapMode(  'baronies' )]"
 					# onclick = "[GetScriptedGui('Entitled_setup').Execute(GuiScope.End)]"
 					down = "[GetVariableSystem.HasValue('Entitled','title')]"
-					enabled = "[GetPlayer.IsValid]"
+					enabled = "[AccessGameRules.AccessNamedGameRule('Entitled_loaded').GetSetting.HasFlag('entitled_disable_start')]"
 					tooltip = ENTITLED_MENU_CUSTOMIZE_TITLE
 					using = tooltip_ws
 				}
@@ -810,6 +837,79 @@ window = {
 		# 		}
 		# 	}
 		# }
+	}
+}
+
+window = {
+	visible = "[And(GetGlobalVariable('entitled_save_from_lobby').IsSet,GetPlayer.IsValid))]"
+	name = "Entitled_save_from_lobby_override"
+	widgetid = "Entitled_save_from_lobby_override"
+	# attachto = {
+	# 	widgetid = JominiMultiplayerLobby_right_panel
+	# }
+	parentanchor = center
+	alwaystransparent = no
+	filter_mouse = all
+	movable = no
+	layer = confirmation
+	size = { 100% 100% }
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		# start_sound = {
+		# 	soundeffect = "event:/SFX/UI/Generic/Windows/sfx_ui_generic_window_outliner_show"
+		# }
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Standard
+		# start_sound = {
+		# 	soundeffect = "event:/SFX/UI/Generic/Windows/sfx_ui_generic_window_outliner_hide"
+		# }
+	}
+
+	background = {
+		using = Background_Area_ExtraDark
+		margin_left = 10
+		margin_bottom = 25
+		margin_top = 10
+		margin_right = 10
+		# color = { 0.15 0.15 0.15 0.75 }
+		# texture_density = 100
+	}
+
+	container = {
+		parentanchor = center
+		allow_outside = yes
+		state = {
+			name = _show
+			duration = 10
+			on_finish = "[GetVariableSystem.Set('entitled_save_from_lobby_remove','on')]"
+		}
+		vbox = {
+			spacing = 10
+			text_label_center = { raw_text = "#T Thank you for using @mmm_entitled_icon! [mmm_entitled|E]!#!" }
+			text_multi = {
+				raw_text = "ENTITLED_SAVE_FROM_LOBBY_REMOVE"
+				align = nobaseline
+				autoresize = yes
+				max_width = 470
+			}
+			spacer = { size = { 0 10 }}
+			button_primary_big = {
+				size = { 380 50 }
+				raw_text = "Click #warning before#! unpausing the game"
+				onclick = "[GetScriptedGui('entitled_save_from_lobby_remove').Execute(GuiScope.End)]"
+				onclick = "[GetVariableSystem.Clear('entitled_save_from_lobby_remove')]"
+				# enabled = "[GetVariableSystem.Exists('entitled_save_from_lobby_remove')]"
+				icon = {
+					size = { 50 50 }
+					texture = "gfx/interface/icons/symbols/icon_warning.dds"
+				}
+			}
+		}
 	}
 }
 
@@ -1231,6 +1331,211 @@ template entitled_de_facto_liege_remove_tooltip {
 			}
 			blockoverride "concept_link" {
 				text = "[liege|E]"
+			}
+		}
+	}
+}
+
+template entitled_save_from_lobby_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_SAVE_FROM_LOBBY_TITLE"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				# text = "[SelectLocalization(GetGlobalVariable('entitled_de_facto_liege_auto').IsSet,'ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE')]"
+			}
+
+			blockoverride "extra_data" {
+				# textbox = {
+				# 	using = DefaultTooltipText
+				# 	layoutpolicy_horizontal = expanding
+				# 	multiline = yes
+				# 	text = "ENTITLED_SET_SAVE_FROM_LOBBY_GAMERULE"
+				# 	fonttintcolor = "[TooltipInfo.GetTintColor]"
+				# 	alwaystransparent = no
+				# }
+			}
+
+			blockoverride "warning_description_text" {
+				visible = "[Not(AccessGameRules.AccessNamedGameRule('Entitled_savegame').GetSetting.HasFlag('entitled_disable_start'))]"
+				text = "ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GAMERULE"
+				default_format = "#warning"
+			}
+
+			blockoverride "above_description_text" {
+				visible = "[Not(GetScriptedGui('GG_is_loaded').IsValid(GuiScope.End))]"
+				text = "ENTITLED_SAVE_FROM_LOBBY_REQUIRES_GG"
+				default_format = "#warning"
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_SAVE_FROM_LOBBY_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				# text = "ENTITLED_PIN_TITLE_HELP"
+				# default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[mmm_entitled|E]"
+			}
+		}
+	}
+}
+
+template entitled_start_disabled_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_START_BUTTON"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				# text = "[SelectLocalization(GetGlobalVariable('entitled_de_facto_liege_auto').IsSet,'ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE')]"
+			}
+
+			blockoverride "extra_data" {
+				# textbox = {
+				# 	using = DefaultTooltipText
+				# 	layoutpolicy_horizontal = expanding
+				# 	multiline = yes
+				# 	text = "ENTITLED_SET_SAVE_FROM_LOBBY_GAMERULE"
+				# 	fonttintcolor = "[TooltipInfo.GetTintColor]"
+				# 	alwaystransparent = no
+				# }
+			}
+
+			blockoverride "warning_description_text" {
+				text = "ENTITLED_START_BUTTON_WARNING"
+				default_format = "#warning"
+			}
+
+			blockoverride "above_description_text" {
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_START_BUTTON_TOOLTIP"
+			}
+
+			blockoverride "input_info_text" {
+				# text = "ENTITLED_PIN_TITLE_HELP"
+				# default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[mmm_entitled|E]"
+			}
+		}
+	}
+}
+
+template entitled_start_disabled_bookmark_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_START_BUTTON"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				# text = "[SelectLocalization(GetGlobalVariable('entitled_de_facto_liege_auto').IsSet,'ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE')]"
+			}
+
+			blockoverride "extra_data" {
+				# textbox = {
+				# 	using = DefaultTooltipText
+				# 	layoutpolicy_horizontal = expanding
+				# 	multiline = yes
+				# 	text = "ENTITLED_SET_SAVE_FROM_LOBBY_GAMERULE"
+				# 	fonttintcolor = "[TooltipInfo.GetTintColor]"
+				# 	alwaystransparent = no
+				# }
+			}
+
+			blockoverride "warning_description_text" {
+				text = "ENTITLED_START_BUTTON_BOOKMARK_WARNING"
+				default_format = "#warning"
+			}
+
+			blockoverride "above_description_text" {
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_START_BUTTON_TOOLTIP"
+			}
+
+			blockoverride "input_info_text" {
+				# text = "ENTITLED_PIN_TITLE_HELP"
+				# default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[mmm_entitled|E]"
+			}
+		}
+	}
+}
+
+template entitled_create_title_tooltip {
+	container = {
+		alwaystransparent = no
+		block "datacontext" {
+		}
+
+		object_tooltip_pop_out = {
+			blockoverride "title_text" {
+				margin = { 0 8 }
+				text = "ENTITLED_MENU_CREATE_TITLE"
+				default_format = "#T"
+			}
+			blockoverride "subtitle_text" {
+				# text = "[SelectLocalization(GetGlobalVariable('entitled_de_facto_liege_auto').IsSet,'ENTITLED_DE_FACTO_LIEGE_AUTO_AVAILABLE','ENTITLED_DE_FACTO_LIEGE_AUTO_UNAVAILABLE')]"
+			}
+
+			blockoverride "extra_data" {
+				# textbox = {
+				# 	using = DefaultTooltipText
+				# 	layoutpolicy_horizontal = expanding
+				# 	multiline = yes
+				# 	text = "ENTITLED_SET_SAVE_FROM_LOBBY_GAMERULE"
+				# 	fonttintcolor = "[TooltipInfo.GetTintColor]"
+				# 	alwaystransparent = no
+				# }
+			}
+
+			blockoverride "warning_description_text" {
+				visible = "[Not(AccessGameRules.AccessNamedGameRule('Entitled_loaded').GetSetting.HasFlag('entitled_disable_start'))]"
+				text = "ENTITLED_MENU_CREATE_TITLE_WARNING"
+				default_format = "#warning"
+			}
+
+			blockoverride "above_description_text" {
+			}
+
+			blockoverride "description_text" {
+				text = "ENTITLED_MENU_CREATE_TITLE_DESC"
+			}
+
+			blockoverride "input_info_text" {
+				# text = "ENTITLED_PIN_TITLE_HELP"
+				# default_format = "#help"
+			}
+			blockoverride "concept_link" {
+				text = "[mmm_entitled|E]"
 			}
 		}
 	}

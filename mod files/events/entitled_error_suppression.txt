@@ -11,6 +11,9 @@ entitled_error_suppression.0001 = {
 	immediate = {	
 		fix_variable_error = { X = Entitled_is_loaded }
 		fix_variable_error = { X = Entitled_v1_0 }
+		fix_variable_error = { X = entitled_cleanup }
+		fix_variable_error = { X = GG_is_loaded }
+		
 
 		fix_variable_error = { X = entitled_used }
 		fix_variable_error = { X = Entitled_de_jure }

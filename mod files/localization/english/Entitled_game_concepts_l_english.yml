@@ -45,3 +45,6 @@ game_concept_pow_prisoner_transit_desc: "When captured, either during a battle, 
 
 game_concept_pow_prisoner_release_travel: "Prisoner Release Travel"
 game_concept_pow_prisoner_release_travel_desc: "Upon being released (or escaping), prisoners start a travel home. A setting enables restricting this features to [prisoners_of_war|E] to alleviate the performance cost, should it become an issue.\n\nThe default setting blocks all travel events for returning prisoners, but those can be enabled with the proper setting."
+
+game_concept_entitled_lobby_savegame: "Save From Lobby"
+game_concept_entitled_lobby_savegame_desc: "@warning_icon! #warning Experimental setting, use at your own risk!#!\nThis setting enables you to save from the lobby, to customize your map over several sittings.\nIt prevents a number of on_actions from firing when they should, instead firing them manually later than they should.\nThis has #italic not#! been tested thoroughly, and could cause issues. Caution is advised."
