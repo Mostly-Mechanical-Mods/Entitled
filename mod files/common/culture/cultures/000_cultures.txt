@@ -3279,3 +3279,37 @@ ewe = {
 		10 = debug_clothes
 	}
 }
+brahui = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+east_bantu = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}

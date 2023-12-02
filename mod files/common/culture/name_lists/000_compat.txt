@@ -1,21 +1,21 @@
 ﻿name_list_debug = {
 
-	cadet_dynasty_names = {
-		"dynn_debug_loc_1"
-		"dynn_debug_loc_2"
-	}
+	# cadet_dynasty_names = {
+	# 	# "dynn_debug_loc_1"
+	# 	# "dynn_debug_loc_2"
+	# }
 
-	dynasty_names = {
-		"dynn_debug_loc_1"
-		"dynn_debug_loc_2"
-	}
+	# dynasty_names = {
+	# 	# "dynn_debug_loc_1"
+	# 	# "dynn_debug_loc_2"
+	# }
 
-	male_names = {
-		debug_loc
-	}
+	# male_names = {
+	# 	# debug_loc
+	# }
 
-	female_names = {
-		debug_loc
-	}
+	# female_names = {
+	# 	# debug_loc
+	# }
 	
 }

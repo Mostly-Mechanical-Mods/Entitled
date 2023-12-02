@@ -71,3 +71,7 @@ Entitled_v1_0_8_changelog_no_patch: "This update is savegame compatible"
 Entitled_v1_0_8_changelog_1: "#bold New Feature: Save Progress#! #help (requires [mmm_gg|E])#!\nSave your changes and load back to the lobby later to continue your edits before starting the game."
 Entitled_v1_0_8_changelog_2: "Disabled the Culture Mapmode refresh on Convert Culture to avoid a crash when mass-converting both counties and rulers"
 Entitled_v1_0_8_changelog_3: "Fixed RICE traditions missing their descriptions"
+
+Entitled_v1_0_9_changelog: "#bold Entitled v1.0.9#!"
+Entitled_v1_0_9_changelog_no_patch: "This update is savegame compatible"
+Entitled_v1_0_9_changelog_1: "Updated for Peacock 1.11.2"
