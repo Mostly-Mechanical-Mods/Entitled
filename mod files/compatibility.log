@@ -2,5 +2,3 @@
 - add X_is_loaded in is_shown
 - add scripted_effects to the traditions on_game_start (twice) and in entitlement_create_title sgui
 - add bogus traditions + any relevent thing they reference in is_shown and can_pick
-
-<a href="https://www.flaticon.com/free-icons/save" title="save icons">Save icons created by Yogi Aprelliyanto - Flaticon</a>

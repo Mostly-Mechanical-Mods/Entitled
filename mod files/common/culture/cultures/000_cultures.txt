@@ -1,0 +1,3281 @@
+﻿akan = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kru = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+guan = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bedouin = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+levantine = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+egyptian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+maghrebi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+yemeni = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bedouin = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+levantine = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+egyptian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+maghrebi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+yemeni = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+finnish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sami = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+estonian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+karelian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+vepsian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+butr = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+baranis = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+guanches = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+zaghawa = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+pictish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+welsh = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+breton = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+cornish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+cumbrian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+burmese = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+mon = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+armenian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+greek = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+alan = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+georgian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+assyrian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kanuri = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+hausa = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sao = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+nupe = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+saxon = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+franconian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+swabian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bavarian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+frisian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+dutch = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+german = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+han = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+tamil = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+telugu = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kannada = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+gond = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+ethiopian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+nubian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+welayta = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+daju = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+russian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+ilmenian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+severian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+volhynian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+frankish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+french = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+norman = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+occitan = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+irish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+gaelic = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+andalusian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+basque = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+castilian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+catalan = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+portuguese = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+visigothic = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+galician = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+asturleonese = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+aragonese = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+suebi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bengali = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+oriya = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+assamese = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+hindustani = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+gujarati = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+punjabi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+rajput = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+malvi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sindhi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+marathi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kashmiri = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sinhala = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+nepali = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+persian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kurdish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+baloch = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+daylamite = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+tajik = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+afghan = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+saka = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sogdian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+khwarezmian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+tocharian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+ashkenazi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sephardi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+radhanite = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kochinim = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bavlim = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+italian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+roman = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+cisalpine = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sardinian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sicilian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+lombard = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+langobard = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+mogyer = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+hungarian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+mongol = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+buryat = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+oirat = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+naiman = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kerait = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+khitan = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+tuyuhun = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+jurchen = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+norse = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+swedish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+norwegian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+danish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+tangut = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+qiang = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sorko = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+gaw = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+songhai = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+soninke = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bozo = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+mossi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+pulaar = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+serer = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+wolof = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+somali = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+beja = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+afar = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+croatian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bosnian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+serbian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bulgarian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bodpa = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+zhangzhung = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+sumpa = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+tsangpa = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kirati = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+lhomon = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+turkish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+pecheneg = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+cuman = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+khazar = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bolghar = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bashkir = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+avar = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+karluk = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kimek = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kipchak = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+laktan = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+kirghiz = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+uyghur = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+yughur = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+uriankhai = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+chuvash = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+shatuo = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+ongud = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+komi = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+khanty = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+samoyed = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+vlach = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+mordvin = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+merya = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+meshchera = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+mari = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+muroma = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+malinke = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+bobo = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+gur = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+marka = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+mel = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+english = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+anglo_saxon = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+old_saxon = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+scottish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+pommeranian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+czech = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+polish = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+polabian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+slovien = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+carantanian = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+yoruba = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+edo = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+igbo = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
+ewe = {
+	color = { 0 0 0 }
+	ethos = ethos_egalitarian
+	heritage = heritage_akan
+	language = language_kwa
+	martial_custom = martial_custom_equal
+	name_list = name_list_debug
+	
+	coa_gfx = { debug_gfx }
+	building_gfx = { debug_gfx }
+	clothing_gfx = { debug_gfx }
+	unit_gfx = { debug_gfx }
+	
+	ethnicities = {
+		10 = debug_clothes
+	}
+}
