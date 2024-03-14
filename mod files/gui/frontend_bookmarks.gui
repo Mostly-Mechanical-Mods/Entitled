@@ -986,9 +986,9 @@ widget = {
 										spacing = 5
 
 										item = {
-													dlc_button = {}
-												}
-											}
+											dlc_button = {}
+										}
+									}
 
 									expand = {}
 								}
