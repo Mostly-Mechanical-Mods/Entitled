@@ -471,6 +471,7 @@ widget = {
 
 						vbox = {
 							hbox = {
+								allow_outside = yes
 								spacing = 60
 								margin_left = -100
 								margin_top = 10
@@ -985,21 +986,9 @@ widget = {
 										spacing = 5
 
 										item = {
-											hbox = {
-												widget = {
-													visible = "[DlcItem.GetDlc.IsMajor]"
-													size = { 47 47 }
-													dlc_button = {}
-												}
-
-												widget = {
-													visible = "[Not( DlcItem.GetDlc.IsMajor )]"
-													size = { 33 33 }
 													dlc_button = {}
 												}
 											}
-										}
-									}
 
 									expand = {}
 								}
@@ -1617,7 +1606,7 @@ widget = {
 
 															blockoverride "portrait_tooltip"
 															{
-																tooltip_enabled = yes
+																tooltip_visible = yes
 															}
 
 															blockoverride "portrait_button"
@@ -1682,7 +1671,7 @@ widget = {
 
 															blockoverride "portrait_tooltip"
 															{
-																tooltip_enabled = yes
+																tooltip_visible = yes
 															}
 
 															blockoverride "portrait_button"
@@ -3805,7 +3794,7 @@ types BookmarkPortraits
 			alwaystransparent = yes
 
 			block "portrait_tooltip" {
-				tooltip_enabled = no
+				tooltip_visible = no
 			}
 
 			block "portrait_button" {}

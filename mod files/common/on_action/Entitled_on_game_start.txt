@@ -19,6 +19,7 @@ Entitled_changelog = {
 		set_global_variable = Entitled_v1_0_7
 		set_global_variable = Entitled_v1_0_8
 		set_global_variable = Entitled_v1_0_9
+		set_global_variable = Entitled_v1_0_10
 	}
 }
 
