@@ -210,6 +210,8 @@ Entitled_customize_culture_setup = {
 			entitled_record_tradition = { TRADITION = tradition_fp2_ritualised_friendship }
 			#common\culture\traditions\04_ep2_traditions.txt
 			entitled_record_tradition = { TRADITION = tradition_ep2_avid_falconers }
+			#common\culture\traditions\06_ce1_traditions.txt
+			entitled_record_tradition = { TRADITION = tradition_ce1_ritual_washing }
 			#TFE
 			if = {
 				limit = { TFE_is_loaded = yes }
@@ -586,6 +588,8 @@ Entitled_culture_reset = {
 		entitled_reset_tradition = { TRADITION = tradition_fp2_ritualised_friendship }
 		#common\culture\traditions\04_ep2_traditions.txt
 		entitled_reset_tradition = { TRADITION = tradition_ep2_avid_falconers }
+		#common\culture\traditions\06_ce1_traditions.txt
+		entitled_reset_tradition = { TRADITION = tradition_ce1_ritual_washing }
 		#TFE
 		if = {
 			limit = { TFE_is_loaded = yes }

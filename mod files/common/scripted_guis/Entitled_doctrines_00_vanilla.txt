@@ -732,20 +732,6 @@ tenet_sanctity_of_nature = {
 	effect = { entitled_toggle_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sanctity_of_nature }}
 }
 
-tenet_sky_burials = {
-	scope = faith
-	# saved_scopes = { add }
-
-	is_shown = {
-		OR = {
-			has_doctrine = pagan_hostility_doctrine
-			has_doctrine = eastern_hostility_doctrine
-		}
-	}
-
-	effect = { entitled_toggle_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sky_burials }}
-}
-
 tenet_sun_worship = {
 	scope = faith
 	# saved_scopes = { add }
@@ -1868,6 +1854,38 @@ doctrine_pilgrimage_mandatory_hajj = {
 	is_shown = {
 		religion_tag = islam_religion
 	}
+}
+
+# doctrine_funeral
+# group = "main_group"
+doctrine_funeral_stoic = {
+	scope = faith
+	# saved_scopes = { add }
+	effect = { entitled_toggle_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_stoic }}
+}
+
+doctrine_funeral_bewailment = {
+	scope = faith
+	# saved_scopes = { add }
+	effect = { entitled_toggle_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_bewailment }}
+}
+
+doctrine_funeral_cremation = {
+	scope = faith
+	# saved_scopes = { add }
+	effect = { entitled_toggle_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_cremation }}
+}
+
+doctrine_funeral_sky_burial = {
+	scope = faith
+	# saved_scopes = { add }
+	effect = { entitled_toggle_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_sky_burial }}
+}
+
+doctrine_funeral_mummification = {
+	scope = faith
+	# saved_scopes = { add }
+	effect = { entitled_toggle_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_mummification }}
 }
 
 # hostility_group

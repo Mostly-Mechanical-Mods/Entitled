@@ -82,7 +82,6 @@ Entitled_customize_faith_setup = {
 				entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_ritual_celebrations }
 				entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sacred_childbirth }
 				entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sanctity_of_nature }
-				entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sky_burials }
 				entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sun_worship }
 				entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_warmonger }
 				entitled_record_doctrine = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_gruesome_festivals }
@@ -169,6 +168,11 @@ Entitled_customize_faith_setup = {
 				entitled_record_doctrine = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_encouraged }
 				entitled_record_doctrine = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_mandatory }
 				entitled_record_doctrine = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_mandatory_hajj }
+				entitled_record_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_stoic }
+				entitled_record_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_bewailment }
+				entitled_record_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_cremation }
+				entitled_record_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_sky_burial }
+				entitled_record_doctrine = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_mummification }
 				entitled_record_doctrine = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = abrahamic_hostility_doctrine }
 				entitled_record_doctrine = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = pagan_hostility_doctrine }
 				entitled_record_doctrine = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = eastern_hostility_doctrine }

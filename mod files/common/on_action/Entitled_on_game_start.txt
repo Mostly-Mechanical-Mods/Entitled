@@ -80,6 +80,10 @@ Entitled_culture = {
 				heritage_yoruba = { entitled_record_heritage = { HERITAGE = heritage_yoruba }}
 				heritage_tocharian = { entitled_record_heritage = { HERITAGE = heritage_tocharian }}
 				heritage_vlach = { entitled_record_heritage = { HERITAGE = heritage_vlach }}
+				heritage_gothic = { entitled_record_heritage = { HERITAGE = heritage_gothic }}
+				heritage_egyptian = { entitled_record_heritage = { HERITAGE = heritage_egyptian }}
+				heritage_hunnic = { entitled_record_heritage = { HERITAGE = heritage_hunnic }}
+				heritage_ancient_greek = { entitled_record_heritage = { HERITAGE = heritage_ancient_greek }}
 			}
 			switch = {
 				trigger = has_cultural_pillar
@@ -738,6 +742,8 @@ Entitled_culture = {
 		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_fp2_ritualised_friendship }
 		#common\culture\traditions\04_ep2_traditions.txt
 		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_ep2_avid_falconers }
+		#common\culture\traditions\06_ce1_traditions.txt
+		entitled_tradition_setup = { GROUPING = societal TRADITION = tradition_ce1_ritual_washing }
 		#TFE
 		if = {
 			limit = { TFE_is_loaded = yes }
@@ -936,7 +942,6 @@ Entitled_culture = {
 		entitled_doctrine_setup = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_ritual_celebrations }
 		entitled_doctrine_setup = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sacred_childbirth }
 		entitled_doctrine_setup = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sanctity_of_nature }
-		entitled_doctrine_setup = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sky_burials }
 		entitled_doctrine_setup = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_sun_worship }
 		entitled_doctrine_setup = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_warmonger }
 		entitled_doctrine_setup = { GROUP = doctrine_core_tenets GUI_GROUP = tenet DOCTRINE = tenet_gruesome_festivals }
@@ -1023,6 +1028,11 @@ Entitled_culture = {
 		entitled_doctrine_setup = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_encouraged }
 		entitled_doctrine_setup = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_mandatory }
 		entitled_doctrine_setup = { GROUP = doctrine_pilgrimage GUI_GROUP = main_group DOCTRINE = doctrine_pilgrimage_mandatory_hajj }
+		entitled_doctrine_setup = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_stoic }
+		entitled_doctrine_setup = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_bewailment }
+		entitled_doctrine_setup = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_cremation }
+		entitled_doctrine_setup = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_sky_burial }
+		entitled_doctrine_setup = { GROUP = doctrine_funeral GUI_GROUP = main_group DOCTRINE = doctrine_funeral_mummification }
 		entitled_doctrine_setup = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = abrahamic_hostility_doctrine }
 		entitled_doctrine_setup = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = pagan_hostility_doctrine }
 		entitled_doctrine_setup = { GROUP = hostility_group GUI_GROUP = not_creatable DOCTRINE = eastern_hostility_doctrine }

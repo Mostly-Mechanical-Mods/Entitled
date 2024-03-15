@@ -3,51 +3,61 @@
 heritage_celtic = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_pictish = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_celtiberian = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_east_germanic = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_slavic = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_sarmatian = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_caucasian = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_celtic = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_celtic = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 heritage_celtic = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 #RICE
@@ -55,34 +65,42 @@ heritage_celtic = {
 heritage_algonquian = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 heritage_iroquoian = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 heritage_paleo_inuit = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 heritage_inuit = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 heritage_siberian = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 heritage_east_bantu = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 heritage_guanche = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 heritage_elamite = {
 	type = heritage
 	is_shown = { always = no }
+	audio_parameter = european
 }
 
 language_inuit = {

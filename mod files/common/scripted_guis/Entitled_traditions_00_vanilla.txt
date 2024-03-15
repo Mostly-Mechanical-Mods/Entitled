@@ -3193,3 +3193,15 @@ tradition_ep2_avid_falconers = {
 		entitled_toggle_tradition = { TRADITION = tradition_ep2_avid_falconers }
 	}
 }
+
+tradition_ce1_ritual_washing = {
+	scope = culture
+	saved_scopes = { add character }
+	is_shown = {
+	}
+	is_valid = {
+	}
+	effect = {
+		entitled_toggle_tradition = { TRADITION = tradition_ce1_ritual_washing }
+	}
+}

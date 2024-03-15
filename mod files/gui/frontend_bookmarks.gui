@@ -3978,14 +3978,15 @@ types GameSetupTypes
 	}
 
 	type dlc_button = button {
-		size = { 100% 100% }
-		texture = "[DlcItem.GetDlc.GetIcon]"
+		datacontext = "[DlcItem.GetDlc]"
+		size = "[Dlc.GetIconSize]"
+		texture = "[Dlc.GetIcon]"
 		onclick = "[DlcItem.ShowInStore]"
 		tooltip = "DLC_BUTTON_TOOLTIP"
 		using = tooltip_nw
 
 		modify_texture = {
-			visible = "[Not( DlcItem.GetDlc.IsEnabled )]"
+			visible = "[Not( Dlc.IsEnabled )]"
 			texture = "gfx/interface/colors/black.dds"
 			blend_mode = normal
 			alpha = 0.4

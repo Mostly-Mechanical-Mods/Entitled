@@ -74,8 +74,6 @@
 				custom = Entitled_v1_0_9_changelog
 				custom_tooltip = Entitled_v1_0_9_changelog_no_patch
 				custom_tooltip = Entitled_v1_0_9_changelog_1
-				custom_tooltip = Entitled_v1_0_9_changelog_2
-				custom_tooltip = Entitled_v1_0_9_changelog_3
 			}
 		}
 		if = {

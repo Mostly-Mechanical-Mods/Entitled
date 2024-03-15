@@ -153,3 +153,19 @@ heritage_tocharian = {
 heritage_vlach = {
 	type = heritage
 }
+
+heritage_gothic = {
+	type = heritage
+}
+
+heritage_egyptian = {
+	type = heritage
+}
+
+heritage_hunnic = {
+	type = heritage
+}
+
+heritage_ancient_greek = {
+	type = heritage
+}

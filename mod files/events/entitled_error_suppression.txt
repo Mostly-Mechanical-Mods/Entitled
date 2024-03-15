@@ -272,6 +272,14 @@ entitled_error_suppression.0001 = {
 		fix_variable_error = { X = entitled_doctrine_for_toggle }
 		fix_variable_error = { X = not_creatable }
 
+		fix_variable_error = { X = doctrine_funeral }
+		fix_variable_error = { X = doctrine_funeral_main_group }
+		fix_variable_error = { X = doctrine_funeral_stoic }
+		fix_variable_error = { X = doctrine_funeral_cremation }
+		fix_variable_error = { X = doctrine_funeral_bewailment }
+		fix_variable_error = { X = doctrine_funeral_mummification }
+		fix_variable_error = { X = doctrine_funeral_sky_burial }
+
 
 
 		#TFE
