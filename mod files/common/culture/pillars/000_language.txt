@@ -1,432 +1,432 @@
 ﻿#Vanilla
 
 language_anglic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_arabic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_aramaic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_baltic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_basque = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_berber = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_brythonic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_burmese = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_central_germanic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_chadic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_chinese = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_cushitic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_dutch = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_east_slavic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_ethiopic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_finnic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_frankish = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_french = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_goidelic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_gur = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_high_german = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_iberian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 #Apabhramsa dialect Continuums:
 
 language_sauraseni = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_marathi = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_magadhan = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_pahari = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_rajasthani = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_vrachada = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_sinhalese = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_kashmiri = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 #Dravidian Languages
 
 language_tamil = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_telugu = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_kannada = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_iranian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_israelite = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_latin = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_kru = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_kwa = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_magyar = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_manding = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_mongolic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_norse = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_oghur = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_omotic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_qiangic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_sami = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_saxon = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_senegambian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_soninke = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_south_slavic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_slavonic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_sudanic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_tibetan = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_tubu = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_turkic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_ugro_permian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_volga_finnic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_yoruba = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_armenian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_greek = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_scythian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_georgian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_occitano_romance = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_lechitic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_czech_slovak = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_tocharian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_tungusic = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_sardinian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_wallachian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_italian = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
 language_ayneha = {
-	type = heritage
+	type = language
 	is_shown = { always = no }
-	#color = english
+	color = english
 }
 
